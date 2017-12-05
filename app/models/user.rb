@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class User < ApplicationRecord
   include Spotlight::User
   if Blacklight::Utils.needs_attr_accessible?
