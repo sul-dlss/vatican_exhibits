@@ -18,7 +18,7 @@ SecureHeaders::Configuration.default do |config|
   config.csp[:img_src] = ['*']
 
   if Rails.env.development? || Rails.env.test?
-    config.cookies[:secure] = false
+    config.cookies[:secure] = SecureHeaders::OPT_OUT
     config.hsts = SecureHeaders::OPT_OUT
     config.csp[:default_src] << 'http:'
     config.csp[:script_src] << 'http:'
