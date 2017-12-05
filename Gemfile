@@ -79,14 +79,14 @@ gem 'faraday'
 gem 'faraday-http-cache'
 gem 'octokit', '~> 4.0'
 
-group :production do
-  gem 'okcomputer'
-  gem 'honeybadger'
-  gem 'lograge'
-  gem 'rack-attack'
-  gem 'secure_headers'
-  gem 'slowpoke'
+gem 'okcomputer'
+gem 'honeybadger'
+gem 'lograge'
+gem 'rack-attack'
+gem 'secure_headers'
+gem 'slowpoke'
 
+group :production do
   gem 'carrierwave-aws'
   gem 'pg'
   gem 'sidekiq'
