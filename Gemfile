@@ -38,7 +38,14 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
+  gem 'coveralls', require: false
   gem 'selenium-webdriver'
+  gem 'factory_girl_rails'
+  gem 'rails-controller-testing'
+  gem 'rspec-rails'
+  gem 'rubocop'
+  gem 'rubocop-rspec'
+  gem 'solr_wrapper', '>= 0.3'
 end
 
 group :development do
@@ -55,9 +62,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'blacklight', ' ~> 6.0'
 gem 'blacklight-spotlight', github: 'projectblacklight/spotlight'
-group :development, :test do
-  gem 'solr_wrapper', '>= 0.3'
-end
 
 gem 'rsolr', '>= 1.0'
 gem 'jquery-rails'
@@ -69,3 +73,24 @@ gem 'sitemap_generator'
 gem 'blacklight-gallery', '>= 0.3.0'
 gem 'blacklight-oembed', '>= 0.1.0'
 gem 'devise_invitable'
+
+gem 'config'
+gem 'faraday'
+gem 'faraday-http-cache'
+gem 'octokit', '~> 4.0'
+
+group :production do
+  gem 'okcomputer'
+  gem 'honeybadger'
+  gem 'lograge'
+  gem 'rack-attack'
+  gem 'secure_headers'
+  gem 'slowpoke'
+
+  gem 'carrierwave-aws'
+  gem 'pg'
+  gem 'sidekiq'
+end
+
+gem 'traject'
+gem 'traject_plus'
