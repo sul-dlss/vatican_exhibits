@@ -23,6 +23,10 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :exhibits do
+    resources :vatican_teis
+  end
+
   mount Riiif::Engine => '/images', as: 'riiif'
   mount Spotlight::Engine, at: '/'
   mount Blacklight::Engine, at: '/'

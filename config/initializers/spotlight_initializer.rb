@@ -62,3 +62,5 @@
 #   FeaturedPages SolrDocuments SolrDocumentsCarousel SolrDocumentsEmbed
 #   SolrDocumentsFeatures SolrDocumentsGrid SearchResults
 # )
+
+Spotlight::Engine.config.external_resources_partials += ['vatican_teis/form']
