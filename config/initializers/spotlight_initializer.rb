@@ -17,14 +17,14 @@
 # ]
 # Spotlight::Engine.config.external_resources_partials = []
 # Spotlight::Engine.config.default_browse_index_view_type = :gallery
-# Spotlight::Engine.config.default_contact_email = nil
+Spotlight::Engine.config.default_contact_email = Settings.contact.email
 
 # ==> Solr configuration
 # Spotlight::Engine.config.writable_index = true
 # Spotlight::Engine.config.solr_batch_size = 20
 # Spotlight::Engine.config.filter_resources_by_exhibit = true
 # Spotlight::Engine.config.autocomplete_search_field = 'autocomplete'
-# Spotlight::Engine.config.default_autocomplete_params = { qf: 'id^1000 full_title_tesim^100 id_ng full_title_ng' }
+Spotlight::Engine.config.default_autocomplete_params = { qf: 'id^1000 full_title_tesim^100 id_ng full_title_ng' }
 
 # Solr field configurations
 # Spotlight::Engine.config.solr_fields.prefix = ''.freeze
@@ -64,3 +64,4 @@
 # )
 
 Spotlight::Engine.config.external_resources_partials += ['vatican_teis/form']
+Spotlight::Engine.config.ga_web_property_id = Settings.analytics.web_property_id
