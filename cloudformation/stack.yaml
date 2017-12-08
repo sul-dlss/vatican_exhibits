@@ -26,7 +26,7 @@ Parameters:
   DatabaseName:
     Type: String
     Description: Name of the database
-    Default: dlme
+    Default: vatican_exhibits
   DatabaseStorageSize:
     Type: String
     Description: Size of DB in Gigs
@@ -85,6 +85,7 @@ Parameters:
   GitHubToken:
     Type: String
     Description: GitHub repository personal access token with repo and admin:repo_hook privileges
+    NoEcho: 'true'
 Conditions:
   HasSSLCertificate: !Not [!Equals [!Ref 'SSLCertificateId', '']]
 Mappings:
@@ -213,13 +214,13 @@ Resources:
       RouteTableIds: [!Ref 'PrivateRouteTable', !Ref 'PublicRouteTable']
       ServiceName: !Sub 'com.amazonaws.${AWS::Region}.s3'
       VpcId: !Ref 'VPC'
-  DNS:
-    Type: AWS::Route53::HostedZone
-    Properties:
-      Name: !Ref 'HostedZoneName'
-      VPCs:
-        - VPCId: !Ref 'VPC'
-          VPCRegion: !Ref 'AWS::Region'
+  # DNS:
+  #   Type: AWS::Route53::HostedZone
+  #   Properties:
+  #     Name: !Ref 'HostedZoneName'
+  #     VPCs:
+  #       - VPCId: !Ref 'VPC'
+  #         VPCRegion: !Ref 'AWS::Region'
   DefaultSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
@@ -340,7 +341,7 @@ Resources:
     Properties:
       ApplicationName: !Ref 'Application'
       Description: Solr EB Environment
-      EnvironmentName: solr
+      EnvironmentName: !Sub '${AWS::StackName}-solr'
       TemplateName: !Ref 'SolrConfigurationTemplate'
       VersionLabel: !Ref 'SolrApplicationVersion'
   SolrConfigurationTemplate:
@@ -372,7 +373,7 @@ Resources:
           Value: !Ref 'PrivateSubnetA'
         - Namespace: aws:ec2:vpc
           OptionName: AssociatePublicIpAddress
-          Value: false
+          Value: true
         - Namespace: aws:autoscaling:launchconfiguration
           OptionName: SSHSourceRestriction
           Value: tcp, 22, 22, 10.0.0.0/16
@@ -394,7 +395,7 @@ Resources:
         - Namespace: aws:elasticbeanstalk:managedactions
           OptionName: ManagedActionsEnabled
           Value: 'false'
-      SolutionStackName: 64bit Amazon Linux 2017.03 v2.7.1 running Docker 17.03.1-ce
+      SolutionStackName: 64bit Amazon Linux 2017.09 v2.8.0 running Docker 17.06.2-ce
   EBRecordSet:
     Type: AWS::Route53::RecordSet
     Properties:
@@ -461,6 +462,9 @@ Resources:
         - Namespace: aws:ec2:vpc
           OptionName: ELBSubnets
           Value: !Ref 'PublicSubnetA'
+        - Namespace: aws:ec2:vpc
+          OptionName: AssociatePublicIpAddress
+          Value: true
         - Namespace: aws:autoscaling:launchconfiguration
           OptionName: EC2KeyName
           Value: !Ref 'KeyName'
@@ -539,7 +543,7 @@ Resources:
             OptionName: ListenerProtocol
             Value: HTTPS
           - !Ref 'AWS::NoValue'
-      SolutionStackName: 64bit Amazon Linux 2017.03 v2.4.2 running Ruby 2.3 (Puma)
+      SolutionStackName: 64bit Amazon Linux 2017.09 v2.6.1 running Ruby 2.4 (Puma)
   WebappApplicationVersion:
     Type: AWS::ElasticBeanstalk::ApplicationVersion
     Properties:
@@ -553,7 +557,7 @@ Resources:
     Properties:
       ApplicationName: !Ref 'Application'
       Description: Webapp Environment
-      EnvironmentName: webapp
+      EnvironmentName: !Sub '${AWS::StackName}-webapp'
       TemplateName: !Ref 'WebappConfigurationTemplate'
       VersionLabel: !Ref 'WebappApplicationVersion'
       CNAMEPrefix: !Ref 'AWS::StackName'
@@ -572,7 +576,7 @@ Resources:
         Value: 'true'
       - Namespace: aws:elasticbeanstalk:application:environment
         OptionName: SOLR_URL
-        Value: !Sub 'http://${EBRecordSet}/solr/dlme-prod'
+        Value: !Sub 'http://${EBRecordSet}/solr/vatican_exhibits-prod'
       - Namespace: aws:elasticbeanstalk:application:environment
         OptionName: REDIS_HOST
         Value: !GetAtt [RedisCluster, RedisEndpoint.Address]
@@ -654,7 +658,7 @@ Resources:
                 - Name: SourceOutput
               Configuration:
                 Owner: 'sul-dlss'
-                Repo: 'dlme'
+                Repo: 'vatican_exhibits'
                 Branch: 'master'
                 OAuthToken: !Ref GitHubToken
               RunOrder: 1
@@ -670,7 +674,7 @@ Resources:
                 Provider: ElasticBeanstalk
               Configuration:
                 ApplicationName: !Ref 'Application'
-                EnvironmentName: webapp
+                EnvironmentName: !Sub '${AWS::StackName}-webapp'
               RunOrder: 1
       ArtifactStore:
         Type: S3
