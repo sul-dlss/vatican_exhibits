@@ -1,0 +1,67 @@
+version: "2"
+
+services:
+  postgres:
+    image: postgres:9.6-alpine
+    environment:
+      POSTGRES_USER: exhibits
+      POSTGRES_PASSWORD: changeme
+      POSTGRES_DB: exhibits
+    ports:
+      - "5432:5432"
+  redis:
+    image: redis:3.2-alpine
+    ports:
+      - "6379:6379"
+  migrater:
+    depends_on:
+      - postgres
+    build:
+      context: .
+      dockerfile: Dockerfile.migrater
+    command: bundle exec rake db:migrate
+    environment:
+      RAILS_LOG_TO_STDOUT: "true"
+      RDS_DB_NAME: exhibits
+      RDS_USERNAME: exhibits
+      RDS_PASSWORD: changeme
+      RDS_HOSTNAME: postgres
+      RDS_PORT: 5432
+  solr:
+    image: solr:6.5
+    ports:
+      - "8983:8983"
+    volumes:
+      - ./solr/config:/opt/solr/server/solr/exhibits
+    entrypoint:
+      - docker-entrypoint.sh
+      - solr-precreate
+      - exhibits
+      - /opt/solr/server/solr/exhibits
+  app:
+    depends_on:
+      - postgres
+      - redis
+      - solr
+      - migrater
+    build: .
+    ports:
+      - "3000:3000"
+    command: bundle exec rails s
+    environment:
+      RAILS_SERVE_STATIC_FILES: "true"
+      RAILS_LOG_TO_STDOUT: "true"
+      RAILS_GROUPS: aws
+      REDIS_URL: redis://redis
+      REDIS_PORT: 6379
+      RDS_DB_NAME: exhibits
+      RDS_USERNAME: exhibits
+      RDS_PASSWORD: changeme
+      RDS_HOSTNAME: postgres
+      RDS_PORT: 5432
+      SOLR_URL: solr:8983/solr/exhibits
+      # SETTINGS__APPLICATION__DEFAULT_FROM
+      # SETTINGS__APPLICATION__DEFAULT_HOST
+      # SETTINGS__CONTACT__EMAIL
+      # SETTINGS__IMPORT__ACCESS_TOKEN
+      # AWS_REGION
