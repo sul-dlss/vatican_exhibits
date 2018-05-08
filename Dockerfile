@@ -1,6 +1,8 @@
 FROM centos:7
 RUN useradd -ms /bin/bash centos
 ADD . /app
-WORKDIR /app
-RUN chmod +x /app/install.sh
-RUN /app/install.sh
+WORKDIR /
+RUN chmod +x /app/install_dependencies.sh
+RUN chmod +x /app/install_app_dependencies.sh
+RUN /app/install_dependencies.sh
+RUN /app/install_app_dependencies.sh
