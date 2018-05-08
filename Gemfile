@@ -65,6 +65,7 @@ group :test do
   gem 'rubocop-rspec', require: false
   gem 'rspec-rails'
   gem 'factory_bot_rails'
+  gem 'database_cleaner'
   gem 'rails-controller-testing'
   gem 'capybara'
   gem 'chromedriver-helper'
