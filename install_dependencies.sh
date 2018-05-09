@@ -25,6 +25,9 @@ rvm install 2.5.1
 # Install Java 10
 yum install -y java-1.8.0-openjdk-headless
 
+# Install initscripts / service
+yum install -y initscripts
+
 # Install Solr
 curl -O http://apache.claz.org/lucene/solr/7.3.0/solr-7.3.0.tgz 
 tar xzf solr-7.3.0.tgz solr-7.3.0/bin/install_solr_service.sh --strip-components=2
@@ -50,6 +53,26 @@ curl --fail -sSLo /etc/yum.repos.d/passenger.repo https://oss-binaries.phusionpa
 yum install -y mod_passenger || yum-config-manager --enable cr && yum install -y mod_passenger
 systemctl restart httpd
 /usr/bin/passenger-config validate-install --auto
+
+# Configure passenger
+echo "
+
+<VirtualHost *:80>
+    PassengerRuby /usr/local/rvm/gems/ruby-2.5.1/wrappers/ruby
+    DocumentRoot /home/centos/vatican_exhibits/public
+    PassengerStickySessions on
+
+    <Directory /home/centos/vatican_exhibits/public>
+        Allow from all
+        Options -MultiViews
+        Require all granted
+    </Directory>
+</VirtualHost>
+" >> /etc/httpd/conf.modules.d/10-passenger.conf
+
+# Install nodejs
+curl --silent --location https://rpm.nodesource.com/setup_8.x | bash -
+yum install -y nodejs
 
 # Install MariaDB
 yum install -y mariadb-server mariadb-devel

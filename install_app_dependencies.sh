@@ -4,6 +4,7 @@
 set -x #echo on
 
 # Download repository from GitHub
+cd /home/centos
 git clone https://github.com/sul-dlss/vatican_exhibits.git --depth=0
 cd vatican_exhibits
 
@@ -13,6 +14,6 @@ rvm --default use 2.5.1
 
 # Install Ruby dependencies
 gem install bundler
-bundle install
+bundle install --deployment
 
 exit 0

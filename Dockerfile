@@ -17,7 +17,10 @@ VOLUME [ "/sys/fs/cgroup" ]
 RUN chmod +x /app/install_dependencies.sh
 RUN chmod +x /app/install_app_dependencies.sh
 RUN /app/install_dependencies.sh
+RUN usermod -aG rvm centos
+RUN chmod +x /home/centos/
+USER centos
 RUN /app/install_app_dependencies.sh
-
+USER root
 ENV container docker
 CMD ["/usr/sbin/init"]
