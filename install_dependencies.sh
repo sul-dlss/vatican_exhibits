@@ -10,7 +10,7 @@ yum update --verbose
 
 # Install EPEL (needed for Redis and Passenger)
 yum install -y epel-release yum-utils
-sudo yum-config-manager --enable epel
+yum-config-manager --enable epel
 yum update -y
 
 # Install which / needed for RVM install
@@ -50,5 +50,11 @@ curl --fail -sSLo /etc/yum.repos.d/passenger.repo https://oss-binaries.phusionpa
 yum install -y mod_passenger || yum-config-manager --enable cr && yum install -y mod_passenger
 systemctl restart httpd
 /usr/bin/passenger-config validate-install --auto
+
+# Install MariaDB
+yum install -y mariadb-server mariadb-devel
+
+# Install Git
+yum install -y git
 
 exit 0
