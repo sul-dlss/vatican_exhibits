@@ -8,6 +8,11 @@ yum clean all
 yum check-update
 yum update --verbose
 
+# Install EPEL (needed for Redis and Passenger)
+yum install -y epel-release yum-utils
+sudo yum-config-manager --enable epel
+yum update -y
+
 # Install which / needed for RVM install
 yum install -v -y which
 
@@ -29,12 +34,21 @@ bash ./install_solr_service.sh solr-7.3.0.tgz
 yum install -y ImageMagick ImageMagick-devel
 
 # Install Redis
-yum install -y epel-release
-yum update
 yum install -y redis
 
 # Install Apache HTTP
 yum install -y httpd
+systemctl enable httpd.service
+
+# Install Passenger (with ntp dependency)
+yum install -y ntp
+chkconfig ntpd on
+ntpdate pool.ntp.org
+
+yum install -y pygpgme curl
+curl --fail -sSLo /etc/yum.repos.d/passenger.repo https://oss-binaries.phusionpassenger.com/yum/definitions/el-passenger.repo
+yum install -y mod_passenger || yum-config-manager --enable cr && yum install -y mod_passenger
+systemctl restart httpd
+/usr/bin/passenger-config validate-install --auto
 
 exit 0
-
