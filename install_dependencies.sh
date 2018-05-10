@@ -22,6 +22,9 @@ curl -sSL https://get.rvm.io | bash -s stable
 source /etc/profile.d/rvm.sh
 rvm install 2.5.1
 
+# Set the user that will be running the app to the rvm group
+usermod -aG rvm centos
+
 # Install Java 10
 yum install -y java-1.8.0-openjdk-headless
 
@@ -54,6 +57,9 @@ yum install -y mod_passenger || yum-config-manager --enable cr && yum install -y
 systemctl restart httpd
 /usr/bin/passenger-config validate-install --auto
 
+# Make user directory where app is served from executable
+chmod +x /home/centos/
+
 # Configure passenger
 echo "
 
@@ -79,5 +85,12 @@ yum install -y mariadb-server mariadb-devel
 
 # Install Git
 yum install -y git
+
+# Set a secret env for Rails
+echo "
+export SECRET_KEY_BASE=`tr -cd '[:alnum:]' < /dev/urandom | fold -w128 | head -n1`
+" >> /etc/profile.d/rails.sh
+
+chmod +x /etc/profile.d/rails.sh
 
 exit 0
