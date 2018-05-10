@@ -17,6 +17,7 @@ rvm --default use 2.5.1
 gem install bundler
 bundle install --deployment
 
+source /etc/profile.d/rails.sh
 # Setup database
 RAILS_ENV=production bin/rails db:create
 RAILS_ENV=production bin/rails db:migrate
