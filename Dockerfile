@@ -1,6 +1,5 @@
 FROM centos:7
 RUN useradd -ms /bin/bash centos
-ADD . /app
 WORKDIR /
 
 RUN (cd /lib/systemd/system/sysinit.target.wants/; for i in *; do [ $i == \
@@ -14,9 +13,12 @@ rm -f /lib/systemd/system/basic.target.wants/*;\
 rm -f /lib/systemd/system/anaconda.target.wants/*;
 VOLUME [ "/sys/fs/cgroup" ]
 
+RUN mkdir /app
+ADD install_dependencies.sh /app/install_dependencies.sh
 RUN chmod +x /app/install_dependencies.sh
-RUN chmod +x /app/install_app_dependencies.sh
 RUN /app/install_dependencies.sh
+ADD install_app_dependencies.sh /app/install_app_dependencies.sh
+RUN chmod +x /app/install_app_dependencies.sh
 USER centos
 RUN /app/install_app_dependencies.sh
 USER root
