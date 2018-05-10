@@ -4,9 +4,10 @@
 set -x #echo on
 
 # Download repository from GitHub
-cd /home/centos
-git clone https://github.com/sul-dlss/vatican_exhibits.git --depth=0
-cd vatican_exhibits
+mkdir /home/centos/vatican_exhibits
+cd /home/centos/vatican_exhibits
+git clone https://github.com/sul-dlss/vatican_exhibits.git current --depth=0
+cd current
 
 # Use 2.5.1 as default
 source /etc/profile.d/rvm.sh

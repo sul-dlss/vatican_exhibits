@@ -65,10 +65,10 @@ echo "
 
 <VirtualHost *:80>
     PassengerRuby /usr/local/rvm/gems/ruby-2.5.1/wrappers/ruby
-    DocumentRoot /home/centos/vatican_exhibits/public
+    DocumentRoot /home/centos/vatican_exhibits/current/public
     PassengerStickySessions on
 
-    <Directory /home/centos/vatican_exhibits/public>
+    <Directory /home/centos/vatican_exhibits/current/public>
         Allow from all
         Options -MultiViews
         Require all granted
