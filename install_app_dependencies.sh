@@ -21,5 +21,6 @@ source /etc/profile.d/rails.sh
 # Setup database
 RAILS_ENV=production bin/rails db:create
 RAILS_ENV=production bin/rails db:migrate
+RAILS_ENV=production bundle exec rake assets:precompile
 
 exit 0
