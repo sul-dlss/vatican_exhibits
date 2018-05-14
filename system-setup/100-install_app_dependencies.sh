@@ -18,7 +18,9 @@ gem install bundler
 bundle install --deployment
 
 source /etc/profile.d/rails.sh
-# Setup database
+
+# Precompile javascript + css assets
+# Note: our current context doesn't have access to the database)
 (unset DATABASE_URL; bundle exec rake assets:precompile)
 
 exit 0

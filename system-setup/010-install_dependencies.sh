@@ -65,14 +65,19 @@ MYSQL_PASSWORD=`tr -cd '[:alnum:]' < /dev/urandom | fold -w128 | head -n1`
 # Install Git
 yum install -y git
 yum install -y sudo
-# Set a secret env for Rails
-# TODO: Create a database + app user + add DATABASE_URL env variable to rails.sh
+# Set the Rails env
+echo "export RAILS_ENV=production" >> /etc/profile.d/rails.sh
+
+# Set database env variables
 echo "
 export MYSQL_DATABASE=$MYSQL_DATABASE
 export MYSQL_USER=$MYSQL_USER
 export MYSQL_PASSWORD=$MYSQL_PASSWORD
-export RAILS_ENV=production
 export DATABASE_URL=mysql2://$MYSQL_USER:$MYSQL_PASSWORD@localhost/$MYSQL_DATABASE
+" >> /etc/profile.d/rails.sh
+
+# Set a secret env for Rails
+echo "
 export SECRET_KEY_BASE=`tr -cd '[:alnum:]' < /dev/urandom | fold -w128 | head -n1`
 " >> /etc/profile.d/rails.sh
 
