@@ -4,8 +4,7 @@
 set -x #echo on
 
 # Download repository from GitHub
-mkdir /home/centos/vatican_exhibits
-cd /home/centos/vatican_exhibits
+cd /srv/app
 git clone https://github.com/sul-dlss/vatican_exhibits.git current --depth=0
 cd current
 

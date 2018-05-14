@@ -3,7 +3,6 @@
 # Echo the commands as they run
 set -x #echo on
 
-
 # Install Solr
 tar xzf solr-7.3.0.tgz solr-7.3.0/bin/install_solr_service.sh --strip-components=2
 bash ./install_solr_service.sh solr-7.3.0.tgz -n
@@ -31,18 +30,15 @@ yum install -y pygpgme curl
 curl --fail -sSLo /etc/yum.repos.d/passenger.repo https://oss-binaries.phusionpassenger.com/yum/definitions/el-passenger.repo
 yum install -y mod_passenger || yum-config-manager --enable cr && yum install -y mod_passenger
 
-# Make user directory where app is served from executable
-chmod +x /home/centos/
-
 # Configure passenger
 echo "
 
 <VirtualHost *:80>
     PassengerRuby /usr/local/rvm/gems/ruby-2.5.1/wrappers/ruby
-    DocumentRoot /home/centos/vatican_exhibits/current/public
+    DocumentRoot /srv/app/current/public
     PassengerStickySessions on
 
-    <Directory /home/centos/vatican_exhibits/current/public>
+    <Directory /srv/app/current/public>
         Allow from all
         Options -MultiViews
         Require all granted
@@ -82,5 +78,8 @@ export SECRET_KEY_BASE=`tr -cd '[:alnum:]' < /dev/urandom | fold -w128 | head -n
 " >> /etc/profile.d/rails.sh
 
 chmod +x /etc/profile.d/rails.sh
+
+mkdir /srv/app
+chown centos /srv/app
 
 exit 0
