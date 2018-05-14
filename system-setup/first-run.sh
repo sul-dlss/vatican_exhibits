@@ -4,7 +4,7 @@
 # steps that need to happen after system services are running.
 
 # Configure a new solr collection
-su -c "/opt/solr/bin/solr create -c blacklight-core -d /srv/app/current/solr/conf -p 8983" -m "solr"
+su -c "/opt/solr/bin/solr create -c blacklight-core -d /srv/app/current/solr/config -p 8983" -m "solr"
 
 # Update the current date+time
 ntpdate pool.ntp.org
