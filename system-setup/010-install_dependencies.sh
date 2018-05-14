@@ -50,6 +50,9 @@ echo "
 curl --silent --location https://rpm.nodesource.com/setup_8.x | bash -
 yum install -y nodejs
 
+# Install yarn - Deploy will check and try to use this anyways
+npm install -g yarn
+
 # Install MariaDB
 yum install -y mariadb-server mariadb-devel
 systemctl enable mariadb.service
