@@ -17,6 +17,10 @@ Rails.application.routes.draw do
   resources :solr_documents, only: [:show], path: '/catalog', controller: 'catalog' do
     concerns :exportable
   end
+  
+  resources :exhibits, path: '/', only: [] do
+    resource :vatican_iiif_resources, only: [:create, :update]
+  end
 
   resources :bookmarks do
     concerns :exportable
