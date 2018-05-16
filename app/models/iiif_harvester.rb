@@ -20,7 +20,7 @@ class IiifHarvester
 
   def slug
     shelfmark
-      .tr('.', '_') # TODO: Figure out what we want our ids to be
+      .tr('.', '_') # TODO: Figure out what we want our ids to be; see https://github.com/sul-dlss/vatican_exhibits/issues/37
   end
 
   def response
