@@ -1,4 +1,4 @@
-FROM centos:systemd
+FROM centos/systemd
 MAINTAINER "SUL DLSS Access Team" <dlss-access-team@lists.stanford.edu>
 
 ENV container docker
