@@ -1,12 +1,10 @@
 ##
 # Controller managing VaticanIiifResource operations
-class VaticanIiifResourcesController < Spotlight::ResourcesController
+class VaticanIiifResourcesController < ApplicationController
   before_action :authenticate_user!
   load_and_authorize_resource :exhibit, class: Spotlight::Exhibit
   before_action :build_resource
   authorize_resource
-
-  helper_method :resource_class
 
   def create
     @resource.update(resource_params)
@@ -23,10 +21,6 @@ class VaticanIiifResourcesController < Spotlight::ResourcesController
   alias update create
 
   private
-
-  def resource_class
-    VaticanIiifResource
-  end
 
   def build_resource
     @resource = VaticanIiifResource.instance(current_exhibit)
