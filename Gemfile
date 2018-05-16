@@ -96,6 +96,7 @@ gem 'devise_invitable'
 gem 'config'
 gem 'sidekiq'
 gem 'traject'
+gem 'traject_plus'
 gem 'mirador_rails'
 
 gem 'okcomputer'

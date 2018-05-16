@@ -2,6 +2,7 @@
 require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
+require 'devise'
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
@@ -34,6 +35,14 @@ RSpec.configure do |config|
   # examples within a transaction, remove the following line or assign false
   # instead of true.
   config.use_transactional_fixtures = true
+
+  if defined? Devise::Test::ControllerHelpers
+    config.include Devise::Test::ControllerHelpers, type: :controller
+    config.include Devise::Test::ControllerHelpers, type: :view
+  else
+    config.include Devise::TestHelpers, type: :controller
+    config.include Devise::TestHelpers, type: :view
+  end
 
   # RSpec Rails can automatically mix in different behaviours to your tests
   # based on their file location, for example enabling you to call `get` and
