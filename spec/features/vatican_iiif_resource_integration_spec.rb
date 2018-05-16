@@ -31,6 +31,10 @@ RSpec.describe 'Bibliography resource integration test', type: :feature do
       expect(document['id']).to eq ['MSS_Barb_gr_252']
     end
 
+    it 'has a title' do
+      expect(document['full_title_tesim']).to eq ['Miscellanea Eunapii atque Porphyrii operum']
+    end
+
     it 'has iiif manifest' do
       expect(document['iiif_manifest_url_ssi']).to eq ['https://digi.vatlib.it/iiif/MSS_Barb.gr.252/manifest.json']
     end

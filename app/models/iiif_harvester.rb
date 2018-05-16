@@ -12,10 +12,14 @@ class IiifHarvester
     manifest['@id']
   end
 
-  def slug
+  def shelfmark
     id
       .sub('https://digi.vatlib.it/iiif/', '')
       .sub('/manifest.json', '')
+  end
+
+  def slug
+    shelfmark
       .tr('.', '_') # TODO: Figure out what we want our ids to be
   end
 
