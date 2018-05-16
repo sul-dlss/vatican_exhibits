@@ -1,8 +1,8 @@
 require_relative 'vatican_iiif_reader'
-require_relative 'macros/general'
+require 'traject_plus/macros'
 
 # rubocop:disable Style/MixinUsage
-extend Macros::General
+extend TrajectPlus::Macros
 # rubocop:enable Style/MixinUsage
 
 settings do
