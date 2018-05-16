@@ -12,11 +12,6 @@ RSpec.describe VaticanIiifResource do
 
   let(:exhibit) { FactoryBot.create(:exhibit) }
 
-  before do
-    # allow(harvester).to receive(:exhibit).and_return(exhibit)
-    # allow(harvester).to receive(:blacklight_solr).and_return(blacklight_solr)
-  end
-
   describe '.instance' do
     subject(:class_instance) { described_class.instance(exhibit) }
 
@@ -31,7 +26,7 @@ RSpec.describe VaticanIiifResource do
     let(:resource) { vatican_resource.resources.first }
 
     it do
-      expect(resource).to be_a String
+      expect(resource).to be_a IiifHarvester
     end
   end
 

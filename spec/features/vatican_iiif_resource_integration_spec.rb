@@ -11,6 +11,13 @@ RSpec.describe 'Bibliography resource integration test', type: :feature do
 
   let(:exhibit) { FactoryBot.create(:exhibit) }
 
+  before do
+    ['MSS_Barb.gr.252', 'MSS_Chig.R.V.29'].each do |v|
+      stub_request(:get, "https://digi.vatlib.it/iiif/#{v}/manifest.json")
+        .to_return(body: stubbed_manifest("#{v}.json"))
+    end
+  end
+
   it 'can write the document to solr' do
     expect { bibliograpy_resource.reindex }.not_to raise_error
   end
