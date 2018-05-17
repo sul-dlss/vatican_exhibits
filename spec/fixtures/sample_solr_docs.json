@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "id": "MSS_Vat_gr_504",
+    "exhibit_test_public_bsi": true,
+    "spotlight_exhibit_slug_default-exhibit_bsi": true,
+    "spotlight_exhibit_slugs_ssim": [
+      "default-exhibit"
+    ],
+    "spotlight_resource_id_ssim": [
+      "gid://vatican-exhibits/VaticanIiifResource/2"
+    ],
+    "spotlight_resource_type_ssim": [
+      "vatican_iiif_resources"
+    ],
+    "full_title_tesim": [
+      "S. Maximi confessoris opera complura et alia nonnulla"
+    ],
+    "iiif_manifest_url_ssi": "https://digi.vatlib.it/iiif/MSS_Vat.gr.504/manifest.json"
+  },
+  {
+    "id": "MSS_Pal_gr_220",
+    "exhibit_test_public_bsi": true,
+    "spotlight_exhibit_slug_default-exhibit_bsi": true,
+    "spotlight_exhibit_slugs_ssim": [
+      "default-exhibit"
+    ],
+    "spotlight_resource_id_ssim": [
+      "gid://vatican-exhibits/VaticanIiifResource/2"
+    ],
+    "spotlight_resource_type_ssim": [
+      "vatican_iiif_resources"
+    ],
+    "full_title_tesim": [
+      "Quattuor evangelia cum scholiis"
+    ],
+    "iiif_manifest_url_ssi": "https://digi.vatlib.it/iiif/MSS_Pal.gr.220/manifest.json"
+  }
+]
