@@ -24,6 +24,8 @@ class CatalogController < ApplicationController
     config.document_solr_path = 'get'
     config.document_unique_id_param = 'ids'
 
+    config.show.partials.insert(1, :viewer)
+
     # solr field configuration for search results/index views
     config.index.title_field = 'full_title_tesim'
 

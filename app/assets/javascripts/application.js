@@ -18,4 +18,7 @@
 //= require jquery
 //= require blacklight/blacklight
 
-//= require_tree .
+//= require blacklight_gallery
+//= require blacklight_oembed
+//= require openseadragon
+//= require spotlight

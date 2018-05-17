@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+  resources :mirador, only: [:index]
   mount Blacklight::Oembed::Engine, at: 'oembed'
   mount Riiif::Engine => '/images', as: 'riiif'
   root to: 'spotlight/exhibits#index'
@@ -29,5 +29,7 @@ Rails.application.routes.draw do
       delete 'clear'
     end
   end
+
+  mount MiradorRails::Engine, at: MiradorRails::Engine.locales_mount_path
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
