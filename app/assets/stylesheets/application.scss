@@ -1,0 +1,12 @@
+/*
+*= require blacklight_gallery
+*= require blacklight_oembed
+*= require openseadragon
+*/
+
+@import 'blacklight';
+@import 'spotlight';
+
+.mirador-embed-wrapper {
+  height: 60vh;
+}
