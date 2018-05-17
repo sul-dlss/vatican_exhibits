@@ -6,6 +6,7 @@ class SolrDocument
   include Spotlight::SolrDocument
 
   include Spotlight::SolrDocument::AtomicUpdates
+  include ManifestConcern
 
 
   # self.unique_key = 'id'
