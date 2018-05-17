@@ -14,7 +14,7 @@ class VaticanIiifResource < Spotlight::Resource
   def resources
     return to_enum(:resources) { iiif_urls.size } unless block_given?
 
-    iiif_urls.each { |u| yield u }
+    iiif_urls.each { |u| yield IiifHarvester.new(u) }
   end
 
   def iiif_urls
