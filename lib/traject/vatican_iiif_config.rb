@@ -14,4 +14,16 @@ to_field 'full_title_tesim', (accumulate do |resource, *_|
   resource.manifest['metadata'].select { |k| k['label'] == 'Title' }.first['value']
 end)
 
+to_field 'watermark_tesim' do |resource, accumulator, _context|
+  resource.tei.xpath('//watermarks').map do |element|
+    accumulator << element.text.strip
+  end
+end
+
+to_field 'colophon_tesim' do |resource, accumulator, _context|
+  resource.tei.xpath('//colophon').map do |element|
+    accumulator << element.text.strip
+  end
+end
+
 to_field 'iiif_manifest_url_ssi', (accumulate { |resource, *_| resource.id })

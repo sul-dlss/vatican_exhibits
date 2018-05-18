@@ -1,6 +1,7 @@
 <% vatican_iiif_resource = VaticanIiifResource.instance(current_exhibit) %>
 <%= bootstrap_form_for(vatican_iiif_resource, url: exhibit_vatican_iiif_resources_path(exhibit_id: current_exhibit)) do |f| %>
-  <%= f.text_area :iiif_url_list, rows: 10, label: t('.label'), help: t('.help') %>
+  <%= f.text_area :iiif_url_list, rows: 10, label: t('.iiif_url_list.label'), help: t('.iiif_url_list.help') %>
+  <%= f.text_field :tei_url, label: t('.tei_url.label'), help: t('.tei_url.help_html') %>
   <div class="form-actions">
     <div class="primary-actions">
       <%= cancel_link @resource, :back, class: 'btn btn-default' %>

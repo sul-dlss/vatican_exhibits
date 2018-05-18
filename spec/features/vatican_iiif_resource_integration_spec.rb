@@ -5,7 +5,8 @@ RSpec.describe 'Bibliography resource integration test', type: :feature do
     VaticanIiifResource.new(
       iiif_url_list: "https://digi.vatlib.it/iiif/MSS_Barb.gr.252/manifest.json\
          \n https://digi.vatlib.it/iiif/MSS_Chig.R.V.29/manifest.json",
-      exhibit: exhibit
+      exhibit: exhibit,
+      tei_url: 'http://example.com/{shelfmark}/tei.xml'
     )
   end
 
@@ -16,6 +17,10 @@ RSpec.describe 'Bibliography resource integration test', type: :feature do
       stub_request(:get, "https://digi.vatlib.it/iiif/#{v}/manifest.json")
         .to_return(body: stubbed_manifest("#{v}.json"))
     end
+    stub_request(:get, 'http://example.com/MSS_Barb.gr.252/tei.xml')
+      .to_return(body: stubbed_tei('MSS_Barb.gr.252.xml'))
+    stub_request(:get, 'http://example.com/MSS_Chig.R.V.29/tei.xml')
+      .to_return(status: 404)
   end
 
   it 'can write the document to solr' do
@@ -33,6 +38,14 @@ RSpec.describe 'Bibliography resource integration test', type: :feature do
 
     it 'has a title' do
       expect(document['full_title_tesim']).to eq ['Miscellanea Eunapii atque Porphyrii operum']
+    end
+
+    it 'has a watermark' do
+      expect(document['watermark_tesim'].first).to include('In prima parte codicis')
+    end
+
+    it 'has a colophon' do
+      expect(document['colophon_tesim'].first).to include('Ἀδελφὸς Οὐαλεριᾶνος Φορολιβιεὺς')
     end
 
     it 'has iiif manifest' do
