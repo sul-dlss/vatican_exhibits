@@ -29,6 +29,12 @@ class CatalogController < ApplicationController
     # solr field configuration for search results/index views
     config.index.title_field = 'full_title_tesim'
 
+    config.add_index_field 'watermark_tesim', label: 'Watermark'
+    config.add_index_field 'colophon_tesim', label: 'Colophon'
+
+    config.add_show_field 'watermark_tesim', label: 'Watermark'
+    config.add_show_field 'colophon_tesim', label: 'Colophon'
+
     config.add_search_field 'all_fields', label: I18n.t('spotlight.search.fields.search.all_fields')
 
     config.add_sort_field 'relevance', sort: 'score desc', label: I18n.t('spotlight.search.fields.sort.relevance')
