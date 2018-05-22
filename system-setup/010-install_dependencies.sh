@@ -4,8 +4,8 @@
 set -x #echo on
 
 # Install Solr
-tar xzf solr-7.3.0.tgz solr-7.3.0/bin/install_solr_service.sh --strip-components=2
-bash ./install_solr_service.sh solr-7.3.0.tgz -n
+tar xzf solr-7.3.1.tgz solr-7.3.1/bin/install_solr_service.sh --strip-components=2
+bash ./install_solr_service.sh solr-7.3.1.tgz -n
 
 # Set the user that will be running the app to the solr group
 usermod -aG solr centos
