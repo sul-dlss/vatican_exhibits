@@ -5,8 +5,15 @@ set -x #echo on
 
 # Download repository from GitHub
 cd /srv/app
-git clone https://github.com/sul-dlss/vatican_exhibits.git current --depth=0
-cd current
+mkdir releases
+mkdir shared
+mkdir -p shared/log shared/tmp/pids shared/tmp/cache shared/tmp/sockets
+
+git clone https://github.com/sul-dlss/vatican_exhibits.git releases/0 --depth=0
+ln -s /srv/app/releases/0 /srv/app/current
+cd /srv/app/current
+rm -rf /srv/app/current/log; ln -s /srv/app/shared/log /srv/app/current/log
+ln -s /srv/app/shared/tmp/* /srv/app/current/tmp
 
 # Use 2.5.1 as default
 source /etc/profile.d/rvm.sh
