@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount OkComputer::Engine, at: "/status"
   scope '(:locale)', locale: Regexp.union(Spotlight::Engine.config.i18n_locales.keys.map(&:to_s)), defaults: { locale: nil } do
     resources :mirador, only: [:index]
     mount Blacklight::Oembed::Engine, at: 'oembed'
