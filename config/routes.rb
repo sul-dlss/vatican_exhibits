@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     Sidekiq::Web.set :session_secret, Rails.application.secrets[:secret_key_base]
     mount Sidekiq::Web => '/sidekiq'
   end
+  mount OkComputer::Engine, at: "/status"
   resources :mirador, only: [:index]
   mount Blacklight::Oembed::Engine, at: 'oembed'
   mount Riiif::Engine => '/images', as: 'riiif'
