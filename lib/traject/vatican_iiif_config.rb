@@ -8,10 +8,14 @@ settings do
   provide 'processing_thread_pool', 1
 end
 
+each_record do |record, context|
+  context.skip!("Skipping #{record} because it is not valid") unless record.valid?
+end
+
 to_field 'id', (accumulate { |resource, *_| resource.slug })
 
 to_field 'full_title_tesim', (accumulate do |resource, *_|
-  resource.manifest['metadata'].select { |k| k['label'] == 'Title' }.first['value']
+  (resource.manifest['metadata'].select { |k| k['label'] == 'Title' }.first || {})['value']
 end)
 
 to_field 'watermark_tesim' do |resource, accumulator, _context|
