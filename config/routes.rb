@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  authenticate :user, lambda { |u| u.superadmin? } do
+    require 'sidekiq/web'
+    Sidekiq::Web.set :session_secret, Rails.application.secrets[:secret_key_base]
+    mount Sidekiq::Web => '/sidekiq'
+  end
   resources :mirador, only: [:index]
   mount Blacklight::Oembed::Engine, at: 'oembed'
   mount Riiif::Engine => '/images', as: 'riiif'
@@ -17,7 +22,7 @@ Rails.application.routes.draw do
   resources :solr_documents, only: [:show], path: '/catalog', controller: 'catalog' do
     concerns :exportable
   end
-  
+
   resources :exhibits, path: '/', only: [] do
     resource :vatican_iiif_resources, only: [:create, :update]
   end
