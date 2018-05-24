@@ -30,4 +30,6 @@ to_field 'colophon_tesim' do |resource, accumulator, _context|
   end
 end
 
+to_field 'thumbnail_url_ssm', (accumulate { |resource, *_| resource.thumbnails })
+
 to_field 'iiif_manifest_url_ssi', (accumulate { |resource, *_| resource.id })
