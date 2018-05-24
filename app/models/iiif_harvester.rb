@@ -34,6 +34,18 @@ class IiifHarvester
     tei_template_url.gsub('{shelfmark}', shelfmark)
   end
 
+  def thumbnails
+    return [] if manifest['sequences'].blank?
+
+    manifest['sequences'].flat_map do |sequence|
+      next [] if sequence['canvases'].blank?
+
+      sequence['canvases'].map do |canvas|
+        canvas.dig('thumbnail', '@id')
+      end.compact
+    end
+  end
+
   def tei
     @tei ||= begin
       Nokogiri::XML Faraday.get(tei_url).body
