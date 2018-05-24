@@ -2,12 +2,17 @@
 # Harvester used for retrieving IIIF manifests from Vatican resources
 class IiifHarvester
   attr_reader :iiif_manifest_url, :tei_template_url
+
   ##
   # @param [String] iiif_manifest_url
   # @param [String] tei_template_url
   def initialize(iiif_manifest_url, tei_template_url)
     @iiif_manifest_url = iiif_manifest_url
     @tei_template_url = tei_template_url
+  end
+
+  def valid?
+    manifest.present?
   end
 
   def id
