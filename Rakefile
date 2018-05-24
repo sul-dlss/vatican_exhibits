@@ -22,8 +22,7 @@ rescue LoadError
 end
 
 desc 'Run tests in generated test Rails app with generated Solr instance running'
-task ci: [:rubocop, :environment, 'factory_bot:lint'] do
-  # Rake::Task['factory_bot:lint']
+task ci: [:rubocop, 'factory_bot:lint', :environment] do
   require 'solr_wrapper'
   ENV['environment'] = 'test'
   SolrWrapper.wrap(port: '8983') do |solr|
