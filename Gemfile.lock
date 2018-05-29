@@ -50,6 +50,8 @@ GEM
       sshkit (>= 1.6.1, != 1.7.0)
     almond-rails (0.1.0)
       rails (>= 4.2, < 6)
+    annotot (0.4.0)
+      rails (~> 5.1)
     archive-zip (0.11.0)
       io-like (~> 0.3.0)
     arel (9.0.0)
@@ -582,6 +584,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  annotot
   blacklight (~> 6.0)
   blacklight-gallery (>= 0.3.0)
   blacklight-oembed (>= 0.1.0)
@@ -638,4 +641,4 @@ DEPENDENCIES
   webmock
 
 BUNDLED WITH
-   1.16.1
+   1.16.2
