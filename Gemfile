@@ -97,6 +97,7 @@ gem 'config'
 gem 'sidekiq'
 gem 'traject'
 gem 'traject_plus'
+gem 'rack-cors', require: 'rack/cors'
 gem 'mirador_rails'
 gem 'annotot'
 
