@@ -27,6 +27,6 @@ class VaticanIiifResourcesController < ApplicationController
   end
 
   def resource_params
-    params.require(:vatican_iiif_resource).permit(:iiif_url_list, :tei_url)
+    params.require(:vatican_iiif_resource).permit(:iiif_url_list)
   end
 end

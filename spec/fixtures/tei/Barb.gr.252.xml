@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ino:request xmlns:ino="http://namespaces.softwareag.com/tamino/response2">
+<ino:object>
+<TEI.2 inoid="122367" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt><editionStmt><edition>I. Giangrande, Romae, 1956, qui hunc codicem citat p. XLIII.</edition></editionStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Barb.gr." rend="Barb.gr.002520001r-38v" scan="@5Barb.gr.252_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Barb.gr.252">Barb.gr.252</idno>
+					</msIdentifier><msPart><msContents><overview><p scan="@4Libellus I." value="Libellus I.">Libellus I.</p></overview><msItem><locus>1r-38v</locus><author authorityID="32894" scan="@32894" type="internal"><alias><authorityAuthor date="354-420" rif="aut" type="person">Eunapius Sardianus,</authorityAuthor></alias></author><title scan="@1Vitae sophistarum_supplied" type="supplied" value="Vitae sophistarum">Vitae sophistarum</title><uniformTitle authorityID="32895" scan="@32895" type="uniform"><alias><authorityTitleSeries rif="aut" type="uniform" value="Vitae sophistarum (Eunapius Sardianus, 354-420)">Vitae sophistarum (Eunapius Sardianus, 354-420)</authorityTitleSeries></alias></uniformTitle><textLang n="Greco." rend="grc">Greco.</textLang></msItem></msContents><additional><adminInfo><recordHist><source><p>J. Mogenet, Codices Barberiniani Graeci, in Bibliotheca Vaticana 1989, v. 2, p. 100.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="26/09/2013"></date>
+				<persName>D.Lionetti</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">25/11/2016</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						<persName n="26/09/2013">D.Lionetti</persName><persName n="26/09/2013">D.Lionetti</persName><persName n="27/09/2013">D.Lionetti</persName><persName n="27/09/2013">D.Lionetti</persName><persName n="27/09/2013">D.Lionetti</persName><persName n="21/05/2014">D.Lionetti</persName><persName n="21/05/2014">D.Lionetti</persName><persName n="21/05/2014">D.Lionetti</persName><persName n="21/05/2014">D.Lionetti</persName><persName n="30/05/2014">D.Lionetti</persName><persName n="30/06/2014">Linking System: R.Mancusi</persName><persName n="25/11/2016">A.Berloco</persName>
+					<persName n="25/11/2016">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="122370" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt><editionStmt><edition>Sententiae ad intelligibilia ducentes (editionem pleniorem praebuerunt B. Mommert, Lipsiae, 1907 et A. Lamberz, Lipsiae, 1975, qui codicem citat pp. XIX-XX); De abstinentia ab esu animalium (A. Nauk, &quot;Porphyrii opuscula selecta&quot;, Lipsiae, 1886, pp. 85-269, ubi hic codex non citatur).</edition></editionStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Barb.gr." rend="Barb.gr.002520041r-44v" scan="@5Barb.gr.252_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Barb.gr.252">Barb.gr.252</idno>
+					</msIdentifier><msPart><msContents><overview><p scan="@4Libellus II." value="Libellus II.">Libellus II.</p></overview><msItem><locus>41r-44v</locus><author authorityID="3803" scan="@3803" type="internal"><alias><authorityAuthor date="232/233-305?" rif="aut" type="person">Porphyrius Tyrius,</authorityAuthor></alias></author><title scan="@1Sententiae ad intelligibilia ducentes_supplied" type="supplied" value="Sententiae ad intelligibilia ducentes">Sententiae ad intelligibilia ducentes</title><uniformTitle authorityID="32896" scan="@32896" type="uniform"><alias><authorityTitleSeries rif="aut" type="uniform" value="Sententiae ad intelligibilia ducentes (Porphyrius Tyrius, 232/233-305?)">Sententiae ad intelligibilia ducentes (Porphyrius Tyrius, 232/233-305?)</authorityTitleSeries></alias></uniformTitle><textLang n="Greco." rend="grc">Greco.</textLang><note anchored="yes">&lt;Excerpta&gt;. In marginibus, annotationes paucae et correctiones etiam manu librarii primi operis.</note></msItem></msContents><additional><adminInfo><recordHist><source><p>J. Mogenet, Codices Barberiniani Graeci, in Bibliotheca Vaticana 1989, v. 2, p. 100.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="26/09/2013"></date>
+				<persName>D.Lionetti</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">03/10/2017</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						<persName n="26/09/2013">D.Lionetti</persName><persName n="27/09/2013">D.Lionetti</persName><persName n="27/09/2013">D.Lionetti</persName><persName n="27/09/2013">D.Lionetti</persName><persName n="27/09/2013">D.Lionetti</persName><persName n="27/09/2013">D.Lionetti</persName><persName n="27/09/2013">D.Lionetti</persName><persName n="21/05/2014">D.Lionetti</persName><persName n="21/05/2014">D.Lionetti</persName><persName n="21/05/2014">D.Lionetti</persName><persName n="23/05/2014">D.Lionetti</persName><persName n="23/05/2014">D.Lionetti</persName><persName n="30/05/2014">D.Lionetti</persName><persName n="30/06/2014">Linking System: R.Mancusi</persName><persName n="25/11/2016">A.Berloco</persName><persName n="25/11/2016">A.Berloco</persName>
+					<persName n="03/10/2017">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="151181" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="y"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Barb.gr." rend="Barb.gr.002520000" scan="@5Barb.gr.252_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Barb.gr.252">Barb.gr.252</idno>
+					</msIdentifier><msPart><head><watermarks><p>In prima parte codicis, officinarum chartariarum signa duo: ancora in circulo, stella superposita (cf. Briquet 588) et arcuballista in circulo, lilio superposito (Briquet 761); in secunda parte, signum unicum: sagittae, stella superposita (cf. Briquet 6300).</p></watermarks></head><msContents><p>Miscellanea Eunapii atque Porphyrii operum.</p><msItem><colophon>F. 112v, atramento subrubro: Ἀδελφὸς Οὐαλεριᾶνος Φορολιβιεὺς ὁ Ἀλβίνου ταύτην | βίβλον ἐν τῷ μοναστηρίῳ τοῦ ἁγίου Ἀντω|νίου Ἐνέτησιν ἔγραψε, ἔτη το(ῦ) Κ(υρίο)υ ἡμῶν ͵αφλθ´ (manus poster. vertit 1539): v. Vogel-Gardthausen, p. 370.</colophon><textLang n="Greco." rend="grc">Greco.</textLang><note anchored="yes">Codex efficitur duobus libellis, a totidem librariis fere eadem aetate conscriptis et postea in unum conftatis.</note><note anchored="yes">F. Ir, nota antiqua &quot;276&quot;.</note><note anchored="yes">F. 1r, alia manu: Εὐναπίου βίοι Φιλοσόφων καὶ Σοφιστῶν | Πορφυρίου τῶν πρὸς τὰ νοητὰ ἀφορμῶν, et eadem manu in margine: &quot;Codex seculi XVI&quot;.</note><name authorityID="32988" role="scribe" scan="@32988"><alias><authorityAuthor date="f. 1528-1545" rif="see" title="sac.," type="person">Valerianos,</authorityAuthor><authorityAuthor date="f. 1528-1545" rif="see" title="sac.," type="person">Ualerianos,</authorityAuthor><authorityAuthor date="f. 1528-1545" rif="aut" title="sac.," type="person">Albini, Valeriano,</authorityAuthor></alias></name><origDate>sec. XVI med</origDate><origDate notAfter="1575" notBefore="1526">sec. XVI med (ff. 1-38)</origDate><origDate n="1539">anno 1539 (ff. 41-112)</origDate></msItem></msContents><physDesc><support><p>chart.</p></support><dimensions><height>320</height><width>230</width></dimensions><extent>ff. I. 113 (+81. 86. 95)</extent><msWriting><p>Prior libellus (ff. 1r-38v) manu &lt;Basilii Valeris seu Varelis&gt; exaratus est. Vacua sunt ff. 1v. 39r-v.</p></msWriting><decoration><decoNote><p>In utraque parte, tituli et litterae initiales annotationesque nonnullae, atramento subrubro.</p></decoNote></decoration><bindingDesc><binding><decoNote><p>Integumentum membranaceum; in dorso: &quot;Eunapio et Porphyrio greco&quot;.</p></decoNote><p>Membr.</p></binding></bindingDesc></physDesc><additional><adminInfo><recordHist><source><p>J. Mogenet, Codices Barberiniani Graeci, in Bibliotheca Vaticana 1989, v. 2, p. 100-101, 165.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="21/05/2014"></date>
+				<persName>D.Lionetti</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">13/12/2016</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						<persName n="21/05/2014">D.Lionetti</persName><persName n="30/05/2014">D.Lionetti</persName><persName n="30/06/2014">Linking System: R.Mancusi</persName><persName n="03/10/2014">D.Lionetti</persName>
+					<persName n="13/12/2016">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="206580" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt><editionStmt><edition>Sententiae ad intelligibilia ducentes (editionem pleniorem praebuerunt B. Mommert, Lipsiae, 1907 et A. Lamberz, Lipsiae, 1975, qui codicem citat pp. XIX-XX); De abstinentia ab esu animalium (A. Nauk, &quot;Porphyrii opuscula selecta&quot;, Lipsiae, 1886, pp. 85-269, ubi hic codex non citatur).</edition></editionStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Barb.gr." rend="Barb.gr.002520045r-112v" scan="@5Barb.gr.252_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Barb.gr.252">Barb.gr.252</idno>
+					</msIdentifier><msPart><msContents><overview><p scan="@4Libellus II." value="Libellus II.">Libellus II.</p></overview><msItem><locus>45r-112v</locus><author authorityID="3803" scan="@3803" type="internal"><alias><authorityAuthor date="232/233-305?" rif="aut" type="person">Porphyrius Tyrius,</authorityAuthor></alias></author><title scan="@1De abstinentia_supplied" type="supplied" value="De abstinentia">De abstinentia</title><uniformTitle authorityID="32916" scan="@32916" type="uniform"><alias><authorityTitleSeries rif="aut" type="uniform" value="De abstinentia (Porphyrius Tyrius, 232/233-305?)">De abstinentia (Porphyrius Tyrius, 232/233-305?)</authorityTitleSeries></alias></uniformTitle><textLang n="Greco." rend="grc">Greco.</textLang><note anchored="yes">In marginibus, annotationes paucae et correctiones etiam manu librarii primi operis.</note></msItem></msContents><additional><adminInfo><recordHist><source><p>J. Mogenet, Codices Barberiniani Graeci, in Bibliotheca Vaticana 1989, v. 2, p. 100.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="25/11/2016"></date>
+				<persName>A.Berloco</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">25/11/2016</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						
+					<persName n="25/11/2016">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+</ino:request>

@@ -6,8 +6,7 @@ RSpec.describe VaticanIiifResourcesController, type: :controller do
   let(:user) { FactoryBot.create(:exhibit_admin, exhibit: exhibit) }
   let(:attributes) do
     { iiif_url_list: "https://digi.vatlib.it/iiif/MSS_Barb.gr.252/manifest.json\
-       \n https://digi.vatlib.it/iiif/MSS_Chig.R.V.29/manifest.json",
-      tei_url: 'http://example.com/{shelfmark}/tei.xml' }
+       \n https://digi.vatlib.it/iiif/MSS_Chig.R.V.29/manifest.json" }
   end
 
   before do

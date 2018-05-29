@@ -5,8 +5,7 @@ RSpec.describe 'Bibliography resource integration test', type: :feature do
     VaticanIiifResource.new(
       iiif_url_list: "https://digi.vatlib.it/iiif/MSS_Barb.gr.252/manifest.json\
          \n https://digi.vatlib.it/iiif/MSS_Chig.R.V.29/manifest.json",
-      exhibit: exhibit,
-      tei_url: 'http://example.com/{shelfmark}/tei.xml'
+      exhibit: exhibit
     )
   end
 
@@ -17,9 +16,9 @@ RSpec.describe 'Bibliography resource integration test', type: :feature do
       stub_request(:get, "https://digi.vatlib.it/iiif/#{v}/manifest.json")
         .to_return(body: stubbed_manifest("#{v}.json"))
     end
-    stub_request(:get, 'http://example.com/MSS_Barb.gr.252/tei.xml')
-      .to_return(body: stubbed_tei('MSS_Barb.gr.252.xml'))
-    stub_request(:get, 'http://example.com/MSS_Chig.R.V.29/tei.xml')
+    stub_request(:get, 'https://digi.vatlib.it/tei/Barb.gr.252.xml')
+      .to_return(body: stubbed_tei('Barb.gr.252.xml'))
+    stub_request(:get, 'https://digi.vatlib.it/tei/Chig.R.V.29.xml')
       .to_return(status: 404)
   end
 
