@@ -3,3 +3,10 @@ action_mailer:
     from: "noreply@example.com"
   default_url_options:
     host: "localhost:3000"
+
+vatican_iiif_resource:
+  # TEI metadata URL pattern
+  # Enter a URL pattern to indicate where the TEI metadata for the items
+  # can be found.  Use the token <strong>{shelfmark}</strong> in the pattern
+  # to represent the item's unique identifier.
+  tei_template_url: https://digi.vatlib.it/tei/{shelfmark}.xml

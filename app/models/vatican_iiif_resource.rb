@@ -3,7 +3,7 @@
 class VaticanIiifResource < Spotlight::Resource
   self.document_builder_class = VaticanIiifBuilder
 
-  store :data, accessors: [:iiif_url_list, :tei_url]
+  store :data, accessors: [:iiif_url_list]
 
   class << self
     def instance(current_exhibit)
@@ -14,7 +14,7 @@ class VaticanIiifResource < Spotlight::Resource
   def resources
     return to_enum(:resources) { iiif_urls.size } unless block_given?
 
-    iiif_urls.each { |u| yield IiifHarvester.new(u, tei_url) }
+    iiif_urls.each { |u| yield IiifHarvester.new(u) }
   end
 
   def iiif_urls
