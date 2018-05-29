@@ -98,6 +98,7 @@ gem 'sidekiq'
 gem 'traject'
 gem 'traject_plus'
 gem 'mirador_rails'
+gem 'annotot'
 
 gem 'okcomputer'
 gem 'honeybadger'

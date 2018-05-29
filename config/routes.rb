@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Annotot::Engine => '/'
   authenticate :user, lambda { |u| u.superadmin? } do
     require 'sidekiq/web'
     Sidekiq::Web.set :session_secret, Rails.application.secrets[:secret_key_base]
