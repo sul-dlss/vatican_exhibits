@@ -85,4 +85,6 @@ chmod +x /etc/profile.d/rails.sh
 mkdir /srv/app
 chown centos /srv/app
 
+systemctl enable sidekiq
+
 exit 0

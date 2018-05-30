@@ -21,6 +21,7 @@ COPY system-setup/009-download-solr.sh /app/009-download-solr.sh
 RUN chmod +x /app/009-download-solr.sh \
      && /app/009-download-solr.sh
 
+COPY system-setup/sidekiq.service /usr/lib/systemd/system/sidekiq.service
 COPY system-setup/010-install_dependencies.sh /app/010-install_dependencies.sh
 RUN chmod +x /app/010-install_dependencies.sh \
     && /app/010-install_dependencies.sh
@@ -34,6 +35,7 @@ USER centos
 RUN /app/100-install_app_dependencies.sh
 
 USER root
+
 COPY system-setup/999-new-stuff.sh /app/999-new-stuff.sh
 RUN chmod +x /app/999-new-stuff.sh \
     && /app/999-new-stuff.sh
