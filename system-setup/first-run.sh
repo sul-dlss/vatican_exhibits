@@ -26,4 +26,5 @@ Spotlight::Role.create(user: user, resource: Spotlight::Site.instance, role: 'ad
 su -m "centos" -c "cd /srv/app/current;
 bin/rails db:create;
 bin/rails db:migrate;
-bin/rails db:seed"
+bin/rails db:seed
+bin/rake reindex"

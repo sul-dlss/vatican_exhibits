@@ -5,6 +5,7 @@ action_mailer:
     host: "localhost:3000"
 
 vatican_iiif_resource:
+  iiif_template_url: https://digi.vatlib.it/iiif/{shelfmark}/manifest.json
   # TEI metadata URL pattern
   # Enter a URL pattern to indicate where the TEI metadata for the items
   # can be found.  Use the token <strong>{shelfmark}</strong> in the pattern
