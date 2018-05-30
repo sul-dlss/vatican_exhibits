@@ -7,13 +7,14 @@ set -x #echo on
 cd /srv/app
 mkdir releases
 mkdir shared
-mkdir -p shared/log shared/tmp/pids shared/tmp/cache shared/tmp/sockets
+mkdir -p shared/log shared/tmp/pids shared/tmp/cache shared/tmp/sockets shared/public/uploads
 
 git clone https://github.com/sul-dlss/vatican_exhibits.git releases/0 --depth=0
 ln -s /srv/app/releases/0 /srv/app/current
 cd /srv/app/current
 rm -rf /srv/app/current/log; ln -s /srv/app/shared/log /srv/app/current/log
 ln -s /srv/app/shared/tmp/* /srv/app/current/tmp
+ln -s /srv/app/shared/public/uploads /srv/app/current/public/uploads
 
 # Use 2.5.1 as default
 source /etc/profile.d/rvm.sh
