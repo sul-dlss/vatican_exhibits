@@ -3,7 +3,9 @@ action_mailer:
     from: "noreply@example.com"
   default_url_options:
     host: "localhost:3000"
-
+annotations:
+  secure: true
+  api_key: 'test123'
 vatican_iiif_resource:
   iiif_template_url: https://digi.vatlib.it/iiif/{shelfmark}/manifest.json
   # TEI metadata URL pattern
