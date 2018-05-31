@@ -67,6 +67,7 @@ Spotlight::Engine.config.external_resources_partials += ['vatican_iiif_resources
 # Spotlight::Engine.config.ga_page_analytics_options = config.ga_analytics_options.merge(limit: 5)
 
 # ==> Sir Trevor Widget Configuration
+Spotlight::Engine.config.sir_trevor_widgets << 'Mirador'
 # Spotlight::Engine.config.sir_trevor_widgets = %w(
 #   Heading Text List Quote Iframe Video Oembed Rule UploadedItems Browse
 #   FeaturedPages SolrDocuments SolrDocumentsCarousel SolrDocumentsEmbed
