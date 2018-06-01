@@ -10,6 +10,9 @@ RSpec.describe 'Bibliography resource integration test', type: :feature do
   end
 
   let(:exhibit) { FactoryBot.create(:exhibit) }
+  # let(:annotation) do
+  # 
+  # end
 
   before do
     ['MSS_Barb.gr.252', 'MSS_Chig.R.V.29'].each do |v|
@@ -20,6 +23,11 @@ RSpec.describe 'Bibliography resource integration test', type: :feature do
       .to_return(body: stubbed_tei('Barb.gr.252.xml'))
     stub_request(:get, 'https://digi.vatlib.it/tei/Chig.R.V.29.xml')
       .to_return(status: 404)
+    FactoryBot.create(
+      :annotation,
+      canvas: 'https://digi.vatlib.it/iiif/MSS_Barb.gr.252/canvas/p0001',
+      data: load_annotation('test1.json')
+    )
   end
 
   it 'can write the document to solr' do
@@ -53,6 +61,10 @@ RSpec.describe 'Bibliography resource integration test', type: :feature do
 
     it 'has spotlight data' do
       expect(document).to include :spotlight_resource_id_ssim
+    end
+
+    it 'has annotation tags' do
+      expect(document['annotation_tags_ssim'].first).to include('Animali (Agnelli)')
     end
   end
 end

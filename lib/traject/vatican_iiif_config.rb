@@ -30,6 +30,17 @@ to_field 'colophon_tesim' do |resource, accumulator, _context|
   end
 end
 
+to_field 'annotation_tags_ssim' do |resource, accumulator, _context|
+  resource.canvas_ids.map do |id|
+    Annotot::Annotation.where(canvas: id).find_each do |annotation|
+      parsed = ::JSON.parse(annotation.data)
+      parsed['resource'].select { |r| r['@type'] == 'oa:Tag' }.map do |res|
+        accumulator << res['chars'].to_s
+      end
+    end
+  end
+end
+
 to_field 'thumbnail_url_ssm', (accumulate { |resource, *_| resource.thumbnails })
 
 to_field 'iiif_manifest_url_ssi', (accumulate { |resource, *_| resource.id })

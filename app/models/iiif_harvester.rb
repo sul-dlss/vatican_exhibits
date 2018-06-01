@@ -32,6 +32,20 @@ class IiifHarvester
     tei_template_url.gsub('{shelfmark}', shelfmark.sub('MSS_', ''))
   end
 
+  def canvases
+    manifest['sequences'].flat_map do |sequence|
+      next [] if sequence['canvases'].blank?
+
+      sequence['canvases'].map do |canvas|
+        canvas
+      end
+    end.compact.uniq
+  end
+
+  def canvas_ids
+    canvases.map { |c| c['@id'] }
+  end
+
   def thumbnails
     return [] if manifest['sequences'].blank?
 
