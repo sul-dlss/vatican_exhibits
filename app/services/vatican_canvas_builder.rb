@@ -1,6 +1,6 @@
 ##
-# Class used to build / harvest / index for Vatican IIIF resources
-class VaticanIiifBuilder < Spotlight::SolrDocumentBuilder
+# Custom Canvas for indexing Annotot::Annotations
+class VaticanCanvasBuilder < Spotlight::SolrDocumentBuilder
   include ActiveSupport::Benchmarkable
   delegate :logger, to: :Rails
   delegate :resources, to: :resource
@@ -11,25 +11,19 @@ class VaticanIiifBuilder < Spotlight::SolrDocumentBuilder
 
     benchmark "Indexing resource #{inspect}" do
       base_doc = super
-
-      resources.each_with_index do |res, _idx|
-        doc = convert_id(traject_indexer.map_record(res))
-        yield base_doc.merge(doc) if doc
-        IndexRelatedContentJob.perform_later(self, res)
-      end
+      doc = convert_id(traject_indexer.map_record(resource))
+      yield base_doc.merge(doc) if doc
     end
   end
 
   def traject_indexer
     @traject_indexer ||= Traject::Indexer.new('exhibit_slug' => resource.exhibit.slug).tap do |i|
-      i.load_config_file('lib/traject/vatican_iiif_config.rb')
+      i.load_config_file('lib/traject/canvas_config.rb')
     end
   end
 
   private
 
-  ##
-  # Needed because traject has a stringed key, but we need a symbol one
   def convert_id(doc)
     doc[:id] = doc['id'].try(:first)
     doc

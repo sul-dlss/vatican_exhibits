@@ -44,6 +44,20 @@ class IiifHarvester
     end
   end
 
+  def canvases
+    manifest['sequences'].flat_map do |sequence|
+      next [] if sequence['canvases'].blank?
+
+      sequence['canvases'].map do |canvas|
+        canvas
+      end
+    end.compact.uniq
+  end
+
+  def canvas_ids
+    canvases.map { |c| c['@id'] }
+  end
+
   def tei
     @tei ||= begin
       Nokogiri::XML Faraday.get(tei_url).body
