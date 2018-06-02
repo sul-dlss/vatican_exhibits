@@ -1,5 +1,13 @@
 <div class="st__content-block st__content-block--mirador">
-  <div><%= mirador_block.heading %></div>
+  <h3><%= mirador_block.heading %></h3>
   <div><%= mirador_block.text %></div>
+  <% if mirador_block.items.present? %>
+    I would be a mirador instance with the following manifests:
+    <ul>
+      <% mirador_block.items.each do |item| %>
+        <li><%= item['iiif_manifest_url'] %></li>
+      <% end %>
+    </ul>
+  <% end %>
   <div><%= mirador_block.caption %></div>
 </div>

@@ -24,3 +24,4 @@
 //= require spotlight
 //= require zpotlight/sir-trevor/locales
 //= require zpotlight/blocks/mirador_block
+//= require mirador_widget_admin

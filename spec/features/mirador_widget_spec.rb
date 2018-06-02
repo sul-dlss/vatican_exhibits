@@ -14,6 +14,16 @@ RSpec.describe 'Mirador Block', type: :feature, js: true do
 
       add_widget 'mirador'
 
+      choose 'IIIF manifest'
+      input = find('[data-behavior="source-location-input"]', visible: true)
+      expect(input['placeholder']).to eq 'Enter a IIIF manifest URL...'
+
+      input.set('http://example.com/manifest.json')
+      click_link 'Load IIIF item'
+
+      hidden_input = find('input[type="hidden"][name="items[item_0][iiif_manifest_url]"]', visible: false)
+      expect(hidden_input['value']).to eq 'http://example.com/manifest.json'
+
       page.all('input[name="heading"]').first.set('The Heading')
       page.all('textarea[name="text"]').first.set('The Text')
       page.all('input[name="caption"]').first.set('The Caption')
