@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  mount Annotot::Engine => '/', constraints: (ApiAuthorization::Constraint.new if Settings.annotations.secure)
+  mount Annotot::Engine => '/annotations', constraints: (ApiAuthorization::Constraint.new if Settings.annotations.secure)
   authenticate :user, lambda { |u| u.superadmin? } do
     require 'sidekiq/web'
     Sidekiq::Web.set :session_secret, Rails.application.secrets[:secret_key_base]
