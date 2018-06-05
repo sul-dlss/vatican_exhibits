@@ -5,9 +5,9 @@ class VaticanCanvasIndexer
 
   delegate :manifest, to: :manifest_harvester
 
-  def initialize(exhibit, resource)
+  def initialize(exhibit, iiif_manifest_url)
     @exhibit = exhibit
-    @resource = resource
+    @resource = IiifHarvester.new(iiif_manifest_url)
   end
 
   def index_canvases
