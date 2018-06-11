@@ -35,4 +35,49 @@ RSpec.describe 'Mirador Block', type: :feature, js: true do
       expect(page).to have_content 'The Caption'
     end
   end
+
+  describe 'mirador config' do
+    let(:mirador_config) do
+      '{
+        "language": "en",
+        "mainMenuSettings": {
+          "show": false
+        },
+        "buildPath": "/assets/",
+        "saveSession": false,
+        "data": [{
+          "manifestUri": "https://purl.stanford.edu/nb647fd0133/iiif/manifest",
+          "location": "Biblioteca Apostolica Vaticana"
+        },
+        {
+          "manifestUri": "https://purl.stanford.edu/cf386wt1778/iiif/manifest",
+          "location": "Biblioteca Apostolica Vaticana"
+        }
+      ],
+        "windowObjects": [{
+            "loadedManifest": "https://purl.stanford.edu/nb647fd0133/iiif/manifest",
+            "bottomPanelVisible": false,
+            "annotationCreation": false,
+            "canvasControls": {
+              "annotations": {
+                "annotationLayer": true,
+                "annotationState": "on"
+              }
+            }
+          }
+        ]
+      }'
+    end
+
+    it 'parses provided JSON' do
+      visit spotlight.edit_exhibit_home_page_path(exhibit)
+
+      add_widget 'mirador'
+      # this textarea will become a hidden input vatican-exhibits#88
+      input = find('textarea[name="mirador_config"]', visible: true)
+      input.set(mirador_config.to_s)
+      save_page
+      expect(page).to have_css 'iframe[src*=mirador]'
+    end
+  end
 end
