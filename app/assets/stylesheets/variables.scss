@@ -1,0 +1,10 @@
+// Vatican Variables
+$vatican-blue: #1c315b;
+
+// Bootstrap Overrides
+$navbar-height: 56px;
+$navbar-inverse-bg: $vatican-blue;
+$navbar-inverse-link-active-bg: darken($vatican-blue, 5%);
+$navbar-inverse-link-color: #d8d8d8;
+
+@import 'spotlight/variables_bootstrap';
