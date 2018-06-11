@@ -3,6 +3,7 @@ module MiradorHelper
   # rubocop:disable MethodLength
   def mirador_options(manifest, canvas)
     {
+      "language": I18n.default_locale,
       "mainMenuSettings": {
         "show":  false
       },
