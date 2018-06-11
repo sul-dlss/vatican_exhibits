@@ -9,7 +9,8 @@ class MiradorController < ApplicationController
   private
 
   def set_mirador_params
-    @manifest = params.require(:manifest)
+    @manifest = params.fetch(:manifest, nil)
     @canvas = params.fetch(:canvas, nil)
+    @options = params.fetch(:options, nil)
   end
 end

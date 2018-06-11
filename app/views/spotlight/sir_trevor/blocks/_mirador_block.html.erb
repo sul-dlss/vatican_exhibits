@@ -10,4 +10,20 @@
     </ul>
   <% end %>
   <div><%= mirador_block.caption %></div>
+  <div><%= mirador_block.mirador_config %></div>
+
+  <iframe
+      src="<%= mirador_index_path(
+        options: mirador_block.mirador_config
+      ) %>"
+      allowfullscreen="true"
+      class="mirador-embed-wrapper"
+      frameborder="0"
+      marginwidth="0"
+      marginheight="0"
+      scrolling="no"
+      width="100%"
+    ></iframe>
+
+
 </div>
