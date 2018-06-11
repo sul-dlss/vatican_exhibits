@@ -4,8 +4,12 @@
 *= require openseadragon
 */
 
+// Override before importing Blacklight
+$logo-image: image-url('dvl_logo.png') !default;
+
 @import 'blacklight';
 @import 'spotlight';
+@import 'modules/header';
 
 .mirador-embed-wrapper {
   height: 60vh;
