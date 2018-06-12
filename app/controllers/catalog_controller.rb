@@ -34,10 +34,17 @@ class CatalogController < ApplicationController
     config.add_show_field 'watermark_tesim', label: 'Watermark'
     config.add_show_field 'colophon_tesim', label: 'Colophon'
 
+    config.add_facet_field 'annotation_tags_ssim', label: 'Tags', sort: 'index', partial: 'blacklight/hierarchy/facet_hierarchy'
+    config.facet_display = {
+      hierarchy: {
+        'annotation_tags' => [['ssim'], '|']
+      }
+    }
     config.add_search_field 'all_fields', label: I18n.t('spotlight.search.fields.search.all_fields')
 
     config.add_sort_field 'relevance', sort: 'score desc', label: I18n.t('spotlight.search.fields.sort.relevance')
 
+    config.add_facet_fields_to_solr_request!
     config.add_field_configuration_to_solr_request!
 
     # Set which views by default only have the title displayed, e.g.,
