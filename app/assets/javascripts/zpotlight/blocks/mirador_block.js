@@ -75,8 +75,7 @@ SirTrevor.Blocks.Mirador = (function() {
           '<input type="text" name="caption" />',
         '</div>',
         '<div>',
-          '<label for="mirador_config">Mirador config</label>',
-          '<textarea name="mirador_config" class="form-control"></textarea>',
+          '<input type="hidden" name="mirador_config"/>',
         '</div>',
       '</div>'
     ].join("\n")

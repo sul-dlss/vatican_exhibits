@@ -1,5 +1,6 @@
 (function(global) {
   var Module = (function() {
+    var MiradorSerializer = require('mirador_serializer');
     var sourceLocationSelector = 'input[type="radio"][data-behavior="source-location-select"]';
 
     // Trigger an event when the exhibits/iiif radio button is changed
@@ -29,6 +30,7 @@
     function setupItemSubmittedListener(block) {
       block.on('item-submitted', function(e, value) {
         addSelectedItem(block, value);
+        block.find('[name="mirador_config"]').replaceWith(updateHiddenMiradorConfig(block));
       });
     }
 
@@ -64,6 +66,21 @@
 
     function itemsSection(block) {
       return block.find('[data-behavior="items-section"]');
+    }
+
+    function updateHiddenMiradorConfig(block) {
+      var manifestUrls = [];
+      block.find('input[type="hidden"][data-behavior="mirador-item"]').each(function(i, val) {
+        manifestUrls.push($(val).val());
+      });
+      var miradorSerializer = new MiradorSerializer(manifestUrls);
+      var template = [
+        '<input type="hidden" name="mirador_config" value=\'' + 
+          JSON.stringify(miradorSerializer.miradorConfig()) + 
+        '\'/>',
+      ].join("\n");
+
+      return _.template(template);        
     }
 
     return {
