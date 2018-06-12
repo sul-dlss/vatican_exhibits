@@ -27,7 +27,7 @@ SirTrevor.Blocks.Mirador = (function() {
       var i = 0;
       $.each(data.items, function(key, item) {
         itemsSection.append(
-          MiradorWidgetBlock.hiddenInput(i, item.iiif_manifest_url)
+          MiradorWidgetBlock.hiddenInput(i, item)
         );
 
         i++;
@@ -39,7 +39,9 @@ SirTrevor.Blocks.Mirador = (function() {
         '<div class="widget-header">',
           '<%= description() %>',
         '</div>',
-        '<div data-behavior="items-section"></div>',
+        '<div class="panels dd nestable-item-grid">',
+          '<ol class="dd-list" data-behavior="items-section"></ol>',
+        '</div>',
         '<fieldset class="mirador-source-location">',
           '<div class="clearfix">',
             '<legend><%= i18n.t("blocks:mirador:source_location:header") %>:</legend>',
@@ -75,7 +77,7 @@ SirTrevor.Blocks.Mirador = (function() {
           '<input type="text" name="caption" />',
         '</div>',
         '<div>',
-          '<input type="hidden" name="mirador_config"/>',
+          '<input type="text" style="display:none;" name="mirador_config" />',
         '</div>',
       '</div>'
     ].join("\n")
