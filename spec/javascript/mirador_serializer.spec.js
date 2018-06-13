@@ -18,7 +18,7 @@ describe('MiradorSerializer', () => {
       miradorSerializer.manifestUrls.push('d');
       expect(miradorSerializer.layout()).toBe('2x2');
       miradorSerializer.manifestUrls.push('e');
-      expect(miradorSerializer.layout()).toBe(null);
+      expect(miradorSerializer.layout()).toBe('yolo!!');
     });
   });
   describe('miradorConfig', () => {
