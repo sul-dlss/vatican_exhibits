@@ -58,3 +58,23 @@ namespace :spotlight do
     conn.commit
   end
 end
+
+task anno: :environment do
+  anno_list = JSON.parse(File.read(Rails.root.join('tmp', 'p0016__1_.json')))
+  resources = anno_list['resources']
+  puts resources.length
+  resources.each do |resource|
+    annobody = {
+      uuid: resource['@id'],
+      data: resource.to_json,
+      canvas: resource['on'].gsub(/#xywh=\d+,\d+,\d+,\d+$/, '').gsub('http://', 'https://')
+    }
+    conn = Faraday.new('http://127.0.0.1:3000')
+    conn.post do |req|
+      req.url '/annotations'
+      req.body = { annotation: annobody }
+      req.headers['Authorization'] = 'test123'
+    end
+  end
+  
+end
