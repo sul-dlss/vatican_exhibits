@@ -38,46 +38,35 @@ RSpec.describe 'Mirador Block', type: :feature, js: true do
 
   describe 'mirador config' do
     let(:mirador_config) do
-      '{
-        "language": "en",
-        "mainMenuSettings": {
-          "show": false
-        },
-        "buildPath": "/assets/",
-        "saveSession": false,
-        "data": [{
-          "manifestUri": "https://purl.stanford.edu/nb647fd0133/iiif/manifest",
-          "location": "Biblioteca Apostolica Vaticana"
-        },
-        {
-          "manifestUri": "https://purl.stanford.edu/cf386wt1778/iiif/manifest",
-          "location": "Biblioteca Apostolica Vaticana"
-        }
-      ],
-        "windowObjects": [{
-            "loadedManifest": "https://purl.stanford.edu/nb647fd0133/iiif/manifest",
-            "bottomPanelVisible": false,
-            "annotationCreation": false,
-            "canvasControls": {
-              "annotations": {
-                "annotationLayer": true,
-                "annotationState": "on"
-              }
-            }
+      {
+        language: 'en',
+        data: [
+          {
+            manifestUri: 'http://example.com/manifest.json'
+          }
+        ],
+        layout: '1x1',
+        windowObjects: [
+          {
+            loadedManifest: 'http://example.com/manifest.json',
+            viewType: 'ImageView'
           }
         ]
-      }'
+      }.to_json
     end
 
-    it 'parses provided JSON' do
+    it 'renders a usable Mirador configuration' do
       visit spotlight.edit_exhibit_home_page_path(exhibit)
 
       add_widget 'mirador'
-      # this textarea will become a hidden input vatican-exhibits#88
-      input = find('textarea[name="mirador_config"]', visible: true)
-      input.set(mirador_config.to_s)
-      save_page
-      expect(page).to have_css 'iframe[src*=mirador]'
+
+      choose 'IIIF manifest'
+      input = find('[data-behavior="source-location-input"]', visible: true)
+      input.set('http://example.com/manifest.json')
+      click_link 'Load IIIF item'
+      hidden_input = find('input[type="hidden"][name="mirador_config"]', visible: false)
+
+      expect(hidden_input['value']).to eq mirador_config
     end
   end
 end

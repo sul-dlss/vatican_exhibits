@@ -21,8 +21,13 @@ rescue LoadError
   STDERR.puts 'WARNING: Rubocop was not found and could not be required.'
 end
 
+desc 'Run eslint'
+task eslint: [:environment] do
+  `npx eslint ./**/*.es6`
+end
+
 desc 'Run tests in generated test Rails app with generated Solr instance running'
-task ci: [:rubocop, 'factory_bot:lint', :environment] do
+task ci: [:rubocop, :eslint, 'factory_bot:lint', :environment] do
   require 'solr_wrapper'
   ENV['environment'] = 'test'
   SolrWrapper.wrap(port: '8983') do |solr|
