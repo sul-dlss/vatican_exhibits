@@ -83,6 +83,7 @@ SirTrevor.Blocks.Mirador = (function() {
             '</div>',
           '</div>',
           '<div class="form-inline" data-source-location="iiif">',
+          '<span class="manifest-error hidden text-danger" style="display:block"></span>',
             '<div class="form-group">',
               '<label for="<%= blockID + "_iiif_manifest_url" %>" class="hidden"></label>',
               '<input type="text" name="<%= blockID + "_iiif_manifest_url"%>" placeholder="<%= i18n.t("blocks:mirador:source_location:iiif:placeholder")%>" aria-describedby="<%= blockID + "_iiif_manifest_url_help" %>" data-behavior="source-location-input" />',

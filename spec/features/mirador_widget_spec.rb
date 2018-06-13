@@ -36,6 +36,38 @@ RSpec.describe 'Mirador Block', type: :feature, js: true do
         end
       end
 
+      describe 'validations' do
+        let(:input) { find('[data-behavior="source-location-input"]', visible: true) }
+
+        before do
+          visit spotlight.edit_exhibit_home_page_path(exhibit)
+          add_widget 'mirador'
+          choose 'IIIF manifest'
+        end
+
+        it 'URL' do
+          input.set('invalidurl.com')
+          click_link 'Load IIIF item'
+          expect(page).to have_css '.manifest-error', text: /The manifest URL must include http or https/
+        end
+
+        it 'manifest is available' do
+          MockManifestEndpoint.configure.status = 404
+
+          input.set("http://127.0.0.1:#{Capybara.current_session.server.port}/mock_manifest")
+          click_link 'Load IIIF item'
+          expect(page).to have_css '.manifest-error', text: /The manifest cannot be found./
+        end
+
+        it 'manifest is well-formed' do
+          MockManifestEndpoint.configure.content = stubbed_manifest('malformed.json')
+          MockManifestEndpoint.configure.status = 200
+          input.set("http://127.0.0.1:#{Capybara.current_session.server.port}/mock_manifest")
+          click_link 'Load IIIF item'
+          expect(page).to have_css '.manifest-error', text: /The manifest does not comply with the IIIF spec/
+        end
+      end
+
       it 'adds items via the text input (persisting the title, thumb, and manifest to hidden inputs)' do
         visit spotlight.edit_exhibit_home_page_path(exhibit)
 
@@ -43,7 +75,7 @@ RSpec.describe 'Mirador Block', type: :feature, js: true do
         choose 'IIIF manifest'
         input = find('[data-behavior="source-location-input"]', visible: true)
         expect(input['placeholder']).to eq 'Enter a IIIF manifest URL...'
-        input.set('/mock_manifest')
+        input.set("http://127.0.0.1:#{Capybara.current_session.server.port}/mock_manifest")
         click_link 'Load IIIF item'
 
         hidden_title = find('input[type="hidden"][name="items[item_0][title]"]', visible: false)
@@ -63,7 +95,7 @@ RSpec.describe 'Mirador Block', type: :feature, js: true do
         add_widget 'mirador'
         choose 'IIIF manifest'
         input = find('[data-behavior="source-location-input"]', visible: true)
-        input.set('/mock_manifest')
+        input.set("http://127.0.0.1:#{Capybara.current_session.server.port}/mock_manifest")
         click_link 'Load IIIF item'
 
         within '.panels' do
@@ -75,6 +107,7 @@ RSpec.describe 'Mirador Block', type: :feature, js: true do
         end
       end
     end
+
     describe 'from Exhibit' do
       it 'adds items via the autocomplete input (persisting the title, thumb, and manifest to hidden inputs)' do
         visit spotlight.edit_exhibit_home_page_path(exhibit)
@@ -121,6 +154,7 @@ RSpec.describe 'Mirador Block', type: :feature, js: true do
       before do
         MockManifestEndpoint.configure do |config|
           config.content = stubbed_manifest('MSS_Barb.gr.252.json')
+          config.status = 200
         end
       end
 
@@ -135,7 +169,7 @@ RSpec.describe 'Mirador Block', type: :feature, js: true do
         input = find('[data-behavior="source-location-input"]', visible: true)
 
         4.times do
-          input.set('/mock_manifest')
+          input.set("http://127.0.0.1:#{Capybara.current_session.server.port}/mock_manifest")
           click_link 'Load IIIF item'
         end
 
@@ -174,6 +208,7 @@ RSpec.describe 'Mirador Block', type: :feature, js: true do
         config.content = stubbed_manifest('MSS_Barb.gr.252.json')
       end
     end
+
     it 'renders a usable Mirador configuration' do
       visit spotlight.edit_exhibit_home_page_path(exhibit)
 
@@ -181,7 +216,7 @@ RSpec.describe 'Mirador Block', type: :feature, js: true do
 
       choose 'IIIF manifest'
       input = find('[data-behavior="source-location-input"]', visible: true)
-      input.set('/mock_manifest')
+      input.set("http://127.0.0.1:#{Capybara.current_session.server.port}/mock_manifest")
       click_link 'Load IIIF item'
       hidden_input = find('[name="mirador_config"]', visible: false)
 
