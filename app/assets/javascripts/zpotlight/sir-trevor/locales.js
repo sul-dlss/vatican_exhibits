@@ -13,7 +13,12 @@ SirTrevor.Locales.en.blocks = $.extend(SirTrevor.Locales.en.blocks, {
       iiif: {
         button: 'Load IIIF item',
         label: 'IIIF manifest',
-        placeholder: 'Enter a IIIF manifest URL...'
+        placeholder: 'Enter a IIIF manifest URL...',
+        errors: {
+          invalidUrl: 'The manifest URL must include http or https.',
+          unavailable: 'The manifest cannot be found. Verify that the manifest URL is publicly accessible.',
+          malformed: 'The manifest does not comply with the IIIF spec.'
+        }
       }
     },
     text_label: 'Text',
