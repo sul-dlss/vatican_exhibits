@@ -39,66 +39,15 @@ SirTrevor.Blocks.Mirador = (function() {
      * to add the updateHiddenMiradorConfig
      */
     createItemPanel: function(data) {
-      var panel = this._itemPanel(data);
+      var panel = MiradorWidgetBlock.hiddenInput(this.globalIndex++, {
+        title: data.title,
+        thumbnail: data.thumbnail,
+        iiif_manifest_url: data.iiif_manifest,
+        id: data.id
+      });
       $(panel).appendTo($('.panels > ol', this.inner));
       MiradorWidgetBlock.updateHiddenMiradorConfig($(this.el));
       $('[data-behavior="nestable"]', this.inner).trigger('change');
-    },
-
-    /**
-     * Overridden from https://github.com/projectblacklight/spotlight/blob/master/app/assets/javascripts/spotlight/blocks/resources_block.js
-     * to trigger the 'item-removed'
-     */
-    afterPanelDelete: function() {
-      var block = $(this).closest('[data-behavior="mirador-widget"]');
-      var panel = $(this).closest('.field');
-      block.trigger('item-removed', { block: block, panel: panel });
-    },
-
-    /**
-     * A simplification from https://github.com/projectblacklight/spotlight/blob/master/app/assets/javascripts/spotlight/blocks/resources_block.js
-     */
-    _itemPanel: function(data) {
-      var index = "item_" + this.globalIndex++;
-      var resource_id = data.slug || data.id;
-      var markup = [
-          '<li class="field form-inline dd-item dd3-item" data-resource-id="' + resource_id + '" data-id="' + index + '" id="' + this.formId("item_" + data.id) + '">',
-            '<input type="hidden" name="item[' + index + '][id]" value="' + resource_id + '" />',
-            '<input data-property="weight" type="hidden" name="item[' + index + '][weight]" value="' + data.weight + '" />',
-            '<div class="dd-handle dd3-handle"><%= i18n.t("blocks:resources:panel:drag") %></div>',
-              '<div class="dd3-content panel panel-default">',
-                '<div class="panel-heading item-grid">',
-                  '<div class="pic thumbnail">',
-                    '<img src="' + data.thumbnail + '" />',
-                  '</div>',
-                  '<div class="main">',
-                    '<div class="title panel-title">' + data.title + '</div>',
-                    '<div>' + (data.slug || data.id) + '</div>',
-                  '</div>',
-                  '<input type="hidden" name="items[' + index + '][title]" value="' + data.title + '" />',
-                  '<input type="hidden" name="items[' + index + '][thumbnail]" value="' + data.thumbnail + '" />',
-                  '<input type="hidden" name="items[' + index + '][iiif_manifest_url]" value="' + data.iiif_manifest + '" data-behavior="mirador-item" />',
-                  '<div class="remove pull-right">',
-                    '<a data-item-grid-panel-remove="true" href="#"><%= i18n.t("blocks:resources:panel:remove") %></a>',
-                  '</div>',
-                '</div>',
-              '</div>',
-            '</li>'
-      ].join("\n");
-
-      var panel = $(_.template(markup)(this));
-      var context = this;
-
-      $('.remove a', panel).on('click', function(e) {
-        e.preventDefault();
-        $(this).closest('.field').remove();
-        context.afterPanelDelete();
-
-      });
-
-      this.afterPanelRender(data, panel);
-
-      return panel;
     },
 
     afterLoadData: function(data) {
