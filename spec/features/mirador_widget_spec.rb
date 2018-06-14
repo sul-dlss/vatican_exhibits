@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Mirador Block', type: :feature, js: true do
   let(:user) { FactoryBot.create(:exhibit_admin, exhibit: exhibit) }
-  let(:exhibit) { FactoryBot.create(:exhibit) }
+  let(:exhibit) { FactoryBot.create(:exhibit, slug: 'default-exhibit') }
 
   before do
     sign_in user
@@ -70,6 +70,47 @@ RSpec.describe 'Mirador Block', type: :feature, js: true do
           click_link 'Remove'
 
           expect(page).not_to have_css('.panel-title', text: 'Barb.gr.252')
+        end
+      end
+    end
+    describe 'from Exhibit' do
+      it 'adds items via the autocomplete input (persisting the title, thumb, and manifest to hidden inputs)' do
+        visit spotlight.edit_exhibit_home_page_path(exhibit)
+
+        add_widget 'mirador'
+
+        fill_in_solr_document_block_typeahead_field with: 'MSS_Vat_gr_504'
+        within(:css, '.panel') do
+          expect(page).to have_content 'S. Maximi confessoris opera complura et alia nonnulla'
+        end
+
+        hidden_title = find('input[type="hidden"][name="items[item_0][title]"]', visible: false)
+        hidden_thumb = find('input[type="hidden"][name="items[item_0][thumbnail]"]', visible: false)
+        hidden_manifest = find('input[type="hidden"][name="items[item_0][iiif_manifest_url]"]', visible: false)
+
+        expect(hidden_title['value']).to eq 'S. Maximi confessoris opera complura et alia nonnulla'
+        expect(hidden_thumb['value']).to eq(
+          'https://digi.vatlib.it/pub/digit/MSS_Vat.gr.504/thumb/Vat.gr.504_0001_al_piatto.anteriore.tif.jpg'
+        )
+        expect(hidden_manifest['value']).to eq 'https://digi.vatlib.it/iiif/MSS_Vat.gr.504/manifest.json'
+      end
+
+      it 'clicking the remove link removes panels' do
+        visit spotlight.edit_exhibit_home_page_path(exhibit)
+
+        add_widget 'mirador'
+
+        fill_in_solr_document_block_typeahead_field with: 'MSS_Vat_gr_504'
+        within(:css, '.panel') do
+          expect(page).to have_content 'S. Maximi confessoris opera complura et alia nonnulla'
+        end
+
+        within '.panels' do
+          expect(page).to have_css('.panel-title', text: 'S. Maximi confessoris opera complura et alia nonnulla')
+
+          click_link 'Remove'
+
+          expect(page).not_to have_css('.panel-title', text: 'S. Maximi confessoris opera complura et alia nonnulla')
         end
       end
     end

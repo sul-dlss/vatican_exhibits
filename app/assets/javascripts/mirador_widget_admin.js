@@ -128,6 +128,10 @@
         showSourceLocationInput(block, sourceLocationValue(block));
       },
 
+      updateHiddenMiradorConfig(block) {
+        updateHiddenMiradorConfig(block);
+      },
+
       setupEvents: function(block) {
         setupSourceLocationEvents(block);
         setupItemInputButtonEvents(block);
