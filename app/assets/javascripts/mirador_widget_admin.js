@@ -29,8 +29,24 @@
     // Setup functions that need to listen to when the add item form is submitted
     function setupItemSubmittedListener(block) {
       block.on('item-submitted', function(e, value) {
-        addSelectedItem(block, value);
-        block.find('[name="mirador_config"]').replaceWith(updateHiddenMiradorConfig(block));
+        fetchSelectedItem(block, value);
+      });
+    }
+
+    // Setup functions that need ot listen to when an item is successfully added to the items array
+    function setupItemAddedListener(block) {
+      block.on('item-added', function(e, eventObject) {
+        appendItemToSection(eventObject.block, eventObject.manifest);
+        updateHiddenMiradorConfig(eventObject.block);
+        sourceLocationInput(block).val('');
+      });
+    }
+
+    // Setup functions that need ot listen to when an item is successfully removed to the items array
+    function setupItemRemovedListener(block) {
+      block.on('item-removed', function(e, eventObject) {
+        eventObject.panel.remove();
+        updateHiddenMiradorConfig(eventObject.block);
       });
     }
 
@@ -39,13 +55,29 @@
       block.find('[data-source-location="' + value + '"]').show();
     }
 
-    function addSelectedItem(block, value) {
-      itemsSection(block).append(itemTemplate(block, value));
+    // TODO: Add some sort of loading animation and clean it up after
+    // complete to help reduce confusion with slow loading manifests
+    function fetchSelectedItem(block, manifestUrl) {
+      $.get(manifestUrl)
+       .done(function(data) {
+         block.trigger('item-added', { block: block, manifest: data });
+       });
     }
 
-    function itemTemplate(block, value) {
+    function appendItemToSection(block, manifest) {
       var index = block.find('input[type="hidden"][data-behavior="mirador-item"]').length;
-      return MiradorWidgetBlock.hiddenInput(index, value);
+
+      if(typeof(manifest) == 'string') {
+        manifest = JSON.parse(manifest);
+      }
+
+      itemsSection(block).append(
+        MiradorWidgetBlock.hiddenInput(index, {
+          title: manifest.label,
+          thumbnail: manifest.thumbnail ? manifest.thumbnail['@id'] : manifest.sequences[0].canvases[0].thumbnail['@id'],
+          iiif_manifest_url: manifest['@id']
+        })
+      );
     }
 
     function sourceLocationSubmit(block) {
@@ -75,12 +107,12 @@
       });
       var miradorSerializer = new MiradorSerializer(manifestUrls);
       var template = [
-        '<input type="hidden" name="mirador_config" value=\'' + 
-          JSON.stringify(miradorSerializer.miradorConfig()) + 
+        '<input type="text" style="display:none;" name="mirador_config" value=\'' +
+          JSON.stringify(miradorSerializer.miradorConfig()) +
         '\'/>',
       ].join("\n");
 
-      return _.template(template);        
+      block.find('[name="mirador_config"]').replaceWith(_.template(template));
     }
 
     return {
@@ -104,19 +136,44 @@
       setupListeners: function(block) {
         setupSourceLocationInputListener(block);
         setupItemSubmittedListener(block);
+        setupItemAddedListener(block);
+        setupItemRemovedListener(block);
       },
 
-      hiddenInput: function(index, value) {
-        var obj = { index: index, manifest: value };
+      hiddenInput: function(index, object) {
+        object.index = index;
+        object.title = object.title || null;
+        object.thumbnail = object.thumbnail || null;
 
         template = [
-          '<div>',
-            value,
-            '<input type="hidden" name="items[item_<%= index %>][iiif_manifest_url]" value="<%= manifest %>" data-behavior="mirador-item" />',
-          '</div>'
+          '<li class="field form-inline dd-item dd3-item">',
+            '<div class="dd-handle dd3-handle">Drag</div>',
+            '<div class="dd3-content panel panel-default">',
+              '<div class="panel-heading item-grid">',
+                '<div class="pic thumbnail"><img src="<%= thumbnail %>" /></div>',
+                '<div class="main">',
+                  '<div class="title panel-title"><%= title %></div>',
+                  '<div><%= iiif_manifest_url %></div>',
+                '</div>',
+                '<input type="hidden" name="items[item_<%= index %>][title]" value="<%= title %>" />',
+                '<input type="hidden" name="items[item_<%= index %>][thumbnail]" value="<%= thumbnail %>" />',
+                '<input type="hidden" name="items[item_<%= index %>][iiif_manifest_url]" value="<%= iiif_manifest_url %>" data-behavior="mirador-item" />',
+                '<div class="remove pull-right">',
+                  '<a data-item-grid-panel-remove="true" href="#">Remove</a>',
+                '</div>',
+              '</div>',
+            '</div>',
+          '</li>'
         ].join("\n");
+        var $el = $(_.template(template, object)(object));
+        $el.find('[data-item-grid-panel-remove]').on('click', function(e) {
+          e.preventDefault();
+          var block = $(this).closest('[data-behavior="mirador-widget"]');
+          var panel = $(this).closest('.field');
+          block.trigger('item-removed', { block: block, panel: panel });
+        });
 
-        return _.template(template, obj)(obj);
+        return $el;
       }
     };
   })();

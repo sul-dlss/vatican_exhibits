@@ -14,16 +14,6 @@ RSpec.describe 'Mirador Block', type: :feature, js: true do
 
       add_widget 'mirador'
 
-      choose 'IIIF manifest'
-      input = find('[data-behavior="source-location-input"]', visible: true)
-      expect(input['placeholder']).to eq 'Enter a IIIF manifest URL...'
-
-      input.set('http://example.com/manifest.json')
-      click_link 'Load IIIF item'
-
-      hidden_input = find('input[type="hidden"][name="items[item_0][iiif_manifest_url]"]', visible: false)
-      expect(hidden_input['value']).to eq 'http://example.com/manifest.json'
-
       page.all('input[name="heading"]').first.set('The Heading')
       page.all('textarea[name="text"]').first.set('The Text')
       page.all('input[name="caption"]').first.set('The Caption')
@@ -36,25 +26,79 @@ RSpec.describe 'Mirador Block', type: :feature, js: true do
     end
   end
 
+  describe 'adding items for the Mirador viewer' do
+    describe 'from IIIF' do
+      before do
+        MockManifestEndpoint.configure do |config|
+          config.content = stubbed_manifest('MSS_Barb.gr.252.json')
+        end
+      end
+
+      it 'adds items via the text input (persisting the title, thumb, and manifest to hidden inputs)' do
+        visit spotlight.edit_exhibit_home_page_path(exhibit)
+
+        add_widget 'mirador'
+        choose 'IIIF manifest'
+        input = find('[data-behavior="source-location-input"]', visible: true)
+        expect(input['placeholder']).to eq 'Enter a IIIF manifest URL...'
+        input.set('/mock_manifest')
+        click_link 'Load IIIF item'
+
+        hidden_title = find('input[type="hidden"][name="items[item_0][title]"]', visible: false)
+        hidden_thumb = find('input[type="hidden"][name="items[item_0][thumbnail]"]', visible: false)
+        hidden_manifest = find('input[type="hidden"][name="items[item_0][iiif_manifest_url]"]', visible: false)
+
+        expect(hidden_title['value']).to eq 'Barb.gr.252'
+        expect(hidden_thumb['value']).to eq(
+          'https://digi.vatlib.it/pub/digit/MSS_Barb.gr.252/thumb/Barb.gr.252_0001_al_piatto.anteriore.tif.jpg'
+        )
+        expect(hidden_manifest['value']).to eq 'https://digi.vatlib.it/iiif/MSS_Barb.gr.252/manifest.json'
+      end
+
+      it 'clicking the remove link removes panels' do
+        visit spotlight.edit_exhibit_home_page_path(exhibit)
+
+        add_widget 'mirador'
+        choose 'IIIF manifest'
+        input = find('[data-behavior="source-location-input"]', visible: true)
+        input.set('/mock_manifest')
+        click_link 'Load IIIF item'
+
+        within '.panels' do
+          expect(page).to have_css('.panel-title', text: 'Barb.gr.252')
+
+          click_link 'Remove'
+
+          expect(page).not_to have_css('.panel-title', text: 'Barb.gr.252')
+        end
+      end
+    end
+  end
+
   describe 'mirador config' do
     let(:mirador_config) do
       {
         language: 'en',
         data: [
           {
-            manifestUri: 'http://example.com/manifest.json'
+            manifestUri: 'https://digi.vatlib.it/iiif/MSS_Barb.gr.252/manifest.json'
           }
         ],
         layout: '1x1',
         windowObjects: [
           {
-            loadedManifest: 'http://example.com/manifest.json',
+            loadedManifest: 'https://digi.vatlib.it/iiif/MSS_Barb.gr.252/manifest.json',
             viewType: 'ImageView'
           }
         ]
       }.to_json
     end
 
+    before do
+      MockManifestEndpoint.configure do |config|
+        config.content = stubbed_manifest('MSS_Barb.gr.252.json')
+      end
+    end
     it 'renders a usable Mirador configuration' do
       visit spotlight.edit_exhibit_home_page_path(exhibit)
 
@@ -62,9 +106,9 @@ RSpec.describe 'Mirador Block', type: :feature, js: true do
 
       choose 'IIIF manifest'
       input = find('[data-behavior="source-location-input"]', visible: true)
-      input.set('http://example.com/manifest.json')
+      input.set('/mock_manifest')
       click_link 'Load IIIF item'
-      hidden_input = find('input[type="hidden"][name="mirador_config"]', visible: false)
+      hidden_input = find('[name="mirador_config"]', visible: false)
 
       expect(hidden_input['value']).to eq mirador_config
     end
