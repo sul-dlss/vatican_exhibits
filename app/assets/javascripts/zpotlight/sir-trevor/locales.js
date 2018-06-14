@@ -1,7 +1,7 @@
 SirTrevor.Locales.en.blocks = $.extend(SirTrevor.Locales.en.blocks, {
   mirador: {
     caption_label: 'Viewer caption',
-    description: 'This widget displays IIIF items in a Mirador viewer, which enables exhibit visitors to view and compare images in a zoomable, interactive environment. Configuring this widget is a four-step process.',
+    description: 'This widget displays items in a Mirador viewer, which enables exhibit visitors to view and compare images in a zoomable, interactive environment. Optionally, you can add a heading and/or text to be displayed above the Mirador viewer and a caption to be displayed below the viewer.',
     heading_label: 'Heading',
     source_location: {
       exhibit: {
