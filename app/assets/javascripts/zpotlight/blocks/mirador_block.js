@@ -1,8 +1,20 @@
 SirTrevor.Blocks.Mirador = (function() {
 
-  return Spotlight.Block.extend({
+  return Spotlight.Block.Resources.extend({
     type: 'mirador',
     icon_name: 'item_features',
+
+    /**
+     * autocomplete_url, autocomplete_template, and transform_autocomplete_results
+     * were copied from https://github.com/projectblacklight/spotlight/blob/master/app/assets/javascripts/spotlight/blocks/solr_documents_base_block.js
+     */
+    autocomplete_url: function() { return this.$instance().closest('form[data-autocomplete-exhibit-catalog-path]').data('autocomplete-exhibit-catalog-path').replace("%25QUERY", "%QUERY"); },
+    autocomplete_template: function() { return '<div class="autocomplete-item{{#if private}} blacklight-private{{/if}}">{{#if thumbnail}}<div class="document-thumbnail thumbnail"><img src="{{thumbnail}}" /></div>{{/if}}<span class="autocomplete-title">{{title}}</span><br/><small>&nbsp;&nbsp;{{description}}</small></div>' },
+    transform_autocomplete_results: function(response) {
+      return $.map(response['docs'], function(doc) {
+        return doc;
+      })
+    },
 
     title: function() {
       return i18n.t('blocks:mirador:title');
@@ -22,13 +34,31 @@ SirTrevor.Blocks.Mirador = (function() {
       MiradorWidgetAdmin.init();
     },
 
+    /**
+     * Overridden from https://github.com/projectblacklight/spotlight/blob/master/app/assets/javascripts/spotlight/blocks/resources_block.js
+     * to add the updateHiddenMiradorConfig
+     */
+    createItemPanel: function(data) {
+      var panel = MiradorWidgetBlock.hiddenInput(this.globalIndex++, {
+        title: data.title,
+        thumbnail: data.thumbnail,
+        iiif_manifest_url: data.iiif_manifest,
+        id: data.id
+      });
+      $(panel).appendTo($('.panels > ol', this.inner));
+      MiradorWidgetBlock.updateHiddenMiradorConfig($(this.el));
+      $('[data-behavior="nestable"]', this.inner).trigger('change');
+    },
+
     afterLoadData: function(data) {
+      var context = this;
       var itemsSection = $(this.$('[data-behavior="items-section"]'));
       var i = 0;
       $.each(data.items, function(key, item) {
         itemsSection.append(
           MiradorWidgetBlock.hiddenInput(i, item)
         );
+        context.globalIndex++; // Make sure to update the globalIndex
 
         i++;
       });
@@ -46,7 +76,7 @@ SirTrevor.Blocks.Mirador = (function() {
           '<div class="clearfix">',
             '<legend><%= i18n.t("blocks:mirador:source_location:header") %>:</legend>',
             '<label for="<%= blockID + "_source_location_exhibit_label"  %>" class="radio-inline">',
-              '<input type="radio" name="<%= blockID %>_source_location" id="<%= blockID + "_source_location_exhibit_label" %>" data-behavior="source-location-select" value="exhibit"> <%= i18n.t("blocks:mirador:source_location:exhibit:label") %>',
+              '<input type="radio" name="<%= blockID %>_source_location" id="<%= blockID + "_source_location_exhibit_label" %>" data-behavior="source-location-select" value="exhibit" checked> <%= i18n.t("blocks:mirador:source_location:exhibit:label") %>',
             '</label>',
             '<label for="<%= blockID + "_source_location_iiif_label"  %>" class="radio-inline">',
               '<input type="radio" name="<%= blockID %>_source_location" id="<%= blockID + "_source_location_iiif_label" %>" data-behavior="source-location-select" value="iiif"> <%= i18n.t("blocks:mirador:source_location:iiif:label") %>',
@@ -54,7 +84,8 @@ SirTrevor.Blocks.Mirador = (function() {
           '</div>',
           '<div class="form-inline" data-source-location="exhibit">',
             '<div class="form-group">',
-              '<input type="text" placeholder="<%= i18n.t("blocks:mirador:source_location:exhibit:placeholder") %>" data-behavior="source-location-input" />',
+              '<label for="mirador-source-location-exhibit" class="sr-only"><%= i18n.t("blocks:mirador:source_location:exhibit:label") %></label>',
+              '<input id="mirador-source-location-exhibit" type="text" class="st-input-string form-control item-input-field" data-twitter-typeahead="true" placeholder="<%= i18n.t("blocks:mirador:source_location:exhibit:placeholder")%>"/>',
             '</div>',
           '</div>',
           '<div class="form-inline" data-source-location="iiif">',
