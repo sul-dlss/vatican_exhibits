@@ -2,6 +2,7 @@
   var Module = (function() {
     var MiradorSerializer = require('mirador_serializer');
     var sourceLocationSelector = 'input[type="radio"][data-behavior="source-location-select"]';
+    var itemThreshold = 4;
 
     // Trigger an event when the exhibits/iiif radio button is changed
     // that contains the value of the radio button that was selected
@@ -38,7 +39,8 @@
       block.on('item-added', function(e, eventObject) {
         appendItemToSection(eventObject.block, eventObject.manifest);
         MiradorWidgetBlock.updateHiddenMiradorConfig(eventObject.block);
-        sourceLocationInput(block).val('');
+        sourceLocationInput(eventObject.block).val('');
+        MiradorWidgetBlock.toggleSorceLocationFieldset(eventObject.block);
       });
     }
 
@@ -47,12 +49,17 @@
       block.on('item-removed', function(e, eventObject) {
         eventObject.panel.remove();
         MiradorWidgetBlock.updateHiddenMiradorConfig(eventObject.block);
+        MiradorWidgetBlock.toggleSorceLocationFieldset(eventObject.block);
       });
     }
 
     function showSourceLocationInput(block, value) {
       block.find('[data-source-location]').hide();
       block.find('[data-source-location="' + value + '"]').show();
+    }
+
+    function sourceLocationFieldset(block) {
+      return block.find('[data-behavior="mirador-source-location-fieldset"]');
     }
 
     // TODO: Add some sort of loading animation and clean it up after
@@ -100,6 +107,10 @@
       return block.find('[data-behavior="items-section"]');
     }
 
+    function itemCount(block) {
+      return block.find('[data-behavior="mirador-item"]').length;
+    }
+
     return {
       init: function(block) {
         if(block.prop('data-mirador-block')) {
@@ -110,7 +121,9 @@
 
         this.setupEvents(block);
         this.setupListeners(block);
+
         showSourceLocationInput(block, sourceLocationValue(block));
+        this.toggleSorceLocationFieldset(block);
       },
 
       updateHiddenMiradorConfig(block) {
@@ -126,6 +139,14 @@
         ].join("\n");
 
         block.find('[name="mirador_config"]').replaceWith(_.template(template));
+      },
+
+      toggleSorceLocationFieldset: function(block) {
+        if(itemCount(block) < itemThreshold) {
+          sourceLocationFieldset(block).show();
+        } else {
+          sourceLocationFieldset(block).hide();
+        }
       },
 
       setupEvents: function(block) {

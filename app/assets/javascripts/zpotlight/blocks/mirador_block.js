@@ -47,6 +47,7 @@ SirTrevor.Blocks.Mirador = (function() {
       });
       $(panel).appendTo($('.panels > ol', this.inner));
       MiradorWidgetBlock.updateHiddenMiradorConfig($(this.el));
+      MiradorWidgetBlock.toggleSorceLocationFieldset($(this.el));
       $('[data-behavior="nestable"]', this.inner).trigger('change');
     },
 
@@ -72,7 +73,7 @@ SirTrevor.Blocks.Mirador = (function() {
         '<div class="panels dd nestable-item-grid">',
           '<ol class="dd-list" data-behavior="items-section"></ol>',
         '</div>',
-        '<fieldset class="mirador-source-location">',
+        '<fieldset class="mirador-source-location" data-behavior="mirador-source-location-fieldset">',
           '<div class="clearfix">',
             '<legend><%= i18n.t("blocks:mirador:source_location:header") %>:</legend>',
             '<label for="<%= blockID + "_source_location_exhibit_label"  %>" class="radio-inline">',
