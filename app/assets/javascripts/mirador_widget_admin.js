@@ -38,9 +38,9 @@
     function setupItemAddedListener(block) {
       block.on('item-added', function(e, eventObject) {
         appendItemToSection(eventObject.block, eventObject.manifest);
-        MiradorWidgetBlock.updateHiddenMiradorConfig(eventObject.block);
         sourceLocationInput(eventObject.block).val('');
-        MiradorWidgetBlock.toggleSorceLocationFieldset(eventObject.block);
+
+        eventObject.block.trigger('items-updated', eventObject.block);
       });
     }
 
@@ -48,8 +48,15 @@
     function setupItemRemovedListener(block) {
       block.on('item-removed', function(e, eventObject) {
         eventObject.panel.remove();
-        MiradorWidgetBlock.updateHiddenMiradorConfig(eventObject.block);
-        MiradorWidgetBlock.toggleSorceLocationFieldset(eventObject.block);
+
+        eventObject.block.trigger('items-updated', eventObject.block);
+      });
+    }
+
+    function setupItemsUpdatedListener(block) {
+      block.on('items-updated', function(e, eventBlock) {
+        MiradorWidgetBlock.updateHiddenMiradorConfig($(eventBlock));
+        toggleSorceLocationFieldset($(eventBlock));
       });
     }
 
@@ -60,6 +67,14 @@
 
     function sourceLocationFieldset(block) {
       return block.find('[data-behavior="mirador-source-location-fieldset"]');
+    }
+
+    function toggleSorceLocationFieldset(block) {
+      if(itemCount(block) < itemThreshold) {
+        sourceLocationFieldset(block).show();
+      } else {
+        sourceLocationFieldset(block).hide();
+      }
     }
 
     // TODO: Add some sort of loading animation and clean it up after
@@ -123,7 +138,7 @@
         this.setupListeners(block);
 
         showSourceLocationInput(block, sourceLocationValue(block));
-        this.toggleSorceLocationFieldset(block);
+        toggleSorceLocationFieldset(block);
       },
 
       updateHiddenMiradorConfig(block) {
@@ -141,14 +156,6 @@
         block.find('[name="mirador_config"]').replaceWith(_.template(template));
       },
 
-      toggleSorceLocationFieldset: function(block) {
-        if(itemCount(block) < itemThreshold) {
-          sourceLocationFieldset(block).show();
-        } else {
-          sourceLocationFieldset(block).hide();
-        }
-      },
-
       setupEvents: function(block) {
         setupSourceLocationEvents(block);
         setupItemInputButtonEvents(block);
@@ -159,6 +166,7 @@
         setupItemSubmittedListener(block);
         setupItemAddedListener(block);
         setupItemRemovedListener(block);
+        setupItemsUpdatedListener(block);
       },
 
       hiddenInput: function(index, object) {

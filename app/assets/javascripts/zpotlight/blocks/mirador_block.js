@@ -46,8 +46,8 @@ SirTrevor.Blocks.Mirador = (function() {
         id: data.id
       });
       $(panel).appendTo($('.panels > ol', this.inner));
-      MiradorWidgetBlock.updateHiddenMiradorConfig($(this.el));
-      MiradorWidgetBlock.toggleSorceLocationFieldset($(this.el));
+      var block = $(this.el).find('[data-behavior="mirador-widget"]');
+      block.trigger('items-updated', block);
       $('[data-behavior="nestable"]', this.inner).trigger('change');
     },
 
