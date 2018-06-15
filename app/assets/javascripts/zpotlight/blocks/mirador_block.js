@@ -32,6 +32,7 @@ SirTrevor.Blocks.Mirador = (function() {
 
     onBlockRender: function() {
       MiradorWidgetAdmin.init();
+      SpotlightNestable.init($('[data-behavior="nestable"]', this.inner));
     },
 
     /**
@@ -69,7 +70,7 @@ SirTrevor.Blocks.Mirador = (function() {
         '<div class="widget-header">',
           '<%= description() %>',
         '</div>',
-        '<div class="panels dd nestable-item-grid">',
+        '<div class="panels dd nestable-item-grid" data-behavior="nestable" data-max-depth="1">',
           '<ol class="dd-list" data-behavior="items-section"></ol>',
         '</div>',
         '<fieldset class="mirador-source-location">',
