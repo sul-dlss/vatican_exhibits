@@ -37,7 +37,7 @@
     function setupItemAddedListener(block) {
       block.on('item-added', function(e, eventObject) {
         appendItemToSection(eventObject.block, eventObject.manifest);
-        updateHiddenMiradorConfig(eventObject.block);
+        MiradorWidgetBlock.updateHiddenMiradorConfig(eventObject.block);
         sourceLocationInput(block).val('');
       });
     }
@@ -46,7 +46,7 @@
     function setupItemRemovedListener(block) {
       block.on('item-removed', function(e, eventObject) {
         eventObject.panel.remove();
-        updateHiddenMiradorConfig(eventObject.block);
+        MiradorWidgetBlock.updateHiddenMiradorConfig(eventObject.block);
       });
     }
 
@@ -100,21 +100,6 @@
       return block.find('[data-behavior="items-section"]');
     }
 
-    function updateHiddenMiradorConfig(block) {
-      var manifestUrls = [];
-      block.find('input[type="hidden"][data-behavior="mirador-item"]').each(function(i, val) {
-        manifestUrls.push($(val).val());
-      });
-      var miradorSerializer = new MiradorSerializer(manifestUrls);
-      var template = [
-        '<input type="text" style="display:none;" name="mirador_config" value=\'' +
-          JSON.stringify(miradorSerializer.miradorConfig()) +
-        '\'/>',
-      ].join("\n");
-
-      block.find('[name="mirador_config"]').replaceWith(_.template(template));
-    }
-
     return {
       init: function(block) {
         if(block.prop('data-mirador-block')) {
@@ -126,6 +111,21 @@
         this.setupEvents(block);
         this.setupListeners(block);
         showSourceLocationInput(block, sourceLocationValue(block));
+      },
+
+      updateHiddenMiradorConfig(block) {
+        var manifestUrls = [];
+        block.find('input[type="hidden"][data-behavior="mirador-item"]').each(function(i, val) {
+          manifestUrls.push($(val).val());
+        });
+        var miradorSerializer = new MiradorSerializer(manifestUrls);
+        var template = [
+          '<input type="text" style="display:none;" name="mirador_config" value=\'' +
+            JSON.stringify(miradorSerializer.miradorConfig()) +
+          '\'/>',
+        ].join("\n");
+
+        block.find('[name="mirador_config"]').replaceWith(_.template(template));
       },
 
       setupEvents: function(block) {
@@ -144,9 +144,10 @@
         object.index = index;
         object.title = object.title || null;
         object.thumbnail = object.thumbnail || null;
+        object.id = object.id || null;
 
         template = [
-          '<li class="field form-inline dd-item dd3-item">',
+          '<li class="field form-inline dd-item dd3-item" data-resource-id="<%= id %>">',
             '<div class="dd-handle dd3-handle">Drag</div>',
             '<div class="dd3-content panel panel-default">',
               '<div class="panel-heading item-grid">',
@@ -155,6 +156,7 @@
                   '<div class="title panel-title"><%= title %></div>',
                   '<div><%= iiif_manifest_url %></div>',
                 '</div>',
+                '<input type="hidden" name="items[item_<%= index %>][id]" value="<%= id %>" />',
                 '<input type="hidden" name="items[item_<%= index %>][title]" value="<%= title %>" />',
                 '<input type="hidden" name="items[item_<%= index %>][thumbnail]" value="<%= thumbnail %>" />',
                 '<input type="hidden" name="items[item_<%= index %>][iiif_manifest_url]" value="<%= iiif_manifest_url %>" data-behavior="mirador-item" />',
