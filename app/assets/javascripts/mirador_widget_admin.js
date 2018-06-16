@@ -37,7 +37,7 @@
     // Setup functions that need ot listen to when an item is successfully added to the items array
     function setupItemAddedListener(block) {
       block.on('item-added', function(e, eventObject) {
-        appendItemToSection(eventObject.block, eventObject.manifest);
+        addIiifItemToSection(eventObject.block, eventObject.manifest);
         sourceLocationInput(eventObject.block).val('');
 
         eventObject.block.trigger('items-updated', eventObject.block);
@@ -86,20 +86,16 @@
        });
     }
 
-    function appendItemToSection(block, manifest) {
-      var index = block.find('input[type="hidden"][data-behavior="mirador-item"]').length;
-
+    function addIiifItemToSection(block, manifest) {
       if(typeof(manifest) == 'string') {
         manifest = JSON.parse(manifest);
       }
 
-      itemsSection(block).append(
-        MiradorWidgetBlock.hiddenInput(index, {
-          title: manifest.label,
-          thumbnail: manifest.thumbnail ? manifest.thumbnail['@id'] : manifest.sequences[0].canvases[0].thumbnail['@id'],
-          iiif_manifest_url: manifest['@id']
-        })
-      );
+      MiradorWidgetBlock.addItemToSection(block, {
+        title: manifest.label,
+        thumbnail: manifest.thumbnail ? manifest.thumbnail['@id'] : manifest.sequences[0].canvases[0].thumbnail['@id'],
+        iiif_manifest_url: manifest['@id']
+      }, false);
     }
 
     function sourceLocationSubmit(block) {
@@ -154,6 +150,22 @@
         ].join("\n");
 
         block.find('[name="mirador_config"]').replaceWith(_.template(template));
+      },
+
+      addItemToSection: function(block, itemObject, shouldTriggerEvent) {
+        var index = block.find('input[type="hidden"][data-behavior="mirador-item"]').length;
+
+        itemsSection(block).append(
+          MiradorWidgetBlock.hiddenInput(index, itemObject)
+        );
+
+        // When the shouldTriggerEvent option is set to true (or not set, as it is the default behavior)
+        // trigger the items-updated event.  Somebody calling MiradorWidgetBlock.addItemToSection should
+        // only set shouldTriggerEvent to false if they do not want adding the item to trigger events
+        // such as updating the mirador config based on the current items (e.g. Block initialization) 
+        if (shouldTriggerEvent || shouldTriggerEvent === undefined) {
+          block.trigger('items-updated', block);
+        }
       },
 
       setupEvents: function(block) {
