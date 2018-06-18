@@ -20,5 +20,6 @@
 
 //= require blacklight_gallery
 //= require blacklight_oembed
+//= require blacklight/hierarchy/hierarchy
 //= require openseadragon
 //= require spotlight

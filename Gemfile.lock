@@ -79,6 +79,10 @@ GEM
       bootstrap-sass (~> 3.0)
       openseadragon (>= 0.2.0)
       rails
+    blacklight-hierarchy (1.1.0)
+      blacklight (~> 6.0)
+      jquery-rails
+      rails (>= 4.1, < 6)
     blacklight-oembed (0.2.0)
       blacklight (>= 5.0, < 7)
       bootstrap-sass (~> 3.0)
@@ -591,6 +595,7 @@ DEPENDENCIES
   annotot
   blacklight (~> 6.0)
   blacklight-gallery (>= 0.3.0)
+  blacklight-hierarchy
   blacklight-oembed (>= 0.1.0)
   blacklight-spotlight (~> 2.0)
   bootsnap (>= 1.1.0)
