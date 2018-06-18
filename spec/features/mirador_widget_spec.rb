@@ -116,6 +116,38 @@ RSpec.describe 'Mirador Block', type: :feature, js: true do
         end
       end
     end
+
+    describe 'item limtation' do
+      before do
+        MockManifestEndpoint.configure do |config|
+          config.content = stubbed_manifest('MSS_Barb.gr.252.json')
+        end
+      end
+
+      it 'removes the source/input fieldset when the maximum items have been reached' do
+        visit spotlight.edit_exhibit_home_page_path(exhibit)
+
+        add_widget 'mirador'
+
+        expect(page).to have_css('fieldset.mirador-source-location', visible: true)
+
+        choose 'IIIF manifest'
+        input = find('[data-behavior="source-location-input"]', visible: true)
+
+        4.times do
+          input.set('/mock_manifest')
+          click_link 'Load IIIF item'
+        end
+
+        expect(page).not_to have_css('fieldset.mirador-source-location', visible: true)
+
+        within(first('.nestable-item-grid .dd-item')) do
+          click_link 'Remove'
+        end
+
+        expect(page).to have_css('fieldset.mirador-source-location', visible: true)
+      end
+    end
   end
 
   describe 'mirador config' do

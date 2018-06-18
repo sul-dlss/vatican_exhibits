@@ -47,7 +47,8 @@ SirTrevor.Blocks.Mirador = (function() {
         id: data.id
       });
       $(panel).appendTo($('.panels > ol', this.inner));
-      MiradorWidgetBlock.updateHiddenMiradorConfig($(this.el));
+      var block = $(this.el).find('[data-behavior="mirador-widget"]');
+      block.trigger('items-updated', block);
       $('[data-behavior="nestable"]', this.inner).trigger('change');
     },
 
@@ -73,7 +74,7 @@ SirTrevor.Blocks.Mirador = (function() {
         '<div class="panels dd nestable-item-grid" data-behavior="nestable" data-max-depth="1">',
           '<ol class="dd-list" data-behavior="items-section"></ol>',
         '</div>',
-        '<fieldset class="mirador-source-location">',
+        '<fieldset class="mirador-source-location" data-behavior="mirador-source-location-fieldset">',
           '<div class="clearfix">',
             '<legend><%= i18n.t("blocks:mirador:source_location:header") %>:</legend>',
             '<label for="<%= blockID + "_source_location_exhibit_label"  %>" class="radio-inline">',
