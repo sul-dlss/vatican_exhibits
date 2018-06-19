@@ -29,6 +29,7 @@ RSpec.describe 'Annotation Requests', type: :request do
       end.to raise_error ApiAuthorization::Unauthorized
     end
   end
+
   context 'with an API key' do
     let(:anno) { FactoryBot.create(:annotation) }
     let(:valid_attributes) do
