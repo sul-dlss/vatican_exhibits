@@ -40,29 +40,21 @@ SirTrevor.Blocks.Mirador = (function() {
      * to add the updateHiddenMiradorConfig
      */
     createItemPanel: function(data) {
-      var panel = MiradorWidgetBlock.hiddenInput(this.globalIndex++, {
+      var block = $(this.el).find('[data-behavior="mirador-widget"]');
+      MiradorWidgetBlock.addItemToSection(block, {
         title: data.title,
         thumbnail: data.thumbnail,
         iiif_manifest_url: data.iiif_manifest,
         id: data.id
       });
-      $(panel).appendTo($('.panels > ol', this.inner));
-      var block = $(this.el).find('[data-behavior="mirador-widget"]');
-      block.trigger('items-updated', block);
+
       $('[data-behavior="nestable"]', this.inner).trigger('change');
     },
 
     afterLoadData: function(data) {
-      var context = this;
-      var itemsSection = $(this.$('[data-behavior="items-section"]'));
-      var i = 0;
+      var block = $(this.el).find('[data-behavior="mirador-widget"]');
       $.each(data.items, function(key, item) {
-        itemsSection.append(
-          MiradorWidgetBlock.hiddenInput(i, item)
-        );
-        context.globalIndex++; // Make sure to update the globalIndex
-
-        i++;
+        MiradorWidgetBlock.addItemToSection(block, item, false);
       });
     },
 
