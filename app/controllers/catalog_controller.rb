@@ -34,6 +34,8 @@ class CatalogController < ApplicationController
     config.add_index_field 'beginning_date_ssim', label: 'Beginning date'
     config.add_index_field 'ending_date_ssim', label: 'Ending date'
     config.add_index_field 'dated_mss_ssim', label: 'Dated Mss'
+    config.add_index_field 'annotation_text_tesim', label: 'Annotation text'
+    config.add_index_field 'annotation_tags_ssim', label: 'Annotation tags', link_to_facet: true
 
     config.add_show_field 'manuscript_collection_tesim'
     config.add_show_field 'manuscript_shelfmark_tesim'
@@ -112,7 +114,7 @@ class CatalogController < ApplicationController
     config.add_facet_field 'language_ssim', label: 'Language'
     config.facet_display = {
       hierarchy: {
-        'annotation_tags' => [['ssim'], '|']
+        'annotation_tags' => [['ssim'], ':']
       }
     }
     config.add_search_field 'all_fields', label: I18n.t('spotlight.search.fields.search.all_fields')

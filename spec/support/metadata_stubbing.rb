@@ -14,4 +14,8 @@ module MetadataStubbing
   def stubbed_tei(file_name)
     File.read(File.join(tei_root, file_name))
   end
+
+  def stubbed_annotation(file_name)
+    File.read(Rails.root.join('spec', 'fixtures', 'annotations', file_name))
+  end
 end
