@@ -4,6 +4,7 @@ class VaticanIiifBuilder < Spotlight::SolrDocumentBuilder
   include ActiveSupport::Benchmarkable
   delegate :logger, to: :Rails
   delegate :resources, to: :resource
+  delegate :exhibit, to: :resource
   delegate :size, to: :resources
 
   def to_solr
@@ -15,6 +16,7 @@ class VaticanIiifBuilder < Spotlight::SolrDocumentBuilder
       resources.each_with_index do |res, _idx|
         doc = convert_id(traject_indexer.map_record(res))
         yield base_doc.merge(doc) if doc
+        IndexRelatedContentJob.perform_later(exhibit, res.iiif_manifest_url)
       end
     end
   end

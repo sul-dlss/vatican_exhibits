@@ -28,6 +28,11 @@ class CatalogController < ApplicationController
     # solr field configuration for search results/index views
     config.index.title_field = 'full_title_tesim'
 
+    config.add_facet_field 'annotation_tags_ssim', label: 'Annotation Tags'
+
+    config.add_facet_fields_to_solr_request!
+
+
     config.add_index_field 'watermark_tesim', label: 'Watermark'
     config.add_index_field 'colophon_tesim', label: 'Colophon'
 
