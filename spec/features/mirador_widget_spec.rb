@@ -163,7 +163,8 @@ RSpec.describe 'Mirador Block', type: :feature, js: true do
         windowObjects: [
           {
             loadedManifest: 'https://digi.vatlib.it/iiif/MSS_Barb.gr.252/manifest.json',
-            viewType: 'ImageView'
+            viewType: 'ImageView',
+            slotAddress: nil
           }
         ]
       }.to_json
