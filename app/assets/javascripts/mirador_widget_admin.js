@@ -161,7 +161,12 @@
       },
 
       addItemToSection: function(block, itemObject, shouldTriggerEvent) {
-        var index = block.find('input[type="hidden"][data-behavior="mirador-item"]').length;
+        var miradorItemIndexes = [];
+        block.find('input[type="hidden"][data-behavior="mirador-item"]').each(function() {
+          miradorItemIndexes.push(parseInt($(this).prop('name').match(/(\d)/)[0]) + 1);
+        });
+
+        var index = (miradorItemIndexes.sort().pop() || 0);
 
         itemsSection(block).append(
           MiradorWidgetBlock.hiddenInput(index, itemObject)
