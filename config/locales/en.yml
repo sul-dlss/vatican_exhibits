@@ -10,6 +10,8 @@ en:
       notice: Your Vatican IIIF resource has been successfully created.
       error: There was a problem with adding the Vatican IIIF resource.
   catalog:
+    curatorial_narrative_default:
+      title: Curatorial narrative
     parts_default:
       title: Parts of this manuscript
     show_manuscript:

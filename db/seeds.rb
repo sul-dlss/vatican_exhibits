@@ -12,4 +12,6 @@ data['pathways'].each do |pathway|
   exhibit = Spotlight::Exhibit.create_with(title: pathway['name']).find_or_create_by(slug: pathway['name'])
   iiif_urls = pathway['manuscripts'].map { |shelfmark| Settings.vatican_iiif_resource.iiif_template_url.gsub('{shelfmark}', shelfmark) }
   VaticanIiifResource.instance(exhibit).update(iiif_url_list: iiif_urls.join("\n"))
+
+  exhibit.custom_fields.create(field: Settings.curatorial_narrative.field)
 end

@@ -6,6 +6,8 @@ action_mailer:
 annotations:
   secure: true
   api_key: 'test123'
+curatorial_narrative:
+  field: 'curatorial_narrative_tesim'
 vatican_iiif_resource:
   iiif_template_url: https://digi.vatlib.it/iiif/{shelfmark}/manifest.json
   # TEI metadata URL pattern
