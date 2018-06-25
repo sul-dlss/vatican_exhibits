@@ -20,6 +20,14 @@
       });
     }
 
+    // Trigger the items-updated event when the block's nestable items
+    // are changed so that the MiradorConfiguration is re-serialized
+    function setupNestableChangeEvents(block) {
+      block.find('[data-behavior="nestable"]').on('change', function() {
+        block.trigger('items-updated', block);
+      });
+    }
+
     // Setup functions that need to listen to the source selected event
     function setupSourceLocationInputListener(block) {
       block.on('source-selected', function(e, value) {
@@ -171,6 +179,7 @@
       setupEvents: function(block) {
         setupSourceLocationEvents(block);
         setupItemInputButtonEvents(block);
+        setupNestableChangeEvents(block);
       },
 
       setupListeners: function(block) {
