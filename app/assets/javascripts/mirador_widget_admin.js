@@ -38,6 +38,7 @@
     // Setup functions that need to listen to when the add item form is submitted
     function setupItemSubmittedListener(block) {
       block.on('item-submitted', function(e, value) {
+        clearError(block);
         fetchSelectedItem(block, value);
       });
     }
@@ -56,7 +57,6 @@
     function setupItemRemovedListener(block) {
       block.on('item-removed', function(e, eventObject) {
         eventObject.panel.remove();
-
         eventObject.block.trigger('items-updated', eventObject.block);
       });
     }
@@ -66,6 +66,13 @@
         MiradorWidgetBlock.updateHiddenMiradorConfig($(eventBlock));
         toggleSorceLocationFieldset($(eventBlock));
       });
+    }
+
+    // Setup function that listens to when an external IIIF manifest cannot be fetched
+    function setupManifestErrorListener(block) {
+      block.on('manifest-error', function(e, eventObject) {
+        manifestError(eventObject.block, eventObject.error);
+      })
     }
 
     function showSourceLocationInput(block, value) {
@@ -78,7 +85,7 @@
     }
 
     function toggleSorceLocationFieldset(block) {
-      if(itemCount(block) < itemThreshold) {
+      if (itemCount(block) < itemThreshold) {
         sourceLocationFieldset(block).show();
       } else {
         sourceLocationFieldset(block).hide();
@@ -88,16 +95,35 @@
     // TODO: Add some sort of loading animation and clean it up after
     // complete to help reduce confusion with slow loading manifests
     function fetchSelectedItem(block, manifestUrl) {
+      if (validUrl(block, manifestUrl) === false) {
+        return false;
+      }
+
       $.get(manifestUrl)
-       .done(function(data) {
-         block.trigger('item-added', { block: block, manifest: data });
-       });
+        .done(function(data) {
+          if(typeof(data) == 'string') {
+            data = JSON.parse(data);
+          }
+          if (validManifest(data)) {
+            block.trigger('item-added', {
+              block: block,
+              manifest: data
+            });
+          } else {
+            block.trigger('manifest-error', {
+              block: block,
+              error: 'malformed'
+            });
+          }
+        }).fail(function(data) {
+          block.trigger('manifest-error', {
+            block: block,
+            error: 'unavailable'
+          });
+        });
     }
 
     function addIiifItemToSection(block, manifest) {
-      if(typeof(manifest) == 'string') {
-        manifest = JSON.parse(manifest);
-      }
 
       MiradorWidgetBlock.addItemToSection(block, {
         title: manifest.label,
@@ -130,9 +156,51 @@
       return block.find('[data-behavior="mirador-item"]').length;
     }
 
+    function validManifest(manifest) {
+      var hasContext = (manifest["@context"] || '').includes('iiif.io/api/presentation/2/context.json');
+      var sequences = manifest["sequences"] || '';
+      var hasCanvas = sequences.some(sequence => (sequence["canvases"] || '').length > 0);
+      return hasContext && hasCanvas;
+    }
+
+    function validUrl(block, manifestUrl) {
+      if (manifestUrl.includes('http') || manifestUrl.includes('https')) {
+        return true;
+      } else {
+        block.trigger('manifest-error', {
+          block: block,
+          error: 'invalidUrl'
+        });
+        return false;
+      }
+    }
+
+    function manifestError(block, error) {
+      if (error == 'invalidUrl') {
+        var errorMsg = 'The manifest URL must include http or https.';
+      } else if (error == 'unavailable') {
+        var errorMsg = 'The manifest cannot be found. Verify that the manifest URL is publicly accessible.';
+      } else if (error == 'malformed') {
+        var errorMsg = 'The manifest does not comply with the IIIF spec.';
+      }
+      var input = sourceLocationInput(block).parent();
+      var span = input.prev();
+      input.addClass('has-error');
+      span.removeClass('hidden');
+      span.text(errorMsg);
+    }
+
+    function clearError(block) {
+      var input = sourceLocationInput(block).parent();
+      var span = input.prev();
+      input.removeClass('has-error');
+      span.addClass('hidden');
+      span.text('');
+    }
+
     return {
       init: function(block) {
-        if(block.prop('data-mirador-block')) {
+        if (block.prop('data-mirador-block')) {
           return;
         }
 
@@ -153,7 +221,7 @@
         var miradorSerializer = new MiradorSerializer(manifestUrls);
         var template = [
           '<input type="text" style="display:none;" name="mirador_config" value=\'' +
-            JSON.stringify(miradorSerializer.miradorConfig()) +
+          JSON.stringify(miradorSerializer.miradorConfig()) +
           '\'/>',
         ].join("\n");
 
@@ -175,7 +243,7 @@
         // When the shouldTriggerEvent option is set to true (or not set, as it is the default behavior)
         // trigger the items-updated event.  Somebody calling MiradorWidgetBlock.addItemToSection should
         // only set shouldTriggerEvent to false if they do not want adding the item to trigger events
-        // such as updating the mirador config based on the current items (e.g. Block initialization) 
+        // such as updating the mirador config based on the current items (e.g. Block initialization)
         if (shouldTriggerEvent || shouldTriggerEvent === undefined) {
           block.trigger('items-updated', block);
         }
@@ -193,6 +261,7 @@
         setupItemAddedListener(block);
         setupItemRemovedListener(block);
         setupItemsUpdatedListener(block);
+        setupManifestErrorListener(block);
       },
 
       hiddenInput: function(index, object) {
@@ -227,7 +296,10 @@
           e.preventDefault();
           var block = $(this).closest('[data-behavior="mirador-widget"]');
           var panel = $(this).closest('.field');
-          block.trigger('item-removed', { block: block, panel: panel });
+          block.trigger('item-removed', {
+            block: block,
+            panel: panel
+          });
         });
 
         return $el;
@@ -237,7 +309,7 @@
 
   global.MiradorWidgetBlock = Module;
 
-  Module = (function(){
+  Module = (function() {
     function blocks() {
       return $('[data-behavior="mirador-widget"]');
     }
