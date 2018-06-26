@@ -1,9 +1,7 @@
 require 'traject_plus/macros'
-require_relative 'macros/vatican'
 
 # rubocop:disable Style/MixinUsage
 extend TrajectPlus::Macros
-extend Macros::Vatican
 # rubocop:enable Style/MixinUsage
 
 settings do
@@ -29,32 +27,55 @@ end
 
 to_field 'collection_ssim', (accumulate { |resource, *_| resource.collection })
 
-to_field 'date_ssim', vatican_tei(
-  '//TEI.2/teiHeader/fileDesc/sourceDesc/msDescription/msPart/msContents/msItem/origDate',
-  strip: true,
-  downcase: true
-)
+compose ->(record, accumulator, _context) { accumulator << record.tei.xpath('//TEI.2/teiHeader/fileDesc/sourceDesc/msDescription/msPart/msContents/msItem') } do
+  extend TrajectPlus::Macros
+  extend TrajectPlus::Macros::Xml
 
-to_field 'author_ssim', vatican_tei(
-  "//TEI.2/teiHeader/fileDesc/sourceDesc/msDescription/msPart/msContents/msItem/author/alias/authorityAuthor[@rif='aut']",
-  gsub: [/[,\.]$/, '']
-)
-to_field 'author_ssim', vatican_tei(
-  '//TEI.2/teiHeader/fileDesc/sourceDesc/msDescription/msPart/msContents/msItem/textLang',
-  gsub: [/[,\.]$/, '']
-)
-to_field 'other_author_ssim', vatican_tei(
-  "//TEI.2/teiHeader/fileDesc/sourceDesc/msDescription/msPart/msContents/msItem/name[@role='internal' or @role='external']/alias/authorityAuthor[@rif='aut']",
-  gsub: [/[,\.]$/, '']
-)
-to_field 'other_author_ssim', vatican_tei(
-  "//titleStmt/respStmt/resp/name[@role='internal' or @role='external']/alias/authorityAuthor[@rif='aut']",
-  gsub: [/[,\.]$/, '']
-)
-to_field 'other_name_ssim', vatican_tei(
-  "//TEI.2/teiHeader/fileDesc/sourceDesc/msDescription/msPart/msContents/msItem/name[@role!='internal' and @role!='external' or not(@role)]/alias/authorityAuthor[@rif='aut']",
-  gsub: [/[,\.]$/, '']
-)
+  to_field 'date_ssim', extract_xml(
+    'origDate', nil,
+    strip: true,
+    downcase: true
+  )
+
+  to_field 'author_ssim', extract_xml(
+    "author/alias/authorityAuthor[@rif='aut']", nil,
+    gsub: [/[,\.]$/, '']
+  )
+  to_field 'author_ssim', extract_xml(
+    'textLang', nil,
+    gsub: [/[,\.]$/, '']
+  )
+  to_field 'other_author_ssim', extract_xml(
+    "name[@role='internal' or @role='external']/alias/authorityAuthor[@rif='aut']", nil,
+    gsub: [/[,\.]$/, '']
+  )
+  to_field 'other_name_ssim', extract_xml(
+    "name[@role!='internal' and @role!='external' or not(@role)]/alias/authorityAuthor[@rif='aut']", nil,
+    gsub: [/[,\.]$/, '']
+  )
+  to_field 'place_ssim', extract_xml(
+    'origPlace/settlement', nil
+  )
+  to_field 'language_ssim', extract_xml(
+    'textLang', nil,
+    strip: true,
+    gsub: [/.$/, '']
+  )
+end
+
+compose ->(record, accumulator, _context) { accumulator << record.tei } do
+  extend TrajectPlus::Macros
+  extend TrajectPlus::Macros::Xml
+
+  to_field 'author_ssim', extract_xml(
+    "//titleStmt/author/alias/authorityAuthor[@rif='aut']/text()", nil,
+    gsub: [/[,\.]$/, '']
+  )
+  to_field 'other_author_ssim', extract_xml(
+    "//titleStmt/respStmt/resp/name[@role='internal' or @role='external']/alias/authorityAuthor[@rif='aut']", nil,
+    gsub: [/[,\.]$/, '']
+  )
+end
 # TODO: Should we add this here?
 # to_field 'other_name_ssim', vatican_tei(
 #   "TEI.2/teiHeader/fileDesc/titleStmt/respStmt/resp/name[@role!='internal' and @role!='external' or not(@role)]/alias/authorityAuthor[@rif='aut']"
@@ -63,15 +84,6 @@ to_field 'name_ssim', copy('author_ssim')
 to_field 'name_ssim', copy('other_author_ssim')
 to_field 'name_ssim', copy('other_name_ssim')
 
-to_field 'place_ssim', vatican_tei(
-  '//TEI.2/teiHeader/fileDesc/sourceDesc/msDescription/msPart/msContents/msItem/origPlace/settlement'
-)
-
-to_field 'language_ssim', vatican_tei(
-  '//TEI.2/teiHeader/fileDesc/sourceDesc/msDescription/msPart/msContents/msItem/textLang',
-  strip: true,
-  gsub: [/.$/, '']
-)
 to_field 'author_tesim', copy('author_ssim')
 to_field 'collection_tesim', copy('collection_ssim')
 to_field 'date_tesim', copy('date_ssim')
