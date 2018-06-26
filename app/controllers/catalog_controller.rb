@@ -28,13 +28,20 @@ class CatalogController < ApplicationController
     # solr field configuration for search results/index views
     config.index.title_field = 'full_title_tesim'
 
+    config.add_index_field 'collection_ssim', label: 'Collection'
+    config.add_index_field 'date_ssim', label: 'Date'
     config.add_index_field 'watermark_tesim', label: 'Watermark'
     config.add_index_field 'colophon_tesim', label: 'Colophon'
 
     config.add_show_field 'watermark_tesim', label: 'Watermark'
     config.add_show_field 'colophon_tesim', label: 'Colophon'
 
+    config.add_facet_field 'collection_ssim', label: 'Collection'
+    config.add_facet_field 'date_ssim', label: 'Date'
+    config.add_facet_field 'name_ssim', label: 'Name'
+    config.add_facet_field 'place_ssim', label: 'Place'
     config.add_facet_field 'annotation_tags_ssim', label: 'Tags', sort: 'index', partial: 'blacklight/hierarchy/facet_hierarchy'
+    config.add_facet_field 'language_ssim', label: 'Language'
     config.facet_display = {
       hierarchy: {
         'annotation_tags' => [['ssim'], '|']

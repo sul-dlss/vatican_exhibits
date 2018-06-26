@@ -39,6 +39,36 @@ RSpec.describe 'Bibliography resource integration test', type: :feature do
       expect(document['full_title_tesim']).to eq ['Miscellanea Eunapii atque Porphyrii operum']
     end
 
+    it 'has date' do
+      expect(document['date_ssim']).to eq ['sec. xvi med', 'sec. xvi med (ff. 1-38)', 'anno 1539 (ff. 41-112)']
+    end
+
+    it 'has author' do
+      expect(document['author_ssim']).to eq ['Eunapius Sardianus', 'Porphyrius Tyrius', 'Greco']
+    end
+
+    it 'has other author' do
+      expect(document['other_author_ssim']).to be_nil
+    end
+
+    it 'has other name' do
+      expect(document['other_name_ssim']).to eq ['Albini, Valeriano']
+    end
+
+    it 'has place' do
+      expect(document['place_ssim']).to be_nil
+    end
+
+    it 'has a language' do
+      expect(document['language_ssim']).to eq ['Greco']
+      expect(document['language_tesim']).to eq ['Greco']
+    end
+
+    it 'has a collection' do
+      expect(document['collection_ssim']).to eq ['Barb.gr.']
+      expect(document['collection_tesim']).to eq ['Barb.gr.']
+    end
+
     it 'has a watermark' do
       expect(document['watermark_tesim'].first).to include('In prima parte codicis')
     end
