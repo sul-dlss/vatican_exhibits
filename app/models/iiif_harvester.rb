@@ -46,7 +46,9 @@ class IiifHarvester
 
   def tei
     @tei ||= begin
-      Nokogiri::XML Faraday.get(tei_url).body
+      Nokogiri::XML(Rails.cache.fetch(tei_url) do
+        Faraday.get(tei_url).body
+      end)
     rescue Faraday::Error => e
       Rails.logger.warn("#{self.class.name} failed to fetch #{tei_url} with: #{e}")
       '{}'
@@ -55,7 +57,9 @@ class IiifHarvester
 
   def response
     @response ||= begin
-      Faraday.get(iiif_manifest_url).body
+      Rails.cache.fetch(iiif_manifest_url) do
+        Faraday.get(iiif_manifest_url).body
+      end
     rescue Faraday::Error => e
       Rails.logger.warn("#{self.class.name} failed to fetch #{iiif_manifest_url} with: #{e}")
       '{}'
