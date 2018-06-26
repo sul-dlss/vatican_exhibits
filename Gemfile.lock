@@ -547,7 +547,7 @@ GEM
       marc-fastxmlwriter (~> 1.0)
       slop (>= 3.4.5, < 4.0)
       yell
-    traject_plus (0.0.2)
+    traject_plus (0.0.3)
       activesupport
       jsonpath
       traject (~> 2.3, >= 2.3.4)
