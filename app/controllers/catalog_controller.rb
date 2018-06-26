@@ -28,14 +28,19 @@ class CatalogController < ApplicationController
     # solr field configuration for search results/index views
     config.index.title_field = 'full_title_tesim'
 
+    config.add_index_field 'resource_type_ssim', label: 'Resource type'
     config.add_index_field 'collection_ssim', label: 'Collection'
     config.add_index_field 'date_ssim', label: 'Date'
+    config.add_index_field 'beginning_date_ssim', label: 'Beginning date'
+    config.add_index_field 'ending_date_ssim', label: 'Ending date'
+    config.add_index_field 'dated_mss_ssim', label: 'Dated Mss'
     config.add_index_field 'watermark_tesim', label: 'Watermark'
     config.add_index_field 'colophon_tesim', label: 'Colophon'
 
     config.add_show_field 'watermark_tesim', label: 'Watermark'
     config.add_show_field 'colophon_tesim', label: 'Colophon'
 
+    config.add_facet_field 'resource_type_ssim', label: 'Resource type'
     config.add_facet_field 'collection_ssim', label: 'Collection'
     config.add_facet_field 'date_ssim', label: 'Date'
     config.add_facet_field 'name_ssim', label: 'Name'

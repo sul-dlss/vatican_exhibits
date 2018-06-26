@@ -35,12 +35,28 @@ RSpec.describe 'Bibliography resource integration test', type: :feature do
       expect(document['id']).to eq ['MSS_Barb_gr_252']
     end
 
+    it 'has a resource type' do
+      expect(document['resource_type_ssim']).to eq ['Manuscript']
+    end
+
     it 'has a title' do
       expect(document['full_title_tesim']).to eq ['Miscellanea Eunapii atque Porphyrii operum']
     end
 
     it 'has date' do
       expect(document['date_ssim']).to eq ['sec. xvi med', 'sec. xvi med (ff. 1-38)', 'anno 1539 (ff. 41-112)']
+    end
+
+    it 'has beginning date' do
+      expect(document['beginning_date_ssim']).to eq ['1526']
+    end
+
+    it 'has ending date' do
+      expect(document['ending_date_ssim']).to eq ['1575']
+    end
+
+    it 'has dated mss' do
+      expect(document['dated_mss_ssim']).to eq ['1539']
     end
 
     it 'has author' do

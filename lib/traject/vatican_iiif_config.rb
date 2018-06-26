@@ -14,6 +14,7 @@ each_record do |record, context|
 end
 
 to_field 'id', (accumulate { |resource, *_| resource.slug })
+to_field 'resource_type_ssim', literal('Manuscript')
 
 to_field 'full_title_tesim', (accumulate do |resource, *_|
   (resource.manifest['metadata'].select { |k| k['label'] == 'Title' }.first || {})['value']
@@ -35,6 +36,15 @@ compose ->(record, accumulator, _context) { accumulator << record.tei.xpath('//T
     'origDate', nil,
     strip: true,
     downcase: true
+  )
+  to_field 'beginning_date_ssim', extract_xml(
+    'origDate/@notBefore', nil
+  )
+  to_field 'ending_date_ssim', extract_xml(
+    'origDate/@notAfter', nil
+  )
+  to_field 'dated_mss_ssim', extract_xml(
+    'origDate/@n', nil
   )
 
   to_field 'author_ssim', extract_xml(
