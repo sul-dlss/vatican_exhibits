@@ -15,6 +15,7 @@ end
 
 to_field 'id', (accumulate { |resource, *_| resource.slug })
 to_field 'resource_type_ssim', literal('Manuscript')
+to_field 'shelfmark_tsim', (accumulate { |resource, *_| resource.shelfmark })
 
 to_field 'full_title_tesim', (accumulate do |resource, *_|
   (resource.manifest['metadata'].select { |k| k['label'] == 'Title' }.first || {})['value']
@@ -71,6 +72,27 @@ compose ->(record, accumulator, _context) { accumulator << record.tei.xpath('//T
     strip: true,
     gsub: [/.$/, '']
   )
+  to_field 'incipit_tesim', extract_xml(
+    "incipit[@type='text']/@value", nil
+  )
+  to_field 'incipit_tesim', extract_xml(
+    'incipit[not(@type)]/@value', nil
+  )
+  to_field 'explicit_tesim', extract_xml(
+    "explicit[@type='text']/@value", nil
+  )
+  to_field 'explicit_tesim', extract_xml(
+    'explicit[not(@type)]/@value', nil
+  )
+  to_field 'title_tesim', extract_xml(
+    "title[@type='title']/@value", nil
+  )
+  to_field 'title_tesim', extract_xml(
+    "title[@type='supplied']/@value", nil
+  )
+  to_field 'title_tesim', extract_xml(
+    "uniformTitle/alias/authorityTitleSeries[@rif='aut']/@value", nil
+  )
 end
 
 compose ->(record, accumulator, _context) { accumulator << record.tei } do
@@ -85,6 +107,9 @@ compose ->(record, accumulator, _context) { accumulator << record.tei } do
     "//titleStmt/respStmt/resp/name[@role='internal' or @role='external']/alias/authorityAuthor[@rif='aut']", nil,
     gsub: [/[,\.]$/, '']
   )
+  to_field 'title_tesim', extract_xml(
+    "//titleStmt/title[@level!='u' or not(@level)]/@value", nil
+  )
 end
 # TODO: Should we add this here?
 # to_field 'other_name_ssim', vatican_tei(
@@ -94,11 +119,13 @@ to_field 'name_ssim', copy('author_ssim')
 to_field 'name_ssim', copy('other_author_ssim')
 to_field 'name_ssim', copy('other_name_ssim')
 
-to_field 'author_tesim', copy('author_ssim')
 to_field 'collection_tesim', copy('collection_ssim')
 to_field 'date_tesim', copy('date_ssim')
 to_field 'language_tesim', copy('language_ssim')
-
+to_field 'author_tesim', copy('author_ssim')
+to_field 'author_tesim', copy('other_author_ssim')
+to_field 'name_tesim', copy('name_ssim')
+to_field 'title_tesim', copy('full_title_tesim')
 
 to_field 'colophon_tesim' do |resource, accumulator, _context|
   resource.tei.xpath('//colophon').map do |element|

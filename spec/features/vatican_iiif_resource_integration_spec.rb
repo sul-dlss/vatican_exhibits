@@ -43,6 +43,23 @@ RSpec.describe 'Bibliography resource integration test', type: :feature do
       expect(document['full_title_tesim']).to eq ['Miscellanea Eunapii atque Porphyrii operum']
     end
 
+    it 'has all titles' do
+      expect(document['title_tesim']).to eq [
+        'Vitae sophistarum', 'Sententiae ad intelligibilia ducentes', 'De abstinentia',
+        'Vitae sophistarum (Eunapius Sardianus, 354-420)',
+        'Sententiae ad intelligibilia ducentes (Porphyrius Tyrius, 232/233-305?)',
+        'De abstinentia (Porphyrius Tyrius, 232/233-305?)', 'Miscellanea Eunapii atque Porphyrii operum'
+      ]
+    end
+
+    it 'has incipit' do
+      expect(document['incipit_tesim']).to be_nil
+    end
+
+    it 'has explicit' do
+      expect(document['explicit_tesim']).to be_nil
+    end
+
     it 'has date' do
       expect(document['date_ssim']).to eq ['sec. xvi med', 'sec. xvi med (ff. 1-38)', 'anno 1539 (ff. 41-112)']
     end
