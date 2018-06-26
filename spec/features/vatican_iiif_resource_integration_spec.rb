@@ -117,5 +117,17 @@ RSpec.describe 'Bibliography resource integration test', type: :feature do
     it 'has spotlight data' do
       expect(document).to include :spotlight_resource_id_ssim
     end
+
+    it 'has a summary' do
+      expect(document['summary_tesim']).to be_nil
+    end
+
+    it 'has a overview' do
+      expect(document['overview_tesim']).to eq ['Libellus I.', 'Libellus II.']
+    end
+
+    it 'has all of the text' do
+      expect(document['all_text_timv']).to include 'console'
+    end
   end
 end

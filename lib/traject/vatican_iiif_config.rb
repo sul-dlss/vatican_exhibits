@@ -93,6 +93,9 @@ compose ->(record, accumulator, _context) { accumulator << record.tei.xpath('//T
   to_field 'title_tesim', extract_xml(
     "uniformTitle/alias/authorityTitleSeries[@rif='aut']/@value", nil
   )
+  to_field 'summary_tesim', extract_xml(
+    'summary', nil
+  )
 end
 
 compose ->(record, accumulator, _context) { accumulator << record.tei } do
@@ -109,6 +112,12 @@ compose ->(record, accumulator, _context) { accumulator << record.tei } do
   )
   to_field 'title_tesim', extract_xml(
     "//titleStmt/title[@level!='u' or not(@level)]/@value", nil
+  )
+  to_field 'overview_tesim', extract_xml(
+    '//TEI.2/teiHeader/fileDesc/sourceDesc/msDescription/msPart/msContents/overview/p/@value', nil
+  )
+  to_field 'all_text_timv', extract_xml(
+    '//text()', nil
   )
 end
 # TODO: Should we add this here?

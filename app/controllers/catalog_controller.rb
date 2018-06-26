@@ -59,6 +59,8 @@ class CatalogController < ApplicationController
     config.add_search_field 'name_tesim', label: 'Name'
     config.add_search_field 'incipit_tesim', label: 'Incipit'
     config.add_search_field 'explicit_tesim', label: 'Explicit'
+    config.add_search_field 'overview_tesim', label: 'Overview'
+    config.add_search_field 'summary_tesim', label: 'Summary'
 
     config.add_sort_field 'relevance', sort: 'score desc', label: I18n.t('spotlight.search.fields.sort.relevance')
 
