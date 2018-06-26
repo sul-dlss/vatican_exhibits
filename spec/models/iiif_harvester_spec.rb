@@ -95,4 +95,18 @@ RSpec.describe IiifHarvester do
       end
     end
   end
+
+  describe '#collection' do
+    it 'selects the longest matching collection identifier' do
+      expect(harvester).to receive_messages(manifest: { '@id' => 'Capp.Sist.Diari.123' })
+
+      expect(harvester.collection).to eq 'Capp.Sist.Diari.'
+    end
+
+    it 'is nil if no collection strings match' do
+      expect(harvester).to receive_messages(manifest: { '@id' => 'howdy' })
+
+      expect(harvester.collection).to be_nil
+    end
+  end
 end
