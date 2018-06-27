@@ -19,7 +19,7 @@ class IiifHarvester
 
   def collection
     Settings.vatican.collections.select do |collection|
-      naked_shelfmark.start_with? collection
+      shelfmark.start_with? collection
     end.max_by(&:length)
   end
 
@@ -27,6 +27,7 @@ class IiifHarvester
     id
       .sub('https://digi.vatlib.it/iiif/', '')
       .sub('/manifest.json', '')
+      .gsub('MSS_', '')
   end
 
   def slug
@@ -34,12 +35,8 @@ class IiifHarvester
       .tr('.', '_') # TODO: Figure out what we want our ids to be; see https://github.com/sul-dlss/vatican_exhibits/issues/37
   end
 
-  def naked_shelfmark
-    shelfmark.gsub('MSS_', '')
-  end
-
   def tei_url
-    tei_template_url.gsub('{shelfmark}', naked_shelfmark)
+    tei_template_url.gsub('{shelfmark}', shelfmark)
   end
 
   def thumbnails

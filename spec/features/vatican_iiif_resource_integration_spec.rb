@@ -32,7 +32,7 @@ RSpec.describe 'Bibliography resource integration test', type: :feature do
     end
 
     it 'has a doc id' do
-      expect(document['id']).to eq ['MSS_Barb_gr_252']
+      expect(document['id']).to eq ['Barb_gr_252']
     end
 
     it 'has a resource type' do
@@ -40,7 +40,7 @@ RSpec.describe 'Bibliography resource integration test', type: :feature do
     end
 
     it 'has a title' do
-      expect(document['full_title_tesim']).to eq ['Miscellanea Eunapii atque Porphyrii operum']
+      expect(document['full_title_tesim']).to eq ['Barb.gr.252']
     end
 
     it 'has all titles' do
@@ -48,7 +48,7 @@ RSpec.describe 'Bibliography resource integration test', type: :feature do
         'Vitae sophistarum', 'Sententiae ad intelligibilia ducentes', 'De abstinentia',
         'Vitae sophistarum (Eunapius Sardianus, 354-420)',
         'Sententiae ad intelligibilia ducentes (Porphyrius Tyrius, 232/233-305?)',
-        'De abstinentia (Porphyrius Tyrius, 232/233-305?)', 'Miscellanea Eunapii atque Porphyrii operum'
+        'De abstinentia (Porphyrius Tyrius, 232/233-305?)'
       ]
     end
 
