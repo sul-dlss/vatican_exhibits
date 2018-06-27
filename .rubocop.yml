@@ -17,7 +17,18 @@ Rails:
 
 Metrics/BlockLength:
   Exclude:
+    - 'app/controllers/catalog_controller.rb'
+    - lib/traject/vatican_iiif_config.rb
     - 'spec/**/*'
+
+Metrics/ClassLength:
+  Exclude:
+    - 'app/controllers/catalog_controller.rb'
+
+Metrics/LineLength:
+  Exclude:
+    - lib/traject/vatican_iiif_config.rb
+    - spec/features/vatican_iiif_resource_integration_spec.rb
 
 RSpec/ExampleLength:
   Enabled: false
