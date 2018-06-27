@@ -2,4 +2,5 @@
 <%= javascript_include_tag "mirador_bundle" %>
 
 <%= mirador_tag(:height => "100%",
+                :instance_name => "viewerInstance",
                 :options => @options.present? ? JSON.parse(@options) : mirador_options(@manifest, @canvas)) %>

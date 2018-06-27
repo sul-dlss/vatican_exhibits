@@ -98,7 +98,7 @@ gem 'sidekiq'
 gem 'traject'
 gem 'traject_plus'
 gem 'rack-cors', require: 'rack/cors'
-gem 'mirador_rails'
+gem 'mirador_rails', github: 'sul-dlss/mirador_rails', branch: 'master'
 gem 'annotot'
 
 gem 'okcomputer'
