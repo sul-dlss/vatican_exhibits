@@ -9,73 +9,76 @@ en:
     create:
       notice: Your Vatican IIIF resource has been successfully created.
       error: There was a problem with adding the Vatican IIIF resource.
+  catalog:
+    parts_default:
+      title: Parts of this manuscript
   blacklight:
     search:
       fields:
-        manuscript_collection_tesim: Collection
-        manuscript_shelfmark_tesim: Shelfmark
-        manuscript_library_tesim: Library
-        manuscript_ocelli_nominum_tesim: Ocelli nominum
-        manuscript_date_tesim: Date
-        manuscript_date_mss_tesim: Dated Mss
-        manuscript_beginning_date_tesim: Beginning date
-        manuscript_ending_date_tesim: Ending date
-        manuscript_date_of_text_tesim: Date of text
-        manuscript_country_tesim: Country
-        manuscript_region_tesim: Region
-        manuscript_place_tesim: Place
-        manuscript_support_tesim: Support
-        manuscript_physical_shapes_tesim: Physical shapes
-        manuscript_height_tesim: Height
-        manuscript_width_tesim: Width
-        manuscript_depth_tesim: Depth
-        manuscript_extent_tesim: Extent
-        manuscript_content_tesim: Content
-        manuscript_overview_tesim: Overview
-        manuscript_collation_tesim: Collation
-        manuscript_layout_tesim: Layout
-        manuscript_foliation_tesim: Foliation
-        manuscript_writing_tesim: Writing
-        manuscript_writing_note_tesim: Writing - Note
-        manuscript_music_notation_tesim: Music notation
-        manuscript_punctuation_tesim: Punctuation
-        manuscript_decoration_tesim: Decoration
-        manuscript_decoration_note_tesim: Decoration - Note
-        manuscript_binding_tesim: Binding
-        manuscript_binding_note_tesim: Binding - Note
-        manuscript_additions_tesim: Additions
-        manuscript_condition_tesim: Condition
-        manuscript_signatures_tesim: Signatures
-        manuscript_catchwords_tesim: Catchwords
-        manuscript_palimpsest_tesim: Palimpsest
-        manuscript_physical_description_tesim: Physical description
-        manuscript_heraldry_tesim: Heraldry
-        manuscript_seal_tesim: Seal
-        manuscript_format_tesim: Format
-        manuscript_watermarks_tesim: Watermarks
-        manuscript_motto_tesim: Motto
-        manuscript_locus_tesim: Locus
-        manuscript_author_tesim: Author
-        manuscript_other_author_tesim: Other author
-        manuscript_title_tesim: Title
-        manuscript_supplied_title_tesim: Supplied title
-        manuscript_uniform_title_tesim: Uniform title
-        manuscript_rubric_tesim: Rubric
-        manuscript_summary_tesim: Summary
-        manuscript_incipit_text_tesim: Incipit text
-        manuscript_incipit_dedication_tesim: Incipit dedication
-        manuscript_incipit_preface_tesim: Incipit preface
-        manuscript_incipit_tesim: Incipit
-        manuscript_explicit_text_tesim: Explicit text
-        manuscript_explicit_dedication_tesim: Explicit dedication
-        manuscript_explicit_preface_tesim: Explicit preface
-        manuscript_explicit_tesim: Explicit
-        manuscript_type_of_document_tesim: Type of document
-        manuscript_general_note_tesim: General note
-        manuscript_source_note_tesim: Source note
-        manuscript_other_name_tesim: Other name
-        manuscript_subject_tesim: Subject
-        manuscript_language_tesim: Language
-        manuscript_alphabet_tesim: Alphabet
-        manuscript_colophon_tesim: Colophon
-        manuscript_secfol_tesim: Secundum Folium
+        ms_collection_tesim: Collection
+        ms_shelfmark_tesim: Shelfmark
+        ms_library_tesim: Library
+        ms_ocelli_nominum_tesim: Ocelli nominum
+        ms_date_tesim: Date
+        ms_date_mss_tesim: Dated Mss
+        ms_beginning_date_tesim: Beginning date
+        ms_ending_date_tesim: Ending date
+        ms_date_of_text_tesim: Date of text
+        ms_country_tesim: Country
+        ms_region_tesim: Region
+        ms_place_tesim: Place
+        ms_support_tesim: Support
+        ms_physical_shapes_tesim: Physical shapes
+        ms_height_tesim: Height
+        ms_width_tesim: Width
+        ms_depth_tesim: Depth
+        ms_extent_tesim: Extent
+        ms_content_tesim: Content
+        ms_overview_tesim: Overview
+        ms_collation_tesim: Collation
+        ms_layout_tesim: Layout
+        ms_foliation_tesim: Foliation
+        ms_writing_tesim: Writing
+        ms_writing_note_tesim: Writing - Note
+        ms_music_notation_tesim: Music notation
+        ms_punctuation_tesim: Punctuation
+        ms_decoration_tesim: Decoration
+        ms_decoration_note_tesim: Decoration - Note
+        ms_binding_tesim: Binding
+        ms_binding_note_tesim: Binding - Note
+        ms_additions_tesim: Additions
+        ms_condition_tesim: Condition
+        ms_signatures_tesim: Signatures
+        ms_catchwords_tesim: Catchwords
+        ms_palimpsest_tesim: Palimpsest
+        ms_physical_description_tesim: Physical description
+        ms_heraldry_tesim: Heraldry
+        ms_seal_tesim: Seal
+        ms_format_tesim: Format
+        ms_watermarks_tesim: Watermarks
+        ms_motto_tesim: Motto
+        ms_locus_tesim: Locus
+        ms_author_tesim: Author
+        ms_other_author_tesim: Other author
+        ms_title_tesim: Title
+        ms_supplied_title_tesim: Supplied title
+        ms_uniform_title_tesim: Uniform title
+        ms_rubric_tesim: Rubric
+        ms_summary_tesim: Summary
+        ms_incipit_text_tesim: Incipit text
+        ms_incipit_dedication_tesim: Incipit dedication
+        ms_incipit_preface_tesim: Incipit preface
+        ms_incipit_tesim: Incipit
+        ms_explicit_text_tesim: Explicit text
+        ms_explicit_dedication_tesim: Explicit dedication
+        ms_explicit_preface_tesim: Explicit preface
+        ms_explicit_tesim: Explicit
+        ms_type_of_document_tesim: Type of document
+        ms_general_note_tesim: General note
+        ms_source_note_tesim: Source note
+        ms_other_name_tesim: Other name
+        ms_subject_tesim: Subject
+        ms_language_tesim: Language
+        ms_alphabet_tesim: Alphabet
+        ms_colophon_tesim: Colophon
+        ms_secfol_tesim: Secundum Folium

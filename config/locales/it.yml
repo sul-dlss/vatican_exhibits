@@ -2,70 +2,70 @@ it:
   blacklight:
     search:
       fields:
-        manuscript_collection_tesim: Fondo
-        manuscript_shelfmark_tesim: Segnatura
-        manuscript_library_tesim: Biblioteca
-        manuscript_ocelli_nominum_tesim: Altra denominazione
-        manuscript_date_tesim: Datazione
-        manuscript_date_mss_tesim: Datato
-        manuscript_beginning_date_tesim: Data inizio
-        manuscript_ending_date_tesim: Data fine
-        manuscript_date_of_text_tesim: Data testo
-        manuscript_country_tesim: Paese
-        manuscript_region_tesim: Regione
-        manuscript_place_tesim: Localita
-        manuscript_support_tesim: Materiale
-        manuscript_physical_shapes_tesim: Forma
-        manuscript_height_tesim: Altezza
-        manuscript_width_tesim: Larghezza
-        manuscript_depth_tesim: Profondita
-        manuscript_extent_tesim: Numero fogli
-        manuscript_content_tesim: Contenuto
-        manuscript_overview_tesim: Nota generale
-        manuscript_collation_tesim: Collazione
-        manuscript_layout_tesim: Impaginazione
-        manuscript_foliation_tesim: Foliazione
-        manuscript_writing_tesim: Scrittura
-        manuscript_writing_note_tesim: Scrittura - Nota
-        manuscript_music_notation_tesim: Notazione musicale
-        manuscript_punctuation_tesim: Punteggiatura
-        manuscript_decoration_tesim: Decorazione
-        manuscript_decoration_note_tesim: Decorazione - Nota
-        manuscript_binding_tesim: Legatura
-        manuscript_binding_note_tesim: Legatura -Nota
-        manuscript_additions_tesim: Allegati
-        manuscript_condition_tesim: Stato di conservazione
-        manuscript_signatures_tesim: Segnature di fascicoli
-        manuscript_catchwords_tesim: Verba reclamantia
-        manuscript_palimpsest_tesim: Palinsesto
-        manuscript_physical_description_tesim: Descrizione fisica
-        manuscript_heraldry_tesim: Stemma
-        manuscript_seal_tesim: Sigillo
-        manuscript_format_tesim: Formato
-        manuscript_watermarks_tesim: Filigrane
-        manuscript_motto_tesim: Motto
-        manuscript_locus_tesim: Locus
-        manuscript_author_tesim: Autore
-        manuscript_other_author_tesim: Altro autore
-        manuscript_title_tesim: Titolo
-        manuscript_supplied_title_tesim: Titolo supplito
-        manuscript_uniform_title_tesim: Titolo uniforme
-        manuscript_rubric_tesim: Rubrica
-        manuscript_summary_tesim: Sommario
-        manuscript_incipit_text_tesim: Incipit testo
-        manuscript_incipit_dedication_tesim: Incipit dedica
-        manuscript_incipit_preface_tesim: Incipit prefazione
-        manuscript_incipit_tesim: Incipit
-        manuscript_explicit_text_tesim: Explicit testo
-        manuscript_explicit_dedication_tesim: Explicit dedica
-        manuscript_explicit_preface_tesim: Explicit prefazione
-        manuscript_explicit_tesim: Explicit
-        manuscript_type_of_document_tesim: Tipologia documento
-        manuscript_general_note_tesim: Nota
-        manuscript_source_note_tesim: Nota di fonte
-        manuscript_other_name_tesim: Altro nome
-        manuscript_subject_tesim: Soggetto
-        manuscript_language_tesim: Lingua
-        manuscript_alphabet_tesim: Alfabeto
-        manuscript_colophon_tesim: Colophon
-        manuscript_secfol_tesim: Secundum Folium
+        ms_collection_tesim: Fondo
+        ms_shelfmark_tesim: Segnatura
+        ms_library_tesim: Biblioteca
+        ms_ocelli_nominum_tesim: Altra denominazione
+        ms_date_tesim: Datazione
+        ms_date_mss_tesim: Datato
+        ms_beginning_date_tesim: Data inizio
+        ms_ending_date_tesim: Data fine
+        ms_date_of_text_tesim: Data testo
+        ms_country_tesim: Paese
+        ms_region_tesim: Regione
+        ms_place_tesim: Localita
+        ms_support_tesim: Materiale
+        ms_physical_shapes_tesim: Forma
+        ms_height_tesim: Altezza
+        ms_width_tesim: Larghezza
+        ms_depth_tesim: Profondita
+        ms_extent_tesim: Numero fogli
+        ms_content_tesim: Contenuto
+        ms_overview_tesim: Nota generale
+        ms_collation_tesim: Collazione
+        ms_layout_tesim: Impaginazione
+        ms_foliation_tesim: Foliazione
+        ms_writing_tesim: Scrittura
+        ms_writing_note_tesim: Scrittura - Nota
+        ms_music_notation_tesim: Notazione musicale
+        ms_punctuation_tesim: Punteggiatura
+        ms_decoration_tesim: Decorazione
+        ms_decoration_note_tesim: Decorazione - Nota
+        ms_binding_tesim: Legatura
+        ms_binding_note_tesim: Legatura -Nota
+        ms_additions_tesim: Allegati
+        ms_condition_tesim: Stato di conservazione
+        ms_signatures_tesim: Segnature di fascicoli
+        ms_catchwords_tesim: Verba reclamantia
+        ms_palimpsest_tesim: Palinsesto
+        ms_physical_description_tesim: Descrizione fisica
+        ms_heraldry_tesim: Stemma
+        ms_seal_tesim: Sigillo
+        ms_format_tesim: Formato
+        ms_watermarks_tesim: Filigrane
+        ms_motto_tesim: Motto
+        ms_locus_tesim: Locus
+        ms_author_tesim: Autore
+        ms_other_author_tesim: Altro autore
+        ms_title_tesim: Titolo
+        ms_supplied_title_tesim: Titolo supplito
+        ms_uniform_title_tesim: Titolo uniforme
+        ms_rubric_tesim: Rubrica
+        ms_summary_tesim: Sommario
+        ms_incipit_text_tesim: Incipit testo
+        ms_incipit_dedication_tesim: Incipit dedica
+        ms_incipit_preface_tesim: Incipit prefazione
+        ms_incipit_tesim: Incipit
+        ms_explicit_text_tesim: Explicit testo
+        ms_explicit_dedication_tesim: Explicit dedica
+        ms_explicit_preface_tesim: Explicit prefazione
+        ms_explicit_tesim: Explicit
+        ms_type_of_document_tesim: Tipologia documento
+        ms_general_note_tesim: Nota
+        ms_source_note_tesim: Nota di fonte
+        ms_other_name_tesim: Altro nome
+        ms_subject_tesim: Soggetto
+        ms_language_tesim: Lingua
+        ms_alphabet_tesim: Alfabeto
+        ms_colophon_tesim: Colophon
+        ms_secfol_tesim: Secundum Folium

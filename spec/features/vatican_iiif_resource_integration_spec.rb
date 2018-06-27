@@ -102,14 +102,6 @@ RSpec.describe 'Bibliography resource integration test', type: :feature do
       expect(document['collection_tesim']).to eq ['Barb.gr.']
     end
 
-    it 'has a watermark' do
-      expect(document['watermark_tesim'].first).to include('In prima parte codicis')
-    end
-
-    it 'has a colophon' do
-      expect(document['colophon_tesim'].first).to include('Ἀδελφὸς Οὐαλεριᾶνος Φορολιβιεὺς')
-    end
-
     it 'has iiif manifest' do
       expect(document['iiif_manifest_url_ssi']).to eq ['https://digi.vatlib.it/iiif/MSS_Barb.gr.252/manifest.json']
     end
@@ -131,27 +123,39 @@ RSpec.describe 'Bibliography resource integration test', type: :feature do
     end
 
     it 'has manuscript-level information' do
-      expect(document).to include 'manuscript_alphabet_tesim' => ['Greco.'],
-                                  'manuscript_beginning_date_tesim' => ['1526'],
-                                  'manuscript_binding_note_tesim' => ['Integumentum membranaceum; in dorso: "Eunapio et Porphyrio greco".'],
-                                  'manuscript_binding_tesim' => ['Membr.'],
-                                  'manuscript_colophon_tesim' => ['F. 112v, atramento subrubro: Ἀδελφὸς Οὐαλεριᾶνος Φορολιβιεὺς ὁ Ἀλβίνου ταύτην | βίβλον ἐν τῷ μοναστηρίῳ τοῦ ἁγίου Ἀντω|νίου Ἐνέτησιν ἔγραψε, ἔτη το(ῦ) Κ(υρίο)υ ἡμῶν ͵αφλθ´ (manus poster. vertit 1539): v. Vogel-Gardthausen, p. 370.'],
-                                  'manuscript_content_tesim' => ['Miscellanea Eunapii atque Porphyrii operum.'],
-                                  'manuscript_date_mss_tesim' => ['1539'],
-                                  'manuscript_date_tesim' => ['sec. XVI med', 'sec. XVI med (ff. 1-38)', 'anno 1539 (ff. 41-112)'],
-                                  'manuscript_decoration_note_tesim' => ['In utraque parte, tituli et litterae initiales annotationesque nonnullae, atramento subrubro.'],
-                                  'manuscript_ending_date_tesim' => ['1575'],
-                                  'manuscript_extent_tesim' => ['ff. I. 113 (+81. 86. 95)'],
-                                  'manuscript_general_note_tesim' => ['Codex efficitur duobus libellis, a totidem librariis fere eadem aetate conscriptis et postea in unum conftatis.', 'F. Ir, nota antiqua "276".', 'F. 1r, alia manu: Εὐναπίου βίοι Φιλοσόφων καὶ Σοφιστῶν | Πορφυρίου τῶν πρὸς τὰ νοητὰ ἀφορμῶν, et eadem manu in margine: "Codex seculi XVI".'],
-                                  'manuscript_height_tesim' => ['320'],
-                                  'manuscript_language_tesim' => ['Greco.'],
-                                  'manuscript_library_tesim' => ['Biblioteca Apostolica Vaticana'],
-                                  'manuscript_other_name_tesim' => ['Albini, Valeriano,'],
-                                  'manuscript_shelfmark_tesim' => ['Barb.gr.252'],
-                                  'manuscript_support_tesim' => ['chart.'],
-                                  'manuscript_watermarks_tesim' => ['In prima parte codicis, officinarum chartariarum signa duo: ancora in circulo, stella superposita (cf. Briquet 588) et arcuballista in circulo, lilio superposito (Briquet 761); in secunda parte, signum unicum: sagittae, stella superposita (cf. Briquet 6300).'],
-                                  'manuscript_width_tesim' => ['230'],
-                                  'manuscript_writing_note_tesim' => ['Prior libellus (ff. 1r-38v) manu <Basilii Valeris seu Varelis> exaratus est. Vacua sunt ff. 1v. 39r-v.']
+      expect(document).to include 'ms_alphabet_tesim' => ['Greco.'],
+                                  'ms_beginning_date_tesim' => ['1526'],
+                                  'ms_binding_note_tesim' => ['Integumentum membranaceum; in dorso: "Eunapio et Porphyrio greco".'],
+                                  'ms_binding_tesim' => ['Membr.'],
+                                  'ms_colophon_tesim' => ['F. 112v, atramento subrubro: Ἀδελφὸς Οὐαλεριᾶνος Φορολιβιεὺς ὁ Ἀλβίνου ταύτην | βίβλον ἐν τῷ μοναστηρίῳ τοῦ ἁγίου Ἀντω|νίου Ἐνέτησιν ἔγραψε, ἔτη το(ῦ) Κ(υρίο)υ ἡμῶν ͵αφλθ´ (manus poster. vertit 1539): v. Vogel-Gardthausen, p. 370.'],
+                                  'ms_content_tesim' => ['Miscellanea Eunapii atque Porphyrii operum.'],
+                                  'ms_date_mss_tesim' => ['1539'],
+                                  'ms_date_tesim' => ['sec. XVI med', 'sec. XVI med (ff. 1-38)', 'anno 1539 (ff. 41-112)'],
+                                  'ms_decoration_note_tesim' => ['In utraque parte, tituli et litterae initiales annotationesque nonnullae, atramento subrubro.'],
+                                  'ms_ending_date_tesim' => ['1575'],
+                                  'ms_extent_tesim' => ['ff. I. 113 (+81. 86. 95)'],
+                                  'ms_general_note_tesim' => ['Codex efficitur duobus libellis, a totidem librariis fere eadem aetate conscriptis et postea in unum conftatis.', 'F. Ir, nota antiqua "276".', 'F. 1r, alia manu: Εὐναπίου βίοι Φιλοσόφων καὶ Σοφιστῶν | Πορφυρίου τῶν πρὸς τὰ νοητὰ ἀφορμῶν, et eadem manu in margine: "Codex seculi XVI".'],
+                                  'ms_height_tesim' => ['320'],
+                                  'ms_language_tesim' => ['Greco.'],
+                                  'ms_library_tesim' => ['Biblioteca Apostolica Vaticana'],
+                                  'ms_other_name_tesim' => ['Albini, Valeriano,'],
+                                  'ms_shelfmark_tesim' => ['Barb.gr.252'],
+                                  'ms_support_tesim' => ['chart.'],
+                                  'ms_watermarks_tesim' => ['In prima parte codicis, officinarum chartariarum signa duo: ancora in circulo, stella superposita (cf. Briquet 588) et arcuballista in circulo, lilio superposito (Briquet 761); in secunda parte, signum unicum: sagittae, stella superposita (cf. Briquet 6300).'],
+                                  'ms_width_tesim' => ['230'],
+                                  'ms_writing_note_tesim' => ['Prior libellus (ff. 1r-38v) manu <Basilii Valeris seu Varelis> exaratus est. Vacua sunt ff. 1v. 39r-v.']
+    end
+
+    it 'has parts' do
+      expect(document['parts_ssm'].length).to eq 3
+      data = document['parts_ssm'].map { |x| JSON.parse(x) }
+      expect(data).to include 'ms_overview_tesim' => ['Libellus I.'],
+                              'ms_locus_tesim' => ['1r-38v'],
+                              'ms_author_tesim' => ['Eunapius Sardianus,'],
+                              'ms_supplied_title_tesim' => ['Vitae sophistarum'],
+                              'ms_uniform_title_tesim' => ['Vitae sophistarum (Eunapius Sardianus, 354-420)'],
+                              'ms_language_tesim' => ['Greco.'],
+                              'ms_alphabet_tesim' => ['Greco.']
     end
   end
 end
