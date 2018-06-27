@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_29_221543) do
+ActiveRecord::Schema.define(version: 2018_06_27_194747) do
 
   create_table "annotot_annotations", force: :cascade do |t|
     t.string "uuid"
@@ -213,7 +213,7 @@ ActiveRecord::Schema.define(version: 2018_05_29_221543) do
     t.string "type"
     t.string "slug"
     t.string "scope"
-    t.text "content"
+    t.text "content", limit: 16777215
     t.integer "weight", default: 50
     t.boolean "published"
     t.integer "exhibit_id"
