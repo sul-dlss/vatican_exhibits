@@ -163,6 +163,7 @@ compose ->(record, accumulator, _context) { accumulator << record.tei.xpath('//T
   to_field 'ms_motto_tesim', extract_xml('msPart/head/motto', nil) #	Motto	Motto
   to_field 'ms_locus_tesim', extract_xml('msPart/msContents/msItem/locus', nil) #	Locus	Locus
   to_field 'ms_author_tesim', extract_xml('msPart/msContents/msItem/author/alias/authorityAuthor[@rif="aut"]', nil) #	Autore	Author
+  to_field 'ms_author_date_tesim', extract_xml('msPart/msContents/msItem/author/alias/authorityAuthor[@rif="aut"]/@date', nil)
   to_field 'ms_other_author_tesim', extract_xml('msPart/msContents/msItem/name[@role="internal" or @role="external"]/alias/authorityAuthor[@rif="aut"]', nil) #	Altro autore	Other author
   to_field 'ms_title_tesim', extract_xml('msPart/msContents/msItem/title[@type="title"]/@value', nil) #		Titolo	Title
   to_field 'ms_supplied_title_tesim', extract_xml('msPart/msContents/msItem/title[@type="supplied"]/@value', nil) #		Titolo supplito	Supplied title

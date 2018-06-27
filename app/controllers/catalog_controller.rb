@@ -8,7 +8,7 @@ class CatalogController < ApplicationController
     config.show.partials.insert(1, :oembed)
     config.show.partials.insert(1, :viewer)
     config.show.partials << :parts
-    config.view.parts.partials = [:part_header, :show]
+    config.view.parts.partials = [:part_header, :part_show]
 
     config.view.gallery.partials = [:index_header, :index]
     config.view.masonry.partials = [:index]
@@ -78,7 +78,7 @@ class CatalogController < ApplicationController
     config.add_show_field 'ms_format_tesim'
     config.add_show_field 'ms_watermarks_tesim'
     config.add_show_field 'ms_motto_tesim'
-    # config.add_show_field 'ms_locus_tesim'
+    config.add_show_field 'ms_locus_tesim'
     config.add_show_field 'ms_author_tesim'
     config.add_show_field 'ms_other_author_tesim'
     config.add_show_field 'ms_title_tesim'
