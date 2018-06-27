@@ -178,11 +178,11 @@ compose ->(record, accumulator, _context) { accumulator << record.tei.xpath('//T
   to_field 'manuscript_incipit_text_tesim', extract_xml('msPart/msContents/msItem/incipit[@type="text"]/@value', nil) #		Incipit testo	Incipit text
   to_field 'manuscript_incipit_dedication_tesim', extract_xml('msPart/msContents/msItem/incipit[@type="dedication"]/@value', nil) #		Incipit dedica	Incipit dedication
   to_field 'manuscript_incipit_preface_tesim', extract_xml('msPart/msContents/msItem/incipit[@type="preface"]/@value', nil) #		Incipit prefazione	Incipit preface
-  to_field 'manuscript_incipit_tesim', extract_xml('msPart/msContents/msItem/incipit[not(@type, nil)]/@value', nil) #		Incipit	Incipit
+  to_field 'manuscript_incipit_tesim', extract_xml('msPart/msContents/msItem/incipit[not(@type)]/@value', nil) #		Incipit	Incipit
   to_field 'manuscript_explicit_text_tesim', extract_xml('msPart/msContents/msItem/explicit[@type="text"]/@value', nil) #		Explicit testo	Explicit text
   to_field 'manuscript_explicit_dedication_tesim', extract_xml('msPart/msContents/msItem/explicit[@type="dedication"]/@value', nil) #		Explicit dedica	Explicit dedication
   to_field 'manuscript_explicit_preface_tesim', extract_xml('msPart/msContents/msItem/explicit[@type="preface"]/@value', nil) #		Explicit prefazione	Explicit preface
-  to_field 'manuscript_explicit_tesim', extract_xml('msPart/msContents/msItem/explicit[not(@type, nil)]/@value', nil) #		Explicit	Explicit
+  to_field 'manuscript_explicit_tesim', extract_xml('msPart/msContents/msItem/explicit[not(@type)]/@value', nil) #		Explicit	Explicit
   to_field 'manuscript_type_of_document_tesim', extract_xml('msPart/msContents/msItem/note[@anchored and not(@anchored="yes")]', nil) #	Tipologia documento	Type of document
   to_field 'manuscript_general_note_tesim', extract_xml('msPart/msContents/msItem/note[@anchored="yes" or not(@anchored)]', nil) #	Nota	General note
   to_field 'manuscript_source_note_tesim', extract_xml('msPart/msContents/msItem/note[@anchored="sourceSYS"]', nil) #		Nota di fonte	Source note
