@@ -4,6 +4,7 @@ class CatalogController < ApplicationController
   include Blacklight::Catalog
 
   configure_blacklight do |config|
+    config.index.display_type_field = :resource_type_ssim
     config.show.oembed_field = :oembed_url_ssm
     config.show.partials.insert(1, :oembed)
     config.show.partials.insert(1, :viewer)
@@ -36,26 +37,26 @@ class CatalogController < ApplicationController
     config.add_index_field 'ending_date_ssim', label: 'Ending date'
     config.add_index_field 'dated_mss_ssim', label: 'Dated Mss'
 
-    config.add_show_field 'ms_collection_tesim'
-    config.add_show_field 'ms_shelfmark_tesim'
-    config.add_show_field 'ms_library_tesim'
-    config.add_show_field 'ms_ocelli_nominum_tesim'
-    config.add_show_field 'ms_date_tesim'
-    config.add_show_field 'ms_date_mss_tesim'
-    config.add_show_field 'ms_beginning_date_tesim'
-    config.add_show_field 'ms_ending_date_tesim'
-    config.add_show_field 'ms_date_of_text_tesim'
-    config.add_show_field 'ms_country_tesim'
-    config.add_show_field 'ms_region_tesim'
-    config.add_show_field 'ms_place_tesim'
-    config.add_show_field 'ms_support_tesim'
-    config.add_show_field 'ms_physical_shapes_tesim'
-    config.add_show_field 'ms_height_tesim'
-    config.add_show_field 'ms_width_tesim'
-    config.add_show_field 'ms_depth_tesim'
-    config.add_show_field 'ms_extent_tesim'
-    config.add_show_field 'ms_content_tesim'
-    config.add_show_field 'ms_overview_tesim'
+    config.add_show_field 'ms_collection_tesim', section: :general
+    config.add_show_field 'ms_shelfmark_tesim', section: :general
+    config.add_show_field 'ms_library_tesim', section: :general
+    config.add_show_field 'ms_ocelli_nominum_tesim', section: :general
+    config.add_show_field 'ms_date_tesim', section: :general
+    config.add_show_field 'ms_date_mss_tesim', section: :general
+    config.add_show_field 'ms_beginning_date_tesim', section: :general
+    config.add_show_field 'ms_ending_date_tesim', section: :general
+    config.add_show_field 'ms_date_of_text_tesim', section: :general
+    config.add_show_field 'ms_country_tesim', section: :general
+    config.add_show_field 'ms_region_tesim', section: :general
+    config.add_show_field 'ms_place_tesim', section: :general
+    config.add_show_field 'ms_support_tesim', section: :general
+    config.add_show_field 'ms_physical_shapes_tesim', section: :general
+    config.add_show_field 'ms_height_tesim', section: :general
+    config.add_show_field 'ms_width_tesim', section: :general
+    config.add_show_field 'ms_depth_tesim', section: :general
+    config.add_show_field 'ms_extent_tesim', section: :general
+    config.add_show_field 'ms_content_tesim', section: :general
+    config.add_show_field 'ms_overview_tesim', section: :general
     config.add_show_field 'ms_collation_tesim'
     config.add_show_field 'ms_layout_tesim'
     config.add_show_field 'ms_foliation_tesim'

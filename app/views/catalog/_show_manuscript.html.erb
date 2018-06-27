@@ -1,0 +1,25 @@
+<% doc_presenter = show_presenter(document) %>
+<div class="general-section row">
+  <h2 class="col-md-7"><%= t('.general_title') %></h2>
+  <%# default partial to display solr document fields in catalog show view -%>
+  <dl class="dl-horizontal dl-invert">
+    <% document_show_fields(document).select { |_, field| field.section == :general }.each do |field_name, field| -%>
+      <% if should_render_show_field? document, field %>
+  	    <dt class="blacklight-<%= field_name.parameterize %>"><%= render_document_show_field_label document, field: field_name %></dt>
+  	    <dd class="blacklight-<%= field_name.parameterize %>"><%= doc_presenter.field_value field_name %></dd>
+      <% end -%>
+    <% end -%>
+  </dl>
+</div>
+
+<div class="description-section row">
+  <h2 class="col-md-7"><%= t('.description_title') %></h2>
+  <dl class="dl-horizontal dl-invert">
+    <% document_show_fields(document).select { |_, field| field.section.nil? }.each do |field_name, field| -%>
+      <% if should_render_show_field? document, field %>
+  	    <dt class="blacklight-<%= field_name.parameterize %>"><%= render_document_show_field_label document, field: field_name %></dt>
+  	    <dd class="blacklight-<%= field_name.parameterize %>"><%= doc_presenter.field_value field_name %></dd>
+      <% end -%>
+    <% end -%>
+  </dl>
+</div>

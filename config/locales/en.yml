@@ -12,6 +12,9 @@ en:
   catalog:
     parts_default:
       title: Parts of this manuscript
+    show_manuscript:
+      general_title: 'General information'
+      description_title: 'Description'
   blacklight:
     search:
       fields:
