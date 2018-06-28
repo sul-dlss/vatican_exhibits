@@ -114,7 +114,7 @@ RSpec.describe 'Mirador Block', type: :feature, js: true do
 
         add_widget 'mirador'
 
-        fill_in_solr_document_block_typeahead_field with: 'MSS_Vat_gr_504'
+        fill_in_solr_document_block_typeahead_field with: 'Vat_gr_504'
         within(:css, '.panel') do
           expect(page).to have_content 'S. Maximi confessoris opera complura et alia nonnulla'
         end
@@ -135,7 +135,7 @@ RSpec.describe 'Mirador Block', type: :feature, js: true do
 
         add_widget 'mirador'
 
-        fill_in_solr_document_block_typeahead_field with: 'MSS_Vat_gr_504'
+        fill_in_solr_document_block_typeahead_field with: 'Vat_gr_504'
         within(:css, '.panel') do
           expect(page).to have_content 'S. Maximi confessoris opera complura et alia nonnulla'
         end
