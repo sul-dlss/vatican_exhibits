@@ -1,0 +1,34 @@
+{
+   "@type" : "sc:Canvas",
+   "width" : 2190,
+   "thumbnail" : {
+      "format" : "image/jpeg",
+      "@type" : "dctypes:Image",
+      "@id" : "https://digi.vatlib.it/pub/digit/MSS_Barb.gr.252/thumb/Barb.gr.252_0001_al_piatto.anteriore.tif.jpg",
+      "width" : 110,
+      "height" : 150
+   },
+   "@id" : "https://digi.vatlib.it/iiif/MSS_Barb.gr.252/canvas/p0001",
+   "height" : 2978,
+   "images" : [
+      {
+         "motivation" : "sc:painting",
+         "on" : "https://digi.vatlib.it/iiif/MSS_Barb.gr.252/canvas/p0001",
+         "@type" : "oa:Annotation",
+         "resource" : {
+            "height" : 2978,
+            "width" : 2190,
+            "@id" : "https://digi.vatlib.it/iiif/MSS_Barb.gr.252/res/img0001",
+            "service" : {
+               "@id" : "https://digi.vatlib.it/iiifimage/MSS_Barb.gr.252/Barb.gr.252_0001_al_piatto.anteriore.jp2",
+               "profile" : "http://iiif.io/api/image/2/level2.json",
+               "@context" : "http://iiif.io/api/image/2/context.json"
+            },
+            "@type" : "dctypes:Image",
+            "format" : "image/jpeg"
+         },
+         "@id" : "https://digi.vatlib.it/iiif/MSS_Barb.gr.252/res/anno0001"
+      }
+   ],
+   "label" : "piatto.anteriore"
+}
