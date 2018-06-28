@@ -27,3 +27,4 @@
 //= require mirador_serializer
 //= require zpotlight/blocks/mirador_block
 //= require mirador_widget_admin
+//= require metadata
