@@ -16,10 +16,7 @@ end
 to_field 'id', (accumulate { |resource, *_| resource.slug })
 to_field 'resource_type_ssim', literal('Manuscript')
 to_field 'shelfmark_tsim', (accumulate { |resource, *_| resource.shelfmark })
-
-to_field 'full_title_tesim', (accumulate do |resource, *_|
-  (resource.manifest['metadata'].select { |k| k['label'] == 'Title' }.first || {})['value']
-end)
+to_field 'full_title_tesim', copy('shelfmark_tsim')
 
 to_field 'watermark_tesim' do |resource, accumulator, _context|
   resource.tei.xpath('//watermarks').map do |element|
@@ -208,7 +205,6 @@ to_field 'language_tesim', copy('language_ssim')
 to_field 'author_tesim', copy('author_ssim')
 to_field 'author_tesim', copy('other_author_ssim')
 to_field 'name_tesim', copy('name_ssim')
-to_field 'title_tesim', copy('full_title_tesim')
 
 to_field 'colophon_tesim' do |resource, accumulator, _context|
   resource.tei.xpath('//colophon').map do |element|

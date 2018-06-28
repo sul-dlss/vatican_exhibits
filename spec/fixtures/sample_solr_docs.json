@@ -1,6 +1,6 @@
 [
   {
-    "id": "MSS_Vat_gr_504",
+    "id": "Vat_gr_504",
     "exhibit_test_public_bsi": true,
     "spotlight_exhibit_slug_default-exhibit_bsi": true,
     "spotlight_exhibit_slugs_ssim": [
@@ -18,7 +18,7 @@
     "iiif_manifest_url_ssi": "https://digi.vatlib.it/iiif/MSS_Vat.gr.504/manifest.json"
   },
   {
-    "id": "MSS_Pal_gr_220",
+    "id": "Pal_gr_220",
     "exhibit_test_public_bsi": true,
     "spotlight_exhibit_slug_default-exhibit_bsi": true,
     "spotlight_exhibit_slugs_ssim": [
