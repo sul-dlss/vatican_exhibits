@@ -15,7 +15,14 @@
     "full_title_tesim": [
       "S. Maximi confessoris opera complura et alia nonnulla"
     ],
-    "iiif_manifest_url_ssi": "https://digi.vatlib.it/iiif/MSS_Vat.gr.504/manifest.json"
+    "ms_shelfmark_tesim": ["Vat.gr.504"],
+    "ms_language_tesim": ["Greco."],
+    "resource_type_ssim": ["Manuscript"],
+    "iiif_manifest_url_ssi": "https://digi.vatlib.it/iiif/MSS_Vat.gr.504/manifest.json",
+    "parts_ssm": [
+      "{\"ms_locus_tesim\":[\"1r-4v \\u003cinf.\\u003e\"],\"ms_author_tesim\":[\"Gregorius Nazianzenus,\"]}",
+      "{\"ms_locus_tesim\":[\"5r-10r\"],\"ms_author_tesim\":[\"Alexander Cyprius,\"]}"
+    ]
   },
   {
     "id": "Pal_gr_220",

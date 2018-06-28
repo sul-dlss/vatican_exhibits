@@ -1,0 +1,10 @@
+<% if document.parts.any? %>
+  <div class="col-md-12">
+    <h2><%= t('.title') %></h2>
+    <% document.parts.each do |part| %>
+      <div class="part col-md-12">
+        <%= render_document_partials part, blacklight_config.view_config(:parts).partials %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
