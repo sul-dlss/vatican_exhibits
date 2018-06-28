@@ -122,6 +122,10 @@ RSpec.describe 'Bibliography resource integration test', type: :feature do
       expect(document['all_text_timv']).to include 'console'
     end
 
+    it 'has the TEI' do
+      expect(document['tei_ss']).to include(/TEI.2/)
+    end
+
     it 'has manuscript-level information' do
       expect(document).to include 'ms_alphabet_tesim' => ['Greco.'],
                                   'ms_beginning_date_tesim' => ['1526'],
