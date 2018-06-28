@@ -3,6 +3,10 @@
 class CatalogController < ApplicationController
   include Blacklight::Catalog
 
+  before_action do
+    blacklight_config.show.partials -= [:viewer] unless action_name == 'show'
+  end
+
   configure_blacklight do |config|
           config.show.oembed_field = :oembed_url_ssm
           config.show.partials.insert(1, :oembed)
