@@ -41,14 +41,14 @@ class CatalogController < ApplicationController
     # solr field configuration for search results/index views
     config.index.title_field = 'full_title_tesim'
 
-    config.add_index_field 'resource_type_ssim', label: 'Resource type', section: :general
-    config.add_index_field 'collection_ssim', label: 'Collection', section: :general
-    config.add_index_field 'date_ssim', label: 'Date'
-    config.add_index_field 'beginning_date_ssim', label: 'Beginning date'
-    config.add_index_field 'ending_date_ssim', label: 'Ending date'
-    config.add_index_field 'dated_mss_ssim', label: 'Dated Mss'
-    config.add_index_field 'annotation_text_tesim', label: 'Annotation text'
-    config.add_index_field 'annotation_tags_ssim', label: 'Annotation tags', link_to_facet: true
+    config.add_index_field 'resource_type_ssim', section: :general
+    config.add_index_field 'collection_ssim', section: :general
+    config.add_index_field 'date_ssim'
+    config.add_index_field 'beginning_date_ssim'
+    config.add_index_field 'ending_date_ssim'
+    config.add_index_field 'dated_mss_ssim'
+    config.add_index_field 'annotation_text_tesim'
+    config.add_index_field 'annotation_tags_ssim', link_to_facet: true
     config.add_index_field 'curatorial_narrative_tesim',
                            immutable: { show: false }.merge(config.view.keys.map { |k| [k, false] }.to_h)
 
@@ -121,27 +121,27 @@ class CatalogController < ApplicationController
     config.add_show_field 'ms_colophon_tesim'
     config.add_show_field 'ms_secfol_tesim'
 
-    config.add_facet_field 'resource_type_ssim', label: 'Resource type'
-    config.add_facet_field 'collection_ssim', label: 'Collection'
-    config.add_facet_field 'date_ssim', label: 'Date'
-    config.add_facet_field 'name_ssim', label: 'Name'
-    config.add_facet_field 'place_ssim', label: 'Place'
-    config.add_facet_field 'annotation_tags_ssim', label: 'Tags', sort: 'index', partial: 'blacklight/hierarchy/facet_hierarchy'
-    config.add_facet_field 'language_ssim', label: 'Language'
+    config.add_facet_field 'resource_type_ssim'
+    config.add_facet_field 'collection_ssim'
+    config.add_facet_field 'date_ssim'
+    config.add_facet_field 'name_ssim'
+    config.add_facet_field 'place_ssim'
+    config.add_facet_field 'annotation_tags_ssim', sort: 'index', partial: 'blacklight/hierarchy/facet_hierarchy'
+    config.add_facet_field 'language_ssim'
     config.facet_display = {
       hierarchy: {
         'annotation_tags' => [['ssim'], ':']
       }
     }
     config.add_search_field 'all_fields', label: I18n.t('spotlight.search.fields.search.all_fields')
-    config.add_search_field 'shelfmark_tsim', label: 'Shelfmark'
-    config.add_search_field 'title_tesim', label: 'Title'
-    config.add_search_field 'author_tesim', label: 'Author'
-    config.add_search_field 'name_tesim', label: 'Name'
-    config.add_search_field 'incipit_tesim', label: 'Incipit'
-    config.add_search_field 'explicit_tesim', label: 'Explicit'
-    config.add_search_field 'overview_tesim', label: 'Overview'
-    config.add_search_field 'summary_tesim', label: 'Summary'
+    config.add_search_field 'shelfmark_tsim'
+    config.add_search_field 'title_tesim'
+    config.add_search_field 'author_tesim'
+    config.add_search_field 'name_tesim'
+    config.add_search_field 'incipit_tesim'
+    config.add_search_field 'explicit_tesim'
+    config.add_search_field 'overview_tesim'
+    config.add_search_field 'summary_tesim'
 
     config.add_sort_field 'relevance', sort: 'score desc', label: I18n.t('spotlight.search.fields.sort.relevance')
 
