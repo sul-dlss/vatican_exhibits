@@ -31,7 +31,7 @@ class CatalogController < ApplicationController
     config.index.title_field = 'full_title_tesim'
 
     config.add_index_field 'resource_type_ssim', label: 'Resource type'
-    config.add_index_field 'collection_ssim', label: 'Collection'
+    config.add_index_field 'collection_ssim', label: 'Collection', section: :general
     config.add_index_field 'date_ssim', label: 'Date'
     config.add_index_field 'beginning_date_ssim', label: 'Beginning date'
     config.add_index_field 'ending_date_ssim', label: 'Ending date'
