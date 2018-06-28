@@ -38,6 +38,7 @@ en:
         ms_extent_tesim: Extent
         ms_content_tesim: Content
         ms_overview_tesim: Overview
+        ms_bibl_tesim: Bibliography
         ms_collation_tesim: Collation
         ms_layout_tesim: Layout
         ms_foliation_tesim: Foliation
