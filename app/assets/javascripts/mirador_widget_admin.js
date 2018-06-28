@@ -28,6 +28,12 @@
       });
     }
 
+    function setupMiradorModalEvents(block) {
+      $('[data-save-mirador-config]').on('click', function(context) {
+        block.trigger('mirador-modal-closed', context);
+      });
+    }
+
     // Setup functions that need to listen to the source selected event
     function setupSourceLocationInputListener(block) {
       block.on('source-selected', function(e, value) {
@@ -41,6 +47,35 @@
         clearError(block);
         fetchSelectedItem(block, value);
       });
+    }
+
+    function modalMiradorSubmitListener(block) {
+      block.on('mirador-modal-closed', function(e, value) {
+        // Extract and merge config information
+        var miradorInstance = $(value.currentTarget).parents()
+          .find('iframe')[0].contentWindow.miradorInstance;
+        var config = miradorInstance.saveController.currentConfig;
+        var newConfig = {
+          data: config.data,
+          layout: config.layout,
+          windowObjects: config.windowObjects.map(function(value) {
+            return {
+              slotAddress: value.slotAddress,
+              viewType: value.viewType,
+              canvasID: value.canvasID,
+              loadedManifest: value.loadedManifest,
+              sidePanelVisible: value.sidePanelVisible,
+              windowOptions: value.windowOptions ? { osdBounds: value.windowOptions.osdBounds } : undefined
+            }
+          })
+        };
+        // Add config to hidden form.
+        var input = '<input type="text" style="display:none;" name="mirador_config" value=\'' +
+         JSON.stringify(newConfig) +
+        '\'/>';
+        $('[name="mirador_config"]').replaceWith(input);
+        $('#mirador-modal').modal('hide')
+      })
     }
 
     // Setup functions that need ot listen to when an item is successfully added to the items array
@@ -253,6 +288,7 @@
         setupSourceLocationEvents(block);
         setupItemInputButtonEvents(block);
         setupNestableChangeEvents(block);
+        setupMiradorModalEvents(block);
       },
 
       setupListeners: function(block) {
@@ -262,6 +298,7 @@
         setupItemRemovedListener(block);
         setupItemsUpdatedListener(block);
         setupManifestErrorListener(block);
+        modalMiradorSubmitListener(block);
       },
 
       hiddenInput: function(index, object) {
