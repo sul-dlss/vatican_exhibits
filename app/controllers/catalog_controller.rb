@@ -134,11 +134,11 @@ class CatalogController < ApplicationController
     config.add_facet_field 'date_ssim', limit: true
     config.add_facet_field 'name_ssim', limit: true
     config.add_facet_field 'place_ssim', limit: true
-    config.add_facet_field 'annotation_tags_ssim', sort: 'index', partial: 'blacklight/hierarchy/facet_hierarchy'
+    config.add_facet_field 'annotation_tags_facet_ssim', sort: 'index', partial: 'blacklight/hierarchy/facet_hierarchy'
     config.add_facet_field 'language_ssim', limit: true
     config.facet_display = {
       hierarchy: {
-        'annotation_tags' => [['ssim'], ':']
+        'annotation_tags_facet' => [['ssim'], ':']
       }
     }
     config.add_search_field 'all_fields', label: I18n.t('spotlight.search.fields.search.all_fields')

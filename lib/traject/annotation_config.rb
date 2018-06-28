@@ -36,6 +36,18 @@ compose ->(_record, accumulator, context) { accumulator << context.clipboard[:an
       res['chars'].to_s
     end
   end)
+  to_field 'annotation_tags_facet_ssim', (accumulate do |_resource, context|
+    context.output_hash['annotation_tags_ssim'].flat_map do |value|
+      case value
+      when /\(.+\)/
+        components = value.match(/^(.*)\((.+)\)/).captures.map(&:strip)
+
+        [components.first, components.join(':')]
+      else
+        value
+      end
+    end
+  end)
 end
 
 compose ->(_record, accumulator, context) { accumulator << context.clipboard[:canvas] } do

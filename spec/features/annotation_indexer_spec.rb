@@ -34,7 +34,8 @@ RSpec.describe 'Indexing IIIF Annotations', type: :feature do
       expect(document).to include 'type_ssi' => ['oa:Annotation'],
                                   'motivation_ssim' => ['oa:tagging', 'oa:commenting'],
                                   'annotation_text_tesim' => ['<p>test123</p>'],
-                                  'annotation_tags_ssim' => ['Animali (Agnelli)']
+                                  'annotation_tags_ssim' => ['Animali (Agnelli)'],
+                                  'annotation_tags_facet_ssim' => ['Animali', 'Animali:Agnelli']
     end
 
     it 'extracts information from the IIIF canvas the annotation is on' do
