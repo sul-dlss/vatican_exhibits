@@ -34,7 +34,7 @@ class CatalogController < ApplicationController
     # solr field configuration for search results/index views
     config.index.title_field = 'full_title_tesim'
 
-    config.add_index_field 'resource_type_ssim', label: 'Resource type'
+    config.add_index_field 'resource_type_ssim', label: 'Resource type', section: :general
     config.add_index_field 'collection_ssim', label: 'Collection', section: :general
     config.add_index_field 'date_ssim', label: 'Date'
     config.add_index_field 'beginning_date_ssim', label: 'Beginning date'
