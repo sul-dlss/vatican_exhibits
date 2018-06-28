@@ -120,7 +120,6 @@ class CatalogController < ApplicationController
     config.add_show_field 'ms_alphabet_tesim'
     config.add_show_field 'ms_colophon_tesim'
     config.add_show_field 'ms_secfol_tesim'
-
     config.add_show_field 'ms_origin_tesim'
     config.add_show_field 'ms_provenance_tesim'
     config.add_show_field 'ms_acquisition_tesim'
@@ -130,13 +129,13 @@ class CatalogController < ApplicationController
     config.add_show_field 'ms_custodial_history_tesim', section: :administrative
     config.add_show_field 'ms_remarks_tesim', section: :administrative
 
-    config.add_facet_field 'resource_type_ssim', label: 'Resource type'
-    config.add_facet_field 'collection_ssim', label: 'Collection'
-    config.add_facet_field 'date_ssim', label: 'Date'
-    config.add_facet_field 'name_ssim', label: 'Name'
-    config.add_facet_field 'place_ssim', label: 'Place'
+    config.add_facet_field 'resource_type_ssim', label: 'Resource type', limit: true
+    config.add_facet_field 'collection_ssim', label: 'Collection', limit: true
+    config.add_facet_field 'date_ssim', label: 'Date', limit: true
+    config.add_facet_field 'name_ssim', label: 'Name', limit: true
+    config.add_facet_field 'place_ssim', label: 'Place', limit: true
     config.add_facet_field 'annotation_tags_ssim', label: 'Tags', sort: 'index', partial: 'blacklight/hierarchy/facet_hierarchy'
-    config.add_facet_field 'language_ssim', label: 'Language'
+    config.add_facet_field 'language_ssim', label: 'Language', limit: true
     config.facet_display = {
       hierarchy: {
         'annotation_tags' => [['ssim'], ':']
