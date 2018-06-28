@@ -86,6 +86,7 @@ RSpec.describe 'Bibliography resource integration test', type: :feature do
 
     it 'has other name' do
       expect(document['other_name_ssim']).to eq ['Albini, Valeriano']
+      expect(document['other_name_and_role_ssim']).to eq ['Albini, Valeriano [scribe]']
     end
 
     it 'has place' do

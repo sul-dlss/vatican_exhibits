@@ -55,6 +55,19 @@ compose ->(record, accumulator, _context) { accumulator << record.tei.xpath('//T
     "name[@role!='internal' and @role!='external' or not(@role)]/alias/authorityAuthor[@rif='aut']", nil,
     gsub: [/[,\.]$/, '']
   )
+  to_field 'other_name_and_role_ssim', (accumulate do |resource, *_|
+    resource.xpath("name[@role!='internal' and @role!='external' or not(@role)]").flat_map do |name|
+      name.xpath("alias/authorityAuthor[@rif='aut']").map do |author|
+        author_name = author.text.gsub(/[,\.]$/, '')
+
+        if name['role'].present?
+          "#{author_name} [#{name['role']}]"
+        else
+          author_name
+        end
+      end
+    end
+  end)
   to_field 'place_ssim', extract_xml(
     'origPlace/settlement', nil
   )
@@ -241,14 +254,17 @@ end
 # )
 to_field 'name_ssim', copy('author_ssim')
 to_field 'name_ssim', copy('other_author_ssim')
-to_field 'name_ssim', copy('other_name_ssim')
+to_field 'name_ssim', copy('other_name_and_role_ssim')
+
+to_field 'name_tesim', copy('author_ssim')
+to_field 'name_tesim', copy('other_author_ssim')
+to_field 'name_tesim', copy('other_name_ssim')
 
 to_field 'collection_tesim', copy('collection_ssim')
 to_field 'date_tesim', copy('date_ssim')
 to_field 'language_tesim', copy('language_ssim')
 to_field 'author_tesim', copy('author_ssim')
 to_field 'author_tesim', copy('other_author_ssim')
-to_field 'name_tesim', copy('name_ssim')
 
 to_field 'thumbnail_url_ssm', (accumulate { |resource, *_| resource.thumbnails })
 
