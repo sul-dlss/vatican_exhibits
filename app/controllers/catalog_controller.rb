@@ -12,6 +12,7 @@ class CatalogController < ApplicationController
     config.show.oembed_field = :oembed_url_ssm
     config.show.partials.insert(1, :oembed)
     config.show.partials.insert(1, :viewer)
+    config.show.partials.insert(3, :curatorial_narrative)
     config.show.partials << :parts
     config.view.parts.partials = [:part_header, :part_show]
 
@@ -19,6 +20,12 @@ class CatalogController < ApplicationController
     config.view.masonry.partials = [:index]
     config.view.slideshow.partials = [:index]
 
+    config.index.document_actions.clear
+    config.index.collection_actions.clear
+    config.show.document_actions.clear
+    config.index.document_actions[:bookmark].if = false
+    config.show.document_actions[:bookmark].if = false
+    config.navbar.partials.clear
 
     config.show.tile_source_field = :content_metadata_image_iiif_info_ssm
     ## Default parameters to send to solr for all search-like requests. See also SolrHelper#solr_search_params
@@ -42,6 +49,8 @@ class CatalogController < ApplicationController
     config.add_index_field 'dated_mss_ssim', label: 'Dated Mss'
     config.add_index_field 'annotation_text_tesim', label: 'Annotation text'
     config.add_index_field 'annotation_tags_ssim', label: 'Annotation tags', link_to_facet: true
+    config.add_index_field 'curatorial_narrative_tesim',
+                           immutable: { show: false }.merge(config.view.keys.map { |k| [k, false] }.to_h)
 
     config.add_show_field 'ms_collection_tesim', section: :general
     config.add_show_field 'ms_shelfmark_tesim', section: :general
@@ -111,6 +120,14 @@ class CatalogController < ApplicationController
     config.add_show_field 'ms_alphabet_tesim'
     config.add_show_field 'ms_colophon_tesim'
     config.add_show_field 'ms_secfol_tesim'
+    config.add_show_field 'ms_origin_tesim'
+    config.add_show_field 'ms_provenance_tesim'
+    config.add_show_field 'ms_acquisition_tesim'
+    config.add_show_field 'ms_history_tesim'
+    config.add_show_field 'ms_source_of_information_tesim', section: :administrative
+    config.add_show_field 'ms_availability_tesim', section: :administrative
+    config.add_show_field 'ms_custodial_history_tesim', section: :administrative
+    config.add_show_field 'ms_remarks_tesim', section: :administrative
 
     config.add_facet_field 'resource_type_ssim', label: 'Resource type', limit: true
     config.add_facet_field 'collection_ssim', label: 'Collection', limit: true

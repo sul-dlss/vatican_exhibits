@@ -1,0 +1,9 @@
+<% doc_presenter = show_presenter(document) %>
+<% field_value = doc_presenter.field_value(Settings.curatorial_narrative.field) %>
+
+<% if field_value.present? %>
+  <div class="curatorial_narrative">
+    <h2><%= t('.title') %></h2>
+    <p><%= field_value %></p>
+  </div>
+<% end %>
