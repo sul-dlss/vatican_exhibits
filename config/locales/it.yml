@@ -69,3 +69,11 @@ it:
         ms_alphabet_tesim: Alfabeto
         ms_colophon_tesim: Colophon
         ms_secfol_tesim: Secundum Folium
+        ms_origin_tesim: Origine
+        ms_provenance_tesim: Provenienza
+        ms_acquisition_tesim: Acquisizione
+        ms_history_tesim: Storia
+        ms_source_of_information_tesim: Fonte
+        ms_availability_tesim: Disponibilita
+        ms_custodial_history_tesim: Nota di conservazione
+        ms_remarks_tesim: Nota interna

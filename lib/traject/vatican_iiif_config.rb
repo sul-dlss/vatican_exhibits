@@ -185,6 +185,15 @@ compose ->(record, accumulator, _context) { accumulator << record.tei.xpath('//T
   to_field 'ms_colophon_tesim', extract_xml('msPart/msContents/msItem/colophon', nil) #	Colophon	Colophon
   to_field 'ms_secfol_tesim', extract_xml('msPart/msContents/msItem/writingSystem/secFol', nil) #	Secundum Folium	Secundum Folium
   to_field 'ms_bibl_tesim', extract_xml('msPart/msContents/msItem/bibl', nil) # Bibliography
+
+  to_field 'ms_origin_tesim', extract_xml('msPart/history/origin/p', nil)
+  to_field 'ms_provenance_tesim', extract_xml('msPart/history/provenance/p', nil)
+  to_field 'ms_acquisition_tesim', extract_xml('msPart/history/acquisition/p', nil)
+  to_field 'ms_history_tesim', extract_xml('msPart/history/p', nil)
+  to_field 'ms_source_of_information_tesim', extract_xml('msPart/additional/adminInfo/recordHist/source/p', nil)
+  to_field 'ms_availability_tesim', extract_xml('msPart/additional/adminInfo/availability/p', nil)
+  to_field 'ms_custodial_history_tesim', extract_xml('msPart/additional/adminInfo/custodialHist/custEvent/p', nil)
+  to_field 'ms_remarks_tesim', extract_xml('msPart/additional/adminInfo/remarks/p', nil)
 end
 
 # We're being too clever here; the composed fields below are getting indexed into the sections_ssm field as serialized JSON hashes
@@ -229,6 +238,15 @@ compose 'parts_ssm', ->(record, accumulator, _context) { accumulator.concat reco
   to_field 'ms_colophon_tesim', extract_xml('msPart/msContents/msItem/colophon', nil) #	Colophon	Colophon
   to_field 'ms_secfol_tesim', extract_xml('msPart/msContents/msItem/writingSystem/secFol', nil) #	Secundum Folium	Secundum Folium
   to_field 'ms_bibl_tesim', extract_xml('msPart/msContents/msItem/bibl', nil) # Bibliography
+
+  to_field 'ms_origin_tesim', extract_xml('msPart/history/origin/p', nil)
+  to_field 'ms_provenance_tesim', extract_xml('msPart/history/provenance/p', nil)
+  to_field 'ms_acquisition_tesim', extract_xml('msPart/history/acquisition/p', nil)
+  to_field 'ms_history_tesim', extract_xml('msPart/history/p', nil)
+  to_field 'ms_source_of_information_tesim', extract_xml('msPart/additional/adminInfo/recordHist/source/p', nil)
+  to_field 'ms_availability_tesim', extract_xml('msPart/additional/adminInfo/availability/p', nil)
+  to_field 'ms_custodial_history_tesim', extract_xml('msPart/additional/adminInfo/custodialHist/custEvent/p', nil)
+  to_field 'ms_remarks_tesim', extract_xml('msPart/additional/adminInfo/remarks/p', nil)
 end
 
 each_record do |_record, context|

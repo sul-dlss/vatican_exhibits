@@ -149,13 +149,16 @@ RSpec.describe 'Bibliography resource integration test', type: :feature do
     it 'has parts' do
       expect(document['parts_ssm'].length).to eq 3
       data = document['parts_ssm'].map { |x| JSON.parse(x) }
-      expect(data).to include 'ms_overview_tesim' => ['Libellus I.'],
-                              'ms_locus_tesim' => ['1r-38v'],
-                              'ms_author_tesim' => ['Eunapius Sardianus,'],
-                              'ms_supplied_title_tesim' => ['Vitae sophistarum'],
-                              'ms_uniform_title_tesim' => ['Vitae sophistarum (Eunapius Sardianus, 354-420)'],
-                              'ms_language_tesim' => ['Greco.'],
-                              'ms_alphabet_tesim' => ['Greco.']
+      expect(data).to include hash_including(
+        'ms_overview_tesim' => ['Libellus I.'],
+        'ms_locus_tesim' => ['1r-38v'],
+        'ms_author_tesim' => ['Eunapius Sardianus,'],
+        'ms_supplied_title_tesim' => ['Vitae sophistarum'],
+        'ms_uniform_title_tesim' => ['Vitae sophistarum (Eunapius Sardianus, 354-420)'],
+        'ms_language_tesim' => ['Greco.'],
+        'ms_alphabet_tesim' => ['Greco.'],
+        'ms_source_of_information_tesim' => ['J. Mogenet, Codices Barberiniani Graeci, in Bibliotheca Vaticana 1989, v. 2, p. 100.']
+      )
     end
   end
 end
