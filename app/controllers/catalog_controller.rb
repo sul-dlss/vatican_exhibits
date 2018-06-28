@@ -12,6 +12,7 @@ class CatalogController < ApplicationController
     config.show.oembed_field = :oembed_url_ssm
     config.show.partials.insert(1, :oembed)
     config.show.partials.insert(1, :viewer)
+    config.show.partials.insert(3, :curatorial_narrative)
     config.show.partials << :parts
     config.view.parts.partials = [:part_header, :part_show]
 
@@ -42,6 +43,8 @@ class CatalogController < ApplicationController
     config.add_index_field 'dated_mss_ssim', label: 'Dated Mss'
     config.add_index_field 'annotation_text_tesim', label: 'Annotation text'
     config.add_index_field 'annotation_tags_ssim', label: 'Annotation tags', link_to_facet: true
+    config.add_index_field 'curatorial_narrative_tesim',
+                           immutable: { show: false }.merge(config.view.keys.map { |k| [k, false] }.to_h)
 
     config.add_show_field 'ms_collection_tesim', section: :general
     config.add_show_field 'ms_shelfmark_tesim', section: :general
