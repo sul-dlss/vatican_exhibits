@@ -17,6 +17,7 @@ en:
     show_manuscript:
       general_title: 'General information'
       description_title: 'Description'
+      administrative_title: 'Administrative information'
   blacklight:
     search:
       fields:
@@ -88,3 +89,11 @@ en:
         ms_alphabet_tesim: Alphabet
         ms_colophon_tesim: Colophon
         ms_secfol_tesim: Secundum Folium
+        ms_origin_tesim: Origin
+        ms_provenance_tesim: Provenance
+        ms_acquisition_tesim: Acquisition
+        ms_history_tesim: History
+        ms_source_of_information_tesim: Source of information
+        ms_availability_tesim: Availability
+        ms_custodial_history_tesim: Custodial history
+        ms_remarks_tesim: Remarks/Internal usage
