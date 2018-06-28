@@ -11,7 +11,7 @@
     <% end -%>
   </dl>
 </div>
-<div id= "metadataDetails" class="description-section row collapse" data-behavior="metadata-details">
+<div id= "metadataDetails" class="description-section row" data-behavior="metadata-details">
   <h2 class="col-md-7"><%= t('.description_title') %></h2>
   <dl class="dl-horizontal dl-invert">
     <% document_show_fields(document).select { |_, field| field.section.nil? }.each do |field_name, field| -%>
@@ -32,6 +32,3 @@
     <% end -%>
   </dl>
 </div>
-<button type='button' class='btn btn-default btn-details' data-toggle='collapse' data-target='#metadataDetails' aria-expanded='false' aria-controls='metadataDetails'>
-  <span class='btn-text'>More details</span><span class='btn-caret caret-down'>>></span>
-</button>
