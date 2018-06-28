@@ -19,6 +19,12 @@ class CatalogController < ApplicationController
     config.view.masonry.partials = [:index]
     config.view.slideshow.partials = [:index]
 
+    config.index.document_actions.clear
+    config.index.collection_actions.clear
+    config.show.document_actions.clear
+    config.index.document_actions[:bookmark].if = false
+    config.show.document_actions[:bookmark].if = false
+    config.navbar.partials.clear
 
     config.show.tile_source_field = :content_metadata_image_iiif_info_ssm
     ## Default parameters to send to solr for all search-like requests. See also SolrHelper#solr_search_params
