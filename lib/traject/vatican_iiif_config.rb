@@ -20,6 +20,8 @@ to_field 'full_title_tesim', copy('shelfmark_tsim')
 
 to_field 'collection_ssim', (accumulate { |resource, *_| resource.collection })
 
+to_field 'tei_ss', (accumulate { |resource, *_| resource.tei.to_s })
+
 compose ->(record, accumulator, _context) { accumulator << record.tei.xpath('//TEI.2/teiHeader/fileDesc/sourceDesc/msDescription/msPart/msContents/msItem') } do
   extend TrajectPlus::Macros
   extend TrajectPlus::Macros::Xml

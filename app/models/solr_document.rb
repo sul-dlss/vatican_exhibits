@@ -24,6 +24,20 @@ class SolrDocument
   # Recommendation: Use field names from Dublin Core
   use_extension(Blacklight::Document::DublinCore)
 
+  module TeiDocument
+    def self.extended(document)
+      document.will_export_as(:tei, 'application/tei+xml')
+    end
+
+    def export_as_tei
+      self[:tei_ss]
+    end
+  end
+
+  use_extension(TeiDocument) do |document|
+    document.has? :tei_ss
+  end
+
   def parts
     return to_enum(:parts) unless block_given?
 
