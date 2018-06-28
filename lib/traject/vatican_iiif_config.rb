@@ -184,6 +184,7 @@ compose ->(record, accumulator, _context) { accumulator << record.tei.xpath('//T
   to_field 'ms_alphabet_tesim', extract_xml('msPart/msContents/msItem/textLang', nil) #	Alfabeto	Alphabet
   to_field 'ms_colophon_tesim', extract_xml('msPart/msContents/msItem/colophon', nil) #	Colophon	Colophon
   to_field 'ms_secfol_tesim', extract_xml('msPart/msContents/msItem/writingSystem/secFol', nil) #	Secundum Folium	Secundum Folium
+  to_field 'ms_bibl_tesim', extract_xml('msPart/msContents/msItem/bibl', nil) # Bibliography
 end
 
 # We're being too clever here; the composed fields below are getting indexed into the sections_ssm field as serialized JSON hashes
@@ -227,6 +228,7 @@ compose 'parts_ssm', ->(record, accumulator, _context) { accumulator.concat reco
   to_field 'ms_alphabet_tesim', extract_xml('msPart/msContents/msItem/textLang', nil) #	Alfabeto	Alphabet
   to_field 'ms_colophon_tesim', extract_xml('msPart/msContents/msItem/colophon', nil) #	Colophon	Colophon
   to_field 'ms_secfol_tesim', extract_xml('msPart/msContents/msItem/writingSystem/secFol', nil) #	Secundum Folium	Secundum Folium
+  to_field 'ms_bibl_tesim', extract_xml('msPart/msContents/msItem/bibl', nil) # Bibliography
 end
 
 each_record do |_record, context|
