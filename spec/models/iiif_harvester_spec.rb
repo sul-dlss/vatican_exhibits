@@ -21,31 +21,6 @@ RSpec.describe IiifHarvester do
     end
 
     describe 'thumbnails' do
-      context 'when there are no sequences' do
-        it 'is an empty array' do
-          expect(harvester).to receive_messages(manifest: { '@id' => 'howdy' })
-
-          expect(harvester.thumbnails).to be_empty
-        end
-      end
-
-      context 'when a sequence has no canvas' do
-        it 'does not include that sequence' do
-          expect(harvester).to receive_messages(
-            manifest: {
-              '@id' => 'howdy',
-              'sequences' => [
-                {
-                  '@id' => 'sequenceid1'
-                }
-              ]
-            }
-          )
-
-          expect(harvester.thumbnails).to be_empty
-        end
-      end
-
       context 'when a canvas does not have a thumbnail with an @id' do
         it 'they are not included in the thumbnail array' do
           expect(harvester).to receive_messages(
@@ -92,6 +67,51 @@ RSpec.describe IiifHarvester do
           expect(harvester.thumbnails).to include 'http://example.com/cat.gif'
           expect(harvester.thumbnails).to include 'http://example.com/coolcat.gif'
         end
+      end
+    end
+  end
+
+  describe '#canvases' do
+    context 'when there are no sequences' do
+      it 'is an empty array' do
+        expect(harvester).to receive_messages(manifest: { '@id' => 'howdy' })
+
+        expect(harvester.canvases).to be_empty
+      end
+    end
+
+    context 'when a sequence has no canvas' do
+      it 'does not include that sequence' do
+        expect(harvester).to receive_messages(
+          manifest: {
+            '@id' => 'howdy',
+            'sequences' => [
+              {
+                '@id' => 'sequenceid1'
+              }
+            ]
+          }
+        )
+
+        expect(harvester.canvases).to be_empty
+      end
+    end
+
+    context 'with a canvas' do
+      it 'they are included' do
+        expect(harvester).to receive_messages(
+          manifest: {
+            '@id' => 'howdy',
+            'sequences' => [
+              {
+                '@id' => 'sequenceid1',
+                'canvases' => [{ '@id' => 'x' }]
+              }
+            ]
+          }
+        )
+
+        expect(harvester.canvases).to include hash_including('@id' => 'x')
       end
     end
   end
