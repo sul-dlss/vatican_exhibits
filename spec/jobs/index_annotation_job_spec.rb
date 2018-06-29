@@ -10,7 +10,7 @@ RSpec.describe IndexAnnotationJob do
           '@id' => 'x'
         }
       }]
-    }
+    }.to_json
   end
 
   describe '#perform' do
