@@ -1,0 +1,3 @@
+@mixin part-divider($property-name) {
+  #{$property-name}: 1px solid $navbar-inverse-link-color;
+}

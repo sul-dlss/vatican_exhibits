@@ -1,0 +1,41 @@
+.parts-section {
+  padding-left: 0;
+}
+
+.part {
+  @include part-divider(border-bottom);
+  padding: 0;
+
+  &:first-of-type {
+    @include part-divider(border-top);
+    margin-top: $padding-base-vertical;
+  }
+
+  h3 {
+    font-size: 1em;
+    margin-bottom: 0;
+    margin-top: $padding-base-vertical;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  .btn-link {
+    float: right;
+    font-size: $font-size-h6;
+    padding: 0;
+  }
+
+  dl {
+    margin-top: $padding-large-vertical;
+  }
+}
+
+.part-header {
+  padding: 3px 0 6px;
+
+  .part-supplied-title {
+    font-style: italic;
+  }
+}

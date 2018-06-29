@@ -5,7 +5,7 @@ RSpec.describe 'Manuscript display', type: :feature do
 
   it 'has a general information section' do
     visit spotlight.exhibit_solr_document_path(exhibit, 'Vat_gr_504')
-    expect(page).to have_css 'h2', text: 'General information'
+    expect(page).to have_css 'h2', text: 'Manuscript information'
 
     within '.general-section' do
       expect(page).to have_css 'dt', text: 'Shelfmark'
