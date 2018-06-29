@@ -14,8 +14,10 @@ en:
       title: Curatorial narrative
     parts_default:
       title: Parts of this manuscript
+    part_header_default:
+      view_details: View details
     show_manuscript:
-      general_title: General information
+      general_title: Manuscript information
       description_title: Description
       administrative_title: Administrative information
       hide_details: Fewer details
