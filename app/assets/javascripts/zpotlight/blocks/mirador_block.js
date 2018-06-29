@@ -114,7 +114,7 @@ SirTrevor.Blocks.Mirador = (function() {
               '<span id="<%= blockID + "_iiif_manifest_url_help" %>" class="help-block text-muted">Example: https://media.nga.gov/public/manifests/nga_highlights.json</span>',
             '</div>',
           '</fieldset>',
-          '<a class="col-md-3 btn btn-default" data-toggle="modal" data-target="#mirador-modal">Preview and Configure Viewer</a>',
+          '<a class="col-md-3 btn btn-default" data-toggle="modal" data-block="<%= blockID %>" data-target="#mirador-modal">Preview and Configure Viewer</a>',
         '</div>',
         '<div>',
           '<label for="<%= blockID + "_heading"  %>" class="control-label"><%= i18n.t("blocks:mirador:heading_label") %></label>',
