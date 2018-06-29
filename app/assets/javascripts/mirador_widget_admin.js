@@ -118,7 +118,7 @@
     function sourceLocationFieldset(block) {
       return block.find('[data-behavior="mirador-source-location-fieldset"]');
     }
-    
+
     function configureMiradorButton(block) {
       return block.find('.configure-mirador-button');
     }
@@ -212,7 +212,7 @@
     function validManifest(manifest) {
       var hasContext = (manifest["@context"] || '').includes('iiif.io/api/presentation/2/context.json');
       var sequences = manifest["sequences"] || '';
-      var hasCanvas = sequences.some(sequence => (sequence["canvases"] || '').length > 0);
+      var hasCanvas = sequences.some(function(sequence) { return (sequence["canvases"] || '').length > 0 });
       return hasContext && hasCanvas;
     }
 
