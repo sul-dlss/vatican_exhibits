@@ -2,6 +2,8 @@
   "pathways": [
     {
       "name": "latin-paleography",
+      "title": "Latin Paleography",
+      "subtitle": "From Antiquity to the Renaissance",
       "manuscripts": [
         "MSS_Arch.Cap.S.Pietro.D.182",
         "MSS_Barb.lat.570",
@@ -70,6 +72,8 @@
     },
     {
       "name": "greek-paleography",
+      "title": "Greek Paleography",
+      "subtitle": "From Antiquity to the Renaissance",
       "manuscripts": [
         "MSS_Barb.gr.221",
         "MSS_Barb.gr.252",
@@ -126,6 +130,8 @@
     },
     {
       "name": "latin-classics",
+      "title": "Latin Classics",
+      "subtitle": "The Evolution and Transmission of Texts of Specific Works",
       "manuscripts": [
         "MSS_Vat.lat.3225",
         "MSS_Vat.lat.3867",
@@ -212,6 +218,8 @@
     },
     {
       "name": "palimpsests",
+      "title": "Vatican Palimpsests",
+      "subtitle": "Digital Recovery of Erased Identities",
       "manuscripts": [
         "MSS_Vat.gr.1853",
         "MSS_Vat.gr.1876",
@@ -246,6 +254,8 @@
     },
     {
       "name": "humanist-library",
+      "title": "The Humanist Prince's Library",
+      "subtitle": "Federico da Montefeltro and His Manuscripts",
       "manuscripts": [
         "MSS_Urb.lat.1",
         "MSS_Urb.lat.2",
@@ -284,6 +294,8 @@
     },
     {
       "name": "overview",
+      "title": "Project Overview",
+      "subtitle": "Manuscripts From All Thematic Pathways",
       "manuscripts": [
         "MSS_Arch.Cap.S.Pietro.D.182",
         "MSS_Barb.lat.570",
