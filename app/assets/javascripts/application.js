@@ -23,3 +23,7 @@
 //= require blacklight/hierarchy/hierarchy
 //= require openseadragon
 //= require spotlight
+//= require zpotlight/sir-trevor/locales
+//= require mirador_serializer
+//= require zpotlight/blocks/mirador_block
+//= require mirador_widget_admin

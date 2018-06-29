@@ -22,6 +22,9 @@
     "parts_ssm": [
       "{\"ms_locus_tesim\":[\"1r-4v \\u003cinf.\\u003e\"],\"ms_author_tesim\":[\"Gregorius Nazianzenus,\"]}",
       "{\"ms_locus_tesim\":[\"5r-10r\"],\"ms_author_tesim\":[\"Alexander Cyprius,\"]}"
+    ],
+    "thumbnail_url_ssm": [
+      "https://digi.vatlib.it/pub/digit/MSS_Vat.gr.504/thumb/Vat.gr.504_0001_al_piatto.anteriore.tif.jpg"
     ]
   },
   {
@@ -40,6 +43,9 @@
     "full_title_tesim": [
       "Quattuor evangelia cum scholiis"
     ],
-    "iiif_manifest_url_ssi": "https://digi.vatlib.it/iiif/MSS_Pal.gr.220/manifest.json"
+    "iiif_manifest_url_ssi": "https://digi.vatlib.it/iiif/MSS_Pal.gr.220/manifest.json",
+    "thumbnail_url_ssm": [
+      "https://digi.vatlib.it/pub/digit/MSS_Pal.gr.220/thumb/Pal.gr.220_0001_ba_piatto.anteriore.tif.jpg"
+    ]
   }
 ]

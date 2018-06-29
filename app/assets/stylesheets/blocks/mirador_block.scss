@@ -1,0 +1,17 @@
+.mirador-source-location {
+  legend {
+    border: none;
+    display: inline;
+    float: left;
+    padding-right: $padding-base-horizontal;
+    width: auto;
+  }
+}
+
+.modal-dialog.mirador-modal {
+  width: 90%;
+  .modal-body {
+    height: calc(100vh - 190px);
+    overflow-y: scroll;
+  }
+}

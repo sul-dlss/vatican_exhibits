@@ -1,0 +1,25 @@
+<div class="st__content-block st__content-block--mirador">
+  <h3><%= mirador_block.heading %></h3>
+  <p><%= mirador_block.text %></p>
+
+  <iframe
+      src="<%= mirador_index_path(
+        options: mirador_block.mirador_config
+      ) %>"
+      allowfullscreen="true"
+      class="mirador-embed-wrapper"
+      frameborder="0"
+      marginwidth="0"
+      marginheight="0"
+      scrolling="no"
+      width="100%"
+    ></iframe>
+
+  <p class="text-center">
+    <em><%= mirador_block.caption %></em>
+  </p>
+
+  <% if mirador_block.mirador_config.present? %>
+    <pre style="display:none;"><%= JSON.pretty_generate(JSON.parse(mirador_block.mirador_config)) %></pre>
+  <% end %>
+</div>
