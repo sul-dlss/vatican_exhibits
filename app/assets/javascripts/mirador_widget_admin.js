@@ -98,7 +98,7 @@
     function setupItemsUpdatedListener(block) {
       block.on('items-updated', function(e, eventBlock) {
         MiradorWidgetBlock.updateHiddenMiradorConfig($(eventBlock));
-        toggleSorceLocationFieldset($(eventBlock));
+        toggleSourceLocationFieldset($(eventBlock));
       });
     }
 
@@ -118,7 +118,7 @@
       return block.find('[data-behavior="mirador-source-location-fieldset"]');
     }
 
-    function toggleSorceLocationFieldset(block) {
+    function toggleSourceLocationFieldset(block) {
       if (itemCount(block) < itemThreshold) {
         sourceLocationFieldset(block).show();
       } else {
@@ -250,7 +250,7 @@
         this.setupListeners(block);
 
         showSourceLocationInput(block, sourceLocationValue(block));
-        toggleSorceLocationFieldset(block);
+        toggleSourceLocationFieldset(block);
       },
 
       updateHiddenMiradorConfig(block) {
