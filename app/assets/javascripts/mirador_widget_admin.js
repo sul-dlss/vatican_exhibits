@@ -70,10 +70,9 @@
           })
         };
         // Add config to hidden form.
-        var input = '<input type="text" style="display:none;" name="mirador_config" value=\'' +
-         JSON.stringify(newConfig) +
-        '\'/>';
-        $('[name="mirador_config"]').replaceWith(input);
+        $('[name="mirador_config"]').replaceWith(
+          createMiradorConfigInput(newConfig)
+        );
         $('#mirador-modal').modal('hide')
       })
     }
@@ -125,6 +124,12 @@
       } else {
         sourceLocationFieldset(block).hide();
       }
+    }
+
+    function createMiradorConfigInput(config) {
+      var input = $('<input type="text" style="display:none;" name="mirador_config" />');
+      input.val(JSON.stringify(config));
+      return input;
     }
 
     // TODO: Add some sort of loading animation and clean it up after
@@ -254,13 +259,10 @@
           manifestUrls.push($(val).val());
         });
         var miradorSerializer = new MiradorSerializer(manifestUrls);
-        var template = [
-          '<input type="text" style="display:none;" name="mirador_config" value=\'' +
-          JSON.stringify(miradorSerializer.miradorConfig()) +
-          '\'/>',
-        ].join("\n");
 
-        block.find('[name="mirador_config"]').replaceWith(_.template(template));
+        block.find('[name="mirador_config"]').replaceWith(
+          createMiradorConfigInput(miradorSerializer.miradorConfig())
+        );
       },
 
       addItemToSection: function(block, itemObject, shouldTriggerEvent) {
