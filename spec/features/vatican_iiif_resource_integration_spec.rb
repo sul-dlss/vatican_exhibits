@@ -31,6 +31,16 @@ RSpec.describe 'Bibliography resource integration test', type: :feature do
       bibliograpy_resource.document_builder.to_solr.first
     end
 
+    before do
+      allow(IndexAnnotationsForCanvasJob).to receive(:perform_later)
+    end
+
+    it 'triggers annotation indexing for the canvas' do
+      document
+
+      expect(IndexAnnotationsForCanvasJob).to have_received(:perform_later).with(/canvas/).exactly(246).times
+    end
+
     it 'has a doc id' do
       expect(document['id']).to eq ['Barb_gr_252']
     end

@@ -40,14 +40,18 @@ class IiifHarvester
   end
 
   def thumbnails
+    canvases.flat_map do |canvas|
+      canvas.dig('thumbnail', '@id')
+    end.compact
+  end
+
+  def canvases
     return [] if manifest['sequences'].blank?
 
     manifest['sequences'].flat_map do |sequence|
       next [] if sequence['canvases'].blank?
 
-      sequence['canvases'].map do |canvas|
-        canvas.dig('thumbnail', '@id')
-      end.compact
+      sequence['canvases']
     end
   end
 

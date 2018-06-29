@@ -14,6 +14,7 @@ class VaticanIiifBuilder < Spotlight::SolrDocumentBuilder
 
       resources.each_with_index do |res, _idx|
         doc = convert_id(traject_indexer.map_record(res))
+        trigger_canvas_annotation_indexing(res)
         yield base_doc.merge(doc) if doc
       end
     end
@@ -32,5 +33,11 @@ class VaticanIiifBuilder < Spotlight::SolrDocumentBuilder
   def convert_id(doc)
     doc[:id] = doc['id'].try(:first)
     doc
+  end
+
+  def trigger_canvas_annotation_indexing(res)
+    res.canvases.each do |canvas|
+      IndexAnnotationsForCanvasJob.perform_later(canvas['@id'])
+    end
   end
 end
