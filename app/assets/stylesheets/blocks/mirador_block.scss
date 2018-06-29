@@ -7,3 +7,11 @@
     width: auto;
   }
 }
+
+.modal-dialog.mirador-modal {
+  width: 90%;
+  .modal-body {
+    height: calc(100vh - 190px);
+    overflow-y: scroll;
+  }
+}

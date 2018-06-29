@@ -28,6 +28,12 @@
       });
     }
 
+    function setupMiradorModalEvents(block) {
+      $('[data-save-mirador-config]').on('click', function(context) {
+        block.trigger('mirador-modal-closed', context);
+      });
+    }
+
     // Setup functions that need to listen to the source selected event
     function setupSourceLocationInputListener(block) {
       block.on('source-selected', function(e, value) {
@@ -41,6 +47,34 @@
         clearError(block);
         fetchSelectedItem(block, value);
       });
+    }
+
+    function modalMiradorSubmitListener(block) {
+      block.on('mirador-modal-closed', function(e, value) {
+        // Extract and merge config information
+        var miradorInstance = $(value.currentTarget).parents()
+          .find('iframe')[0].contentWindow.miradorInstance;
+        var config = miradorInstance.saveController.currentConfig;
+        var newConfig = {
+          data: config.data,
+          layout: config.layout,
+          windowObjects: config.windowObjects.map(function(value) {
+            return {
+              slotAddress: value.slotAddress,
+              viewType: value.viewType,
+              canvasID: value.canvasID,
+              loadedManifest: value.loadedManifest,
+              sidePanelVisible: value.sidePanelVisible,
+              windowOptions: value.windowOptions ? { osdBounds: value.windowOptions.osdBounds } : undefined
+            }
+          })
+        };
+        // Add config to hidden form.
+        $('[name="mirador_config"]').replaceWith(
+          createMiradorConfigInput(newConfig)
+        );
+        $('#mirador-modal').modal('hide')
+      })
     }
 
     // Setup functions that need ot listen to when an item is successfully added to the items array
@@ -90,6 +124,12 @@
       } else {
         sourceLocationFieldset(block).hide();
       }
+    }
+
+    function createMiradorConfigInput(config) {
+      var input = $('<input type="text" style="display:none;" name="mirador_config" />');
+      input.val(JSON.stringify(config));
+      return input;
     }
 
     // TODO: Add some sort of loading animation and clean it up after
@@ -219,13 +259,10 @@
           manifestUrls.push($(val).val());
         });
         var miradorSerializer = new MiradorSerializer(manifestUrls);
-        var template = [
-          '<input type="text" style="display:none;" name="mirador_config" value=\'' +
-          JSON.stringify(miradorSerializer.miradorConfig()) +
-          '\'/>',
-        ].join("\n");
 
-        block.find('[name="mirador_config"]').replaceWith(_.template(template));
+        block.find('[name="mirador_config"]').replaceWith(
+          createMiradorConfigInput(miradorSerializer.miradorConfig())
+        );
       },
 
       addItemToSection: function(block, itemObject, shouldTriggerEvent) {
@@ -253,6 +290,7 @@
         setupSourceLocationEvents(block);
         setupItemInputButtonEvents(block);
         setupNestableChangeEvents(block);
+        setupMiradorModalEvents(block);
       },
 
       setupListeners: function(block) {
@@ -262,6 +300,7 @@
         setupItemRemovedListener(block);
         setupItemsUpdatedListener(block);
         setupManifestErrorListener(block);
+        modalMiradorSubmitListener(block);
       },
 
       hiddenInput: function(index, object) {
@@ -272,20 +311,22 @@
 
         template = [
           '<li class="field form-inline dd-item dd3-item" data-resource-id="<%= id %>">',
-            '<div class="dd-handle dd3-handle">Drag</div>',
-            '<div class="dd3-content panel panel-default">',
-              '<div class="panel-heading item-grid">',
-                '<div class="pic thumbnail"><img src="<%= thumbnail %>" /></div>',
-                '<div class="main">',
-                  '<div class="title panel-title"><%= title %></div>',
-                  '<div><%= iiif_manifest_url %></div>',
-                '</div>',
-                '<input type="hidden" name="items[item_<%= index %>][id]" value="<%= id %>" />',
-                '<input type="hidden" name="items[item_<%= index %>][title]" value="<%= title %>" />',
-                '<input type="hidden" name="items[item_<%= index %>][thumbnail]" value="<%= thumbnail %>" />',
-                '<input type="hidden" name="items[item_<%= index %>][iiif_manifest_url]" value="<%= iiif_manifest_url %>" data-behavior="mirador-item" />',
-                '<div class="remove pull-right">',
-                  '<a data-item-grid-panel-remove="true" href="#">Remove</a>',
+            '<div>',
+              '<div class="dd-handle dd3-handle">Drag</div>',
+              '<div class="dd3-content panel panel-default">',
+                '<div class="panel-heading item-grid">',
+                  '<div class="pic thumbnail"><img src="<%= thumbnail %>" /></div>',
+                  '<div class="main">',
+                    '<div class="title panel-title"><%= title %></div>',
+                    '<div><%= iiif_manifest_url %></div>',
+                  '</div>',
+                  '<input type="hidden" name="items[item_<%= index %>][id]" value="<%= id %>" />',
+                  '<input type="hidden" name="items[item_<%= index %>][title]" value="<%= title %>" />',
+                  '<input type="hidden" name="items[item_<%= index %>][thumbnail]" value="<%= thumbnail %>" />',
+                  '<input type="hidden" name="items[item_<%= index %>][iiif_manifest_url]" value="<%= iiif_manifest_url %>" data-behavior="mirador-item" />',
+                  '<div class="remove pull-right">',
+                    '<a data-item-grid-panel-remove="true" href="#">Remove</a>',
+                  '</div>',
                 '</div>',
               '</div>',
             '</div>',

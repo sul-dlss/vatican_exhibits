@@ -114,7 +114,7 @@ RSpec.describe 'Mirador Block', type: :feature, js: true do
 
         add_widget 'mirador'
 
-        fill_in_solr_document_block_typeahead_field with: 'MSS_Vat_gr_504'
+        fill_in_solr_document_block_typeahead_field with: 'Vat_gr_504'
         within(:css, '.panel') do
           expect(page).to have_content 'S. Maximi confessoris opera complura et alia nonnulla'
         end
@@ -135,7 +135,7 @@ RSpec.describe 'Mirador Block', type: :feature, js: true do
 
         add_widget 'mirador'
 
-        fill_in_solr_document_block_typeahead_field with: 'MSS_Vat_gr_504'
+        fill_in_solr_document_block_typeahead_field with: 'Vat_gr_504'
         within(:css, '.panel') do
           expect(page).to have_content 'S. Maximi confessoris opera complura et alia nonnulla'
         end
@@ -222,6 +222,39 @@ RSpec.describe 'Mirador Block', type: :feature, js: true do
       hidden_input = find('[name="mirador_config"]', visible: false)
 
       expect(hidden_input['value']).to eq mirador_config
+    end
+    it 'can be updated from a mirador viewer' do
+      visit spotlight.edit_exhibit_home_page_path(exhibit)
+
+      add_widget 'mirador'
+
+      choose 'IIIF manifest'
+      input = find('[data-behavior="source-location-input"]', visible: true)
+      input.set("http://127.0.0.1:#{Capybara.current_session.server.port}/mock_manifest")
+      click_link 'Load IIIF item'
+      hidden_input = find('[name="mirador_config"]', visible: false)
+
+      expect(hidden_input['value']).to eq mirador_config
+
+      find('[data-target="#mirador-modal"]', visible: false).click
+
+      expect(page).to have_css '.modal-body', visible: true # Modal is open
+      within_frame 'miradorConfigFrame' do
+        expect(page).to have_css '.mirador-viewer', visible: true # Mirador is instantiated
+      end
+      click_button 'Close'
+
+      find('[data-target="#mirador-modal"]', visible: false).click
+      within_frame 'miradorConfigFrame' do
+        all('.mirador-viewer', visible: true) # Mirador is instantiated
+      end
+      hidden_input = find('[name="mirador_config"]', visible: false)
+      expect(hidden_input['value']).to eq mirador_config # Config doesn't update on close
+
+      click_button 'Save Changes'
+
+      hidden_input = find('[name="mirador_config"]', visible: false)
+      expect(hidden_input['value']).not_to eq mirador_config # Config is updated on "save"
     end
   end
 end

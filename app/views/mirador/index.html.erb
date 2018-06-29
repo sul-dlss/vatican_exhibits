@@ -1,5 +1,13 @@
 <%= stylesheet_link_tag "mirador_bundle" %>
 <%= javascript_include_tag "mirador_bundle" %>
 
+<% if @options == 'buildFromScratch' %>
+  <%= content_tag :div, data: { miradorFromScratch: true } do %>
+    <%= content_tag :div, '', id: 'miradorId' %>
+  <% end %>
+<% else %>
+
 <%= mirador_tag(:height => "100%",
                 :options => @options.present? ? JSON.parse(@options) : mirador_options(@manifest, @canvas)) %>
+
+<% end %>
