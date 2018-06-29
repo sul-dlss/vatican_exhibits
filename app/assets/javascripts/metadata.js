@@ -9,18 +9,16 @@
     },
 
     addButton: function(el) {
-      var button = "<button type='button' class='btn btn-default btn-details' data-toggle='collapse' data-target='#metadataDetails' aria-expanded='false' aria-controls='metadataDetails'><span class='btn-text'>More details</span><span class='btn-caret caret-down'>&gt;&gt;</span></button>";
-      $(el).after(button);
       $(el).addClass('collapse');
+      $(el).next().toggleClass('hidden');
     },
 
     toggleButton: function(el){
         $(el).next().on('click', function(){
           var button = $(this);
-          var linkText = $(button).find('.btn-text');
           var caret = $(button).find('.btn-caret');
           caret.toggleClass('caret-up caret-down');
-          $(linkText).text(linkText.text() == 'More details' ? 'Fewer details' : 'More details' );
+          $(button).find('.btn-text-show, .btn-text-hide').toggleClass('hidden');
         });
     }
   };
