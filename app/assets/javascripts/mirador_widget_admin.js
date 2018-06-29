@@ -99,6 +99,7 @@
       block.on('items-updated', function(e, eventBlock) {
         MiradorWidgetBlock.updateHiddenMiradorConfig($(eventBlock));
         toggleSourceLocationFieldset($(eventBlock));
+        toggleConfigureMiradorButton($(eventBlock));
       });
     }
 
@@ -117,12 +118,24 @@
     function sourceLocationFieldset(block) {
       return block.find('[data-behavior="mirador-source-location-fieldset"]');
     }
+    
+    function configureMiradorButton(block) {
+      return block.find('.configure-mirador-button');
+    }
 
     function toggleSourceLocationFieldset(block) {
       if (itemCount(block) < itemThreshold) {
         sourceLocationFieldset(block).show();
       } else {
         sourceLocationFieldset(block).hide();
+      }
+    }
+
+    function toggleConfigureMiradorButton(block) {
+      if (itemCount(block) > 0) {
+        configureMiradorButton(block).show();
+      } else {
+        configureMiradorButton(block).hide();
       }
     }
 
@@ -251,6 +264,7 @@
 
         showSourceLocationInput(block, sourceLocationValue(block));
         toggleSourceLocationFieldset(block);
+        toggleConfigureMiradorButton(block);
       },
 
       updateHiddenMiradorConfig(block) {
