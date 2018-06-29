@@ -1,0 +1,29 @@
+.btn-details {
+  .btn-caret {
+    display: inline-block;
+    margin-left: 5px;
+    transform: rotate(-90deg);
+  }
+
+  .btn-text-hide {
+    display: inline;
+  }
+
+  .btn-text-show {
+    display: none;
+  }
+
+  &.collapsed {
+    .btn-caret {
+      transform: rotate(90deg);
+    }
+
+    .btn-text-show {
+      display: inline;
+    }
+
+    .btn-text-hide {
+      display: none;
+    }
+  }
+}

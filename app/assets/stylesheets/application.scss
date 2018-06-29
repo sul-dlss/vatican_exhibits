@@ -11,7 +11,7 @@ $logo-image: image-url('dvl_logo.png') !default;
 @import 'spotlight';
 @import 'modules/header';
 @import 'blocks/mirador_block';
-@import 'modules/carets';
+@import 'modules/metadata_details_btn';
 
 .mirador-embed-wrapper {
   height: 60vh;
