@@ -89,7 +89,7 @@ SirTrevor.Blocks.Mirador = (function() {
             '<ol class=" dd-list" data-behavior="items-section"></ol>',
           '</div>',
           '<div class="col-md-3">',
-            '<a class="btn btn-primary configure-mirador-button" data-toggle="modal" data-block="<%= blockID %>" data-target="#mirador-modal">Preview and Configure Viewer</a>',
+            '<a class="btn btn-primary configure-mirador-button" style="display: none;" data-toggle="modal" data-block="<%= blockID %>" data-target="#mirador-modal">Preview and Configure Viewer</a>',
           '</div>',
         '</div>',
         '<div class="row">',
