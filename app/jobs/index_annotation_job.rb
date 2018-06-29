@@ -11,7 +11,7 @@ class IndexAnnotationJob < ApplicationJob
   private
 
   def index(annotation)
-    manifest_uri = annotation.data['on'].first['within']['@id']
+    manifest_uri = JSON.parse(annotation.data)['on'].first['within']['@id']
 
     VaticanIiifResource.find_each do |resource|
       next unless resource.iiif_urls.include? manifest_uri
