@@ -15,9 +15,11 @@ en:
     parts_default:
       title: Parts of this manuscript
     show_manuscript:
-      general_title: 'General information'
-      description_title: 'Description'
-      administrative_title: 'Administrative information'
+      general_title: General information
+      description_title: Description
+      administrative_title: Administrative information
+      hide_details: Fewer details
+      show_details: More details
   blacklight:
     search:
       fields:
