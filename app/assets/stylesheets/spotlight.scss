@@ -8,3 +8,13 @@
 @import 'sir-trevor/main';
 @import 'leaflet';
 @import 'spotlight/spotlight';
+
+.documents-list {
+  .document-thumbnail {
+    @extend .col-md-2;
+  }
+
+  .document-metadata {
+    @extend .col-md-10;
+  }
+}
