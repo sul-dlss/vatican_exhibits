@@ -267,7 +267,7 @@
         toggleConfigureMiradorButton(block);
       },
 
-      updateHiddenMiradorConfig(block) {
+      updateHiddenMiradorConfig: function(block) {
         var manifestUrls = [];
         block.find('input[type="hidden"][data-behavior="mirador-item"]').each(function(i, val) {
           manifestUrls.push($(val).val());
