@@ -59,6 +59,10 @@ SirTrevor.Blocks.Mirador = (function() {
       });
     },
 
+    miradorPath: function() {
+      return $('[data-mirador-path]').data('miradorPath');
+    },
+
     modalTemplate: [
       '<div id="mirador-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="#international modal">',
         '<div class="modal-dialog mirador-modal" role="document">',
@@ -68,7 +72,7 @@ SirTrevor.Blocks.Mirador = (function() {
             '</div>',
             '<div class="modal-body">',
               '<p>The Mirador Viewer will be displayed to exhibit visitors as shown below. Optionally, you can customize how the viewer will be displayed by adjusting one or more viewer options and saving the changes.</p>',
-              '<iframe id="miradorConfigFrame" src="/mirador?options=buildFromScratch" height="100%" class="mirador-frame" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%"></iframe>',
+              '<iframe id="miradorConfigFrame" src="<%= miradorPath() %>?options=buildFromScratch" height="100%" class="mirador-frame" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" width="100%"></iframe>',
             '</div>',
             '<div class="modal-footer">',
               '<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>',
