@@ -45,4 +45,10 @@ class SolrDocument
       yield SolrDocument.new(JSON.parse(value))
     end
   end
+
+  def related_annotations
+    return [] unless Array(self['resource_type_ssim']).include? 'Annotation'
+
+    Annotot::Annotation.where(canvas: self['canvas_ssi']).where.not(uuid: id)
+  end
 end

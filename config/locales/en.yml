@@ -10,6 +10,8 @@ en:
       notice: Your Vatican IIIF resource has been successfully created.
       error: There was a problem with adding the Vatican IIIF resource.
   catalog:
+    annotations_annotation:
+      title: Other annotations on this folio
     curatorial_narrative_default:
       title: Curatorial narrative
     parts_default:
@@ -116,6 +118,7 @@ en:
         name_ssim: 'Name'
         place_ssim: 'Place'
         language_ssim: 'Language'
+        manuscript_shelfmark_ssim: 'Manuscript'
         shelfmark_tsim: 'Shelfmark'
         title_tesim: 'Title'
         author_tesim: 'Author'
