@@ -58,6 +58,7 @@
         var newConfig = {
           data: config.data,
           layout: config.layout,
+          mainMenuSettings: config.mainMenuSettings,
           windowObjects: config.windowObjects.map(function(value) {
             return {
               slotAddress: value.slotAddress,
@@ -67,7 +68,8 @@
               sidePanelVisible: value.sidePanelVisible,
               windowOptions: value.windowOptions ? { osdBounds: value.windowOptions.osdBounds } : undefined
             }
-          })
+          }),
+          windowSettings: config.windowSettings
         };
         // Add config to hidden form.
         $('[name="mirador_config"]').replaceWith(

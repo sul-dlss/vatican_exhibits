@@ -17,11 +17,20 @@ export default class MiradorSerializer {
         manifestUri: url,
       })),
       layout: this.layout(),
+      mainMenuSettings: {
+        show: false,
+      },
       windowObjects: this.manifestUrls.map((url, index) => ({
         loadedManifest: url,
         viewType: 'ImageView',
-        slotAddress: this.slotAddress(index, this.manifestUrls.length)
+        slotAddress: this.slotAddress(index, this.manifestUrls.length),
       })),
+      windowSettings: {
+        displayLayout: false,
+        layoutOptions: {
+          close: false,
+        },
+      },
     };
   }
 
