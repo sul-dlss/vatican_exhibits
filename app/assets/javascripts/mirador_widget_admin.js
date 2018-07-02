@@ -32,6 +32,12 @@
       modalForBlock(block).find('[data-save-mirador-config]').on('click', function(context) {
         block.trigger('mirador-modal-closed', context);
       });
+      $('.annotations-checkbox').on('change', function(context) {
+        block.trigger('annotations-available', context);
+      });
+      $('.display-default-checkbox').on('change', function(context) {
+        block.trigger('annotations-default-toggled', context);
+      });
     }
 
     // Setup functions that need to listen to the source selected event
@@ -67,9 +73,8 @@
               loadedManifest: value.loadedManifest,
               sidePanelVisible: value.sidePanelVisible,
               windowOptions: value.windowOptions ? { osdBounds: value.windowOptions.osdBounds } : undefined
-            }
-          }),
-          windowSettings: config.windowSettings
+            };
+          })
         };
         // Add config to hidden form.
         block.find('[name="mirador_config"]').replaceWith(
@@ -77,6 +82,15 @@
         );
         $modal.modal('hide')
       })
+    }
+
+    function setupAnnotationsListener(block) {
+      block.on('annotations-available', function(e, value) {
+        console.log('toggled public annotation availability');
+      });
+      block.on('annotations-default-toggled', function(e, value) {
+        console.log('toggled annotations displayed by default');
+      });
     }
 
     // Setup functions that need ot listen to when an item is successfully added to the items array
@@ -311,6 +325,7 @@
         setupItemInputButtonEvents(block);
         setupNestableChangeEvents(block);
         setupMiradorModalEvents(block);
+        setupAnnotationsListener(block);
       },
 
       setupListeners: function(block) {
