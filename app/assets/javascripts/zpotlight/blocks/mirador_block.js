@@ -60,11 +60,11 @@ SirTrevor.Blocks.Mirador = (function() {
     },
 
     modalTemplate: [
-      '<div id="<%= blockID %>-mirador-modal" class="modal fade" data-behavior="mirador-modal" tabindex="-1" role="dialog" aria-labelledby="#international modal">',
+      '<div id="<%= blockID %>-mirador-modal" class="modal fade" data-behavior="mirador-modal" tabindex="-1" role="dialog" aria-labelledby="#<%= blockID %>-modal-title">',
         '<div class="modal-dialog mirador-modal" role="document">',
           '<div class="modal-content">',
             '<div class="modal-header">',
-              '<h4 class="modal-title">Preview and Configure Mirador Viewer</h4>',
+              '<h4 class="modal-title" id="<%= blockID %>-modal-title">Preview and Configure Mirador Viewer</h4>',
             '</div>',
             '<div class="modal-body">',
               '<p>The Mirador Viewer will be displayed to exhibit visitors as shown below. Optionally, you can customize how the viewer will be displayed by adjusting one or more viewer options and saving the changes.</p>',
