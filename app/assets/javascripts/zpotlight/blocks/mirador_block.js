@@ -88,7 +88,7 @@ SirTrevor.Blocks.Mirador = (function() {
         '<div class="widget-header">',
           '<%= description() %>',
         '</div>',
-        '<div class="row mirador-setup">',
+        '<div class="mirador-setup">',
           '<div class="col-sm-9 panels dd nestable-item-grid" data-behavior="nestable" data-max-depth="1">',
             '<ol class=" dd-list" data-behavior="items-section"></ol>',
           '</div>',
