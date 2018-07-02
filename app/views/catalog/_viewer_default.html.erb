@@ -1,7 +1,8 @@
 <% if document.manifest %>
   <iframe
       src="<%= mirador_index_path(
-        manifest: document.manifest
+        manifest: document.manifest,
+        canvas: document.canvas
       ) %>"
       allowfullscreen="true"
       class="mirador-embed-wrapper"
