@@ -9,4 +9,10 @@ module SpotlightHelper
       sanitize v, tags: %w[strong em p]
     end, '')
   end
+
+  def link_to_manuscript(value:, **_args)
+    safe_join(Array(value).map do |v|
+      link_to v, spotlight.exhibit_solr_document_path(current_exhibit, v.tr('.', '_'))
+    end, '')
+  end
 end

@@ -14,4 +14,18 @@ RSpec.describe SpotlightHelper, type: :helper do
       expect(result).not_to match(/style/)
     end
   end
+
+  describe '#link_to_manuscript' do
+    let(:exhibit) { FactoryBot.build_stubbed(:exhibit) }
+
+    before do
+      helper.send(:extend, Module.new { def current_exhibit; end })
+      allow(helper).to receive_messages(current_exhibit: exhibit)
+    end
+
+    it 'creates a link to the manuscript show page' do
+      result = helper.link_to_manuscript(value: 'Vat.gr.1')
+      expect(result).to eq link_to 'Vat.gr.1', '/1001/catalog/Vat_gr_1'
+    end
+  end
 end

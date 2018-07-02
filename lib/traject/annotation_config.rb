@@ -10,8 +10,17 @@ end
 
 each_record do |record, context|
   context.clipboard[:annotation] = ::JSON.parse(record.data)
-  context.clipboard[:canvas] = ::JSON.parse(Faraday.get(record.canvas).body)
-  context.clipboard[:manifest] = ::JSON.parse(Faraday.get(context.clipboard[:annotation]['on'].first['within']['@id']).body)
+
+  canvas_body = Rails.cache.fetch(record.canvas) do
+    Faraday.get(record.canvas).body
+  end
+  context.clipboard[:canvas] = ::JSON.parse(canvas_body)
+
+  manifest_url = context.clipboard[:annotation]['on'].first['within']['@id']
+  manifest_body = Rails.cache.fetch(manifest_url) do
+    Faraday.get(manifest_url).body
+  end
+  context.clipboard[:manifest] = ::JSON.parse(manifest_body)
 end
 
 to_field 'id', (accumulate { |resource, *_| resource.uuid })
@@ -37,7 +46,7 @@ compose ->(_record, accumulator, context) { accumulator << context.clipboard[:an
     end
   end)
   to_field 'annotation_tags_facet_ssim', (accumulate do |_resource, context|
-    context.output_hash['annotation_tags_ssim'].flat_map do |value|
+    Array(context.output_hash['annotation_tags_ssim']).flat_map do |value|
       case value
       when /\(.+\)/
         components = value.match(/^(.*)\((.+)\)/).captures.map(&:strip)
@@ -65,7 +74,10 @@ end
 
 compose ->(_record, accumulator, context) { accumulator << context.clipboard[:manifest] } do
   extend TrajectPlus::Macros
-  to_field 'iiif_manifest_ssi', (accumulate do |resource, *_|
+  to_field 'manuscript_shelfmark_ssim', (accumulate do |resource, *_|
+    IiifHarvester.new(resource['@id']).shelfmark
+  end)
+  to_field 'iiif_manifest_url_ssi', (accumulate do |resource, *_|
     resource['@id']
   end)
   to_field 'iiif_manifest_label_ssi', (accumulate do |resource, *_|
@@ -74,7 +86,7 @@ compose ->(_record, accumulator, context) { accumulator << context.clipboard[:ma
 end
 
 to_field 'full_title_tesim', (accumulate do |_resource, context|
-  text = context.output_hash['annotation_text_tesim'].join(' ')
+  text = Array(context.output_hash['annotation_text_tesim']).join(' ')
   snippet = ActionView::Base.full_sanitizer.sanitize(text).split(/\s+/)[0..3].join(' ')
   "#{context.clipboard[:canvas]['label']}: #{context.clipboard[:manifest]['label']} — #{snippet}"
 end)

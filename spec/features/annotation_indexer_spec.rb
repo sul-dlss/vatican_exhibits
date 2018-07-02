@@ -43,8 +43,9 @@ RSpec.describe 'Indexing IIIF Annotations', type: :feature do
                                   'iiif_image_resource_ssi' => ['https://digi.vatlib.it/iiifimage/MSS_Barb.gr.252/Barb.gr.252_0001_al_piatto.anteriore.jp2']
     end
     it 'extracts information from the IIIF manifest the canvas is contained in' do
-      expect(document).to include 'iiif_manifest_ssi' => ['https://digi.vatlib.it/iiif/MSS_Barb.gr.252/manifest.json'],
-                                  'iiif_manifest_label_ssi' => ['Barb.gr.252']
+      expect(document).to include 'iiif_manifest_url_ssi' => ['https://digi.vatlib.it/iiif/MSS_Barb.gr.252/manifest.json'],
+                                  'iiif_manifest_label_ssi' => ['Barb.gr.252'],
+                                  'manuscript_shelfmark_ssim' => ['Barb.gr.252']
     end
 
     it 'constructs an annotation title by concatenating manifest, canvas, and annotation data' do

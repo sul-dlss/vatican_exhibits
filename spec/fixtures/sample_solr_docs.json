@@ -47,5 +47,29 @@
     "thumbnail_url_ssm": [
       "https://digi.vatlib.it/pub/digit/MSS_Pal.gr.220/thumb/Pal.gr.220_0001_ba_piatto.anteriore.tif.jpg"
     ]
+  },
+  {
+    "id": "ad73da4e-0072-4b07-a12c-a8d10ac2a9ab",
+    "exhibit_test_public_bsi": true,
+    "spotlight_exhibit_slug_default-exhibit_bsi": true,
+    "spotlight_exhibit_slugs_ssim": [
+      "default-exhibit"
+    ],
+    "spotlight_resource_type_ssim": ["annotation_resources"],
+    "canvas_ssi": "https://digi.vatlib.it/iiif/MSS_Urb.lat.491/canvas/p0012",
+    "resource_type_ssim": ["Annotation"],
+    "type_ssi": "oa:Annotation",
+    "motivation_ssim": ["oa:tagging", "oa:commenting"],
+    "annotation_text_tesim": ["<p>particolare dell'esercito di Federico che risale la strada verso la citt&agrave; per cingerla d'assedio.</p>"],
+    "annotation_tags_ssim": ["#EPonzi"],
+    "annotation_tags_facet_ssim": ["#EPonzi"],
+    "canvas_label_ssi": "IIv",
+    "canvas_thumbnail_ssi": "https://digi.vatlib.it/pub/digit/MSS_Urb.lat.491/thumb/Urb.lat.491_0012_cr_0002v.tif.jpg",
+    "iiif_image_resource_ssi": "https://digi.vatlib.it/iiifimage/MSS_Urb.lat.491/Urb.lat.491_0012_cr_0002v.jp2",
+    "shelfmark_ssim": ["Urb.lat.491"],
+    "iiif_manifest_url_ssi": "https://digi.vatlib.it/iiif/MSS_Urb.lat.491/manifest.json",
+    "iiif_manifest_label_ssi": "Urb.lat.491",
+    "full_title_tesim": ["IIv: Urb.lat.491 — particolare dell'esercito di Federico"],
+    "thumbnail_url_ssm": ["https://digi.vatlib.it/iiifimage/MSS_Urb.lat.491/Urb.lat.491_0012_cr_0002v.jp2/0,0,0,0/100,/0/default.jpg"]
   }
 ]

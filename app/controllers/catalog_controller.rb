@@ -14,6 +14,7 @@ class CatalogController < ApplicationController
     config.show.partials.insert(1, :viewer)
     config.show.partials.insert(3, :curatorial_narrative)
     config.show.partials << :parts
+    config.show.partials << :annotations
     config.view.parts.partials = [:part_header, :part_show]
 
     config.view.gallery.partials = [:index_header, :index]
@@ -47,8 +48,9 @@ class CatalogController < ApplicationController
     config.add_index_field 'beginning_date_ssim'
     config.add_index_field 'ending_date_ssim'
     config.add_index_field 'dated_mss_ssim'
+    config.add_index_field 'manuscript_shelfmark_ssim', helper_method: :link_to_manuscript
     config.add_index_field 'annotation_text_tesim', helper_method: :render_annotation_text_field
-    config.add_index_field 'annotation_tags_ssim', link_to_facet: true
+    config.add_index_field 'annotation_tags_ssim', link_to_search: true
     config.add_index_field 'curatorial_narrative_tesim',
                            immutable: { show: false }.merge(config.view.keys.map { |k| [k, false] }.to_h)
 
