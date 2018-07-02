@@ -52,6 +52,7 @@
     function modalMiradorSubmitListener(block) {
       block.on('mirador-modal-closed', function(e, value) {
         // Extract and merge config information
+        var blockId = block.data('mirador-block-id');
         var miradorInstance = $(value.currentTarget).parents()
           .find('iframe')[0].contentWindow.miradorInstance;
         var config = miradorInstance.saveController.currentConfig;
@@ -72,10 +73,10 @@
           windowSettings: config.windowSettings
         };
         // Add config to hidden form.
-        $('[name="mirador_config"]').replaceWith(
+        block.find('[name="mirador_config"]').replaceWith(
           createMiradorConfigInput(newConfig)
         );
-        $('#mirador-modal').modal('hide')
+        $('#' + blockId + '-mirador-modal').modal('hide')
       })
     }
 

@@ -84,7 +84,7 @@ SirTrevor.Blocks.Mirador = (function() {
     ].join("\n"),
 
     template: [
-      '<div class="clearfix" data-behavior="mirador-widget">',
+      '<div class="clearfix" data-behavior="mirador-widget" data-mirador-block-id="<%= blockID %>">',
         '<div class="widget-header">',
           '<%= description() %>',
         '</div>',
