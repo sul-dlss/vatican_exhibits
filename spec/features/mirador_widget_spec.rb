@@ -236,7 +236,7 @@ RSpec.describe 'Mirador Block', type: :feature, js: true do
 
       expect(hidden_input['value']).to eq mirador_config
 
-      find('[data-target="#mirador-modal"]', visible: false).click
+      find('.configure-mirador-button', visible: false).click
 
       expect(page).to have_css '.modal-body', visible: true # Modal is open
       within_frame 'miradorConfigFrame' do
@@ -244,7 +244,7 @@ RSpec.describe 'Mirador Block', type: :feature, js: true do
       end
       click_button 'Close'
 
-      find('[data-target="#mirador-modal"]', visible: false).click
+      find('.configure-mirador-button', visible: false).click
       within_frame 'miradorConfigFrame' do
         all('.mirador-viewer', visible: true) # Mirador is instantiated
       end

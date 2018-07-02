@@ -64,11 +64,11 @@ SirTrevor.Blocks.Mirador = (function() {
     },
 
     modalTemplate: [
-      '<div id="mirador-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="#international modal">',
+      '<div id="<%= blockID %>-mirador-modal" class="modal fade" data-behavior="mirador-modal" tabindex="-1" role="dialog" aria-labelledby="#<%= blockID %>-modal-title">',
         '<div class="modal-dialog mirador-modal" role="document">',
           '<div class="modal-content">',
             '<div class="modal-header">',
-              '<h4 class="modal-title">Preview and Configure Mirador Viewer</h4>',
+              '<h4 class="modal-title" id="<%= blockID %>-modal-title">Preview and Configure Mirador Viewer</h4>',
             '</div>',
             '<div class="modal-body">',
               '<p>The Mirador Viewer will be displayed to exhibit visitors as shown below. Optionally, you can customize how the viewer will be displayed by adjusting one or more viewer options and saving the changes.</p>',
@@ -93,7 +93,7 @@ SirTrevor.Blocks.Mirador = (function() {
             '<ol class=" dd-list" data-behavior="items-section"></ol>',
           '</div>',
           '<div class="col-md-3">',
-            '<a class="btn btn-primary configure-mirador-button" style="display: none;" data-toggle="modal" data-block="<%= blockID %>" data-target="#mirador-modal">Preview and Configure Viewer</a>',
+            '<a class="btn btn-primary configure-mirador-button" style="display: none;" data-toggle="modal" data-block="<%= blockID %>" data-target="#<%= blockID %>-mirador-modal">Preview and Configure Viewer</a>',
           '</div>',
         '</div>',
         '<div class="row">',
