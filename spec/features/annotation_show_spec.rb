@@ -20,6 +20,7 @@ RSpec.describe 'Annotation display', type: :feature do
   it 'has a viewer' do
     visit spotlight.exhibit_solr_document_path(exhibit, 'ad73da4e-0072-4b07-a12c-a8d10ac2a9ab')
     expect(page).to have_css 'iframe[src*=mirador]'
+    expect(page).to have_css 'iframe[src*=canvas]'
   end
 
   it 'has some metadata' do
