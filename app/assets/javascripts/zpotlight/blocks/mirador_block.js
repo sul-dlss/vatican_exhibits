@@ -60,7 +60,7 @@ SirTrevor.Blocks.Mirador = (function() {
     },
 
     modalTemplate: [
-      '<div id="mirador-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="#international modal">',
+      '<div id="<%= blockID %>-mirador-modal" class="modal fade" data-behavior="mirador-modal" tabindex="-1" role="dialog" aria-labelledby="#international modal">',
         '<div class="modal-dialog mirador-modal" role="document">',
           '<div class="modal-content">',
             '<div class="modal-header">',
@@ -89,7 +89,7 @@ SirTrevor.Blocks.Mirador = (function() {
             '<ol class=" dd-list" data-behavior="items-section"></ol>',
           '</div>',
           '<div class="col-md-3">',
-            '<a class="btn btn-primary configure-mirador-button" style="display: none;" data-toggle="modal" data-block="<%= blockID %>" data-target="#mirador-modal">Preview and Configure Viewer</a>',
+            '<a class="btn btn-primary configure-mirador-button" style="display: none;" data-toggle="modal" data-block="<%= blockID %>" data-target="#<%= blockID %>-mirador-modal">Preview and Configure Viewer</a>',
           '</div>',
         '</div>',
         '<div class="row">',
