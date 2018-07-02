@@ -49,10 +49,11 @@ class CatalogController < ApplicationController
     config.add_index_field 'ending_date_ssim'
     config.add_index_field 'dated_mss_ssim'
     config.add_index_field 'manuscript_shelfmark_ssim', helper_method: :link_to_manuscript
-    config.add_index_field 'annotation_text_tesim', helper_method: :render_annotation_text_field
+    config.add_index_field 'annotation_text_tesim', helper_method: :render_minimally_styled_narrative_field
     config.add_index_field 'annotation_tags_en_ssim', link_to_search: true, if: ->(*_) { I18n.locale =~ /en/ }
     config.add_index_field 'annotation_tags_it_ssim', link_to_search: true, if: ->(*_) { I18n.locale =~ /it/ }
     config.add_index_field 'curatorial_narrative_tesim',
+                           helper_method: :render_minimally_styled_narrative_field,
                            immutable: { show: false }.merge(config.view.keys.map { |k| [k, false] }.to_h)
 
     config.add_show_field 'ms_collection_tesim', section: :general
