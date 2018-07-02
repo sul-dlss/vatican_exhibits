@@ -40,13 +40,28 @@ compose ->(_record, accumulator, context) { accumulator << context.clipboard[:an
       res['chars'].to_s
     end
   end)
-  to_field 'annotation_tags_ssim', (accumulate do |resource, *_|
+  to_field 'annotation_tags_it_ssim', (accumulate do |resource, *_|
     resource['resource'].select { |r| r['@type'] == 'oa:Tag' }.map do |res|
       res['chars'].to_s
     end
   end)
-  to_field 'annotation_tags_facet_ssim', (accumulate do |_resource, context|
-    Array(context.output_hash['annotation_tags_ssim']).flat_map do |value|
+  to_field 'annotation_tags_facet_it_ssim', (accumulate do |_resource, context|
+    Array(context.output_hash['annotation_tags_it_ssim']).flat_map do |value|
+      case value
+      when /\(.+\)/
+        components = value.match(/^(.*)\((.+)\)/).captures.map(&:strip)
+
+        [components.first, components.join(':')]
+      else
+        value
+      end
+    end
+  end)
+  to_field 'annotation_tags_en_ssim', extract: (accumulate { |_, context| context.output_hash['annotation_tags_it_ssim'] }),
+                                      transform: transform(translation_map: 'annotation_tags')
+
+  to_field 'annotation_tags_facet_en_ssim', (accumulate do |_resource, context|
+    Array(context.output_hash['annotation_tags_en_ssim']).flat_map do |value|
       case value
       when /\(.+\)/
         components = value.match(/^(.*)\((.+)\)/).captures.map(&:strip)

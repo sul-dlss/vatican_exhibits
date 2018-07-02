@@ -50,7 +50,7 @@ class CatalogController < ApplicationController
     config.add_index_field 'dated_mss_ssim'
     config.add_index_field 'manuscript_shelfmark_ssim', helper_method: :link_to_manuscript
     config.add_index_field 'annotation_text_tesim', helper_method: :render_annotation_text_field
-    config.add_index_field 'annotation_tags_ssim', link_to_search: true
+    config.add_index_field 'annotation_tags_it_ssim', link_to_search: true
     config.add_index_field 'curatorial_narrative_tesim',
                            immutable: { show: false }.merge(config.view.keys.map { |k| [k, false] }.to_h)
 
@@ -136,9 +136,9 @@ class CatalogController < ApplicationController
     config.add_facet_field 'date_ssim', limit: true
     config.add_facet_field 'name_ssim', limit: true
     config.add_facet_field 'place_ssim', limit: true
-    config.add_facet_field 'annotation_tags_facet_ssim', sort: 'index',
-                                                         limit: 9999,
-                                                         partial: 'blacklight/hierarchy/facet_hierarchy'
+    config.add_facet_field 'annotation_tags_facet_it_ssim', sort: 'index',
+                                                            limit: 9999,
+                                                            partial: 'blacklight/hierarchy/facet_hierarchy'
     config.add_facet_field 'language_ssim', limit: true
     config.facet_display = {
       hierarchy: {
