@@ -32,6 +32,12 @@
       $('[data-save-mirador-config]').on('click', function(context) {
         block.trigger('mirador-modal-closed', context);
       });
+      $('[public-annotations-enabled]').on('change', function(context) {
+        block.trigger('annotationEndpoint', context);
+      });
+      $('[annotations-default-toggled]').on('change', function(context) {
+        block.trigger('mirador-modal-closed', context);
+      });
     }
 
     // Setup functions that need to listen to the source selected event
@@ -46,6 +52,15 @@
       block.on('item-submitted', function(e, value) {
         clearError(block);
         fetchSelectedItem(block, value);
+      });
+    }
+
+    function annotationsListener(block) {
+      block.on('public-annotations-enabled', function(e, value) {
+          console.log('toggled public annotation availability');
+      });
+      block.on('annotations-default-toggled', function(e, value) {
+          console.log('toggled annotations displayed by default');
       });
     }
 
