@@ -3,7 +3,7 @@
     <h2><%= t('.title') %></h2>
     <ul>
     <% document.related_annotations.each do |a| %>
-      <li><%= render_annotation_text_field value: ::JSON.parse(a.data)['resource'].reject { |r| r['@type'] == 'oa:Tag' }.map { |r| r['chars'] } %></li>
+      <li><%= render_minimally_styled_narrative_field value: ::JSON.parse(a.data)['resource'].reject { |r| r['@type'] == 'oa:Tag' }.map { |r| r['chars'] } %></li>
     <% end %>
     </ul>
   </div>
