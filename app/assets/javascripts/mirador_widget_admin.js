@@ -237,18 +237,18 @@
         var errorMsg = 'The manifest does not comply with the IIIF spec.';
       }
       var input = sourceLocationInput(block).parent();
-      var span = input.prev();
+      var errorSpan = input.closest('[data-source-location]').find('.manifest-error');
       input.addClass('has-error');
-      span.removeClass('hidden');
-      span.text(errorMsg);
+      errorSpan.removeClass('hidden');
+      errorSpan.text(errorMsg);
     }
 
     function clearError(block) {
       var input = sourceLocationInput(block).parent();
-      var span = input.prev();
+      var errorSpan = input.closest('[data-source-location]').find('.manifest-error');
       input.removeClass('has-error');
-      span.addClass('hidden');
-      span.text('');
+      errorSpan.addClass('hidden');
+      errorSpan.text('');
     }
 
     return {
