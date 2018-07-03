@@ -1,39 +1,42 @@
 <% doc_presenter = show_presenter(document) %>
-<div class="general-section row">
-  <h2 class="col-md-7"><%= t('.general_title') %></h2>
-  <%# default partial to display solr document fields in catalog show view -%>
-  <dl class="dl-horizontal dl-invert">
-    <% document_show_fields(document).select { |_, field| field.section == :general }.each do |field_name, field| -%>
-      <% if should_render_show_field? document, field %>
+<% metadata_presenter = ManuscriptMetadataPresenter.new(context: self, document: document) %>
+<% if metadata_presenter.general_section.render? %>
+  <div class="general-section row">
+    <h2 class="col-md-7"><%= t('.general_title') %></h2>
+    <dl class="dl-horizontal dl-invert">
+      <% metadata_presenter.general_section.fields.each do |field_name, field| -%>
   	    <dt class="blacklight-<%= field_name.parameterize %>"><%= render_document_show_field_label document, field: field_name %></dt>
   	    <dd class="blacklight-<%= field_name.parameterize %>"><%= doc_presenter.field_value field_name %></dd>
       <% end -%>
-    <% end -%>
-  </dl>
-</div>
-<div id= "metadataDetails" class="description-section row" data-behavior="metadata-details">
-  <h2 class="col-md-7"><%= t('.description_title') %></h2>
-  <dl class="dl-horizontal dl-invert">
-    <% document_show_fields(document).select { |_, field| field.section.nil? }.each do |field_name, field| -%>
-      <% if should_render_show_field? document, field %>
-  	    <dt class="blacklight-<%= field_name.parameterize %>"><%= render_document_show_field_label document, field: field_name %></dt>
-  	    <dd class="blacklight-<%= field_name.parameterize %>"><%= doc_presenter.field_value field_name %></dd>
-      <% end -%>
-    <% end -%>
-  </dl>
+    </dl>
+  </div>
+<% end %>
 
-  <h2 class="col-md-7"><%= t('.administrative_title') %></h2>
-  <dl class="dl-horizontal dl-invert">
-    <% document_show_fields(document).select { |_, field| field.section == :administrative }.each do |field_name, field| -%>
-      <% if should_render_show_field? document, field %>
-        <dt class="blacklight-<%= field_name.parameterize %>"><%= render_document_show_field_label document, field: field_name %></dt>
-        <dd class="blacklight-<%= field_name.parameterize %>"><%= doc_presenter.field_value field_name %></dd>
-      <% end -%>
-    <% end -%>
-  </dl>
-</div>
-<button type='button' class='btn btn-sm btn-default btn-details hidden' data-toggle='collapse' data-target='#metadataDetails' aria-expanded='false' aria-controls='metadataDetails'>
-  <span class='btn-text-show'><%= t('.show_details') %></span>
-  <span class='btn-text-hide'><%= t('.hide_details') %></span>
-  <span class='btn-caret'>&raquo;</span>
-</button>
+<% if metadata_presenter.description_section.render? || metadata_presenter.admin_section.render? %>
+  <div id="metadataDetails" class="description-section row" data-behavior="metadata-details">
+    <% if metadata_presenter.description_section.render? %>
+      <h2 class="col-md-7"><%= t('.description_title') %></h2>
+      <dl class="dl-horizontal dl-invert">
+        <% metadata_presenter.description_section.fields.each do |field_name, field| -%>
+          <dt class="blacklight-<%= field_name.parameterize %>"><%= render_document_show_field_label document, field: field_name %></dt>
+          <dd class="blacklight-<%= field_name.parameterize %>"><%= doc_presenter.field_value field_name %></dd>
+        <% end -%>
+      </dl>
+    <% end %>
+
+    <% if metadata_presenter.admin_section.render? %>
+      <h2 class="col-md-7"><%= t('.administrative_title') %></h2>
+      <dl class="dl-horizontal dl-invert">
+        <% metadata_presenter.admin_section.fields.each do |field_name, field| -%>
+          <dt class="blacklight-<%= field_name.parameterize %>"><%= render_document_show_field_label document, field: field_name %></dt>
+          <dd class="blacklight-<%= field_name.parameterize %>"><%= doc_presenter.field_value field_name %></dd>
+        <% end -%>
+      </dl>
+    <% end %>
+  </div>
+  <button type='button' class='btn btn-sm btn-default btn-details hidden' data-toggle='collapse' data-target='#metadataDetails' aria-expanded='false' aria-controls='metadataDetails'>
+    <span class='btn-text-show'><%= t('.show_details') %></span>
+    <span class='btn-text-hide'><%= t('.hide_details') %></span>
+    <span class='btn-caret'>&raquo;</span>
+  </button>
+<% end %>
