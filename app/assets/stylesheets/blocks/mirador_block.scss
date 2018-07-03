@@ -8,6 +8,14 @@
   }
 }
 
+// 🧙‍♂️ https://stackoverflow.com/questions/23436430/bootstrap-3-input-group-100-width
+.form-inline {
+  .input-group-btn.load-iiif-item-button {
+    display: table-cell;
+    width: 1%;
+  }
+}
+
 .modal-dialog.mirador-modal {
   width: 90%;
   .modal-body {
