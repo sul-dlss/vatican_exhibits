@@ -29,7 +29,7 @@
     }
 
     function setupMiradorModalEvents(block) {
-      $('[data-save-mirador-config]').on('click', function(context) {
+      modalForBlock(block).find('[data-save-mirador-config]').on('click', function(context) {
         block.trigger('mirador-modal-closed', context);
       });
     }
@@ -52,9 +52,8 @@
     function modalMiradorSubmitListener(block) {
       block.on('mirador-modal-closed', function(e, value) {
         // Extract and merge config information
-        var blockId = block.data('mirador-block-id');
-        var miradorInstance = $(value.currentTarget).parents()
-          .find('iframe')[0].contentWindow.miradorInstance;
+        var $modal = modalForBlock(block);
+        var miradorInstance = $modal.find('iframe')[0].contentWindow.miradorInstance;
         var config = miradorInstance.saveController.currentConfig;
         var newConfig = {
           data: config.data,
@@ -76,7 +75,7 @@
         block.find('[name="mirador_config"]').replaceWith(
           createMiradorConfigInput(newConfig)
         );
-        $('#' + blockId + '-mirador-modal').modal('hide')
+        $modal.modal('hide')
       })
     }
 
@@ -124,6 +123,10 @@
 
     function configureMiradorButton(block) {
       return block.find('.configure-mirador-button');
+    }
+
+    function modalForBlock(block) {
+      return $('#' + block.data('mirador-block-id') + '-mirador-modal');
     }
 
     function toggleSourceLocationFieldset(block) {

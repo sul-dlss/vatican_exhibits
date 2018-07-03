@@ -12,5 +12,6 @@ class MiradorController < ApplicationController
     @manifest = params.fetch(:manifest, nil)
     @canvas = params.fetch(:canvas, nil)
     @options = params.fetch(:options, nil)
+    @mirador_id = params.fetch(:mirador_id, nil)
   end
 end
