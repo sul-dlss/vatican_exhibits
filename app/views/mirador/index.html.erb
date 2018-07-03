@@ -3,7 +3,7 @@
 
 <% if @options == 'buildFromScratch' %>
   <%= content_tag :div, data: { miradorFromScratch: true } do %>
-    <%= content_tag :div, '', id: 'miradorId' %>
+    <%= content_tag :div, '', id: @mirador_id %>
   <% end %>
 <% else %>
 
