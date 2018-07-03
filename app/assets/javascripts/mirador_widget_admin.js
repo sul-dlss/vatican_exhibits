@@ -53,8 +53,8 @@
       block.on('mirador-modal-closed', function(e, value) {
         // Extract and merge config information
         var blockId = block.data('mirador-block-id');
-        var miradorInstance = $(value.currentTarget).parents()
-          .find('iframe')[0].contentWindow.miradorInstance;
+        var $modal = $('#' + blockId + '-mirador-modal');
+        var miradorInstance = $modal.find('iframe')[0].contentWindow.miradorInstance;
         var config = miradorInstance.saveController.currentConfig;
         var newConfig = {
           data: config.data,
@@ -76,7 +76,7 @@
         block.find('[name="mirador_config"]').replaceWith(
           createMiradorConfigInput(newConfig)
         );
-        $('#' + blockId + '-mirador-modal').modal('hide')
+        $modal.modal('hide')
       })
     }
 
