@@ -7,8 +7,13 @@
       <span class="part-author-date"><%= show_presenter.field_value('ms_author_date_tesim') %>.</span>
     <% end %>
     <span class="part-supplied-title"><%= show_presenter.field_value('ms_supplied_title_tesim') %></span>
-    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#part-show-<%= document.first('ms_locus_tesim').parameterize %>" aria-expanded="false" aria-controls="part-show-<%= document.first('ms_locus_tesim').parameterize %>">
-      <%= t('.view_details') %>
+    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#part-show-<%= document.first('ms_locus_tesim').parameterize %>" aria-expanded="false" aria-controls="part-show-<%= document.first('ms_locus_tesim').parameterize %>">
+      <span class="area-not-collapsed">
+        <%= t('.hide_details') %>
+      </span>
+      <span class="area-collapsed">
+        <%= t('.view_details') %>
+      </span>
     </button>
   </p>
 </div>
