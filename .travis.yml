@@ -13,7 +13,9 @@ env:
 before_install:
   - gem install bundler
   - google-chrome-stable --headless --no-sandbox --disable-gpu --remote-debugging-port=9222 http://localhost &
-  - yarn install
+  - nvm install node
+  - node -v
+  - npm i
 
 before_script:
   - bin/rails assets:precompile

@@ -23,7 +23,9 @@ end
 
 desc 'Run eslint'
 task eslint: [:environment] do
-  `npx eslint ./**/*.es6`
+  puts 'Running eslint...'
+  system('npm i')
+  system('npx eslint ./app/assets/**/*.es6') || abort('eslint task failed, please fix the errors')
 end
 
 desc 'Run tests in generated test Rails app with generated Solr instance running'
