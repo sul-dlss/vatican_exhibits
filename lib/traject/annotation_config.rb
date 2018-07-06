@@ -21,6 +21,10 @@ each_record do |record, context|
     Faraday.get(manifest_url).body
   end
   context.clipboard[:manifest] = ::JSON.parse(manifest_body)
+
+  context.clipboard[:structures] = Array(context.clipboard[:manifest]['structures']).select do |structure|
+    Array(structure['canvases']).include? record.canvas
+  end
 end
 
 to_field 'id', (accumulate { |resource, *_| resource.uuid })
@@ -97,6 +101,17 @@ compose ->(_record, accumulator, context) { accumulator << context.clipboard[:ma
   end)
   to_field 'iiif_manifest_label_ssi', (accumulate do |resource, *_|
     resource['label']
+  end)
+end
+
+compose ->(_record, accumulator, context) { accumulator.concat(context.clipboard[:structures]) } do
+  extend TrajectPlus::Macros
+  to_field 'iiif_structure_label_ssim', (accumulate do |resource, *_|
+    resource['label']
+  end)
+
+  to_field 'iiif_structure_id_ssim', (accumulate do |resource, *_|
+    resource['@id']
   end)
 end
 
