@@ -31,4 +31,12 @@ RSpec.describe 'Manuscript display', type: :feature do
     expect(page).to have_css 'dt', text: 'Author'
     expect(page).to have_css 'dd', text: 'Gregorius Nazianzenu'
   end
+
+  it 'has collapsible parts', js: true do
+    visit spotlight.exhibit_solr_document_path(exhibit, 'Vat_gr_504')
+    expect(page).to have_css '.blacklight-ms_author_tesim', text: 'Gregorius Nazianzenus,', visible: false
+    all('button', text: 'View details')[0].click
+    expect(page).to have_css '.blacklight-ms_author_tesim', text: 'Gregorius Nazianzenus,', visible: true
+    expect(page).to have_css 'button', text: 'Hide details', visible: true
+  end
 end

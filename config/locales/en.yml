@@ -17,6 +17,7 @@ en:
     parts_default:
       title: Parts of this manuscript
     part_header_default:
+      hide_details: Hide details
       view_details: View details
     show_manuscript:
       general_title: Manuscript information
