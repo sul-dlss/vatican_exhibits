@@ -17,7 +17,8 @@ namespace :annotations do
         end
 
         # Remediate bounding box coordinates for SVG-only shapes
-        if data['on'].first['selector']['default']['@type'] == 'oa:FragmentSelector' &&
+        if !data['on'].is_a?(String) &&
+           data['on'].first['selector']['default']['@type'] == 'oa:FragmentSelector' &&
            data['on'].first['selector']['default']['value'] == 'xywh=0,0,0,0' &&
            data['on'].first['selector']['item']['@type'] == 'oa:SvgSelector'
 
