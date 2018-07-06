@@ -46,6 +46,10 @@ echo "
 </VirtualHost>
 " >> /etc/httpd/conf.modules.d/10-passenger.conf
 
+curl https://raw.githubusercontent.com/h5bp/server-configs-apache/master/src/web_performance/compression.conf >> /etc/httpd/conf.d/compression.conf
+
+curl https://raw.githubusercontent.com/h5bp/server-configs-apache/master/src/web_performance/cache_expiration.conf >> /etc/httpd/conf.d/cache_expiration.conf
+
 # Install nodejs
 curl --silent --location https://rpm.nodesource.com/setup_8.x | bash -
 yum install -y nodejs
