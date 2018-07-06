@@ -53,6 +53,11 @@ RSpec.describe 'Indexing IIIF Annotations', type: :feature do
                                   'manuscript_shelfmark_ssim' => ['Barb.gr.252']
     end
 
+    it 'extracts information from the IIIF structure the canvas is contained in' do
+      expect(document).to include 'iiif_structure_label_ssim' => ['Legatura'],
+                                  'iiif_structure_id_ssim' => ['https://digi.vatlib.it/iiif/MSS_Barb.gr.252/range/r0-0']
+    end
+
     it 'constructs an annotation title by concatenating manifest, canvas, and annotation data' do
       expect(document).to include 'full_title_tesim' => ['piatto.anteriore: Barb.gr.252 — test123']
     end

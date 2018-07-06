@@ -56,6 +56,7 @@ class CatalogController < ApplicationController
                            helper_method: :render_minimally_styled_narrative_field,
                            immutable: { show: false }.merge(config.view.keys.map { |k| [k, false] }.to_h)
 
+    config.add_show_field 'iiif_structure_label_ssim'
     config.add_show_field 'ms_collection_tesim', section: :general
     config.add_show_field 'ms_shelfmark_tesim', section: :general
     config.add_show_field 'ms_library_tesim', section: :general
