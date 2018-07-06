@@ -17,11 +17,11 @@ namespace :annotations do
         end
 
         # Remediate bounding box coordinates for SVG-only shapes
-        if annotation['on'].first['selector']['default']['@type'] == 'oa:FragmentSelector' &&
-           annotation['on'].first['selector']['default']['value'] == 'xywh=0,0,0,0' &&
-           annotation['on'].first['selector']['item']['@type'] == 'oa:SvgSelector'
+        if data['on'].first['selector']['default']['@type'] == 'oa:FragmentSelector' &&
+           data['on'].first['selector']['default']['value'] == 'xywh=0,0,0,0' &&
+           data['on'].first['selector']['item']['@type'] == 'oa:SvgSelector'
 
-          svg = annotation['on'].first['selector']['item']['value']
+          svg = data['on'].first['selector']['item']['value']
           svg_data = Nokogiri::XML(svg)
           path = svg_data.xpath('//svg:path/@d', svg: 'http://www.w3.org/2000/svg').first.to_s
 
@@ -58,7 +58,7 @@ namespace :annotations do
             y2 = abs_coords.max_by(&:last)
 
             bounding_box = "xywh=#{x1.first.round},#{y1.last.round},#{(x2.first - x1.first).ceil},#{(y2.last - y1.last).ceil}"
-            annotation['on'].first['selector']['default']['value'] = bounding_box
+            data['on'].first['selector']['default']['value'] = bounding_box
           end
         end
 
