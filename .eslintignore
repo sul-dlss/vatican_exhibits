@@ -1,1 +1,1 @@
-*.js
+app/assets/javascripts/**/*.js

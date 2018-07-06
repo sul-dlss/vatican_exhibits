@@ -1,3 +1,6 @@
 {
-  "extends": "airbnb"
+  "env": {
+    "jasmine": true
+  },
+  "extends": "airbnb",
 }
