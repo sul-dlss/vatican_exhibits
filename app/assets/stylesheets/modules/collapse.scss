@@ -1,0 +1,9 @@
+[data-toggle="collapse"] {
+  &.collapsed .collapse-shown {
+    display: none;
+  }
+
+  &:not(.collapsed) .collapse-hidden {
+    display: none;
+  }
+}

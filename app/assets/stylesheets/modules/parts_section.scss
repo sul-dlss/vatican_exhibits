@@ -1,15 +1,5 @@
 .parts-section {
   padding-left: 0;
-
-  [data-toggle="collapse"] {
-    &.collapsed .area-not-collapsed {
-      display: none;
-    }
-
-    &:not(.collapsed) .area-collapsed {
-      display: none;
-    }
-  }
 }
 
 .part {
