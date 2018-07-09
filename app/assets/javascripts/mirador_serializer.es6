@@ -23,7 +23,7 @@ export default class MiradorSerializer {
       windowObjects: this.manifestUrls.map((url, index) => ({
         loadedManifest: url,
         viewType: 'ImageView',
-        slotAddress: this.slotAddress(index, this.manifestUrls.length),
+        slotAddress: this.constructor.slotAddress(index, this.manifestUrls.length),
       })),
       windowSettings: {
         displayLayout: false,
@@ -38,12 +38,12 @@ export default class MiradorSerializer {
    * A Mirador slot address based on image position
    * @returns {(string|null)}
    */
-  slotAddress(index, total) {
-    if(total < 2) {
+  static slotAddress(index, total) {
+    if (total < 2) {
       return null;
     }
 
-    switch(index) {
+    switch (index) {
       case 0:
         return 'column1.row1.column1';
       case 1:
@@ -80,7 +80,7 @@ export default class MiradorSerializer {
    * Creates a mirador layout object for a simple two up/side-by-side display
    * @returns {object}
    */
-  twoUpLayout() {
+  static twoUpLayout() {
     return {
       type: 'column',
       address: 'column1',
@@ -92,16 +92,16 @@ export default class MiradorSerializer {
             {
               type: 'column',
               depth: 2,
-              address: 'column1.row1.column1'
+              address: 'column1.row1.column1',
             },
             {
               type: 'column',
               depth: 2,
-              address: 'column1.row1.column2'
-            }
-          ]
-        }
-      ]
+              address: 'column1.row1.column2',
+            },
+          ],
+        },
+      ],
     };
   }
 
@@ -111,20 +111,18 @@ export default class MiradorSerializer {
    * @returns {object}
    */
   twoUpOneAcrossLayout() {
-    var layout = this.twoUpLayout();
-    layout.children.push(
-      {
-        type: 'row',
-        address: 'column1.row2',
-        children: [
-          {
-            type: 'column',
-            depth: 2,
-            address: 'column1.row2.column1'
-          }
-        ]
-      }
-    );
+    const layout = this.constructor.twoUpLayout();
+    layout.children.push({
+      type: 'row',
+      address: 'column1.row2',
+      children: [
+        {
+          type: 'column',
+          depth: 2,
+          address: 'column1.row2.column1',
+        },
+      ],
+    });
 
     return layout;
   }
@@ -135,14 +133,12 @@ export default class MiradorSerializer {
    * @returns {object}
    */
   twoByTwoLayout() {
-    var layout = this.twoUpOneAcrossLayout();
-    layout.children[1].children.push(
-      {
-        type: 'column',
-        depth: 2,
-        address: 'column1.row2.column2'
-      }
-    );
+    const layout = this.twoUpOneAcrossLayout();
+    layout.children[1].children.push({
+      type: 'column',
+      depth: 2,
+      address: 'column1.row2.column2',
+    });
 
     return layout;
   }
