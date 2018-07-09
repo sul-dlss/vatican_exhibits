@@ -6,4 +6,4 @@ ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 set :deploy_to, '/srv/app'
 
-set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets public/uploads}
+set :linked_dirs, %w{config/settings log tmp/pids tmp/cache tmp/sockets public/uploads}
