@@ -150,7 +150,8 @@ class CatalogController < ApplicationController
     config.add_facet_field 'language_ssim', limit: true
     config.facet_display = {
       hierarchy: {
-        'annotation_tags_facet' => [['ssim'], ':']
+        'annotation_tags_facet_en' => [['ssim'], ':'],
+        'annotation_tags_facet_it' => [['ssim'], ':']
       }
     }
     config.add_search_field 'all_fields', label: I18n.t('spotlight.search.fields.search.all_fields')
