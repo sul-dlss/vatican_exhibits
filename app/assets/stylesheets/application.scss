@@ -18,3 +18,7 @@ $logo-image: image-url('dvl_logo.png') !default;
 .mirador-embed-wrapper {
   height: 60vh;
 }
+
+#solr_document_sidecar_data_curatorial_narrative_tesim + .help-block {
+  display: none;
+}
