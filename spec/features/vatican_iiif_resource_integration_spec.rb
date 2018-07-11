@@ -87,7 +87,7 @@ RSpec.describe 'Bibliography resource integration test', type: :feature do
     end
 
     it 'has author' do
-      expect(document['author_ssim']).to eq ['Eunapius Sardianus', 'Porphyrius Tyrius', 'Greco']
+      expect(document['author_ssim']).to eq ['Eunapius Sardianus', 'Porphyrius Tyrius']
     end
 
     it 'has other author' do
