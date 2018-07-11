@@ -40,13 +40,8 @@ compose ->(record, accumulator, _context) { accumulator << record.tei.xpath('//T
   to_field 'dated_mss_ssim', extract_xml(
     'origDate/@n', nil
   )
-
   to_field 'author_ssim', extract_xml(
     "author/alias/authorityAuthor[@rif='aut']", nil,
-    gsub: [/[,\.]$/, '']
-  )
-  to_field 'author_ssim', extract_xml(
-    'textLang', nil,
     gsub: [/[,\.]$/, '']
   )
   to_field 'other_author_ssim', extract_xml(
