@@ -138,20 +138,20 @@ RSpec.describe 'Bibliography resource integration test', type: :feature do
     end
 
     it 'has manuscript-level information' do
-      expect(document).to include 'ms_alphabet_tesim' => ['Greco.'],
+      expect(document).to include 'ms_alphabet_ssim' => ['Greco.'],
                                   'ms_beginning_date_tesim' => ['1526'],
                                   'ms_binding_note_tesim' => ['Integumentum membranaceum; in dorso: "Eunapio et Porphyrio greco".'],
                                   'ms_binding_tesim' => ['Membr.'],
                                   'ms_colophon_tesim' => ['F. 112v, atramento subrubro: Ἀδελφὸς Οὐαλεριᾶνος Φορολιβιεὺς ὁ Ἀλβίνου ταύτην | βίβλον ἐν τῷ μοναστηρίῳ τοῦ ἁγίου Ἀντω|νίου Ἐνέτησιν ἔγραψε, ἔτη το(ῦ) Κ(υρίο)υ ἡμῶν ͵αφλθ´ (manus poster. vertit 1539): v. Vogel-Gardthausen, p. 370.'],
                                   'ms_content_tesim' => ['Miscellanea Eunapii atque Porphyrii operum.'],
-                                  'ms_date_mss_tesim' => ['1539'],
-                                  'ms_date_tesim' => ['sec. XVI med', 'sec. XVI med (ff. 1-38)', 'anno 1539 (ff. 41-112)'],
+                                  'ms_date_mss_ssim' => ['1539'],
+                                  'ms_date_ssim' => ['sec. XVI med', 'sec. XVI med (ff. 1-38)', 'anno 1539 (ff. 41-112)'],
                                   'ms_decoration_note_tesim' => ['In utraque parte, tituli et litterae initiales annotationesque nonnullae, atramento subrubro.'],
                                   'ms_ending_date_tesim' => ['1575'],
                                   'ms_extent_tesim' => ['ff. I. 113 (+81. 86. 95)'],
                                   'ms_general_note_tesim' => ['Codex efficitur duobus libellis, a totidem librariis fere eadem aetate conscriptis et postea in unum conftatis.', 'F. Ir, nota antiqua "276".', 'F. 1r, alia manu: Εὐναπίου βίοι Φιλοσόφων καὶ Σοφιστῶν | Πορφυρίου τῶν πρὸς τὰ νοητὰ ἀφορμῶν, et eadem manu in margine: "Codex seculi XVI".'],
                                   'ms_height_tesim' => ['320'],
-                                  'ms_language_tesim' => ['Greco.'],
+                                  'ms_language_ssim' => ['Greco.'],
                                   'ms_library_tesim' => ['Biblioteca Apostolica Vaticana'],
                                   'ms_other_name_tesim' => ['Albini, Valeriano,'],
                                   'ms_shelfmark_tesim' => ['Barb.gr.252'],
@@ -170,8 +170,8 @@ RSpec.describe 'Bibliography resource integration test', type: :feature do
         'ms_author_tesim' => ['Eunapius Sardianus,'],
         'ms_supplied_title_tesim' => ['Vitae sophistarum'],
         'ms_uniform_title_tesim' => ['Vitae sophistarum (Eunapius Sardianus, 354-420)'],
-        'ms_language_tesim' => ['Greco.'],
-        'ms_alphabet_tesim' => ['Greco.'],
+        'ms_language_ssim' => ['Greco.'],
+        'ms_alphabet_ssim' => ['Greco.'],
         'ms_source_of_information_tesim' => ['J. Mogenet, Codices Barberiniani Graeci, in Bibliotheca Vaticana 1989, v. 2, p. 100.']
       )
     end

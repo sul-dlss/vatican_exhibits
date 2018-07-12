@@ -28,18 +28,18 @@ en:
   blacklight:
     search:
       fields:
-        ms_collection_tesim: Collection
+        ms_collection_ssim: Collection
         ms_shelfmark_tesim: Shelfmark
         ms_library_tesim: Library
         ms_ocelli_nominum_tesim: Ocelli nominum
-        ms_date_tesim: Date
-        ms_date_mss_tesim: Dated Mss
+        ms_date_ssim: Date
+        ms_date_mss_ssim: Dated Mss
         ms_beginning_date_tesim: Beginning date
         ms_ending_date_tesim: Ending date
         ms_date_of_text_tesim: Date of text
-        ms_country_tesim: Country
-        ms_region_tesim: Region
-        ms_place_tesim: Place
+        ms_country_ssim: Country
+        ms_region_ssim: Region
+        ms_place_ssim: Place
         ms_support_tesim: Support
         ms_physical_shapes_tesim: Physical shapes
         ms_height_tesim: Height
@@ -92,8 +92,8 @@ en:
         ms_source_note_tesim: Source note
         ms_other_name_tesim: Other name
         ms_subject_tesim: Subject
-        ms_language_tesim: Language
-        ms_alphabet_tesim: Alphabet
+        ms_language_ssim: Language
+        ms_alphabet_ssim: Alphabet
         ms_colophon_tesim: Colophon
         ms_secfol_tesim: Secundum Folium
         ms_origin_tesim: Origin
@@ -130,3 +130,4 @@ en:
         explicit_tesim: 'Explicit'
         overview_tesim: 'Overview'
         summary_tesim: 'Summary'
+        iiif_structure_label_ssim: Section
