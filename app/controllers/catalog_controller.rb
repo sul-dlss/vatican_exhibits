@@ -22,7 +22,6 @@ class CatalogController < ApplicationController
     config.view.slideshow.partials = [:index]
 
     config.index.document_actions.clear
-    config.index.collection_actions.clear
     config.show.document_actions.clear
     config.index.document_actions[:bookmark].if = false
     config.show.document_actions[:bookmark].if = false
