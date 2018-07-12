@@ -16,6 +16,7 @@ class CatalogController < ApplicationController
     config.show.partials << :parts
     config.show.partials << :annotations
     config.view.parts.partials = [:part_header, :part_show]
+    config.view.parts.if = false
 
     config.view.gallery.partials = [:index_header, :index]
     config.view.masonry.partials = [:index]
