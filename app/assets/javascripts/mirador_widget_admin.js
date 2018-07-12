@@ -32,10 +32,10 @@
       modalForBlock(block).find('[data-save-mirador-config]').on('click', function(context) {
         block.trigger('mirador-modal-closed', context);
       });
-      $('.annotations-checkbox').on('change', function(context) {
+      modalForBlock(block).find('.annotations-checkbox').on('change', function(context) {
         block.trigger('annotations-available', context);
       });
-      $('.display-default-checkbox').on('change', function(context) {
+      modalForBlock(block).find('.display-default-checkbox').on('change', function(context) {
         block.trigger('annotations-default-toggled', context);
       });
     }
@@ -85,11 +85,74 @@
     }
 
     function setupAnnotationsListener(block) {
+      // make checkboxes reflect accurate state.
       block.on('annotations-available', function(e, value) {
-        console.log('toggled public annotation availability');
+        var $modal = modalForBlock(block);
+        var iframeContext = $modal.find('iframe')[0].contentWindow;
+        var miradorInstance = iframeContext.miradorInstance;
+        var available = value.currentTarget.checked;
+
+        // Enable the default toggle checkboxes.
+        if (available) {
+
+          // var config = miradorInstance.saveController.currentConfig;
+          // var newConfig = {
+          //   data: config.data,
+          //   layout: config.layout,
+          //   mainMenuSettings: config.mainMenuSettings,
+          //   windowSettings: config.windowSettings,
+          //   windowObjects: config.windowObjects.map(function(value) {
+          //     return {
+          //       slotAddress: value.slotAddress,
+          //       viewType: value.viewType,
+          //       canvasID: value.canvasID,
+          //       loadedManifest: value.loadedManifest,
+          //       sidePanelVisible: value.sidePanelVisible,
+          //       windowOptions: value.windowOptions ? { osdBounds: value.windowOptions.osdBounds } : undefined
+          //     };
+          //   })
+          // };
+          // // Disable the ability to view annotations.
+          // newConfig.windowSettings.canvasControls.annotations.annotationLayer = false;
+
+          // // re-render the entire instsance.
+          // // TO-DO: find a way to not do this and instead
+          // iframeContext.miradorInstance = iframeContext.Mirador(newConfig);
+          modalForBlock(block).find('.display-default-checkbox').removeAttr('disabled');
+          return;
+        }
+
+        // miradorInstance.saveController.currentConfig.windowObjects.forEach(function(window){
+        //   miradorInstance.publish('WINDOW_UPDATED', {
+        //   });
+        // });
+        modalForBlock(block).find('.display-default-checkbox').attr('disabled', true);
       });
+
       block.on('annotations-default-toggled', function(e, value) {
-        console.log('toggled annotations displayed by default');
+
+        var $modal = modalForBlock(block);
+        var miradorInstance = $modal.find('iframe')[0].contentWindow.miradorInstance;
+        var displayed = value.currentTarget.checked;
+
+        // Enable the default toggle checkboxes.
+        if (displayed) {
+
+          miradorInstance.viewer.workspace.windows.forEach(function(window) {
+            // necessary to initialise the menu state machine.
+            // There is no mirador "action" for this setting.
+            window.focusModules.ImageView.hud.annoState.displayOn();
+          });
+
+          console.log(miradorInstance.saveController.currentConfig);
+          return;
+        }
+
+        miradorInstance.viewer.workspace.windows.forEach(function(window) {
+          window.focusModules.ImageView.hud.annoState.displayOff();
+        });
+
+        console.log(miradorInstance.saveController.currentConfig);
       });
     }
 
@@ -325,7 +388,6 @@
         setupItemInputButtonEvents(block);
         setupNestableChangeEvents(block);
         setupMiradorModalEvents(block);
-        setupAnnotationsListener(block);
       },
 
       setupListeners: function(block) {
@@ -336,6 +398,7 @@
         setupItemsUpdatedListener(block);
         setupManifestErrorListener(block);
         modalMiradorSubmitListener(block);
+        setupAnnotationsListener(block);
       },
 
       hiddenInput: function(index, object) {
