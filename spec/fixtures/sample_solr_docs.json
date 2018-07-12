@@ -16,7 +16,7 @@
       "S. Maximi confessoris opera complura et alia nonnulla"
     ],
     "ms_shelfmark_tesim": ["Vat.gr.504"],
-    "ms_language_tesim": ["Greco."],
+    "ms_language_ssim": ["Greco."],
     "resource_type_ssim": ["Manuscript"],
     "iiif_manifest_url_ssi": "https://digi.vatlib.it/iiif/MSS_Vat.gr.504/manifest.json",
     "parts_ssm": [

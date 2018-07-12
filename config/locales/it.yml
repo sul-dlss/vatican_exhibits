@@ -2,18 +2,18 @@ it:
   blacklight:
     search:
       fields:
-        ms_collection_tesim: Fondo
+        ms_collection_ssim: Fondo
         ms_shelfmark_tesim: Segnatura
         ms_library_tesim: Biblioteca
         ms_ocelli_nominum_tesim: Altra denominazione
-        ms_date_tesim: Datazione
-        ms_date_mss_tesim: Datato
+        ms_date_ssim: Datazione
+        ms_date_mss_ssim: Datato
         ms_beginning_date_tesim: Data inizio
         ms_ending_date_tesim: Data fine
         ms_date_of_text_tesim: Data testo
-        ms_country_tesim: Paese
-        ms_region_tesim: Regione
-        ms_place_tesim: Localita
+        ms_country_ssim: Paese
+        ms_region_ssim: Regione
+        ms_place_ssim: Localita
         ms_support_tesim: Materiale
         ms_physical_shapes_tesim: Forma
         ms_height_tesim: Altezza
@@ -65,8 +65,8 @@ it:
         ms_source_note_tesim: Nota di fonte
         ms_other_name_tesim: Altro nome
         ms_subject_tesim: Soggetto
-        ms_language_tesim: Lingua
-        ms_alphabet_tesim: Alfabeto
+        ms_language_ssim: Lingua
+        ms_alphabet_ssim: Alfabeto
         ms_colophon_tesim: Colophon
         ms_secfol_tesim: Secundum Folium
         ms_origin_tesim: Origine

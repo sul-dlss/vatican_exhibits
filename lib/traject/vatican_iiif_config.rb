@@ -126,18 +126,18 @@ compose ->(record, accumulator, _context) { accumulator << record.tei.xpath('//T
   extend TrajectPlus::Macros
   extend TrajectPlus::Macros::Xml
 
-  to_field 'ms_collection_tesim', extract_xml('msIdentifier/collection', nil)	# Fondo	Collection
+  to_field 'ms_collection_ssim', extract_xml('msIdentifier/collection', nil)	# Fondo	Collection
   to_field 'ms_shelfmark_tesim', extract_xml('msIdentifier/idno', nil) #	Segnatura	Shelfmark
   to_field 'ms_library_tesim', extract_xml('msIdentifier/repository', nil) #	Biblioteca	Library
   to_field 'ms_ocelli_nominum_tesim', extract_xml('msIdentifier/altName', nil) #	Altra denominazione	Ocelli nominum
-  to_field 'ms_date_tesim', extract_xml('msPart/msContents/msItem/origDate', nil) #	Datazione	Date
-  to_field 'ms_date_mss_tesim', extract_xml('msPart/msContents/msItem/origDate/@n', nil) #		Datato	Dated Mss
+  to_field 'ms_date_ssim', extract_xml('msPart/msContents/msItem/origDate', nil) #	Datazione	Date
+  to_field 'ms_date_mss_ssim', extract_xml('msPart/msContents/msItem/origDate/@n', nil) #		Datato	Dated Mss
   to_field 'ms_beginning_date_tesim', extract_xml('msPart/msContents/msItem/origDate/@notBefore', nil) #		Data inizio	Beginning date
   to_field 'ms_ending_date_tesim', extract_xml('msPart/msContents/msItem/origDate/@notAfter', nil) #		Data fine	Ending date
   to_field 'ms_date_of_text_tesim', extract_xml('msPart/msContents/msItem/origDate/@value', nil) #		Data testo	Date of text
-  to_field 'ms_country_tesim', extract_xml('msPart/msContents/msItem/origPlace/country', nil) #	Paese	Country
-  to_field 'ms_region_tesim', extract_xml('msPart/msContents/msItem/origPlace/region', nil) #	Regione	Region
-  to_field 'ms_place_tesim', extract_xml('msPart/msContents/msItem/origPlace/settlement', nil) #	Localita	Place
+  to_field 'ms_country_ssim', extract_xml('msPart/msContents/msItem/origPlace/country', nil) #	Paese	Country
+  to_field 'ms_region_ssim', extract_xml('msPart/msContents/msItem/origPlace/region', nil) #	Regione	Region
+  to_field 'ms_place_ssim', extract_xml('msPart/msContents/msItem/origPlace/settlement', nil) #	Localita	Place
   to_field 'ms_support_tesim', extract_xml('msPart/physDesc/support/p', nil) #	Materiale	Support
   to_field 'ms_physical_shapes_tesim', extract_xml('msPart/physDesc/form/p', nil) #	Forma	Physical shapes
   to_field 'ms_height_tesim', extract_xml('msPart/physDesc/dimensions/height', nil) #	Altezza	Height
@@ -190,8 +190,8 @@ compose ->(record, accumulator, _context) { accumulator << record.tei.xpath('//T
   to_field 'ms_source_note_tesim', extract_xml('msPart/msContents/msItem/note[@anchored="sourceSYS"]', nil) #		Nota di fonte	Source note
   to_field 'ms_other_name_tesim', extract_xml('msPart/msContents/msItem/name[@role!="internal" and @role!="external" or not(@role)]/alias/authorityAuthor[@rif="aut"]', nil) #	Altro nome	Other name
   to_field 'ms_subject_tesim', extract_xml('msPart/msContents/msItem/keywords/term/alias/authoritySubject[@rif="aut"]', nil) #	Soggetto	Subject
-  to_field 'ms_language_tesim', extract_xml('msPart/msContents/msItem/textLang', nil) #	Lingua	Language
-  to_field 'ms_alphabet_tesim', extract_xml('msPart/msContents/msItem/textLang/@n', nil) #	Alfabeto	Alphabet
+  to_field 'ms_language_ssim', extract_xml('msPart/msContents/msItem/textLang', nil) #	Lingua	Language
+  to_field 'ms_alphabet_ssim', extract_xml('msPart/msContents/msItem/textLang/@n', nil) #	Alfabeto	Alphabet
   to_field 'ms_colophon_tesim', extract_xml('msPart/msContents/msItem/colophon', nil) #	Colophon	Colophon
   to_field 'ms_secfol_tesim', extract_xml('msPart/msContents/msItem/writingSystem/secFol', nil) #	Secundum Folium	Secundum Folium
   to_field 'ms_bibl_tesim', extract_xml('msPart/msContents/msItem/bibl', nil) # Bibliography
@@ -210,14 +210,14 @@ end
 compose 'parts_ssm', ->(record, accumulator, _context) { accumulator.concat record.tei.xpath('//TEI.2/teiHeader/fileDesc/sourceDesc/msDescription[@n="n"]') } do
   extend TrajectPlus::Macros
   extend TrajectPlus::Macros::Xml
-  to_field 'ms_date_tesim', extract_xml('msPart/msContents/msItem/origDate', nil) #	Datazione	Date
-  to_field 'ms_date_mss_tesim', extract_xml('msPart/msContents/msItem/origDate/@n', nil) #		Datato	Dated Mss
+  to_field 'ms_date_ssim', extract_xml('msPart/msContents/msItem/origDate', nil) #	Datazione	Date
+  to_field 'ms_date_mss_ssim', extract_xml('msPart/msContents/msItem/origDate/@n', nil) #		Datato	Dated Mss
   to_field 'ms_beginning_date_tesim', extract_xml('msPart/msContents/msItem/origDate/@notBefore', nil) #		Data inizio	Beginning date
   to_field 'ms_ending_date_tesim', extract_xml('msPart/msContents/msItem/origDate/@notAfter', nil) #		Data fine	Ending date
   to_field 'ms_date_of_text_tesim', extract_xml('msPart/msContents/msItem/origDate/@value', nil) #		Data testo	Date of text
-  to_field 'ms_country_tesim', extract_xml('msPart/msContents/msItem/origPlace/country', nil) #	Paese	Country
-  to_field 'ms_region_tesim', extract_xml('msPart/msContents/msItem/origPlace/region', nil) #	Regione	Region
-  to_field 'ms_place_tesim', extract_xml('msPart/msContents/msItem/origPlace/settlement', nil) #	Localita	Place
+  to_field 'ms_country_ssim', extract_xml('msPart/msContents/msItem/origPlace/country', nil) #	Paese	Country
+  to_field 'ms_region_ssim', extract_xml('msPart/msContents/msItem/origPlace/region', nil) #	Regione	Region
+  to_field 'ms_place_ssim', extract_xml('msPart/msContents/msItem/origPlace/settlement', nil) #	Localita	Place
   to_field 'ms_support_tesim', extract_xml('msPart/physDesc/support/p', nil) #	Materiale	Support
   to_field 'ms_overview_tesim', extract_xml('msPart/msContents/overview/p/@value', nil) #		Nota generale	Overview
   to_field 'ms_palimpsest_tesim', extract_xml('msPart/physDesc/palimpsest/p', nil) #	Palinsesto	Palimpsest
@@ -243,8 +243,8 @@ compose 'parts_ssm', ->(record, accumulator, _context) { accumulator.concat reco
   to_field 'ms_source_note_tesim', extract_xml('msPart/msContents/msItem/note[@anchored="sourceSYS"]', nil) #		Nota di fonte	Source note
   to_field 'ms_other_name_tesim', extract_xml('msPart/msContents/msItem/name[@role!="internal" and @role!="external" or not(@role)]/alias/authorityAuthor[@rif="aut"]', nil) #	Altro nome	Other name
   to_field 'ms_subject_tesim', extract_xml('msPart/msContents/msItem/keywords/term/alias/authoritySubject[@rif="aut"]', nil) #	Soggetto	Subject
-  to_field 'ms_language_tesim', extract_xml('msPart/msContents/msItem/textLang', nil) #	Lingua	Language
-  to_field 'ms_alphabet_tesim', extract_xml('msPart/msContents/msItem/textLang/@n', nil) #	Alfabeto	Alphabet
+  to_field 'ms_language_ssim', extract_xml('msPart/msContents/msItem/textLang', nil) #	Lingua	Language
+  to_field 'ms_alphabet_ssim', extract_xml('msPart/msContents/msItem/textLang/@n', nil) #	Alfabeto	Alphabet
   to_field 'ms_colophon_tesim', extract_xml('msPart/msContents/msItem/colophon', nil) #	Colophon	Colophon
   to_field 'ms_secfol_tesim', extract_xml('msPart/msContents/msItem/writingSystem/secFol', nil) #	Secundum Folium	Secundum Folium
   to_field 'ms_bibl_tesim', extract_xml('msPart/msContents/msItem/bibl', nil) # Bibliography

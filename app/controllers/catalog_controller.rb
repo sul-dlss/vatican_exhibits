@@ -57,18 +57,18 @@ class CatalogController < ApplicationController
                            immutable: { show: false }.merge(config.view.keys.map { |k| [k, false] }.to_h)
 
     config.add_show_field 'iiif_structure_label_ssim'
-    config.add_show_field 'ms_collection_tesim', section: :general, link_to_search: true
+    config.add_show_field 'ms_collection_ssim', section: :general, link_to_search: true
     config.add_show_field 'ms_shelfmark_tesim', section: :general
     config.add_show_field 'ms_library_tesim', section: :general
     config.add_show_field 'ms_ocelli_nominum_tesim', section: :general
-    config.add_show_field 'ms_date_tesim', section: :general, link_to_search: true
-    config.add_show_field 'ms_date_mss_tesim', section: :general, link_to_search: true
+    config.add_show_field 'ms_date_ssim', section: :general, link_to_search: true
+    config.add_show_field 'ms_date_mss_ssim', section: :general, link_to_search: true
     config.add_show_field 'ms_beginning_date_tesim', section: :general
     config.add_show_field 'ms_ending_date_tesim', section: :general
     config.add_show_field 'ms_date_of_text_tesim', section: :general
-    config.add_show_field 'ms_country_tesim', section: :general, link_to_search: true
-    config.add_show_field 'ms_region_tesim', section: :general, link_to_search: true
-    config.add_show_field 'ms_place_tesim', section: :general, link_to_search: true
+    config.add_show_field 'ms_country_ssim', section: :general, link_to_search: true
+    config.add_show_field 'ms_region_ssim', section: :general, link_to_search: true
+    config.add_show_field 'ms_place_ssim', section: :general, link_to_search: true
     config.add_show_field 'ms_support_tesim', section: :general
     config.add_show_field 'ms_physical_shapes_tesim', section: :general
     config.add_show_field 'ms_height_tesim', section: :general
@@ -101,8 +101,8 @@ class CatalogController < ApplicationController
     config.add_show_field 'ms_watermarks_tesim'
     config.add_show_field 'ms_motto_tesim'
     config.add_show_field 'ms_locus_tesim'
-    config.add_show_field 'ms_author_tesim', link_to_search: :name_ssim
-    config.add_show_field 'ms_other_author_tesim', link_to_search: :name_ssim
+    config.add_show_field 'ms_author_tesim'
+    config.add_show_field 'ms_other_author_tesim'
     config.add_show_field 'ms_title_tesim'
     config.add_show_field 'ms_supplied_title_tesim'
     config.add_show_field 'ms_uniform_title_tesim'
@@ -119,10 +119,10 @@ class CatalogController < ApplicationController
     config.add_show_field 'ms_type_of_document_tesim'
     config.add_show_field 'ms_general_note_tesim'
     config.add_show_field 'ms_source_note_tesim'
-    config.add_show_field 'ms_other_name_tesim', link_to_search: :name_ssim
+    config.add_show_field 'ms_other_name_tesim'
     config.add_show_field 'ms_subject_tesim'
-    config.add_show_field 'ms_language_tesim', link_to_search: true
-    config.add_show_field 'ms_alphabet_tesim', link_to_search: true
+    config.add_show_field 'ms_language_ssim', link_to_search: true
+    config.add_show_field 'ms_alphabet_ssim', link_to_search: true
     config.add_show_field 'ms_colophon_tesim'
     config.add_show_field 'ms_secfol_tesim'
     config.add_show_field 'ms_origin_tesim'
