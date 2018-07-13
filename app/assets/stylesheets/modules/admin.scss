@@ -1,0 +1,47 @@
+a[aria-expanded=true] .glyphicon-chevron-right {
+  display: none;
+}
+
+a[aria-expanded=false] .glyphicon-chevron-down {
+  display: none;
+}
+
+.text-as-label {
+  font-weight: bold;
+}
+
+h3 + .table.analytics {
+  margin-top: $padding-large-vertical * 2;
+}
+
+.table.analytics {
+  background-color: $table-bg-accent;
+
+  .value {
+    color: $gray-dark;
+    font-size: $font-size-h2;
+    font-weight: 700;
+    padding-bottom: 0;
+  }
+
+  + h4 {
+    margin-top: $padding-large-vertical * 4;
+  }
+}
+
+[data-behavior="translation-progress"] .badge {
+  background-color: $gray-lighter;
+  border-radius: 3px;
+  color: $black;
+  font-weight: normal;
+}
+
+#new_language {
+  margin-bottom: $padding-large-vertical * 3;
+}
+
+.translation-subheading {
+  font-size: $font-size-h3;
+  margin-top: $padding-large-vertical * 3;
+  padding-bottom: $padding-base-vertical;
+}

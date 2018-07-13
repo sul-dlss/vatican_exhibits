@@ -1,3 +1,7 @@
+body {
+  font-family: $font-family-sans-serif;
+}
+
 .facets-heading {
   @extend .h3;
   @include heading-with-border();
