@@ -1,6 +1,8 @@
 // Layout adjustments for both the exhibits cards
 // and the site home sidebar
-.blacklight-exhibits-index {
+.blacklight-exhibits-index,
+.blacklight-sites,
+.blacklight-admin_users {
   .nav > li > a {
     display: block;
     padding: 6px 12px;

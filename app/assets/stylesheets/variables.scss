@@ -1,6 +1,10 @@
 // Vatican Variables
 $vatican-blue: #1c315b;
 
+$font-family-sans-serif: "Source Sans Pro", "Arial Unicode MS", Helvetica, sans-serif;
+$headings-font-family: "Source Sans Pro", "Arial Unicode MS", Helvetica, sans-serif;
+$heading-font-color: #3f3c30;
+
 // Bootstrap Overrides
 $navbar-inverse-bg: $vatican-blue;
 $navbar-inverse-link-active-bg: darken($vatican-blue, 5%);
