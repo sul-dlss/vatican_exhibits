@@ -11,6 +11,7 @@ $logo-image: image-url('dvl_logo.png') !default;
 @import 'spotlight';
 @import "modules/mixins";
 @import "modules/blacklight_overrides";
+@import "modules/spotlight_overrides";
 @import "modules/parts_section";
 @import 'modules/header';
 @import 'blocks/mirador_block';

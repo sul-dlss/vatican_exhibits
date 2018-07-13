@@ -13,3 +13,8 @@
 @mixin thumbnail-image-border() {
   border: 1px solid $gray-lighter;
 }
+
+@mixin sidebar-link-active() {
+  color: $sidebar-link-color;
+  font-weight: 600;
+}
