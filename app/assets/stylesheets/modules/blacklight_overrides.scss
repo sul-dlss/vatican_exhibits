@@ -7,6 +7,10 @@ body {
   @include heading-with-border();
 }
 
+#facet-panel-collapse {
+  padding-left: 0;
+}
+
 .top-panel-heading {
   padding: $padding-base-vertical 0;
 }
