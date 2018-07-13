@@ -66,7 +66,7 @@ export default class MiradorSerializer {
       case 1:
         return '1x1';
       case 2:
-        return this.twoUpLayout();
+        return this.constructor.twoUpLayout();
       case 3:
         return this.twoUpOneAcrossLayout();
       case 4:
