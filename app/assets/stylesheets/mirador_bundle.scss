@@ -1,3 +1,9 @@
 @import 'font-awesome';
 @import 'material_icons';
 @import 'mirador-combined';
+
+// There is no setting to show/hide edit and delete controls, thus we just need
+// display:none as editing capabilities is not needed for this application.
+.mirador-container .annotation-display.annotation-tooltip .button-container {
+  display: none;
+}
