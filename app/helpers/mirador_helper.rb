@@ -23,10 +23,18 @@ module MiradorHelper
         "canvasControls": {
           "annotations": {
             "annotationLayer": true,
-            "annotationState": 'on'
+            "annotationState": canvas ? 'on' : 'off', # set the annotationState on whether or not a canvas is passed
+            "annotationCreation": false
           }
         }
-      }]
+      }],
+      "annotationEndpoint": {
+        name: 'Annotot',
+        module: 'AnnototEndpoint',
+        options: {
+          endpoint: annotot_path
+        }
+      }
     }
   end
   # rubocop:enable MethodLength
