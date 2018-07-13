@@ -1,3 +1,11 @@
 @mixin part-divider($property-name) {
   #{$property-name}: 1px solid $navbar-inverse-link-color;
 }
+
+@mixin heading-with-border() {
+  border-bottom: 1px solid $navbar-inverse-link-color;
+  color: $gray;
+  margin-bottom: 6px;
+  padding-bottom: 3px;
+  padding-left: 3px;
+}
