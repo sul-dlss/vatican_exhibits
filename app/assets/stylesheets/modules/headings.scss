@@ -1,0 +1,14 @@
+// Reduce size of page titles
+.empty-page-block h2 {
+  @extend .h3;
+}
+
+.page-title,
+.page-header {
+  @extend .h2;
+  color: $heading-font-color;
+
+  small {
+    font-size: 24px;
+  }
+}

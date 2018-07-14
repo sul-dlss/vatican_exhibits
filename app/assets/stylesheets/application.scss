@@ -9,11 +9,17 @@ $logo-image: image-url('dvl_logo.png') !default;
 
 @import 'blacklight';
 @import 'spotlight';
-@import 'vatican_library_theme';
+@import "modules/mixins";
+@import "modules/blacklight_overrides";
+@import "modules/spotlight_overrides";
+@import "modules/parts_section";
 @import 'modules/header';
 @import 'blocks/mirador_block';
 @import 'modules/metadata_details_btn';
 @import 'modules/collapse';
+@import 'modules/site_home';
+@import 'modules/headings';
+@import 'modules/admin';
 
 .mirador-embed-wrapper {
   height: 60vh;
