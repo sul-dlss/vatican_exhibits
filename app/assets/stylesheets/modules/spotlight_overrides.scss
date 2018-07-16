@@ -1,3 +1,26 @@
+body,
+.thumbnail {
+  background-color: $base-background-color;
+}
+
+a {
+  color: lighten($default-link-color, 0%);
+}
+
+.btn-primary,
+.nav-pills > li.active > a {
+  background-color: $vatican-blue-alternate;
+  border-color: darken($vatican-blue-alternate, 5%);
+
+  &:hover,
+  &:active,
+  &:focus,
+  &:active:focus {
+    background-color: lighten($vatican-blue-alternate, 10%);
+    border-color: lighten($vatican-blue-alternate, 15%);
+  }
+}
+
 .dd-list {
   .panel-default {
     > .panel-heading {
@@ -45,7 +68,7 @@
   }
 }
 
-// Ajustments to sidebars to use SUL color palette, more compact vertical spacing
+// Ajustments to sidebars to use more compact vertical spacing
 #sidebar li {
   margin-top: 0;
 }
@@ -62,6 +85,7 @@
 }
 
 #sidebar ul.nav > li a {
+  color: $sidebar-link-color;
   padding: 3px $padding-base-horizontal 3px 3px;
 
   .blacklight-about_pages-show & { // accommodate likely occurrence of multi-line items
@@ -120,12 +144,15 @@
 }
 
 .search-btn {
+  background-color: $vatican-blue;
+  border-color: darken($vatican-blue, 5%);
+
   &:hover,
   &:active,
   &:focus,
   &:active:focus {
-    background-color: $gray-lighter;
-    border-color: $gray;
+    background-color: $vatican-blue-alternate;
+    border-color: darken($vatican-blue-alternate, 5%);
   }
 }
 
@@ -142,32 +169,6 @@
 .blacklight-about_pages-show #sidebar {
   margin-top: $padding-large-vertical * 2;
 }
-
-// TODO: Update facet sidebar with Vatican colors 
-// .facets > .top-panel-heading {
-//   padding-top: 0;
-// }
-//
-// .panel-default {
-//   border-color: $gray-lighter;
-//
-//   > .panel-heading {
-//     background-color: $gray;
-//   }
-//
-//   &.facet_limit-active {
-//     border-color: $gray;
-//
-//     > .panel-heading {
-//       background-color: $gray;
-//       color: $gray-dark;
-//     }
-//   }
-//
-//   .facet-values li .selected {
-//     color: $gray-dark;
-//   }
-// }
 
 .callout-danger .btn-default {
   @extend .btn-danger;

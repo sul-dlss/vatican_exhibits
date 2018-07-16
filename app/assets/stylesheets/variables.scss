@@ -2,17 +2,26 @@
 
 // Vatican Variables
 $vatican-blue: #1c315b;
+$vatican-blue-alternate: #286090;
+
+$base-background-color: #f7f7f7;
+
+$danger-red-background: lighten($brand-danger, 35%);
 
 $font-family-sans-serif: "Source Sans Pro", "Arial Unicode MS", Helvetica, sans-serif;
 $headings-font-family: "Source Sans Pro", "Arial Unicode MS", Helvetica, sans-serif;
-$heading-font-color: #3f3c30;
+$heading-font-color: $vatican-blue;
 
-$sidebar-link-color: $gray;
+$default-link-color: lighten($vatican-blue, 10%);
+$sidebar-link-color: $vatican-blue;
 $sidebar-link-background-color: $gray-lighter;
+
+@import 'spotlight/variables_bootstrap';
 
 // Bootstrap Overrides
 $navbar-inverse-bg: $vatican-blue;
 $navbar-inverse-link-active-bg: darken($vatican-blue, 5%);
 $navbar-inverse-link-color: #d8d8d8;
 
-@import 'spotlight/variables_bootstrap';
+$breadcrumb-bg: transparent;
+$breadcrumb-padding-vertical: $padding-base-vertical;
