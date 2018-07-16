@@ -92,40 +92,43 @@
         var miradorInstance = iframeContext.miradorInstance;
         var available = value.currentTarget.checked;
 
-        // Enable the default toggle checkboxes.
+        // reset the workspace settings if box is checked.
         if (available) {
+          var config = miradorInstance.saveController.currentConfig;
+          var windowConfigs = config.windowObjects.map(function(value) {
+              return {
+                slotAddress: value.slotAddress,
+                viewType: value.viewType,
+                canvasID: value.canvasID,
+                loadedManifest: value.loadedManifest,
+                sidePanelVisible: value.sidePanelVisible,
+                windowOptions: value.windowOptions ? { osdBounds: value.windowOptions.osdBounds } : undefined
+              };
+          });
+          // Disable the ability to view annotations for all new windows.
+          miradorInstance.saveController.currentConfig
+            .windowSettings.canvasControls.annotations
+            .annotationsLayer = false;
 
-          // var config = miradorInstance.saveController.currentConfig;
-          // var newConfig = {
-          //   data: config.data,
-          //   layout: config.layout,
-          //   mainMenuSettings: config.mainMenuSettings,
-          //   windowSettings: config.windowSettings,
-          //   windowObjects: config.windowObjects.map(function(value) {
-          //     return {
-          //       slotAddress: value.slotAddress,
-          //       viewType: value.viewType,
-          //       canvasID: value.canvasID,
-          //       loadedManifest: value.loadedManifest,
-          //       sidePanelVisible: value.sidePanelVisible,
-          //       windowOptions: value.windowOptions ? { osdBounds: value.windowOptions.osdBounds } : undefined
-          //     };
-          //   })
-          // };
-          // // Disable the ability to view annotations.
-          // newConfig.windowSettings.canvasControls.annotations.annotationLayer = false;
+          // clear existing windows
+          miradorInstance.viewer.workspace.windows.forEach(function(window) {
+            miradorInstance.eventEmitter.publish('REMOVE_WINDOW', window.id);
+          });
 
-          // // re-render the entire instsance.
-          // // TO-DO: find a way to not do this and instead
-          // iframeContext.miradorInstance = iframeContext.Mirador(newConfig);
+          // reset original layout
+          miradorInstance.eventEmitter.publish('RESET_WORKSPACE_LAYOUT', {layoutDescription: config.layout});
+
+          // repopulate layout slots with new windows that take up
+          // the new annotation setting on initialisation.
+          // miradorInstance.viewer.workspace.slots.forEach(function(slot, index){
+          //   console.log(windowConfigs);
+          //   miradorInstance.eventEmitter.publish('ADD_WINDOW', windowConfigs[0]);
+          // });
+
           modalForBlock(block).find('.display-default-checkbox').removeAttr('disabled');
           return;
         }
 
-        // miradorInstance.saveController.currentConfig.windowObjects.forEach(function(window){
-        //   miradorInstance.publish('WINDOW_UPDATED', {
-        //   });
-        // });
         modalForBlock(block).find('.display-default-checkbox').attr('disabled', true);
       });
 
