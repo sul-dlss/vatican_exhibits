@@ -45,3 +45,24 @@ h3 + .table.analytics {
   margin-top: $padding-large-vertical * 3;
   padding-bottom: $padding-base-vertical;
 }
+
+.tanslation-description-toggle {
+  background-color: transparent;
+}
+
+.panel-translation {
+  background-color: $gray-lighter;
+}
+
+.exhibit-admin .callout-danger {
+  background-color: $danger-red-background;
+  border-color: darken($danger-red-background, 30%);
+}
+
+.nav-tabs > li.active > a {
+  font-weight: 600;
+}
+
+.btn-link {
+  color: $default-link-color;
+}

@@ -4,7 +4,7 @@
 
 @mixin heading-with-border() {
   border-bottom: 1px solid $navbar-inverse-link-color;
-  color: $gray;
+  color: $heading-font-color;
   margin-bottom: 6px;
   padding-bottom: 3px;
   padding-left: 3px;

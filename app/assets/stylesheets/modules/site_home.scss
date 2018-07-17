@@ -14,19 +14,20 @@
 .home-page-column {
   margin-left: 6px;
 
-  h2,
-  h3 {
+  h2 {
     @include heading-with-border();
-    font-size: $font-size-h4;
+    font-size: 16px;
     padding-bottom: $padding-base-vertical;
     padding-top: 0;
+    text-transform: uppercase;
   }
 
-  .btn + h3 {
-    margin-top: $padding-large-vertical * 2;
+  h2 ~ h2 {
+    margin-top: $padding-large-vertical * 3;
   }
 
   .nav > li > a {
+    color: $sidebar-link-color;
     padding-left: 3px;
   }
 }
