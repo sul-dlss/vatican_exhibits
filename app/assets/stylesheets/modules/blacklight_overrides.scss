@@ -1,5 +1,10 @@
 body {
   font-family: $font-family-sans-serif;
+  margin-bottom: $footer-height + $footer-top-margin;
+
+  @media (max-width: 991px) {
+    margin-bottom: $footer-height + $footer-top-margin + $footer-mobile-adjustment;
+  }
 }
 
 .facets-heading {
