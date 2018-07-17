@@ -1,0 +1,60 @@
+.footer {
+  background-color: $vatican-blue;
+  bottom: 0;
+  color: $base-background-color;
+  font-weight: 300;
+  height: $footer-height;
+  margin-top: $footer-top-margin;
+  padding: 20px 10px 12px;
+  position: absolute;
+  width: 100%;
+
+  .copyright-heading,
+  .partner-heading {
+    display: block;
+    font-size: $font-size-h4;
+    margin-bottom: $padding-large-vertical;
+  }
+
+  .copyright-text {
+    font-size: $font-size-small;
+  }
+
+  .mellon-text {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .footer {
+    height: $footer-height + $footer-mobile-adjustment;
+    padding-top: 15px;
+    text-align: center;
+
+    .partner-heading {
+      margin-bottom: 0;
+      margin-top: 20px;
+    }
+
+    .mellon-logo {
+      display: none;
+    }
+
+    a > .mellon-text {
+      color: $base-background-color;
+      display: block;
+      font-weight: 400;
+    }
+  }
+}
+
+@media (max-width: 579px) {
+  .footer .copyright,
+  .footer .partners {
+    font-size: 16px;
+  }
+
+  .copyright-text {
+    display: none;
+  }
+}
