@@ -1,0 +1,5 @@
+action_mailer:
+  default_options:
+    from: "bav-stanford@lists.stanford.edu"
+  default_url_options:
+    host: <%= ENV['HOSTNAME'] %>
