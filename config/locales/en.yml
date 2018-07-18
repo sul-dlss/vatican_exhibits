@@ -1,4 +1,10 @@
 en:
+  footer:
+    copyright_heading: Copyright © Vatican Library
+    copyright_text: All rights reserved. The contents of this site are protected by copyright. Neither the text nor the images may be reproduced, in any form, without the authorisation of the Vatican Library, 00120, Vatican City.
+    partnership_heading: In partnership with
+    project_support_heading: Project supported by
+    project_support_text: The Andrew W. Mellon Foundation
   vatican_iiif_resources:
     form:
       title: Vatican Hosted IIIF Urls
