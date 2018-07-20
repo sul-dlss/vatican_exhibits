@@ -1,9 +1,12 @@
 #header-navbar {
+  min-height: 40px;
+
   .navbar-brand {
-    height: 56px;
+    background-position: 18px 4px;
+    background-size: auto 40px;
   }
 
   .nav > li > a {
-    padding: 15px 15px 3px;
+    padding: 15px 12px;
   }
 }

@@ -10,6 +10,19 @@
   }
 }
 
+.card-face,
+.card-back {
+  background-color: $vatican-blue-lighter;
+}
+
+.card-face {
+  border-color: darken($vatican-blue-lighter, 10%);
+
+  img {
+    border-bottom: 1px solid darken($vatican-blue-lighter, 10%);
+  }
+}
+
 // Adjustments to site home sidebar
 .home-page-column {
   margin-left: 6px;

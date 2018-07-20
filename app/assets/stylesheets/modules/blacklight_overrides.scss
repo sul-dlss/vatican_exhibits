@@ -56,6 +56,10 @@ body {
   padding: $padding-base-vertical 0;
 }
 
+#per_page-dropdown .dropdown-toggle {
+  color: $default-link-color;
+}
+
 .breadcrumb {
   border-bottom: 1px solid $navbar-inverse-link-color;
   border-radius: 0;
