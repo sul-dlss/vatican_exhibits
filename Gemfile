@@ -69,7 +69,7 @@ group :test do
   gem 'rails-controller-testing'
   gem 'capybara'
   gem 'chromedriver-helper'
-  gem 'selenium-webdriver', '~> 3.12.0'
+  gem 'selenium-webdriver', '>= 3.13.1'
   gem 'simplecov'
   gem 'webmock'
 end
