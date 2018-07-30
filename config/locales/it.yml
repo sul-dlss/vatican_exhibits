@@ -1,4 +1,26 @@
 it:
+  footer:
+    copyright_heading: Copyright © Vatican Library
+    copyright_text: Tutti i diritti riservati. I contenuti di questo sito sono protetti da copyright. Né il testo né le immagini possono essere riprodotti, in alcuna forma, senza l'autorizzazione della Biblioteca Vaticana, V-00120, Città del Vaticano.
+    partnership_heading: In partecipazione con
+    project_support_heading: Progetto finanziato da
+    project_support_text: La Fondazoine Andrew W. Mellon
+  catalog:
+    annotations_annotation:
+      title: Altre annotazioni in questo foglio
+    curatorial_narrative_default:
+      title: Testo del curatore
+    parts_default:
+      title: Descrizioni interne
+    part_header_default:
+      hide_details: Nascondi i dettagli
+      view_details: Visualizza i dettagli
+    show_manuscript:
+      general_title: Informazioni sul manoscritto
+      description_title: Descrizione
+      administrative_title: Informazioni amministrative
+      hide_details: Meno dettagli
+      show_details: Più dettagli
   blacklight:
     search:
       fields:
