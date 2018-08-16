@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ino:request xmlns:ino="http://namespaces.softwareag.com/tamino/response2">
+<ino:object>
+<TEI.2 inoid="210273" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="y"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Vat.lat." rend="Vat.lat.031950000" scan="@5Vat.lat.3195_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Vat.lat.3195">Vat.lat.3195</idno>
+					</msIdentifier><msPart><head><scriptTerm>&lt;semigotica&gt;</scriptTerm></head><msContents><msItem><textLang n="Latino." rend="ita">Italiano.</textLang><name authorityID="42406" role="scribe" scan="@42406"><alias><authorityAuthor date="n. c. 1346-m. c. 1417" rif="aut" type="person">Malpaghini, Giovanni,</authorityAuthor></alias></name><name authorityID="631" role="internal" scan="@631"><alias><authorityAuthor date="1304-1374" rif="aut" type="person">Petrarca, Francesco,</authorityAuthor><authorityAuthor date="1304-1374" rif="see" type="person">Petrarcha, Francesco,</authorityAuthor><authorityAuthor date="1304-1374" rif="see" type="person">Petracco, Francesco,</authorityAuthor><authorityAuthor date="1304-1374" rif="see" type="person">P. F.,</authorityAuthor></alias></name><name authorityID="7350" role="owner" scan="@7350"><alias><authorityAuthor date="1470-1547" rif="aut" title="card.," type="person">Bembo, Pietro,</authorityAuthor></alias></name><name authorityID="32677" role="owner" scan="@32677"><alias><authorityAuthor date="m. 1595" rif="aut" type="person">Bembo, Torquato,</authorityAuthor></alias></name><name authorityID="3585" role="owner" scan="@3585"><alias><authorityAuthor date="1529-1600" rif="aut" type="person">Orsini, Fulvio,</authorityAuthor><authorityAuthor date="1529-1600" rif="see" type="person">Ursinus Fulvius,</authorityAuthor></alias></name><origPlace><country>Italia</country><region>Italia settentrionale</region></origPlace><origDate n="1366-1374">sec. XIV ex</origDate></msItem></msContents><physDesc><support><p>membr.</p></support><dimensions><height>270</height><width>202</width></dimensions><extent>ff. I, 1a e 1b, 72, I&#39; (ff. I e I&#39; guardie moderne non numerate)</extent><msWriting><p>Due mani: la prima &lt;(G. Malpaghini)&gt; ai ff. 1r-38v, 53r-62r, la seconda &lt;(F. Petrarca)&gt; ai ff. 38v-49r, 62r-72v; di mano del sec. XV la tavola dei capoversi ai ff. 1av-1bv. Rare note marginali dellaa seconda mano e di altre mani posteriori (sec. XV-XVI).</p></msWriting></physDesc><additional><adminInfo><recordHist><source><p>IAM41.4 -Rerum vulgarium fragmenta: codice Vat.lat.3195. Commentario all&#39;edizione in facsimile, G. Belloni (cur.), Padova 2006.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="07/02/2017"></date>
+				<persName>A.Berloco</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">05/10/2017</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						<persName n="07/02/2017">A.Berloco</persName>
+					<persName n="05/10/2017">F.Borzumato</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="210275" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Vat.lat." rend="Vat.lat.031950001r-49r. 53r-72v" scan="@5Vat.lat.3195_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Vat.lat.3195">Vat.lat.3195</idno>
+					</msIdentifier><msPart><msContents><msItem><locus>1r-49r. 53r-72v</locus><author authorityID="631" scan="@631"><alias><authorityAuthor date="1304-1374" rif="aut" type="person">Petrarca, Francesco,</authorityAuthor><authorityAuthor date="1304-1374" rif="see" type="person">Petrarcha, Francesco,</authorityAuthor><authorityAuthor date="1304-1374" rif="see" type="person">Petracco, Francesco,</authorityAuthor><authorityAuthor date="1304-1374" rif="see" type="person">P. F.,</authorityAuthor></alias></author><title scan="@1Rerum vulgarium fragmenta_title" type="title" value="Rerum vulgarium fragmenta">Rerum vulgarium fragmenta</title><uniformTitle authorityID="41081" scan="@41081" type="uniform"><alias><authorityTitleSeries rif="aut" type="uniform" value="Rerum vulgarium fragmenta (Petrarca, Francesco, 1304-1374)">Rerum vulgarium fragmenta (Petrarca, Francesco, 1304-1374)</authorityTitleSeries><authorityTitleSeries rif="see" type="uniform" value="Canzoniere (Petrarca, Francesco, 1304-1374)">Canzoniere (Petrarca, Francesco, 1304-1374)</authorityTitleSeries><authorityTitleSeries rif="see" type="uniform" value="Rime (Petrarca, Francesco, 1304-1374)">Rime (Petrarca, Francesco, 1304-1374)</authorityTitleSeries></alias></uniformTitle><textLang n="Latino." rend="ita">Italiano.</textLang><note anchored="yes">Precede la tavola dei capoversi (ff. 1av-1bv).</note><name authorityID="42406" role="scribe" scan="@42406"><alias><authorityAuthor date="n. c. 1346-m. c. 1417" rif="aut" type="person">Malpaghini, Giovanni,</authorityAuthor></alias></name></msItem></msContents><additional><adminInfo><recordHist><source><p>Rerum vulgarium fragmenta: codice Vat.lat.3195. Commentario all&#39;edizione in facsimile, G. Belloni (cur.), Padova 2006.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="07/02/2017"></date>
+				<persName>A.Berloco</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">26/04/2017</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						
+					<persName n="26/04/2017">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+</ino:request>

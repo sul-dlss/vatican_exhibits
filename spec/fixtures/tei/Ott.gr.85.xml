@@ -1,0 +1,1778 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ino:request xmlns:ino="http://namespaces.softwareag.com/tamino/response2">
+<ino:object>
+<TEI.2 inoid="207451" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Ott.gr." rend="Ott.gr.000850001r-v" scan="@5Ott.gr.85_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Ott.gr.85">Ott.gr.85</idno>
+					</msIdentifier><msPart><msContents><msItem><locus>1r-v</locus><author authorityID="33163" scan="@33163" type="internal"><alias><authorityAuthor date="sec. VII" rif="aut" type="person">Leontius Constantinopolitanus,</authorityAuthor><authorityAuthor date="sec. VII" rif="see" type="person">Leontius Presbyter Constantinopolitanus,</authorityAuthor></alias></author><title scan="@1In nativitatem Christi_supplied" type="supplied" value="In nativitatem Christi">In nativitatem Christi</title><incipit scan="@2μάγοι οἱ μάγοι_" value="μάγοι οἱ μάγοι">μάγοι οἱ μάγοι</incipit><textLang n="Greco." rend="grc">Greco.</textLang><note anchored="yes">Fragmentum.</note></msItem></msContents><additional><adminInfo><recordHist><source><p>C. Datema, Leontius, presbyter of Constantinople, and an unpublished homily of Ps. Chrysostom on Christmas | (BHG 1914i/1914k), in Jahrbuch der Österreichischen Byzantinistik 39 (1989) 67-79.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="12/12/2016"></date>
+				<persName>A.Berloco</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">07/11/2017</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						<persName n="12/12/2016">A.Berloco</persName><persName n="12/12/2016">A.Berloco</persName>
+					<persName n="07/11/2017">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="207476" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Ott.gr." rend="Ott.gr.000850061r-v" scan="@5Ott.gr.85_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Ott.gr.85">Ott.gr.85</idno>
+					</msIdentifier><msPart><msContents><msItem><locus>61r-v</locus><author authorityID="465" scan="@465" type="internal"><alias><authorityAuthor date="347-407" rif="aut" title="s., patriarca di Costantinopoli," type="person">Iohannes Chrysostomus,</authorityAuthor><authorityAuthor date="347-407" rif="see" title="s., patriarca di Costantinopoli," type="person">Chrysostomus,</authorityAuthor><authorityAuthor date="347-407" rif="see" title="s., patriarca di Costantinopoli," type="person">Johannes Chrysostomus,</authorityAuthor><authorityAuthor date="347-407" rif="see" title="s., patriarca di Costantinopoli," type="person">Crisostomo, Giovanni,</authorityAuthor><authorityAuthor date="347-407" rif="see" title="s., patriarca di Costantinopoli," type="person">Giovanni Crisostomo,</authorityAuthor><authorityAuthor date="347-407" rif="see" title="s., patriarca di Costantinopoli," type="person">Giovanni Boccadoro,</authorityAuthor></alias></author><title scan="@1De baptismo Christi_supplied" type="supplied" value="De baptismo Christi">De baptismo Christi</title><textLang n="Greco." rend="grc">Greco.</textLang><note anchored="yes">Fragmentum.</note></msItem></msContents><additional><adminInfo><recordHist><source><p>E. Feron, F. Battaglini, Codices manuscripti graeci Ottoboniani Bibliothecae Vaticanae descripti, Romae 1893, p. 52.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="13/12/2016"></date>
+				<persName>A.Berloco</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">07/11/2017</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						<persName n="13/12/2016">A.Berloco</persName>
+					<persName n="07/11/2017">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="184291" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Ott.gr." rend="Ott.gr.000850230r-v" scan="@5Ott.gr.85_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Ott.gr.85">Ott.gr.85</idno>
+					</msIdentifier><msPart><msContents><msItem><locus>230r-v</locus><author authorityID="28332" scan="@28332" type="internal"><alias><authorityAuthor date="c. 330-390" rif="aut" title="s.," type="person">Gregorius Nazianzenus,</authorityAuthor><authorityAuthor date="c. 330-390" rif="see" title="s.," type="person">Gregorius Constantinopolitanus,</authorityAuthor><authorityAuthor date="c. 330-390" rif="see" title="s.," type="person">Gregorio di Nazianzo,</authorityAuthor><authorityAuthor date="c. 330-390" rif="see" title="s.," type="person">Gregorio il Teologo,</authorityAuthor><authorityAuthor date="c. 330-390" rif="see" title="s.," type="person">Gregorio Nazianzeno,</authorityAuthor><authorityAuthor date="c. 330-390" rif="see" title="s.," type="person">Gregorius Theologus,</authorityAuthor></alias></author><title scan="@1In sanctum Pascha et in tarditatem_supplied" type="supplied" value="In sanctum Pascha et in tarditatem">In sanctum Pascha et in tarditatem</title><textLang n="Greco." rend="grc">Greco.</textLang><note anchored="yes">&lt;Fragmentum&gt;. Fol. 230 λόγ. ΜΗ´ .. - τοῦ ΓΡΗΓΟΡΙΟΥ... Ναζιανζοῦ (alia manu recentiori) εἰς ἅγιον Πάσχα.</note></msItem></msContents><additional><adminInfo><recordHist><source><p>E. Feron, F. Battaglini, Codices manuscripti graeci Ottoboniani Bibliothecae Vaticanae descripti, Romae 1893, p. 53.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="29/12/2015"></date>
+				<persName>D.Lionetti</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">07/11/2017</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						<persName n="07/01/2016">D.Lionetti</persName><persName n="15/02/2016">Linking System: R.Mancusi</persName><persName n="28/11/2016">A.Berloco</persName><persName n="28/11/2016">A.Berloco</persName><persName n="13/12/2016">A.Berloco</persName><persName n="13/12/2016">A.Berloco</persName><persName n="18/12/2016">A.Berloco</persName>
+					<persName n="07/11/2017">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="207462" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Ott.gr." rend="Ott.gr.000850231r-234v" scan="@5Ott.gr.85_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Ott.gr.85">Ott.gr.85</idno>
+					</msIdentifier><msPart><msContents><msItem><locus>231r-234v</locus><author authorityID="28332" scan="@28332" type="internal"><alias><authorityAuthor date="c. 330-390" rif="aut" title="s.," type="person">Gregorius Nazianzenus,</authorityAuthor><authorityAuthor date="c. 330-390" rif="see" title="s.," type="person">Gregorius Constantinopolitanus,</authorityAuthor><authorityAuthor date="c. 330-390" rif="see" title="s.," type="person">Gregorio di Nazianzo,</authorityAuthor><authorityAuthor date="c. 330-390" rif="see" title="s.," type="person">Gregorio il Teologo,</authorityAuthor><authorityAuthor date="c. 330-390" rif="see" title="s.," type="person">Gregorio Nazianzeno,</authorityAuthor><authorityAuthor date="c. 330-390" rif="see" title="s.," type="person">Gregorius Theologus,</authorityAuthor></alias></author><title scan="@1In sanctum Pascha_supplied" type="supplied" value="In sanctum Pascha">In sanctum Pascha</title><textLang n="Greco." rend="grc">Greco.</textLang><note anchored="yes">&lt;Fragmentum&gt;. Folio 234v abrumpitur sermo ad verba ἀκοῆς ὡς εὐσεβέστερον.</note></msItem></msContents><additional><adminInfo><recordHist><source><p>E. Feron, F. Battaglini, Codices manuscripti graeci Ottoboniani Bibliothecae Vaticanae descripti, Romae 1893, p. 53.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="13/12/2016"></date>
+				<persName>A.Berloco</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">07/11/2017</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						<persName n="18/12/2016">A.Berloco</persName>
+					<persName n="07/11/2017">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="183855" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="y"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Ott.gr." rend="Ott.gr.000850000" scan="@5Ott.gr.85_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Ott.gr.85">Ott.gr.85</idno>
+					</msIdentifier><msPart><msContents><p>Miscellanea homiletica.</p><msItem><textLang n="Greco." rend="grc">Greco.</textLang><note anchored="yes">Principio et fine caret. Folium 1 incipit a verbis μάγοι οἱ μάγοι· οὐκ ἔτι... [...] Post folium 54 aliquid deest. Deinde sequitur pars sermonis XVI.</note><name authorityID="31269" role="owner" scan="@31269"><alias><authorityAuthor rif="aut" type="person">Altemps (famiglia)</authorityAuthor></alias></name><origDate notAfter="1025" notBefore="976">sec. X-XI</origDate></msItem></msContents><physDesc><support><p>membr.</p></support><dimensions><height>306</height><width>210</width></dimensions><extent>ff. 234</extent></physDesc><history><provenance><p>Folium &quot;a&quot; habet consueta Altaempsiana, et &quot;n. 86&quot;.</p></provenance></history><additional><adminInfo><recordHist><source><p>E. Feron, F. Battaglini, Codices manuscripti graeci Ottoboniani Bibliothecae Vaticanae descripti, Romae 1893, p. 51-53.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="22/12/2015"></date>
+				<persName>D.Lionetti</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">07/11/2017</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						<persName n="07/01/2016">D.Lionetti</persName><persName n="07/01/2016">D.Lionetti</persName><persName n="07/01/2016">D.Lionetti</persName><persName n="15/02/2016">Linking System: R.Mancusi</persName><persName n="12/12/2016">A.Berloco</persName>
+					<persName n="07/11/2017">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="121959" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Ott.gr." rend="Ott.gr.000850007v-17v" scan="@5Ott.gr.85_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Ott.gr.85">Ott.gr.85</idno>
+					</msIdentifier><msPart><msContents><msItem><locus>7v-17v</locus><author authorityID="16197" scan="@16197" type="internal"><alias><authorityAuthor date="c. 335-c. 394" rif="aut" title="s.," type="person">Gregorius Nyssenus,</authorityAuthor></alias></author><title scan="@1Oratio in diem natalem Christi_supplied" type="supplied" value="Oratio in diem natalem Christi">Oratio in diem natalem Christi</title><uniformTitle authorityID="40752" scan="@40752" type="uniform"><alias><authorityTitleSeries rif="aut" type="uniform" value="Oratio in diem natalem Christi (Gregorius Nyssenus, s., c. 335-c. 394)">Oratio in diem natalem Christi (Gregorius Nyssenus, s., c. 335-c. 394)</authorityTitleSeries></alias></uniformTitle><textLang n="Greco." rend="grc">Greco.</textLang><note anchored="yes">Fol. 7v Τοῦ.. ΓΡΗΓΟΡΙΟΥ.. Νύσης εἰς τὴν ἡμέραν τῶν γενεθλίων τοῦ κυρίου λόγ. Ζ´.</note></msItem></msContents><additional><adminInfo><recordHist><source><p>E. Feron, F. Battaglini, Codices manuscripti graeci Ottoboniani Bibliothecae Vaticanae descripti, Romae 1893, p. 51.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="06/09/2013"></date>
+				<persName>D.Lionetti</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">28/11/2016</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						<persName n="18/12/2015">D.Lionetti</persName><persName n="22/12/2015">D.Lionetti</persName><persName n="22/12/2015">D.Lionetti</persName><persName n="29/12/2015">D.Lionetti</persName><persName n="29/12/2015">D.Lionetti</persName><persName n="07/01/2016">D.Lionetti</persName><persName n="15/02/2016">Linking System: R.Mancusi</persName><persName n="25/11/2016">A.Berloco</persName><persName n="25/11/2016">A.Berloco</persName>
+					<persName n="28/11/2016">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="121960" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Ott.gr." rend="Ott.gr.000850021v-24v" scan="@5Ott.gr.85_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Ott.gr.85">Ott.gr.85</idno>
+					</msIdentifier><msPart><msContents><msItem><locus>21v-24v</locus><author authorityID="33322" scan="@33322" type="internal"><alias><authorityAuthor date="sec. VIII" rif="aut" type="person">Iohannes Euboeensis,</authorityAuthor><authorityAuthor date="sec. VIII" rif="see" type="person">Euboea, Iohannes de</authorityAuthor></alias></author><title scan="@1Homilia in sanctos Innocentes_supplied" type="supplied" value="Homilia in sanctos Innocentes">Homilia in sanctos Innocentes</title><uniformTitle authorityID="33267" scan="@33267" type="uniform"><alias><authorityTitleSeries rif="aut" type="uniform" value="Homilia in s. Innocentes (Iohannes Euboeensis, sec. VIII)">Homilia in s. Innocentes (Iohannes Euboeensis, sec. VIII)</authorityTitleSeries><authorityTitleSeries rif="see" type="uniform" value="Homilia in sanctos Innocentes (Iohannes Euboeensis, sec. VIII)">Homilia in sanctos Innocentes (Iohannes Euboeensis, sec. VIII)</authorityTitleSeries></alias></uniformTitle><textLang n="Greco." rend="grc">Greco.</textLang><note anchored="yes">Fol. 21v ΙΩΑΝΝΟΥ.. πρεσβ. Εὐοίας.. εἰς τὰ ἅγια Νήπια λόγ. Θ´.</note></msItem></msContents><additional><adminInfo><recordHist><source><p>E. Feron, F. Battaglini, Codices manuscripti graeci Ottoboniani Bibliothecae Vaticanae descripti, Romae 1893, p. 52.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="06/09/2013"></date>
+				<persName>D.Lionetti</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">28/11/2016</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						<persName n="12/12/2013">D.Lionetti</persName><persName n="18/12/2015">D.Lionetti</persName><persName n="22/12/2015">D.Lionetti</persName><persName n="22/12/2015">D.Lionetti</persName><persName n="29/12/2015">D.Lionetti</persName><persName n="07/01/2016">D.Lionetti</persName><persName n="15/02/2016">Linking System: R.Mancusi</persName><persName n="25/11/2016">A.Berloco</persName>
+					<persName n="28/11/2016">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="121961" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Ott.gr." rend="Ott.gr.000850038r-45v" scan="@5Ott.gr.85_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Ott.gr.85">Ott.gr.85</idno>
+					</msIdentifier><msPart><msContents><msItem><locus>38r-45v</locus><author authorityID="28332" scan="@28332" type="internal"><alias><authorityAuthor date="c. 330-390" rif="aut" title="s.," type="person">Gregorius Nazianzenus,</authorityAuthor><authorityAuthor date="c. 330-390" rif="see" title="s.," type="person">Gregorius Constantinopolitanus,</authorityAuthor><authorityAuthor date="c. 330-390" rif="see" title="s.," type="person">Gregorio di Nazianzo,</authorityAuthor><authorityAuthor date="c. 330-390" rif="see" title="s.," type="person">Gregorio il Teologo,</authorityAuthor><authorityAuthor date="c. 330-390" rif="see" title="s.," type="person">Gregorio Nazianzeno,</authorityAuthor><authorityAuthor date="c. 330-390" rif="see" title="s.," type="person">Gregorius Theologus,</authorityAuthor></alias></author><title scan="@1In sancta lumina_supplied" type="supplied" value="In sancta lumina">In sancta lumina</title><uniformTitle authorityID="37085" scan="@37085" type="uniform"><alias><authorityTitleSeries rif="aut" type="uniform" value="In sancta Lumina (Gregorius Nazianzenus, s., c. 330-390)">In sancta Lumina (Gregorius Nazianzenus, s., c. 330-390)</authorityTitleSeries><authorityTitleSeries rif="see" type="uniform" value="Orationes (Gregorius Nazianzenus, s., c. 330-390). 39, In sancta Lumina">Orationes (Gregorius Nazianzenus, s., c. 330-390). 39, In sancta Lumina</authorityTitleSeries></alias></uniformTitle><textLang n="Greco." rend="grc">Greco.</textLang><note anchored="yes">Fol. 38 ..ΓΡΗΓΟΡΙΟΥ.. Ναζιανζοῦ.. εἰς τὰ Φῶτα - λόγ. ΙΑ´. Fol. 46 Τοῦ αὐτοῦ εἰς τὸ Βάπτισμα λόγ. ΙΒ´.</note></msItem></msContents><additional><adminInfo><recordHist><source><p>E. Feron, F. Battaglini, Codices manuscripti graeci Ottoboniani Bibliothecae Vaticanae descripti, Romae 1893, p. 52.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="06/09/2013"></date>
+				<persName>D.Lionetti</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">28/11/2016</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						<persName n="06/09/2013">D.Lionetti</persName><persName n="22/12/2015">D.Lionetti</persName><persName n="29/12/2015">D.Lionetti</persName><persName n="29/12/2015">D.Lionetti</persName><persName n="07/01/2016">D.Lionetti</persName><persName n="15/02/2016">Linking System: R.Mancusi</persName><persName n="25/11/2016">A.Berloco</persName><persName n="25/11/2016">A.Berloco</persName>
+					<persName n="28/11/2016">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="129921" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Ott.gr." rend="Ott.gr.000850018r-21v" scan="@5Ott.gr.85_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Ott.gr.85">Ott.gr.85</idno>
+					</msIdentifier><msPart><msContents><msItem><locus>18r-21v</locus><author authorityID="3282" scan="@3282" type="internal"><alias><authorityAuthor date="m. c. 446" rif="aut" title="s., arciv. di Costantinopoli," type="person">Proclus,</authorityAuthor><authorityAuthor date="m. c. 446" rif="see" title="s., arciv. di Costantinopoli," type="person">Proclus Constantinopolitanus,</authorityAuthor></alias></author><title scan="@1In sanctum Stephanum homilia_supplied" type="supplied" value="In sanctum Stephanum homilia">In sanctum Stephanum homilia</title><uniformTitle authorityID="33266" scan="@33266" type="uniform"><alias><authorityTitleSeries rif="aut" type="uniform" value="In laudem s. Stephani (Proclus, s., arciv. di Costantinopoli, m. c. 446)">In laudem s. Stephani (Proclus, s., arciv. di Costantinopoli, m. c. 446)</authorityTitleSeries><authorityTitleSeries rif="see" type="uniform" value="Homiliae. In laudem s. Stephani (Proclus, s., arciv. di Costantinopoli, m. c. 446)">Homiliae. In laudem s. Stephani (Proclus, s., arciv. di Costantinopoli, m. c. 446)</authorityTitleSeries></alias></uniformTitle><textLang n="Greco." rend="grc">Greco.</textLang><note anchored="yes">Fol. 18 ΠΡΟΚΛΟΥ ἀρχιεπ. Κπ̅ολ.. εἰς τὸν ἅγιον Στέφανον πρωτομάρτυρα λόγ. Η´.</note></msItem></msContents><additional><adminInfo><recordHist><source><p>E. Feron, F. Battaglini, Codices manuscripti graeci Ottoboniani Bibliothecae Vaticanae descripti, Romae 1893, p. 52.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="12/12/2013"></date>
+				<persName>D.Lionetti</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">25/11/2016</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						<persName n="22/12/2015">D.Lionetti</persName><persName n="22/12/2015">D.Lionetti</persName><persName n="29/12/2015">D.Lionetti</persName><persName n="07/01/2016">D.Lionetti</persName><persName n="15/02/2016">Linking System: R.Mancusi</persName><persName n="25/11/2016">A.Berloco</persName>
+					<persName n="25/11/2016">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="129922" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Ott.gr." rend="Ott.gr.000850025r-38r" scan="@5Ott.gr.85_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Ott.gr.85">Ott.gr.85</idno>
+					</msIdentifier><msPart><msContents><msItem><locus>25r-38r</locus><author authorityID="16197" scan="@16197" type="internal"><alias><authorityAuthor date="c. 335-c. 394" rif="aut" title="s.," type="person">Gregorius Nyssenus,</authorityAuthor></alias></author><title scan="@1In Basilium fratrem_supplied" type="supplied" value="In Basilium fratrem">In Basilium fratrem</title><uniformTitle authorityID="40753" scan="@40753" type="uniform"><alias><authorityTitleSeries rif="aut" type="uniform" value="In Basilium fratrem (Gregorius Nyssenus, s., c. 335-c. 394)">In Basilium fratrem (Gregorius Nyssenus, s., c. 335-c. 394)</authorityTitleSeries></alias></uniformTitle><textLang n="Greco." rend="grc">Greco.</textLang><note anchored="yes">Fol. 25 .. ΓΡΗΓΟΡΙΟΥ.. Νύσης.. εἰς τὸν ὅσ.. Βασίλειον λόγ. Ι´.</note></msItem></msContents><additional><adminInfo><recordHist><source><p>E. Feron, F. Battaglini, Codices manuscripti graeci Ottoboniani Bibliothecae Vaticanae descripti, Romae 1893, p. 52.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="12/12/2013"></date>
+				<persName>D.Lionetti</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">28/11/2016</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						<persName n="22/12/2015">D.Lionetti</persName><persName n="22/12/2015">D.Lionetti</persName><persName n="29/12/2015">D.Lionetti</persName><persName n="07/01/2016">D.Lionetti</persName><persName n="15/02/2016">Linking System: R.Mancusi</persName><persName n="25/11/2016">A.Berloco</persName><persName n="25/11/2016">A.Berloco</persName>
+					<persName n="28/11/2016">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="183872" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Ott.gr." rend="Ott.gr.000850002r-7v" scan="@5Ott.gr.85_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Ott.gr.85">Ott.gr.85</idno>
+					</msIdentifier><msPart><msContents><msItem><locus>2r-7v</locus><author authorityID="23211" scan="@23211" type="internal"><alias><authorityAuthor date="292-373." formal="Opere spurie e dubbie" rif="aut" title="s., patriarca di Alessandria," type="person">Athanasius,</authorityAuthor></alias></author><title scan="@1Sermo de descriptione Deiparae_supplied" type="supplied" value="Sermo de descriptione Deiparae">Sermo de descriptione Deiparae</title><uniformTitle authorityID="40751" scan="@40751" type="uniform"><alias><authorityTitleSeries rif="aut" type="uniform" value="Sermo de descriptione Deiparae (Athanasius, s., patriarca di Alessandria, 292-373. Opere spurie e dubbie)">Sermo de descriptione Deiparae (Athanasius, s., patriarca di Alessandria, 292-373. Opere spurie e dubbie)</authorityTitleSeries></alias></uniformTitle><textLang n="Greco." rend="grc">Greco.</textLang><note anchored="yes">Fol. 2 ΑΘΑΝΑΣΙΟΥ Ἀλεξ.. εἰς τὴν ἀπογραφὴν τῆς Θεοτόκου λόγ. ϛ´ (sermo VI); unde liquet quinque praecessisse sermones.</note></msItem></msContents><additional><adminInfo><recordHist><source><p>E. Feron, F. Battaglini, Codices manuscripti graeci Ottoboniani Bibliothecae Vaticanae descripti, Romae 1893, p. 51.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="22/12/2015"></date>
+				<persName>D.Lionetti</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">28/11/2016</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						<persName n="23/12/2015">D.Lionetti</persName><persName n="07/01/2016">D.Lionetti</persName><persName n="07/01/2016">D.Lionetti</persName><persName n="07/01/2016">D.Lionetti</persName><persName n="15/02/2016">Linking System: R.Mancusi</persName><persName n="25/11/2016">A.Berloco</persName><persName n="25/11/2016">A.Berloco</persName><persName n="28/11/2016">A.Berloco</persName>
+					<persName n="28/11/2016">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="184266" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Ott.gr." rend="Ott.gr.000850061v-66v" scan="@5Ott.gr.85_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Ott.gr.85">Ott.gr.85</idno>
+					</msIdentifier><msPart><msContents><msItem><locus>61v-66v</locus><author authorityID="40755" scan="@40755" type="internal"><alias><authorityAuthor date="f. 570-593" rif="aut" title="vesc. di Antiochia," type="person">Gregorius Antiochenus,</authorityAuthor></alias></author><title scan="@1Homilia II In s. Theophania_supplied" type="supplied" value="Homilia II In s. Theophania">Homilia II In s. Theophania</title><uniformTitle authorityID="40756" scan="@40756" type="uniform"><alias><authorityTitleSeries rif="aut" type="uniform" value="Homilia II in s. Theophania (Gregorius Antiochenus, vesc. di Antiochia, f. 570-593)">Homilia II in s. Theophania (Gregorius Antiochenus, vesc. di Antiochia, f. 570-593)</authorityTitleSeries><authorityTitleSeries rif="see_also" type="uniform" value="In s. Theophania (Iohannes Chrysostomus, s., patriarca di Costantinopoli, 347-407. Opere spurie e dubbie)">In s. Theophania (Iohannes Chrysostomus, s., patriarca di Costantinopoli, 347-407. Opere spurie e dubbie)</authorityTitleSeries></alias></uniformTitle><textLang n="Greco." rend="grc">Greco.</textLang><note anchored="yes">Fol. 61v incipit λόγος ΙΖ´. ΓΡΗΓΟΡΙΟΥ πρεσβυτ. Ἀντιοχείας εἰς τὸ - Οὗτός ἐστιν ὁ Υἱὸς...</note></msItem></msContents><additional><adminInfo><recordHist><source><p>E. Feron, F. Battaglini, Codices manuscripti graeci Ottoboniani Bibliothecae Vaticanae descripti, Romae 1893, p. 52.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="29/12/2015"></date>
+				<persName>D.Lionetti</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">28/11/2016</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						<persName n="07/01/2016">D.Lionetti</persName><persName n="15/02/2016">Linking System: R.Mancusi</persName><persName n="25/11/2016">A.Berloco</persName>
+					<persName n="28/11/2016">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="184268" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Ott.gr." rend="Ott.gr.000850067r-72r" scan="@5Ott.gr.85_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Ott.gr.85">Ott.gr.85</idno>
+					</msIdentifier><msPart><msContents><msItem><locus>67r-72r</locus><author authorityID="33269" scan="@33269" type="internal"><alias><authorityAuthor date="m. 395" rif="aut" title="s., vesc. di Iconium," type="person">Amphilochius,</authorityAuthor><authorityAuthor date="m. 395" rif="see" title="s., vesc. di Iconium," type="person">Amphilochius Iconiensis,</authorityAuthor></alias></author><title scan="@1In occursum Domini_supplied" type="supplied" value="In occursum Domini">In occursum Domini</title><uniformTitle authorityID="33270" scan="@33270" type="uniform"><alias><authorityTitleSeries rif="aut" type="uniform" value="Oratio in Occursum Domini (Amphilochius, s., vesc. di Iconium, m. 395)">Oratio in Occursum Domini (Amphilochius, s., vesc. di Iconium, m. 395)</authorityTitleSeries><authorityTitleSeries rif="see" type="uniform" value="Orationes. Oratio in Occursum Domini (Amphilochius, s., vesc. di Iconium, m. 395)">Orationes. Oratio in Occursum Domini (Amphilochius, s., vesc. di Iconium, m. 395)</authorityTitleSeries></alias></uniformTitle><textLang n="Greco." rend="grc">Greco.</textLang><note anchored="yes">Fol. 67 λόγ. ΙΗ´ ΑΜΦΙΛΟXΙΟΥ ἐπισκόπ. Ἰκονίου.. εἰς τὴν Ἀπαντὴν (sic) τοῦ κυρίου.</note></msItem></msContents><additional><adminInfo><recordHist><source><p>E. Feron, F. Battaglini, Codices manuscripti graeci Ottoboniani Bibliothecae Vaticanae descripti, Romae 1893, p. 52.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="29/12/2015"></date>
+				<persName>D.Lionetti</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">28/11/2016</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						<persName n="07/01/2016">D.Lionetti</persName><persName n="15/02/2016">Linking System: R.Mancusi</persName><persName n="25/11/2016">A.Berloco</persName>
+					<persName n="28/11/2016">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="184269" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Ott.gr." rend="Ott.gr.000850072r-76v" scan="@5Ott.gr.85_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Ott.gr.85">Ott.gr.85</idno>
+					</msIdentifier><msPart><msContents><msItem><locus>72r-76v</locus><author authorityID="40757" scan="@40757" type="internal"><alias><authorityAuthor date="sec. VI" rif="aut" type="person">Timotheus Hierosolymitanus,</authorityAuthor></alias></author><title scan="@1Sermo in Crucem et Transfigurationem_supplied" type="supplied" value="Sermo in Crucem et Transfigurationem">Sermo in Crucem et Transfigurationem</title><uniformTitle authorityID="40758" scan="@40758" type="uniform"><alias><authorityTitleSeries rif="aut" type="uniform" value="Sermo in Crucem et Transfigurationem (Timotheus Hierosolymitanus, sec. VI)">Sermo in Crucem et Transfigurationem (Timotheus Hierosolymitanus, sec. VI)</authorityTitleSeries><authorityTitleSeries rif="see" type="uniform" value="In crucem et in Transfigurationem">In crucem et in Transfigurationem</authorityTitleSeries><authorityTitleSeries rif="see_also" type="uniform" value="Homilia in Transfigurationem et crucem (Leontius Constantinopolitanus, sec. VII. Opere spurie e dubbie))">Homilia in Transfigurationem et crucem (Leontius Constantinopolitanus, sec. VII. Opere spurie e dubbie))</authorityTitleSeries></alias></uniformTitle><textLang n="Greco." rend="grc">Greco.</textLang><note anchored="yes">Fol. 72 λόγ. ΙΘ´ ΤΙΜΟΘΕΟΥ πρεσβ. Ἰεροσολύμων.. εἰς τὸ... - Νῦν ἀπολύεις τὸν δοῦλόν σου..</note></msItem></msContents><additional><adminInfo><recordHist><source><p>E. Feron, F. Battaglini, Codices manuscripti graeci Ottoboniani Bibliothecae Vaticanae descripti, Romae 1893, p. 52.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="29/12/2015"></date>
+				<persName>D.Lionetti</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">28/11/2016</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						<persName n="07/01/2016">D.Lionetti</persName><persName n="15/02/2016">Linking System: R.Mancusi</persName><persName n="25/11/2016">A.Berloco</persName>
+					<persName n="28/11/2016">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="184270" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Ott.gr." rend="Ott.gr.000850076v-89v" scan="@5Ott.gr.85_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Ott.gr.85">Ott.gr.85</idno>
+					</msIdentifier><msPart><msContents><msItem><locus>76v-89v</locus><author authorityID="11482" scan="@11482" type="internal"><alias><authorityAuthor date="m. c. 311." formal="Opere spurie e dubbie" rif="aut" title="s., vesc. di Olympus," type="person">Methodius,</authorityAuthor></alias></author><title scan="@1Sermo de Simeone et Anna_supplied" type="supplied" value="Sermo de Simeone et Anna">Sermo de Simeone et Anna</title><uniformTitle authorityID="40759" scan="@40759" type="uniform"><alias><authorityTitleSeries rif="aut" type="uniform" value="Sermo de Simeone et Anna (Methodius, s., vesc. di Olympus, m. c. 311. Opere spurie e dubbie)">Sermo de Simeone et Anna (Methodius, s., vesc. di Olympus, m. c. 311. Opere spurie e dubbie)</authorityTitleSeries></alias></uniformTitle><textLang n="Greco." rend="grc">Greco.</textLang><note anchored="yes">Fol. 76v λόγ. Κ´.. ΜΕΘΟΔΙΟΥ ἐπισκόπ. Πατάρων... εἰς τὴν Θεοτόκον.</note></msItem></msContents><additional><adminInfo><recordHist><source><p>E. Feron, F. Battaglini, Codices manuscripti graeci Ottoboniani Bibliothecae Vaticanae descripti, Romae 1893, p. 52.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="29/12/2015"></date>
+				<persName>D.Lionetti</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">28/11/2016</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						<persName n="07/01/2016">D.Lionetti</persName><persName n="15/02/2016">Linking System: R.Mancusi</persName><persName n="25/11/2016">A.Berloco</persName>
+					<persName n="28/11/2016">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="184271" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Ott.gr." rend="Ott.gr.000850089v-93v" scan="@5Ott.gr.85_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Ott.gr.85">Ott.gr.85</idno>
+					</msIdentifier><msPart><msContents><msItem><locus>89v-93v</locus><author authorityID="6376" scan="@6376" type="internal"><alias><authorityAuthor date="m. 444" rif="aut" title="s., patriarca di Alessandria," type="person">Cyrillus,</authorityAuthor><authorityAuthor date="m. 444" rif="see" title="s.," type="person">Cyrillus Alexandrinus,</authorityAuthor><authorityAuthor date="m. 444" rif="see" title="s., patriarca di Alessandria," type="person">Cirillo,</authorityAuthor></alias></author><title scan="@1Commentarii in Lucam. Homiliae III et IV_supplied" type="supplied" value="Commentarii in Lucam. Homiliae III et IV">Commentarii in Lucam. Homiliae III et IV</title><uniformTitle authorityID="40760" scan="@40760" type="uniform"><alias><authorityTitleSeries rif="aut" type="uniform" value="Homiliae (Cyrillus, s., patriarca di Alessandria, m. 444). 12, In occursum Domini">Homiliae (Cyrillus, s., patriarca di Alessandria, m. 444). 12, In occursum Domini</authorityTitleSeries><authorityTitleSeries rif="see" type="uniform" value="Commentarii in Lucam (Cyrillus, s., patriarca di Alessandria, m. 444). 1, Homiliae 3 et 4">Commentarii in Lucam (Cyrillus, s., patriarca di Alessandria, m. 444). 1, Homiliae 3 et 4</authorityTitleSeries></alias></uniformTitle><textLang n="Greco." rend="grc">Greco.</textLang><note anchored="yes">Fol. 89v (λόγ.) ΚΑ´.. ΚΥΡΙΛΛΟΥ.. Ἀλεξανδρείας εἰς τὴν ὑπαπαντὴν τοῦ κυρίου...</note></msItem></msContents><additional><adminInfo><recordHist><source><p>E. Feron, F. Battaglini, Codices manuscripti graeci Ottoboniani Bibliothecae Vaticanae descripti, Romae 1893, p. 52.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="29/12/2015"></date>
+				<persName>D.Lionetti</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">28/11/2016</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						<persName n="07/01/2016">D.Lionetti</persName><persName n="15/02/2016">Linking System: R.Mancusi</persName><persName n="25/11/2016">A.Berloco</persName><persName n="28/11/2016">A.Berloco</persName>
+					<persName n="28/11/2016">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="184272" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Ott.gr." rend="Ott.gr.000850093v-97v" scan="@5Ott.gr.85_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Ott.gr.85">Ott.gr.85</idno>
+					</msIdentifier><msPart><msContents><msItem><locus>93v-97v</locus><author authorityID="36302" scan="@36302" type="internal"><alias><authorityAuthor date="sec. V" rif="aut" type="person">Hesychius Hierosolymitanus,</authorityAuthor></alias></author><title scan="@1Homiliae in Hypapanten I et II_supplied" type="supplied" value="Homiliae in Hypapanten I et II">Homiliae in Hypapanten I et II</title><uniformTitle authorityID="40761" scan="@40761" type="uniform"><alias><authorityTitleSeries rif="aut" type="uniform" value="Homilia I in Hypapanten (Hesychius Hierosolymitanus, sec. V)">Homilia I in Hypapanten (Hesychius Hierosolymitanus, sec. V)</authorityTitleSeries></alias></uniformTitle><uniformTitle authorityID="40762" scan="@40762" type="uniform"><alias><authorityTitleSeries rif="aut" type="uniform" value="Homilia II in Hypapanten (Hesychius Hierosolymitanus, sec. V)">Homilia II in Hypapanten (Hesychius Hierosolymitanus, sec. V)</authorityTitleSeries></alias></uniformTitle><textLang n="Greco." rend="grc">Greco.</textLang><note anchored="yes">Fol. 93v (λόγ.) ΚΒ´ ΗΣΥΧΙΟΥ πρεσβ.. εἰς τὴν ὑπαπαντὴν τοῦ Κυρίου..</note></msItem></msContents><additional><adminInfo><recordHist><source><p>E. Feron, F. Battaglini, Codices manuscripti graeci Ottoboniani Bibliothecae Vaticanae descripti, Romae 1893, p. 52.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="29/12/2015"></date>
+				<persName>D.Lionetti</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">28/11/2016</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						<persName n="07/01/2016">D.Lionetti</persName><persName n="15/02/2016">Linking System: R.Mancusi</persName><persName n="25/11/2016">A.Berloco</persName><persName n="25/11/2016">A.Berloco</persName>
+					<persName n="28/11/2016">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="184273" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Ott.gr." rend="Ott.gr.000850097v-100r" scan="@5Ott.gr.85_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Ott.gr.85">Ott.gr.85</idno>
+					</msIdentifier><msPart><msContents><msItem><locus>97v-100r</locus><author authorityID="33304" scan="@33304" type="internal"><alias><authorityAuthor date="sec. V-VII." formal="Opere spurie e dubbie" rif="aut" type="person">Eusebius Alexandrinus,</authorityAuthor></alias></author><title scan="@1In secundum adventum Domini_supplied" type="supplied" value="In secundum adventum Domini">In secundum adventum Domini</title><uniformTitle authorityID="40777" scan="@40777" type="uniform"><alias><authorityTitleSeries rif="aut" type="uniform" value="Sermones (Eusebius Alexandrinus, sec. V-VII. Opere spurie e dubbie). 20, In secundum adventum Domini">Sermones (Eusebius Alexandrinus, sec. V-VII. Opere spurie e dubbie). 20, In secundum adventum Domini</authorityTitleSeries><authorityTitleSeries rif="see_also" type="uniform" value="In secundum adventum Domini (Iohannes Chrysostomus, s., patriarca di Costantinopoli, 347-407. Opere spurie e dubbie)">In secundum adventum Domini (Iohannes Chrysostomus, s., patriarca di Costantinopoli, 347-407. Opere spurie e dubbie)</authorityTitleSeries></alias></uniformTitle><textLang n="Greco." rend="grc">Greco.</textLang><note anchored="yes">Fol. 97v λόγ. ΚΓ´.. ΕΥΣΕΒΙΟΥ... Ἀλεξανδρείας εἰς τὴν δεύτεραν παρουσίαν τοῦ Κυρίου..</note></msItem></msContents><additional><adminInfo><recordHist><source><p>E. Feron, F. Battaglini, Codices manuscripti graeci Ottoboniani Bibliothecae Vaticanae descripti, Romae 1893, p. 52.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="29/12/2015"></date>
+				<persName>D.Lionetti</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">28/11/2016</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						<persName n="07/01/2016">D.Lionetti</persName><persName n="11/01/2016">D.Lionetti</persName><persName n="15/02/2016">Linking System: R.Mancusi</persName>
+					<persName n="28/11/2016">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="184275" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Ott.gr." rend="Ott.gr.000850100r-105r" scan="@5Ott.gr.85_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Ott.gr.85">Ott.gr.85</idno>
+					</msIdentifier><msPart><msContents><msItem><locus>100r-105r</locus><author authorityID="16197" scan="@16197" type="internal"><alias><authorityAuthor date="c. 335-c. 394" rif="aut" title="s.," type="person">Gregorius Nyssenus,</authorityAuthor></alias></author><title scan="@1De sancto Theodoro_supplied" type="supplied" value="De sancto Theodoro">De sancto Theodoro</title><uniformTitle authorityID="40778" scan="@40778" type="uniform"><alias><authorityTitleSeries rif="aut" type="uniform" value="De s. Theodoro (Gregorius Nyssenus, s., c. 335-c. 394)">De s. Theodoro (Gregorius Nyssenus, s., c. 335-c. 394)</authorityTitleSeries><authorityTitleSeries rif="see" type="uniform" value="Oratio laudatoria s. ac magni Martyris Theodori (Gregorius Nyssenus, s., c. 335-c. 394)">Oratio laudatoria s. ac magni Martyris Theodori (Gregorius Nyssenus, s., c. 335-c. 394)</authorityTitleSeries></alias></uniformTitle><textLang n="Greco." rend="grc">Greco.</textLang><note anchored="yes">Fol. 100 λόγ. ΚΔ´.. ΓΡΗΓΟΡΙΟΥ.. Νύσης εἰς Θεόδωρον τὸν μάρτυρα.</note></msItem></msContents><additional><adminInfo><recordHist><source><p>E. Feron, F. Battaglini, Codices manuscripti graeci Ottoboniani Bibliothecae Vaticanae descripti, Romae 1893, p. 52.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="29/12/2015"></date>
+				<persName>D.Lionetti</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">28/11/2016</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						<persName n="07/01/2016">D.Lionetti</persName><persName n="15/02/2016">Linking System: R.Mancusi</persName><persName n="28/11/2016">A.Berloco</persName>
+					<persName n="28/11/2016">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="184277" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Ott.gr." rend="Ott.gr.000850117v-120r" scan="@5Ott.gr.85_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Ott.gr.85">Ott.gr.85</idno>
+					</msIdentifier><msPart><msContents><msItem><locus>117v-120r</locus><author authorityID="4473" scan="@4473" type="internal"><alias><authorityAuthor date="347-407." formal="Opere spurie e dubbie" rif="aut" title="s., patriarca di Costantinopoli," type="person">Iohannes Chrysostomus,</authorityAuthor></alias></author><title scan="@1In Annuntiationem beatae virginis_supplied" type="supplied" value="In Annuntiationem beatae virginis">In Annuntiationem beatae virginis</title><uniformTitle authorityID="40743" scan="@40743" type="uniform"><alias><authorityTitleSeries rif="aut" type="uniform" value="In Annuntiationem beatae virginis (Iohannes Chrysostomus, s., patriarca di Costantinopoli, 347-407. Opere spurie e dubbie)">In Annuntiationem beatae virginis (Iohannes Chrysostomus, s., patriarca di Costantinopoli, 347-407. Opere spurie e dubbie)</authorityTitleSeries><authorityTitleSeries rif="see_also" type="uniform" value="Homilia III in Annuntiatione virginis Mariae (Gregorius Thaumaturgus, s., vesc. di Neocesarea, c. 213-c. 270. Opere spurie e dubbie)">Homilia III in Annuntiatione virginis Mariae (Gregorius Thaumaturgus, s., vesc. di Neocesarea, c. 213-c. 270. Opere spurie e dubbie)</authorityTitleSeries><authorityTitleSeries rif="see_also" type="uniform" value="Sermo in Annuntiationem gloriosissimae Dominae nostrae Deiparae (Proclus, s., arciv. di Costantinopoli, m. c. 446. Opere spurie e dubbie)">Sermo in Annuntiationem gloriosissimae Dominae nostrae Deiparae (Proclus, s., arciv. di Costantinopoli, m. c. 446. Opere spurie e dubbie)</authorityTitleSeries><authorityTitleSeries rif="see_also" type="uniform" value="Sermones (Leo PP. I, Magnus, s., m. 461. Opere spurie e dubbie). 15">Sermones (Leo PP. I, Magnus, s., m. 461. Opere spurie e dubbie). 15</authorityTitleSeries></alias></uniformTitle><textLang n="Greco." rend="grc">Greco.</textLang></msItem></msContents><additional><adminInfo><recordHist><source><p>E. Feron, F. Battaglini, Codices manuscripti graeci Ottoboniani Bibliothecae Vaticanae descripti, Romae 1893, p. 52.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="29/12/2015"></date>
+				<persName>D.Lionetti</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">28/11/2016</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						<persName n="29/12/2015">D.Lionetti</persName><persName n="07/01/2016">D.Lionetti</persName><persName n="08/01/2016">D.Lionetti</persName><persName n="15/02/2016">Linking System: R.Mancusi</persName>
+					<persName n="28/11/2016">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="184278" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Ott.gr." rend="Ott.gr.000850120r-129r" scan="@5Ott.gr.85_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Ott.gr.85">Ott.gr.85</idno>
+					</msIdentifier><msPart><msContents><msItem><locus>120r-129r</locus><author authorityID="22827" scan="@22827" type="internal"><alias><authorityAuthor date="c. 660-c. 720" rif="aut" title="s., arciv. di Gortyna," type="person">Andreas Cretensis,</authorityAuthor></alias></author><title scan="@1Homilia in annuntiationem beatae Mariae_supplied" type="supplied" value="Homilia in annuntiationem beatae Mariae">Homilia in annuntiationem beatae Mariae</title><uniformTitle authorityID="40781" scan="@40781" type="uniform"><alias><authorityTitleSeries rif="aut" type="uniform" value="In Annuntiationem beatae Mariae (Andreas Cretensis, s., arciv. di Gortyna, c. 660-c. 720)">In Annuntiationem beatae Mariae (Andreas Cretensis, s., arciv. di Gortyna, c. 660-c. 720)</authorityTitleSeries><authorityTitleSeries rif="see" type="uniform" value="Homiliae (Andreas Cretensis, s., arciv. di Gortyna, c. 660-c. 720). 5, In Annuntiationem beatae Mariae">Homiliae (Andreas Cretensis, s., arciv. di Gortyna, c. 660-c. 720). 5, In Annuntiationem beatae Mariae</authorityTitleSeries></alias></uniformTitle><textLang n="Greco." rend="grc">Greco.</textLang><note anchored="yes">Fol. 120 λόγ. ΚΗ´.. τοῦ.. ΑΝΔΡΕΟΥ ἐπισκόπ. Κρήτης.. εἰς εὐαγγελισμὸν τῆς Θεοτόκου.</note></msItem></msContents><additional><adminInfo><recordHist><source><p>E. Feron, F. Battaglini, Codices manuscripti graeci Ottoboniani Bibliothecae Vaticanae descripti, Romae 1893, p. 52.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="29/12/2015"></date>
+				<persName>D.Lionetti</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">28/11/2016</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						<persName n="07/01/2016">D.Lionetti</persName><persName n="15/02/2016">Linking System: R.Mancusi</persName><persName n="28/11/2016">A.Berloco</persName>
+					<persName n="28/11/2016">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="184280" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Ott.gr." rend="Ott.gr.000850129v-132v" scan="@5Ott.gr.85_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Ott.gr.85">Ott.gr.85</idno>
+					</msIdentifier><msPart><msContents><msItem><locus>129v-132v</locus><author authorityID="40596" scan="@40596" type="internal"><alias><authorityAuthor date="c. 213-c. 270." formal="Opere spurie e dubbie" rif="aut" title="s., vesc. di Neocesarea," type="person">Gregorius Thaumaturgus,</authorityAuthor></alias></author><title scan="@1Homilia I in Annuntiationem virginis Mariae_supplied" type="supplied" value="Homilia I in Annuntiationem virginis Mariae">Homilia I in Annuntiationem virginis Mariae</title><uniformTitle authorityID="40783" scan="@40783" type="uniform"><alias><authorityTitleSeries rif="aut" type="uniform" value="Homilia I in Annuntiationem virginis Mariae (Gregorius Thaumaturgus, s., vesc. di Neocesarea, c. 213-c. 270. Opere spurie e dubbie)">Homilia I in Annuntiationem virginis Mariae (Gregorius Thaumaturgus, s., vesc. di Neocesarea, c. 213-c. 270. Opere spurie e dubbie)</authorityTitleSeries></alias></uniformTitle><textLang n="Greco." rend="grc">Greco.</textLang><note anchored="yes">Fol. 129v λόγ. ΚΘ´.. ΓΡΗΓΟΡΙΟΥ.. Νεοκαισαρίας Πόντου... εἰς εὐαγγελισμὸν τῆς Θεοτόκου.</note></msItem></msContents><additional><adminInfo><recordHist><source><p>E. Feron, F. Battaglini, Codices manuscripti graeci Ottoboniani Bibliothecae Vaticanae descripti, Romae 1893, p. 52.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="29/12/2015"></date>
+				<persName>D.Lionetti</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">28/11/2016</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						<persName n="07/01/2016">D.Lionetti</persName><persName n="15/02/2016">Linking System: R.Mancusi</persName><persName n="28/11/2016">A.Berloco</persName>
+					<persName n="28/11/2016">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="184281" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Ott.gr." rend="Ott.gr.000850132v-140v" scan="@5Ott.gr.85_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Ott.gr.85">Ott.gr.85</idno>
+					</msIdentifier><msPart><msContents><msItem><locus>132v-140v</locus><author authorityID="465" scan="@465" type="internal"><alias><authorityAuthor date="347-407" rif="aut" title="s., patriarca di Costantinopoli," type="person">Iohannes Chrysostomus,</authorityAuthor><authorityAuthor date="347-407" rif="see" title="s., patriarca di Costantinopoli," type="person">Chrysostomus,</authorityAuthor><authorityAuthor date="347-407" rif="see" title="s., patriarca di Costantinopoli," type="person">Johannes Chrysostomus,</authorityAuthor><authorityAuthor date="347-407" rif="see" title="s., patriarca di Costantinopoli," type="person">Crisostomo, Giovanni,</authorityAuthor><authorityAuthor date="347-407" rif="see" title="s., patriarca di Costantinopoli," type="person">Giovanni Crisostomo,</authorityAuthor><authorityAuthor date="347-407" rif="see" title="s., patriarca di Costantinopoli," type="person">Giovanni Boccadoro,</authorityAuthor></alias></author><title scan="@1De petitione matris filiorum Zebedaei_supplied" type="supplied" value="De petitione matris filiorum Zebedaei">De petitione matris filiorum Zebedaei</title><uniformTitle authorityID="40994" scan="@40994" type="uniform"><alias><authorityTitleSeries rif="aut" type="uniform" value="De petitione matris filiorum Zebedaei (Iohannes Chrysostomus, s., patriarca di Costantinopoli, 347-407)">De petitione matris filiorum Zebedaei (Iohannes Chrysostomus, s., patriarca di Costantinopoli, 347-407)</authorityTitleSeries><authorityTitleSeries rif="see" type="uniform" value="De incomprehensibili Dei natura homiliae (Iohannes Chrysostomus, s., patriarca di Costantinopoli, 347-407). 8, De petitione matris filiorum Zebedaei">De incomprehensibili Dei natura homiliae (Iohannes Chrysostomus, s., patriarca di Costantinopoli, 347-407). 8, De petitione matris filiorum Zebedaei</authorityTitleSeries><authorityTitleSeries rif="see" type="uniform" value="Contra Anomoeos homilia 8 (Iohannes Chrysostomus, s., patriarca di Costantinopoli, 347-407)">Contra Anomoeos homilia 8 (Iohannes Chrysostomus, s., patriarca di Costantinopoli, 347-407)</authorityTitleSeries></alias></uniformTitle><textLang n="Greco." rend="grc">Greco.</textLang><note anchored="yes">Fol. 132v λόγ. Λ´.. τοῦ.. ΙΩΑΝΝΟΥ.. Χρυσοστόμ... εἰς τὴν ῥῆσιν εὐαγγελιστικὴν - Τὸ δὲ καθίσαι ἐκ δεξιῶν μου..</note></msItem></msContents><additional><adminInfo><recordHist><source><p>E. Feron, F. Battaglini, Codices manuscripti graeci Ottoboniani Bibliothecae Vaticanae descripti, Romae 1893, p. 52.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="29/12/2015"></date>
+				<persName>D.Lionetti</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">12/12/2016</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						<persName n="07/01/2016">D.Lionetti</persName><persName n="15/02/2016">Linking System: R.Mancusi</persName><persName n="28/11/2016">A.Berloco</persName><persName n="28/11/2016">A.Berloco</persName>
+					<persName n="12/12/2016">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="184282" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Ott.gr." rend="Ott.gr.000850140v-151r" scan="@5Ott.gr.85_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Ott.gr.85">Ott.gr.85</idno>
+					</msIdentifier><msPart><msContents><msItem><locus>140v-151r</locus><author authorityID="22827" scan="@22827" type="internal"><alias><authorityAuthor date="c. 660-c. 720" rif="aut" title="s., arciv. di Gortyna," type="person">Andreas Cretensis,</authorityAuthor></alias></author><title scan="@1Homilia in Lazarum quatriduanum_supplied" type="supplied" value="Homilia in Lazarum quatriduanum">Homilia in Lazarum quatriduanum</title><uniformTitle authorityID="40788" scan="@40788" type="uniform"><alias><authorityTitleSeries rif="aut" type="uniform" value="In Lazarum quatriduanum (Andreas Cretensis, s., arciv. di Gortyna, c. 660-c. 720)">In Lazarum quatriduanum (Andreas Cretensis, s., arciv. di Gortyna, c. 660-c. 720)</authorityTitleSeries><authorityTitleSeries rif="see" type="uniform" value="Homiliae (Andreas Cretensis, s., arciv. di Gortyna, c. 660-c. 720). 8, In Lazarum quatriduanum">Homiliae (Andreas Cretensis, s., arciv. di Gortyna, c. 660-c. 720). 8, In Lazarum quatriduanum</authorityTitleSeries></alias></uniformTitle><textLang n="Greco." rend="grc">Greco.</textLang><note anchored="yes">Fol. 140v λόγ. ΛΑ´.. τοῦ ΑΝΔΡΕΟΥ.. ἐπισκ. Κρήτης εἰς τὸν.. Λάζαρον.</note></msItem></msContents><additional><adminInfo><recordHist><source><p>E. Feron, F. Battaglini, Codices manuscripti graeci Ottoboniani Bibliothecae Vaticanae descripti, Romae 1893, p. 52.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="29/12/2015"></date>
+				<persName>D.Lionetti</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">28/11/2016</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						<persName n="07/01/2016">D.Lionetti</persName><persName n="15/02/2016">Linking System: R.Mancusi</persName><persName n="28/11/2016">A.Berloco</persName>
+					<persName n="28/11/2016">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="184283" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Ott.gr." rend="Ott.gr.000850151r-153v" scan="@5Ott.gr.85_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Ott.gr.85">Ott.gr.85</idno>
+					</msIdentifier><msPart><msContents><msItem><locus>151r-153v</locus><author authorityID="33269" scan="@33269" type="internal"><alias><authorityAuthor date="m. 395" rif="aut" title="s., vesc. di Iconium," type="person">Amphilochius,</authorityAuthor><authorityAuthor date="m. 395" rif="see" title="s., vesc. di Iconium," type="person">Amphilochius Iconiensis,</authorityAuthor></alias></author><title scan="@1In Lazarum_supplied" type="supplied" value="In Lazarum">In Lazarum</title><uniformTitle authorityID="40789" scan="@40789" type="uniform"><alias><authorityTitleSeries rif="aut" type="uniform" value="Oratio in Lazarum quadriduanum (Amphilochius, s., vesc. di Iconium, m. 395)">Oratio in Lazarum quadriduanum (Amphilochius, s., vesc. di Iconium, m. 395)</authorityTitleSeries><authorityTitleSeries rif="see" type="uniform" value="Orationes. 3, Oratio in Lazarum quadriduanum">Orationes. 3, Oratio in Lazarum quadriduanum</authorityTitleSeries><authorityTitleSeries rif="see_also" type="uniform" value="Homilia in Lazarum quadriduanum (Leontius Constantinopolitanus, sec. VII. Opere spurie e dubbie)">Homilia in Lazarum quadriduanum (Leontius Constantinopolitanus, sec. VII. Opere spurie e dubbie)</authorityTitleSeries></alias></uniformTitle><textLang n="Greco." rend="grc">Greco.</textLang><note anchored="yes">Fol. 151 λόγ. ΛΒ´.. ΑΜΦΙΛΟΧΙΟΥ ἐπισκ. Εἰκονίου (sic).. εἰς τὸν.. Λάζαρον.</note></msItem></msContents><additional><adminInfo><recordHist><source><p>E. Feron, F. Battaglini, Codices manuscripti graeci Ottoboniani Bibliothecae Vaticanae descripti, Romae 1893, p. 52.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="29/12/2015"></date>
+				<persName>D.Lionetti</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">28/11/2016</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						<persName n="07/01/2016">D.Lionetti</persName><persName n="08/01/2016">D.Lionetti</persName><persName n="15/02/2016">Linking System: R.Mancusi</persName><persName n="28/11/2016">A.Berloco</persName>
+					<persName n="28/11/2016">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="184284" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Ott.gr." rend="Ott.gr.000850153v-157r" scan="@5Ott.gr.85_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Ott.gr.85">Ott.gr.85</idno>
+					</msIdentifier><msPart><msContents><msItem><locus>153v-157r</locus><author authorityID="465" scan="@465" type="internal"><alias><authorityAuthor date="347-407" rif="aut" title="s., patriarca di Costantinopoli," type="person">Iohannes Chrysostomus,</authorityAuthor><authorityAuthor date="347-407" rif="see" title="s., patriarca di Costantinopoli," type="person">Chrysostomus,</authorityAuthor><authorityAuthor date="347-407" rif="see" title="s., patriarca di Costantinopoli," type="person">Johannes Chrysostomus,</authorityAuthor><authorityAuthor date="347-407" rif="see" title="s., patriarca di Costantinopoli," type="person">Crisostomo, Giovanni,</authorityAuthor><authorityAuthor date="347-407" rif="see" title="s., patriarca di Costantinopoli," type="person">Giovanni Crisostomo,</authorityAuthor><authorityAuthor date="347-407" rif="see" title="s., patriarca di Costantinopoli," type="person">Giovanni Boccadoro,</authorityAuthor></alias></author><title scan="@1In quatriduanum Lazarum_supplied" type="supplied" value="In quatriduanum Lazarum">In quatriduanum Lazarum</title><uniformTitle authorityID="40790" scan="@40790" type="uniform"><alias><authorityTitleSeries rif="aut" type="uniform" value="In quatriduanum Lazarum (Iohannes Chrysostomus, s., patriarca di Costantinopoli, 347-407)">In quatriduanum Lazarum (Iohannes Chrysostomus, s., patriarca di Costantinopoli, 347-407)</authorityTitleSeries><authorityTitleSeries rif="see" type="uniform" value="De incomprehensibili Dei natura homiliae (Iohannes Chrysostomus, s., patriarca di Costantinopoli, 347-407). 9, In quatriduanum Lazarum">De incomprehensibili Dei natura homiliae (Iohannes Chrysostomus, s., patriarca di Costantinopoli, 347-407). 9, In quatriduanum Lazarum</authorityTitleSeries><authorityTitleSeries rif="see" type="uniform" value="Contra Anomoeos homilia 9 (Iohannes Chrysostomus, s., patriarca di Costantinopoli, 347-407)">Contra Anomoeos homilia 9 (Iohannes Chrysostomus, s., patriarca di Costantinopoli, 347-407)</authorityTitleSeries></alias></uniformTitle><textLang n="Greco." rend="grc">Greco.</textLang></msItem></msContents><additional><adminInfo><recordHist><source><p>E. Feron, F. Battaglini, Codices manuscripti graeci Ottoboniani Bibliothecae Vaticanae descripti, Romae 1893, p. 52.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="29/12/2015"></date>
+				<persName>D.Lionetti</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">28/11/2016</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						<persName n="07/01/2016">D.Lionetti</persName><persName n="15/02/2016">Linking System: R.Mancusi</persName><persName n="28/11/2016">A.Berloco</persName>
+					<persName n="28/11/2016">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="184285" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Ott.gr." rend="Ott.gr.000850162v-174r" scan="@5Ott.gr.85_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Ott.gr.85">Ott.gr.85</idno>
+					</msIdentifier><msPart><msContents><msItem><locus>162v-174r</locus><author authorityID="22827" scan="@22827" type="internal"><alias><authorityAuthor date="c. 660-c. 720" rif="aut" title="s., arciv. di Gortyna," type="person">Andreas Cretensis,</authorityAuthor></alias></author><title scan="@1In ramos palmarum_supplied" type="supplied" value="In ramos palmarum">In ramos palmarum</title><uniformTitle authorityID="40792" scan="@40792" type="uniform"><alias><authorityTitleSeries rif="aut" type="uniform" value="In ramos palmarum (Andreas Cretensis, s., arciv. di Gortyna, c. 660-c. 720)">In ramos palmarum (Andreas Cretensis, s., arciv. di Gortyna, c. 660-c. 720)</authorityTitleSeries><authorityTitleSeries rif="see" type="uniform" value="Homiliae (Andreas Cretensis, s., arciv. di Gortyna, c. 660-c. 720). 9, In ramos palmarum">Homiliae (Andreas Cretensis, s., arciv. di Gortyna, c. 660-c. 720). 9, In ramos palmarum</authorityTitleSeries></alias></uniformTitle><textLang n="Greco." rend="grc">Greco.</textLang><note anchored="yes">Fol. 162v λόγ. ΛΕ´.. ΑΝΔΡΕΟΥ.. ἐπισκ. Κρήτης.. εἰς τὰ Βαΐα.</note></msItem></msContents><additional><adminInfo><recordHist><source><p>E. Feron, F. Battaglini, Codices manuscripti graeci Ottoboniani Bibliothecae Vaticanae descripti, Romae 1893, p. 52.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="29/12/2015"></date>
+				<persName>D.Lionetti</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">28/11/2016</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						<persName n="07/01/2016">D.Lionetti</persName><persName n="15/02/2016">Linking System: R.Mancusi</persName><persName n="28/11/2016">A.Berloco</persName>
+					<persName n="28/11/2016">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="184286" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Ott.gr." rend="Ott.gr.000850174r-176r" scan="@5Ott.gr.85_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Ott.gr.85">Ott.gr.85</idno>
+					</msIdentifier><msPart><msContents><msItem><locus>174r-176r</locus><author authorityID="3282" scan="@3282" type="internal"><alias><authorityAuthor date="m. c. 446" rif="aut" title="s., arciv. di Costantinopoli," type="person">Proclus,</authorityAuthor><authorityAuthor date="m. c. 446" rif="see" title="s., arciv. di Costantinopoli," type="person">Proclus Constantinopolitanus,</authorityAuthor></alias></author><title scan="@1In ramos Palmarum_supplied" type="supplied" value="In ramos Palmarum">In ramos Palmarum</title><uniformTitle authorityID="40793" scan="@40793" type="uniform"><alias><authorityTitleSeries rif="aut" type="uniform" value="In ramos Palmarum (Proclus, s., arciv. di Costantinopoli, m. c. 446)">In ramos Palmarum (Proclus, s., arciv. di Costantinopoli, m. c. 446)</authorityTitleSeries><authorityTitleSeries rif="see" type="uniform" value="Homiliae (Proclus, s., arciv. di Costantinopoli, m. c. 446). 9, In ramos Palmarum">Homiliae (Proclus, s., arciv. di Costantinopoli, m. c. 446). 9, In ramos Palmarum</authorityTitleSeries></alias></uniformTitle><textLang n="Greco." rend="grc">Greco.</textLang><note anchored="yes">Fol. 174 λόγ. ΛϚ´.. ΠΡΟΚΛΟΥ.. Κπ̅ολ.. εἰς τὰ Βαΐα.</note></msItem></msContents><additional><adminInfo><recordHist><source><p>E. Feron, F. Battaglini, Codices manuscripti graeci Ottoboniani Bibliothecae Vaticanae descripti, Romae 1893, p. 52.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="29/12/2015"></date>
+				<persName>D.Lionetti</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">28/11/2016</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						<persName n="07/01/2016">D.Lionetti</persName><persName n="15/02/2016">Linking System: R.Mancusi</persName><persName n="28/11/2016">A.Berloco</persName>
+					<persName n="28/11/2016">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="184287" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Ott.gr." rend="Ott.gr.000850176r-178v" scan="@5Ott.gr.85_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Ott.gr.85">Ott.gr.85</idno>
+					</msIdentifier><msPart><msContents><msItem><locus>176r-178v</locus><author authorityID="4473" scan="@4473" type="internal"><alias><authorityAuthor date="347-407." formal="Opere spurie e dubbie" rif="aut" title="s., patriarca di Costantinopoli," type="person">Iohannes Chrysostomus,</authorityAuthor></alias></author><title scan="@1In illud: Collegerunt Judaei_supplied" type="supplied" value="In illud: Collegerunt Judaei">In illud: Collegerunt Judaei</title><uniformTitle authorityID="40797" scan="@40797" type="uniform"><alias><authorityTitleSeries rif="aut" type="uniform" value="In illud: Collegerunt Judaei (Iohannes Chrysostomus, s., patriarca di Costantinopoli, 347-407. Opere spurie e dubbie)">In illud: Collegerunt Judaei (Iohannes Chrysostomus, s., patriarca di Costantinopoli, 347-407. Opere spurie e dubbie)</authorityTitleSeries></alias></uniformTitle><textLang n="Greco." rend="grc">Greco.</textLang></msItem></msContents><additional><adminInfo><recordHist><source><p>E. Feron, F. Battaglini, Codices manuscripti graeci Ottoboniani Bibliothecae Vaticanae descripti, Romae 1893, pp. 52-53.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="29/12/2015"></date>
+				<persName>D.Lionetti</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">28/11/2016</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						<persName n="07/01/2016">D.Lionetti</persName><persName n="07/01/2016">D.Lionetti</persName><persName n="11/01/2016">D.Lionetti</persName><persName n="15/02/2016">Linking System: R.Mancusi</persName><persName n="28/11/2016">A.Berloco</persName>
+					<persName n="28/11/2016">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="184288" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Ott.gr." rend="Ott.gr.000850207r-210r" scan="@5Ott.gr.85_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Ott.gr.85">Ott.gr.85</idno>
+					</msIdentifier><msPart><msContents><msItem><locus>207r-210r</locus><author authorityID="138" scan="@138" type="internal"><alias><authorityAuthor date="303-373" rif="aut" title="s.," type="person">Ephraem Syrus,</authorityAuthor><authorityAuthor date="303-373" rif="see" title="s.," type="person">Ephraem Graecus,</authorityAuthor></alias></author><title scan="@1De passione Salvatoris_supplied" type="supplied" value="De passione Salvatoris">De passione Salvatoris</title><uniformTitle authorityID="40796" scan="@40796" type="uniform"><alias><authorityTitleSeries rif="aut" type="uniform" value="Sermo de passione Salvatoris (Ephraem Syrus, s., 303-373)">Sermo de passione Salvatoris (Ephraem Syrus, s., 303-373)</authorityTitleSeries></alias></uniformTitle><textLang n="Greco." rend="grc">Greco.</textLang><note anchored="yes">Fol. 207 λόγ. ΜΔ´.. τοῦ.. ΕΦΡΑΙΜ εἰς τὸ.. πάθος τοῦ.. Χριστοῦ..</note></msItem></msContents><additional><adminInfo><recordHist><source><p>E. Feron, F. Battaglini, Codices manuscripti graeci Ottoboniani Bibliothecae Vaticanae descripti, Romae 1893, p. 53.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="29/12/2015"></date>
+				<persName>D.Lionetti</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">28/11/2016</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						<persName n="29/12/2015">D.Lionetti</persName><persName n="07/01/2016">D.Lionetti</persName><persName n="15/02/2016">Linking System: R.Mancusi</persName><persName n="28/11/2016">A.Berloco</persName>
+					<persName n="28/11/2016">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="184289" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Ott.gr." rend="Ott.gr.000850210r-214v" scan="@5Ott.gr.85_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Ott.gr.85">Ott.gr.85</idno>
+					</msIdentifier><msPart><msContents><msItem><locus>210r-214v</locus><author authorityID="4473" scan="@4473" type="internal"><alias><authorityAuthor date="347-407." formal="Opere spurie e dubbie" rif="aut" title="s., patriarca di Costantinopoli," type="person">Iohannes Chrysostomus,</authorityAuthor></alias></author><title scan="@1In sancta et magna parasceve_supplied" type="supplied" value="In sancta et magna parasceve">In sancta et magna parasceve</title><uniformTitle authorityID="40815" scan="@40815" type="uniform"><alias><authorityTitleSeries rif="aut" type="uniform" value="In sancta et magna Parasceve (Iohannes Chrysostomus, s., patriarca di Costantinopoli, 347-407. Opere spurie e dubbie)">In sancta et magna Parasceve (Iohannes Chrysostomus, s., patriarca di Costantinopoli, 347-407. Opere spurie e dubbie)</authorityTitleSeries><authorityTitleSeries rif="see_also" type="uniform" value="Sermo in sanctum Parasceven et in Crucem (Iohannes Damascenus, s., 670-756)">Sermo in sanctum Parasceven et in Crucem (Iohannes Damascenus, s., 670-756)</authorityTitleSeries></alias></uniformTitle><textLang n="Greco." rend="grc">Greco.</textLang></msItem></msContents><additional><adminInfo><recordHist><source><p>E. Feron, F. Battaglini, Codices manuscripti graeci Ottoboniani Bibliothecae Vaticanae descripti, Romae 1893, p. 53.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="29/12/2015"></date>
+				<persName>D.Lionetti</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">28/11/2016</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						<persName n="29/12/2015">D.Lionetti</persName><persName n="07/01/2016">D.Lionetti</persName><persName n="15/02/2016">Linking System: R.Mancusi</persName>
+					<persName n="28/11/2016">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="184290" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Ott.gr." rend="Ott.gr.000850220v-230r" scan="@5Ott.gr.85_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Ott.gr.85">Ott.gr.85</idno>
+					</msIdentifier><msPart><msContents><msItem><locus>220v-230r</locus><author authorityID="76" scan="@76" type="internal"><alias><authorityAuthor date="c. 315-403." formal="Opere spurie e dubbie" rif="aut" title="s., vesc. di Costanza in Cipro," type="person">Epiphanius,</authorityAuthor></alias></author><title scan="@1Homilia in divini corporis sepulturam_supplied" type="supplied" value="Homilia in divini corporis sepulturam">Homilia in divini corporis sepulturam</title><uniformTitle authorityID="40819" scan="@40819" type="uniform"><alias><authorityTitleSeries rif="aut" type="uniform" value="Homilia in divini corporis sepulturam (Epiphanius, s., vesc. di Costanza in Cipro, c. 315-403. Opere spurie e dubbie)">Homilia in divini corporis sepulturam (Epiphanius, s., vesc. di Costanza in Cipro, c. 315-403. Opere spurie e dubbie)</authorityTitleSeries><authorityTitleSeries rif="see" type="uniform" value="Homiliae (Epiphanius, s., vesc. di Costanza in Cipro, c. 315-403. Opere spurie e dubbie). 2, In divini corporis sepulturam">Homiliae (Epiphanius, s., vesc. di Costanza in Cipro, c. 315-403. Opere spurie e dubbie). 2, In divini corporis sepulturam</authorityTitleSeries></alias></uniformTitle><textLang n="Greco." rend="grc">Greco.</textLang><note anchored="yes">Fol. 220v λόγ. ΜΖ´ .. - ΕΠΙΦΑΝΙΟΥ... ἐπισκ. Κύπρου.. εἰς τὴν θεόσωμον ταφὴν τοῦ.. Χριστοῦ..</note></msItem></msContents><additional><adminInfo><recordHist><source><p>E. Feron, F. Battaglini, Codices manuscripti graeci Ottoboniani Bibliothecae Vaticanae descripti, Romae 1893, p. 53.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="29/12/2015"></date>
+				<persName>D.Lionetti</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">28/11/2016</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						<persName n="07/01/2016">D.Lionetti</persName><persName n="15/02/2016">Linking System: R.Mancusi</persName><persName n="28/11/2016">A.Berloco</persName>
+					<persName n="28/11/2016">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="206593" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Ott.gr." rend="Ott.gr.000850046r-60v" scan="@5Ott.gr.85_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Ott.gr.85">Ott.gr.85</idno>
+					</msIdentifier><msPart><msContents><msItem><locus>46r-60v</locus><author authorityID="28332" scan="@28332" type="internal"><alias><authorityAuthor date="c. 330-390" rif="aut" title="s.," type="person">Gregorius Nazianzenus,</authorityAuthor><authorityAuthor date="c. 330-390" rif="see" title="s.," type="person">Gregorius Constantinopolitanus,</authorityAuthor><authorityAuthor date="c. 330-390" rif="see" title="s.," type="person">Gregorio di Nazianzo,</authorityAuthor><authorityAuthor date="c. 330-390" rif="see" title="s.," type="person">Gregorio il Teologo,</authorityAuthor><authorityAuthor date="c. 330-390" rif="see" title="s.," type="person">Gregorio Nazianzeno,</authorityAuthor><authorityAuthor date="c. 330-390" rif="see" title="s.," type="person">Gregorius Theologus,</authorityAuthor></alias></author><title scan="@1In sanctum baptisma_supplied" type="supplied" value="In sanctum baptisma">In sanctum baptisma</title><uniformTitle authorityID="37086" scan="@37086" type="uniform"><alias><authorityTitleSeries rif="aut" type="uniform" value="In s. Baptisma (Gregorius Nazianzenus, s., c. 330-390)">In s. Baptisma (Gregorius Nazianzenus, s., c. 330-390)</authorityTitleSeries><authorityTitleSeries rif="see" type="uniform" value="Orationes (Gregorius Nazianzenus, s., c. 330-390). 40, In s. Baptisma">Orationes (Gregorius Nazianzenus, s., c. 330-390). 40, In s. Baptisma</authorityTitleSeries></alias></uniformTitle><textLang n="Greco." rend="grc">Greco.</textLang><note anchored="yes">Fol. 38 ..ΓΡΗΓΟΡΙΟΥ.. Ναζιανζοῦ.. εἰς τὰ Φῶτα - λόγ. ΙΑ´. Fol. 46 Τοῦ αὐτοῦ εἰς τὸ Βάπτισμα λόγ. ΙΒ´.Post folium 54 aliquid deest. Deinde sequitur pars sermonis XVI.</note></msItem></msContents><additional><adminInfo><recordHist><source><p>E. Feron, F. Battaglini, Codices manuscripti graeci Ottoboniani Bibliothecae Vaticanae descripti, Romae 1893, p. 52.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="25/11/2016"></date>
+				<persName>A.Berloco</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">13/12/2016</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						<persName n="25/11/2016">A.Berloco</persName><persName n="28/11/2016">A.Berloco</persName><persName n="13/12/2016">A.Berloco</persName><persName n="13/12/2016">A.Berloco</persName>
+					<persName n="13/12/2016">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="206604" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Ott.gr." rend="Ott.gr.000850114r-117v" scan="@5Ott.gr.85_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Ott.gr.85">Ott.gr.85</idno>
+					</msIdentifier><msPart><msContents><msItem><locus>114r-117v</locus><author authorityID="4473" scan="@4473" type="internal"><alias><authorityAuthor date="347-407." formal="Opere spurie e dubbie" rif="aut" title="s., patriarca di Costantinopoli," type="person">Iohannes Chrysostomus,</authorityAuthor></alias></author><title scan="@1In Annuntiationem ss. Deiparae_supplied" type="supplied" value="In Annuntiationem ss. Deiparae">In Annuntiationem ss. Deiparae</title><uniformTitle authorityID="40779" scan="@40779" type="uniform"><alias><authorityTitleSeries rif="aut" type="uniform" value="In Annuntiationem ss. Deiparae (Iohannes Chrysostomus, s., patriarca di Costantinopoli, 347-407. Opere spurie e dubbie)">In Annuntiationem ss. Deiparae (Iohannes Chrysostomus, s., patriarca di Costantinopoli, 347-407. Opere spurie e dubbie)</authorityTitleSeries></alias></uniformTitle><textLang n="Greco." rend="grc">Greco.</textLang></msItem></msContents><additional><adminInfo><recordHist><source><p>E. Feron, F. Battaglini, Codices manuscripti graeci Ottoboniani Bibliothecae Vaticanae descripti, Romae 1893, p. 52.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="28/11/2016"></date>
+				<persName>A.Berloco</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">28/11/2016</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						
+					<persName n="28/11/2016">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="206605" xmlns:ino="http://namespaces.softwareag.com/tamino/response2">
+	<teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Ott.gr." rend="Ott.gr.000850105r-113v" scan="@5Ott.gr.85_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Ott.gr.85">Ott.gr.85</idno>
+					</msIdentifier><msPart><msContents><msItem><locus>105r-113v</locus><author authorityID="3282" scan="@3282" type="internal"><alias><authorityAuthor date="m. c. 446" rif="aut" title="s., arciv. di Costantinopoli," type="person">Proclus,</authorityAuthor><authorityAuthor date="m. c. 446" rif="see" title="s., arciv. di Costantinopoli," type="person">Proclus Constantinopolitanus,</authorityAuthor></alias></author><title scan="@1Laudatio de genitricis Mariae_supplied" type="supplied" value="Laudatio de genitricis Mariae">Laudatio de genitricis Mariae</title><uniformTitle authorityID="40780" scan="@40780" type="uniform"><alias><authorityTitleSeries rif="see" type="uniform" value="Homiliae (Proclus, s., arciv. di Costantinopoli, m. c. 446). 6, Laudatio s. Dei genitricis Mariae">Homiliae (Proclus, s., arciv. di Costantinopoli, m. c. 446). 6, Laudatio s. Dei genitricis Mariae</authorityTitleSeries><authorityTitleSeries rif="aut" type="uniform" value="Laudatio s. dei genitricis Mariae (Proclus, s., arciv. di Costantinopoli, m. c. 446)">Laudatio s. dei genitricis Mariae (Proclus, s., arciv. di Costantinopoli, m. c. 446)</authorityTitleSeries></alias></uniformTitle><textLang n="Greco." rend="grc">Greco.</textLang></msItem></msContents><additional><adminInfo><recordHist><source><p>E. Feron, F. Battaglini, Codices manuscripti graeci Ottoboniani Bibliothecae Vaticanae descripti, Romae 1893, p. 52.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="28/11/2016"></date>
+				<persName>A.Berloco</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date"></date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						
+					</resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader>
+	<text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text>
+</TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="206630" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Ott.gr." rend="Ott.gr.000850157r-162v" scan="@5Ott.gr.85_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Ott.gr.85">Ott.gr.85</idno>
+					</msIdentifier><msPart><msContents><msItem><locus>157r-162v</locus><author authorityID="4473" scan="@4473" type="internal"><alias><authorityAuthor date="347-407." formal="Opere spurie e dubbie" rif="aut" title="s., patriarca di Costantinopoli," type="person">Iohannes Chrysostomus,</authorityAuthor></alias></author><title scan="@1In ramos palmarum_supplied" type="supplied" value="In ramos palmarum">In ramos palmarum</title><uniformTitle authorityID="40791" scan="@40791" type="uniform"><alias><authorityTitleSeries rif="aut" type="uniform" value="In ramos palmarum (Iohannes Chrysostomus, s., patriarca di Costantinopoli, 347-407. Opere spurie e dubbie)">In ramos palmarum (Iohannes Chrysostomus, s., patriarca di Costantinopoli, 347-407. Opere spurie e dubbie)</authorityTitleSeries></alias></uniformTitle><textLang n="Greco." rend="grc">Greco.</textLang></msItem></msContents><additional><adminInfo><recordHist><source><p>E. Feron, F. Battaglini, Codices manuscripti graeci Ottoboniani Bibliothecae Vaticanae descripti, Romae 1893, p. 52.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="28/11/2016"></date>
+				<persName>A.Berloco</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">28/11/2016</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						
+					<persName n="28/11/2016">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="206641" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Ott.gr." rend="Ott.gr.000850178v-182v" scan="@5Ott.gr.85_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Ott.gr.85">Ott.gr.85</idno>
+					</msIdentifier><msPart><msContents><msItem><locus>178v-182v</locus><author authorityID="4473" scan="@4473" type="internal"><alias><authorityAuthor date="347-407." formal="Opere spurie e dubbie" rif="aut" title="s., patriarca di Costantinopoli," type="person">Iohannes Chrysostomus,</authorityAuthor></alias></author><title scan="@1In Illud: Exeuntes Pharisaei_supplied" type="supplied" value="In Illud: Exeuntes Pharisaei">In Illud: Exeuntes Pharisaei</title><uniformTitle authorityID="40798" scan="@40798" type="uniform"><alias><authorityTitleSeries rif="aut" type="uniform" value="In illud: Exeuntes Pharisaei (Iohannes Chrysostomus, s., patriarca di Costantinopoli, 347-407. Opere spurie e dubbie)">In illud: Exeuntes Pharisaei (Iohannes Chrysostomus, s., patriarca di Costantinopoli, 347-407. Opere spurie e dubbie)</authorityTitleSeries></alias></uniformTitle><textLang n="Greco." rend="grc">Greco.</textLang></msItem></msContents><additional><adminInfo><recordHist><source><p>E. Feron, F. Battaglini, Codices manuscripti graeci Ottoboniani Bibliothecae Vaticanae descripti, Romae 1893, pp. 52-53.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="28/11/2016"></date>
+				<persName>A.Berloco</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">28/11/2016</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						
+					<persName n="28/11/2016">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="206643" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Ott.gr." rend="Ott.gr.000850182v-184r" scan="@5Ott.gr.85_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Ott.gr.85">Ott.gr.85</idno>
+					</msIdentifier><msPart><msContents><msItem><locus>182v-184r</locus><author authorityID="4473" scan="@4473" type="internal"><alias><authorityAuthor date="347-407." formal="Opere spurie e dubbie" rif="aut" title="s., patriarca di Costantinopoli," type="person">Iohannes Chrysostomus,</authorityAuthor></alias></author><title scan="@1In meretricem et in pharisaeum_supplied" type="supplied" value="In meretricem et in pharisaeum">In meretricem et in pharisaeum</title><uniformTitle authorityID="33302" scan="@33302" type="uniform"><alias><authorityTitleSeries rif="aut" type="uniform" value="In meretricem et in Pharisaeum (Iohannes Chrysostomus, s., patriarca di Costantinopoli, 347-407. Opere spurie e dubbie)">In meretricem et in Pharisaeum (Iohannes Chrysostomus, s., patriarca di Costantinopoli, 347-407. Opere spurie e dubbie)</authorityTitleSeries></alias></uniformTitle><textLang n="Greco." rend="grc">Greco.</textLang></msItem></msContents><additional><adminInfo><recordHist><source><p>E. Feron, F. Battaglini, Codices manuscripti graeci Ottoboniani Bibliothecae Vaticanae descripti, Romae 1893, pp. 52-53.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="28/11/2016"></date>
+				<persName>A.Berloco</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">28/11/2016</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						<persName n="28/11/2016">A.Berloco</persName><persName n="28/11/2016">A.Berloco</persName>
+					<persName n="28/11/2016">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="206650" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Ott.gr." rend="Ott.gr.000850184r-188r" scan="@5Ott.gr.85_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Ott.gr.85">Ott.gr.85</idno>
+					</msIdentifier><msPart><msContents><msItem><locus>184r-188r</locus><author authorityID="33213" scan="@33213" type="internal"><alias><authorityAuthor date="m. 408/431" rif="aut" title="s.," type="person">Severianus Gabalensis,</authorityAuthor><authorityAuthor date="m. 408/431" rif="see" title="s.," type="person">Severianus Gabalitanus,</authorityAuthor><authorityAuthor date="m. 408/431" rif="see" title="s., vesc. di Gabala," type="person">Severiano,</authorityAuthor></alias></author><title scan="@1In meretricem et Pharisaeum_supplied" type="supplied" value="In meretricem et Pharisaeum">In meretricem et Pharisaeum</title><uniformTitle authorityID="40809" scan="@40809" type="uniform"><alias><authorityTitleSeries rif="aut" type="uniform" value="In meretricem et Pharisaeum (Severianus Gabalensis, s., f. 400-408)">In meretricem et Pharisaeum (Severianus Gabalensis, s., f. 400-408)</authorityTitleSeries><authorityTitleSeries rif="see_also" type="uniform" value="In meretricem et in Pharisaeum (Iohannes Chrysostomus, s., patriarca di Costantinopoli, 347-407. Opere spurie e dubbie)">In meretricem et in Pharisaeum (Iohannes Chrysostomus, s., patriarca di Costantinopoli, 347-407. Opere spurie e dubbie)</authorityTitleSeries></alias></uniformTitle><textLang n="Greco." rend="grc">Greco.</textLang></msItem></msContents><additional><adminInfo><recordHist><source><p>E. Feron, F. Battaglini, Codices manuscripti graeci Ottoboniani Bibliothecae Vaticanae descripti, Romae 1893, pp. 52-53.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="28/11/2016"></date>
+				<persName>A.Berloco</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">28/11/2016</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						<persName n="28/11/2016">A.Berloco</persName><persName n="28/11/2016">A.Berloco</persName>
+					<persName n="28/11/2016">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="206664" xmlns:ino="http://namespaces.softwareag.com/tamino/response2">
+	<teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Ott.gr." rend="Ott.gr.000850188r-196r" scan="@5Ott.gr.85_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Ott.gr.85">Ott.gr.85</idno>
+					</msIdentifier><msPart><msContents><msItem><locus>188r-196r</locus><author authorityID="465" scan="@465" type="internal"><alias><authorityAuthor date="347-407" rif="aut" title="s., patriarca di Costantinopoli," type="person">Iohannes Chrysostomus,</authorityAuthor><authorityAuthor date="347-407" rif="see" title="s., patriarca di Costantinopoli," type="person">Chrysostomus,</authorityAuthor><authorityAuthor date="347-407" rif="see" title="s., patriarca di Costantinopoli," type="person">Johannes Chrysostomus,</authorityAuthor><authorityAuthor date="347-407" rif="see" title="s., patriarca di Costantinopoli," type="person">Crisostomo, Giovanni,</authorityAuthor><authorityAuthor date="347-407" rif="see" title="s., patriarca di Costantinopoli," type="person">Giovanni Crisostomo,</authorityAuthor><authorityAuthor date="347-407" rif="see" title="s., patriarca di Costantinopoli," type="person">Giovanni Boccadoro,</authorityAuthor></alias></author><title scan="@1De proditione Judae homilae I et II_supplied" type="supplied" value="De proditione Judae homilae I et II">De proditione Judae homilae I et II</title><uniformTitle authorityID="40804" scan="@40804" type="uniform"><alias><authorityTitleSeries rif="aut" type="uniform" value="De proditione Judae homiliae (Iohannes Chrysostomus, s., patriarca di Costantinopoli, 347-407)">De proditione Judae homiliae (Iohannes Chrysostomus, s., patriarca di Costantinopoli, 347-407)</authorityTitleSeries></alias></uniformTitle><textLang n="Greco." rend="grc">Greco.</textLang></msItem></msContents><additional><adminInfo><recordHist><source><p>E. Feron, F. Battaglini, Codices manuscripti graeci Ottoboniani Bibliothecae Vaticanae descripti, Romae 1893, pp. 52-53.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="28/11/2016"></date>
+				<persName>A.Berloco</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date"></date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						
+					</resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader>
+	<text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text>
+</TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="206665" xmlns:ino="http://namespaces.softwareag.com/tamino/response2">
+	<teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Ott.gr." rend="Ott.gr.000850196r-199r" scan="@5Ott.gr.85_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Ott.gr.85">Ott.gr.85</idno>
+					</msIdentifier><msPart><msContents><msItem><locus>196r-199r</locus><author authorityID="33213" scan="@33213" type="internal"><alias><authorityAuthor date="m. 408/431" rif="aut" title="s.," type="person">Severianus Gabalensis,</authorityAuthor><authorityAuthor date="m. 408/431" rif="see" title="s.," type="person">Severianus Gabalitanus,</authorityAuthor><authorityAuthor date="m. 408/431" rif="see" title="s., vesc. di Gabala," type="person">Severiano,</authorityAuthor></alias></author><title scan="@1Homilia de lotione pedum_supplied" type="supplied" value="Homilia de lotione pedum">Homilia de lotione pedum</title><uniformTitle authorityID="40812" scan="@40812" type="uniform"><alias><authorityTitleSeries rif="aut" type="uniform" value="Homilia de lotione pedum (Severianus Gabalensis, s., f. 400-408)">Homilia de lotione pedum (Severianus Gabalensis, s., f. 400-408)</authorityTitleSeries></alias></uniformTitle><textLang n="Greco." rend="grc">Greco.</textLang></msItem></msContents><additional><adminInfo><recordHist><source><p>E. Feron, F. Battaglini, Codices manuscripti graeci Ottoboniani Bibliothecae Vaticanae descripti, Romae 1893, pp. 52-53.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="28/11/2016"></date>
+				<persName>A.Berloco</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date"></date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						
+					</resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader>
+	<text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text>
+</TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="206666" xmlns:ino="http://namespaces.softwareag.com/tamino/response2">
+	<teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Ott.gr." rend="Ott.gr.000850199r-207r" scan="@5Ott.gr.85_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Ott.gr.85">Ott.gr.85</idno>
+					</msIdentifier><msPart><msContents><msItem><locus>199r-207r</locus><author authorityID="4473" scan="@4473" type="internal"><alias><authorityAuthor date="347-407." formal="Opere spurie e dubbie" rif="aut" title="s., patriarca di Costantinopoli," type="person">Iohannes Chrysostomus,</authorityAuthor></alias></author><title scan="@1In Illud: Pater si possibile est_supplied" type="supplied" value="In Illud: Pater si possibile est">In Illud: Pater si possibile est</title><uniformTitle authorityID="40813" scan="@40813" type="uniform"><alias><authorityTitleSeries rif="aut" type="uniform" value="In illud: Pater si possibile est (Iohannes Chrysostomus, s., patriarca di Costantinopoli, 347-407. Opere spurie e dubbie)">In illud: Pater si possibile est (Iohannes Chrysostomus, s., patriarca di Costantinopoli, 347-407. Opere spurie e dubbie)</authorityTitleSeries></alias></uniformTitle><textLang n="Greco." rend="grc">Greco.</textLang></msItem></msContents><additional><adminInfo><recordHist><source><p>E. Feron, F. Battaglini, Codices manuscripti graeci Ottoboniani Bibliothecae Vaticanae descripti, Romae 1893, pp. 52-53.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="28/11/2016"></date>
+				<persName>A.Berloco</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date"></date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						
+					</resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader>
+	<text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text>
+</TEI.2>
+</ino:object>
+<ino:object>
+<TEI.2 inoid="206671" xmlns:ino="http://namespaces.softwareag.com/tamino/response2"><teiHeader status="new">
+		<fileDesc>
+			<titleStmt>
+				
+			</titleStmt>
+			<publicationStmt>
+				<p></p>
+			</publicationStmt>
+			<sourceDesc default="NO">
+				<msDescription n="n"><msIdentifier type="primary">
+						<repository>Biblioteca Apostolica Vaticana</repository>
+						<idno TEIform="0" n="Ott.gr." rend="Ott.gr.000850214v-220r" scan="@5Ott.gr.85_ms" type="ms" uriSYS="http://digi.vatlib.it/view/MSS_Ott.gr.85">Ott.gr.85</idno>
+					</msIdentifier><msPart><msContents><msItem><locus>214v-220r</locus><author authorityID="4473" scan="@4473" type="internal"><alias><authorityAuthor date="347-407." formal="Opere spurie e dubbie" rif="aut" title="s., patriarca di Costantinopoli," type="person">Iohannes Chrysostomus,</authorityAuthor></alias></author><title scan="@1In vivificam sepulturam et triduanam resurrectionem Christi_supplied" type="supplied" value="In vivificam sepulturam et triduanam resurrectionem Christi">In vivificam sepulturam et triduanam resurrectionem Christi</title><uniformTitle authorityID="41000" scan="@41000" type="uniform"><alias><authorityTitleSeries rif="aut" type="uniform" value="In vivificam sepulturam et triduanam resurrectionem Christi (Iohannes Chrysostomus, s., patriarca di Costantinopoli, 347-407. Opere spurie e dubbie)">In vivificam sepulturam et triduanam resurrectionem Christi (Iohannes Chrysostomus, s., patriarca di Costantinopoli, 347-407. Opere spurie e dubbie)</authorityTitleSeries></alias></uniformTitle><textLang n="Greco." rend="grc">Greco.</textLang></msItem></msContents><additional><adminInfo><recordHist><source><p>E. Feron, F. Battaglini, Codices manuscripti graeci Ottoboniani Bibliothecae Vaticanae descripti, Romae 1893, p. 53.</p></source></recordHist></adminInfo></additional></msPart></msDescription>
+			</sourceDesc>
+		</fileDesc>
+		<profileDesc>
+			<creation>
+				<date TEIform="date" value="28/11/2016"></date>
+				<persName>A.Berloco</persName>
+				<orig>console</orig>
+			</creation>
+		</profileDesc>
+		<revisionDesc>
+			<change>
+				<date TEIform="date">13/12/2016</date>
+				<respStmt>
+					<resp>
+						<name type="org">BAV</name>
+						<persName n="12/12/2016">A.Berloco</persName>
+					<persName n="13/12/2016">A.Berloco</persName></resp>
+				</respStmt>
+				<item id="Vero"></item>
+			</change>
+		</revisionDesc>
+	</teiHeader><text>
+		<body>
+			<bibl default="NO"></bibl>
+		</body>
+	</text></TEI.2>
+</ino:object>
+</ino:request>

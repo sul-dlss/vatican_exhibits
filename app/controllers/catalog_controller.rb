@@ -101,8 +101,8 @@ class CatalogController < ApplicationController
     config.add_show_field 'ms_watermarks_tesim'
     config.add_show_field 'ms_motto_tesim'
     config.add_show_field 'ms_locus_tesim'
-    config.add_show_field 'ms_author_tesim'
-    config.add_show_field 'ms_other_author_tesim'
+    config.add_show_field 'ms_author_tesim', separator_options: { words_connector: '<br>' }
+    config.add_show_field 'ms_other_author_tesim', separator_options: { words_connector: '<br>' }
     config.add_show_field 'ms_title_tesim'
     config.add_show_field 'ms_supplied_title_tesim'
     config.add_show_field 'ms_uniform_title_tesim'
@@ -119,7 +119,7 @@ class CatalogController < ApplicationController
     config.add_show_field 'ms_type_of_document_tesim'
     config.add_show_field 'ms_general_note_tesim'
     config.add_show_field 'ms_source_note_tesim'
-    config.add_show_field 'ms_other_name_tesim'
+    config.add_show_field 'ms_other_name_tesim', separator_options: { words_connector: '<br>' }
     config.add_show_field 'ms_subject_tesim'
     config.add_show_field 'ms_language_ssim', link_to_search: true
     config.add_show_field 'ms_alphabet_ssim', link_to_search: true
