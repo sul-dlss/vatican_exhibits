@@ -87,7 +87,10 @@ RSpec.describe 'Bibliography resource integration test', type: :feature do
     end
 
     it 'has author' do
-      expect(document['author_ssim']).to eq ['Eunapius Sardianus', 'Porphyrius Tyrius']
+      expect(document['author_ssim']).to eq [
+        'Eunapius Sardianus, 354-420 [person]',
+        'Porphyrius Tyrius, 232/233-305? [person]'
+      ]
     end
 
     it 'has other author' do
@@ -95,7 +98,7 @@ RSpec.describe 'Bibliography resource integration test', type: :feature do
     end
 
     it 'has other name' do
-      expect(document['other_name_ssim']).to eq ['Albini, Valeriano']
+      expect(document['other_name_ssim']).to eq ['Albini, Valeriano, sac., f. 1528-1545 [person]']
       expect(document['other_name_and_role_ssim']).to eq ['Albini, Valeriano [scribe]']
     end
 
@@ -153,7 +156,7 @@ RSpec.describe 'Bibliography resource integration test', type: :feature do
                                   'ms_height_tesim' => ['320'],
                                   'ms_language_ssim' => ['Greco.'],
                                   'ms_library_tesim' => ['Biblioteca Apostolica Vaticana'],
-                                  'ms_other_name_tesim' => ['Albini, Valeriano,'],
+                                  'ms_other_name_tesim' => ['Albini, Valeriano, sac., f. 1528-1545 [person]'],
                                   'ms_shelfmark_tesim' => ['Barb.gr.252'],
                                   'ms_support_tesim' => ['chart.'],
                                   'ms_watermarks_tesim' => ['In prima parte codicis, officinarum chartariarum signa duo: ancora in circulo, stella superposita (cf. Briquet 588) et arcuballista in circulo, lilio superposito (Briquet 761); in secunda parte, signum unicum: sagittae, stella superposita (cf. Briquet 6300).'],
@@ -174,6 +177,71 @@ RSpec.describe 'Bibliography resource integration test', type: :feature do
         'ms_alphabet_ssim' => ['Greco.'],
         'ms_source_of_information_tesim' => ['J. Mogenet, Codices Barberiniani Graeci, in Bibliotheca Vaticana 1989, v. 2, p. 100.']
       )
+    end
+    context 'with more complex author display' do
+      subject(:document) do
+        bibliograpy_resource.document_builder.to_solr.first
+      end
+
+      let(:bibliograpy_resource) do
+        VaticanIiifResource.new(
+          iiif_url_list: 'https://digi.vatlib.it/iiif/MSS_Ott.gr.85/manifest.json',
+          exhibit: exhibit
+        )
+      end
+
+      before do
+        stub_request(:get, 'https://digi.vatlib.it/iiif/MSS_Ott.gr.85/manifest.json')
+          .to_return(body: stubbed_manifest('MSS_Ott.gr.85.json'))
+        stub_request(:get, 'https://digi.vatlib.it/tei/Ott.gr.85.xml')
+          .to_return(body: stubbed_tei('Ott.gr.85.xml'))
+        allow(IndexAnnotationsForCanvasJob).to receive(:perform_later)
+      end
+
+      it 'works with present and missing values' do
+        expect(document['author_ssim']).to include(
+          'Leontius Constantinopolitanus, sec. VII [person]',
+          'Athanasius, s., patriarca di Alessandria, 292-373. Opere spurie e dubbie [person]',
+          'Iohannes Chrysostomus, s., patriarca di Costantinopoli, 347-407. Opere spurie e dubbie [person]'
+        )
+        expect(document['ms_other_name_tesim']).to include(
+          'Altemps (famiglia) [person]'
+        )
+      end
+    end
+
+    context 'with other author and other name' do
+      subject(:document) do
+        bibliograpy_resource.document_builder.to_solr.first
+      end
+
+      let(:bibliograpy_resource) do
+        VaticanIiifResource.new(
+          iiif_url_list: 'https://digi.vatlib.it/iiif/MSS_Vat.lat.3195/manifest.json',
+          exhibit: exhibit
+        )
+      end
+
+      before do
+        stub_request(:get, 'https://digi.vatlib.it/iiif/MSS_Vat.lat.3195/manifest.json')
+          .to_return(body: stubbed_manifest('MSS_Vat.lat.3195.json'))
+        stub_request(:get, 'https://digi.vatlib.it/tei/Vat.lat.3195.xml')
+          .to_return(body: stubbed_tei('Vat.lat.3195.xml'))
+        allow(IndexAnnotationsForCanvasJob).to receive(:perform_later)
+      end
+
+      it 'works with present and missing values' do
+        expect(document['other_author_ssim']).to include(
+          'Petrarca, Francesco, 1304-1374 [person]'
+        )
+        expect(document['ms_other_author_tesim']).to include(
+          'Petrarca, Francesco, 1304-1374 [person]'
+        )
+        expect(document['ms_other_name_tesim']).to include(
+          'Malpaghini, Giovanni, n. c. 1346-m. c. 1417 [person]',
+          'Bembo, Pietro, card., 1470-1547 [person]'
+        )
+      end
     end
   end
 end
