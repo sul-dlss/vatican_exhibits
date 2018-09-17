@@ -4,6 +4,7 @@ module ApiAuthorization
   class Constraint
     def matches?(request)
       return true if request.get? || valid_api_key?(request)
+
       raise ApiAuthorization::Unauthorized
     end
 
