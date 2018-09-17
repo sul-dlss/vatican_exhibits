@@ -66,6 +66,7 @@ class ManuscriptMetadataPresenter
 
     def type
       return nil if @type == :description
+
       @type
     end
   end
