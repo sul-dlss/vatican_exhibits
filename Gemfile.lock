@@ -561,7 +561,7 @@ GEM
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     uber (0.1.0)
-    uglifier (4.1.19)
+    uglifier (4.1.18)
       execjs (>= 0.3.0, < 3)
     underscore-rails (1.8.3)
     unf (0.1.4)
@@ -646,9 +646,9 @@ DEPENDENCIES
   traject_plus
   turbolinks (~> 5)
   tzinfo-data
-  uglifier (>= 1.3.0)
+  uglifier (>= 1.3.0, <= 4.1.18)
   web-console (>= 3.3.0)
   webmock
 
 BUNDLED WITH
-   1.16.3
+   1.16.4
