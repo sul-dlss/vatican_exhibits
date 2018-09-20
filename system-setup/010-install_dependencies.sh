@@ -19,7 +19,7 @@ yum install -y redis
 systemctl enable redis.service
 
 # Install Apache HTTP
-yum install -y httpd
+yum install -y httpd mod_ssl
 systemctl enable httpd.service
 
 # Install Passenger (with ntp dependency)
