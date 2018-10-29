@@ -5,7 +5,7 @@ module MiradorHelper
     {
       "language": I18n.default_locale,
       "mainMenuSettings": {
-        "show":  false
+        "show": false
       },
       "buildPath": '/assets/',
       "saveSession": false,
