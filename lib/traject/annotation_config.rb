@@ -16,7 +16,7 @@ each_record do |record, context|
   end
   context.clipboard[:canvas] = ::JSON.parse(canvas_body)
 
-  manifest_url = context.clipboard[:annotation]['on'].first['within']['@id']
+  manifest_url = AnnotationCompatibility.new(context.clipboard[:annotation]).manifest_uri
   manifest_body = Rails.cache.fetch(manifest_url) do
     Faraday.get(manifest_url).body
   end
@@ -123,7 +123,7 @@ end)
 
 to_field 'thumbnail_url_ssm', (accumulate do |_resource, context|
   image = context.clipboard[:canvas]['images'].first['resource']['service']['@id']
-  selector = context.clipboard[:annotation]['on'].first['selector']['default']
+  selector = AnnotationCompatibility.new(context.clipboard[:annotation]).selector
   region = selector['value'].sub('xywh=', '') if selector['@type'] == 'oa:FragmentSelector'
   region ||= 'full'
   "#{image}/#{region}/100,/0/default.jpg"

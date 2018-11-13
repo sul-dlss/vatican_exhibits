@@ -23,8 +23,6 @@ class IndexAnnotationJob < ApplicationJob
   end
 
   def manifest_uri(annotation)
-    return unless JSON.parse(annotation.data)['on']
-
-    JSON.parse(annotation.data)['on'].first['within']['@id']
+    AnnotationCompatibility.new(JSON.parse(annotation.data)).manifest_uri
   end
 end
