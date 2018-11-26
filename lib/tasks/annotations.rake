@@ -63,7 +63,8 @@ namespace :annotations do
           end
         end
 
-        annotation.data = data.to_json
+        # We don't want to double encode JSON data here
+        annotation.data = data.is_a?(Hash) ? data.to_json : data
         annotation.save!
       end
     end
