@@ -6,7 +6,7 @@ module SpotlightHelper
 
   def render_minimally_styled_narrative_field(value:, **_args)
     safe_join(Array(value).map do |v|
-      sanitize v, tags: %w[strong em p a], attributes: %w[href]
+      sanitize v, tags: %w[strong em p a i b br], attributes: %w[href target]
     end, '')
   end
 
