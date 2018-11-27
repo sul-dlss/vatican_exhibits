@@ -71,7 +71,7 @@ RSpec.describe 'Bibliography resource integration test', type: :feature do
     end
 
     it 'has date' do
-      expect(document['date_ssim']).to eq ['sec. xvi med', 'sec. xvi med (ff. 1-38)', 'anno 1539 (ff. 41-112)']
+      expect(document['date_ssim']).to eq ['sec. XVI med', 'sec. XVI med (ff. 1-38)', 'anno 1539 (ff. 41-112)']
     end
 
     it 'has beginning date' do

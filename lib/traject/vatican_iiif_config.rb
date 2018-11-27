@@ -29,8 +29,7 @@ compose ->(record, accumulator, _context) { accumulator << record.tei.xpath('//T
 
   to_field 'date_ssim', extract_xml(
     'origDate', nil,
-    strip: true,
-    downcase: true
+    strip: true
   )
   to_field 'beginning_date_ssim', extract_xml(
     'origDate/@notBefore', nil
