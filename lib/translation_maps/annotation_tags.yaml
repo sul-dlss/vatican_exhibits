@@ -1,21 +1,599 @@
-Alloro:	Laurel
-Angeli:	Angels
-Animali:	Animals
-Animali (Agnelli):	Animals (Lambs)
-Animali (Asini):	Animals (Donkeys)
-Animali (Cani):	Animals (Dogs)
-Animali (Cavalli):	Animals (Horses)
-Datazione (Sec. IX):	Date (9th cent.)
-Datazione (Sec. VIII):	Date (8th cent.)
-Datazione (Sec. X):	Date (10th cent.)
-Datazione (Sec. XII):	Date (12th cent.)
-Datazione (Sec. XIII):	Date (13th cent.)
-Datazione (Sec. XIV):	Date (14th cent.)
-Datazione (Sec. XV):	Date (15th cent.)
-"iniziali: A":	"initial letters: A"
-"iniziali:B":	"initial letters: B"
-"iniziali:C":	"initial letters: C"
-Miniature:	Illuminations
-Frontespizi:	Title pages
-Fregi:	Ornaments
-Blu:	Blue
+A. Berloco (a cura di): A. Berloco (edited by)
+Abbreviazioni: Abbreviations
+Acates: Achates
+Achilles: Achilles
+Actaeon: Actaeon
+Adam: Adam
+Adrastos: Adrastus
+Adulterio: Adultery
+Aegisthus: Aegisthus
+Aeneas: Aeneas
+Agamemnon: Agamemnon
+Agesilaus: Agesilaus
+Aggressioni: Agressions
+Agrimensura: Land Surveying
+Alcmena: Alcmene
+Alcyon: Alcyone
+Aletes: Aletes
+Allecto: Alecto
+Alloro: Laurel
+Amazzoni: Amazons
+Amor: Cupid
+Amphytrion: Amphytrion
+Ancelle: Servants
+Anchises: Anchises
+Andromacha: Andromache
+Angeli: Angels
+Angeli reggistemma: Angels bearing a coat of arms
+Animali: Animals
+Animali (Agnelli): Animals (Lambs)
+Animali (Asini): Animals (Donkeys)
+Animali (Cani): Animals (Dogs)
+Animali (Cavalli): Animals (Horses)
+Animali (Cervi): Animals (Deer)
+Animali (Cigni): Animals (Swans)
+Animali (Cinghiali): Animals (Boars)
+Animali (Conigli): Animals (Rabbits)
+Animali (Delfini): Animals (Dolphins)
+Animali (Farfalle): Animals (Butterflies)
+Animali (Felini): Animals (Felines)
+Animali (Giovenche): Animals (Bullocks)
+Animali (Insetti): Animals (Insects)
+Animali (Leoni): Animals (Lions)
+Animali (Lepri): Animals (Hares)
+Animali (Lupi): Animals (Wolves)
+Animali (Maiali): Animals (Swine)
+Animali (Orsi): Animals (Bears)
+Animali (Pavoni): Animals (Peacocks)
+Animali (Porcellini): Animals (Piglets)
+Animali (Rapaci): Animals (Birds of prey)
+Animali (Scimmie): Animals (Apes)
+Animali (Scrofe): Animals (Sows)
+Animali (Serpenti): Animals (Serpents)
+Animali (Struzzi): Animals (Ostriches)
+Animali (Tori): Animals (Bulls)
+Animali (Volatili): Animals (Winged)
+Anna (sorella di Didone): Anne (Sister of Dido)
+Antigone: Antigone
+Antiporte miniate: Antiporta
+Anziani: Elders
+Apicoltura: Beekeeping
+Apollon: Apollo
+Apostoli: Apostles
+Aquila: Eagle
+Arancio: Orange color
+Aratura: Ploughing
+Archi: Arches
+Arethusa: Arethusa
+Argia: Argia
+Argos: Argos
+Armi: Arms
+Armigeri: Armigers
+Artemidora: Artemidora
+Ascanius: Ascanius
+Assedi: Sieges
+Astyages: Astyages
+Astyanax: Astyanax
+Ateniesi: Athenians
+Atreus: Atreus
+Azzurro: Blue
+Balestre: Crossbows
+Bastarda: Bastard script
+Bastoni bolognesi: Bolognese baton
+Battaglie: Battles
+Battus: Battus
+Bellum: Bellum
+Beneventana: Beneventan script
+Beron: Beron
+Biacca: White lead
+Blu: Blue
+Bombarda rovesciata ed esplodente: Inverted and Explosive Bombard
+Boura: Bura
+Briareus: Briareus
+Brindisi: Brindisi
+Briseis: Briseis
+Cacciatori: Hunters
+Cacografia: Cacography
+Cadmus: Cadmus
+Caieta: Caieta
+Calligrafi: Calligraphers
+Cambiavalute: Office of exchange
+Camilla: Camilla
+Campi Elisi: Elysian Fields
+Candaules: Candaules
+Candelabre: Candelabra
+Canoni eusebiani: Eusebian canons
+Capaneus: Capaneus
+Capitale libraria: Book majuscule script
+Carolina: Carolingian script
+Carro (Medea): Chariot (Medea)
+Carthago: Carthage
+Cartigli: Scrolls
+Cassandra: Cassandra
+Castor: Castor
+Cavalieri: Knight
+Cavalleria: Cavalry
+Cavallo di Troia: Trojan Horse
+Cerberus: Cerberus
+Ceres: Ceres
+Chimera: Chimera
+Chrismon: Chrismon
+Cicladi: Cyclades
+Ciclopi: Cyclopes
+Cidno: Cydnus
+Circe: Circe
+Clipei istoriati: Illustrated clipei
+Clipei laureati: Clipei with laurel
+Clytaemnestra: Clytemnestra
+Colofoni: Colophons
+Coltivazioni: Plantations
+Combattimenti: Fights
+Comete: Comets
+Concili: Councils
+Contadini: Peasants
+Copisti: Scribes
+Cornucopie: Cornucopias
+Coro (tragedie): Chorus (tragedy)
+Coroebo: Coroebus
+Corpo del testo: Body of Text
+Corsiva nuova: Later Roman cursive
+Corydon: Corydon
+Costantinopoli: Constantinople
+Costellazioni: Constellations
+Creazione: Creation
+Creon: Creon
+Creusa: Creusa
+Cupidus: Cupid
+Cycnus: Cycnus
+D. Surace (a cura di): D. Surace (edited by)
+Dameta: Damoetas
+Daphne: Daphne
+Datazione (Sec. IX): Date (9th c.)
+Datazione (Sec. VIII): Date (8th c.)
+Datazione (Sec. X): Date (10th c.)
+Datazione (Sec. XII): Date (12th c.)
+Datazione (Sec. XIII): Date (13th c.)
+Datazione (Sec. XIV): Date (14th c.)
+Datazione (Sec. XV): Date (15th c.)
+David: David
+Decorazioni: Decorations
+Deianira: Deianira
+Deiphobus: Deiphobus
+Demofon: Demophon
+Dialoghi: Dialogues
+Didascalie: Captions
+Dido, regina di Cartagine: Dido, queen of Carthage
+Dio: God
+Diodorus: Diodore
+Dioscuri: Dioscuri
+Discepoli: Disciples
+Disegni: Sketches
+Disegni preparatori: Preparatory sketches
+Divinità: Deities
+Donne: Women
+Dormizione: Dormition
+Draghi: Dragons
+Drepanum (riferimento nell'Eneide, attuale Trapani): Drepana (reference to the Aeneid, modern-day Trapani)
+Drôleries: Drôleries
+E. Ponzi (a cura di): E. Ponzi (edited by)
+Edificazione di Roma: Building of Rome
+Elice: Helike
+Enti: Being
+Epaminondas: Epaminondas
+Erato: Erato
+Ermellino: Stoat
+Espunzione: Erasure
+Eteocles: Eteocles
+Eumenes: Eumenes
+Eurialus: Eurialus
+Europa: Europa
+Eva: Eve
+Evander: Evander
+Evangeliari: Evangeliaries
+Ex libris: Ex libris
+Explicit: Explicit
+Fanciulle: Maidens
+Festoni: Festoons
+Fiammelle inquartate: Decoration of small flames in four parts
+Figli: Sons
+Figure geometriche: Geometric designs
+Filatteri: Phylacteries
+Filatteri erasi: Erased phylacteries
+Filatteri muti: Mute phylacteries
+Filatteri parlanti: Speaking phylacteries
+Filosofi: Philosophers
+Firenze: Florence
+Firmamento: Firmament
+Fiumi: Rivers
+Foglie d'acanto: Acanthus leaves
+Foglie di vite: Grapevine leaves
+Foglie trilobe: Trilobal leaves
+Fortuna: Fortune
+Frecce: Arrows
+Fregi: Friezes
+Fregi a bianchi girari: Friezes of the bianchi girari type
+Fregi abitati: Inhabited Friezes
+Fregi decorati: Decorated Friezes
+Fregi fitomorfi: Phytomorphic Friezes
+Fregi zoomorfi: Zoomorphic Friezes
+Freni: Bits and reins
+Frontespizi: Frontispieces
+Furiae: Furies
+Genealogie: Geneologies
+Generali romani: Roman generals
+Geryon: Geryon
+Giallo: Yellow
+Gigli: Lilies
+Giovani: Youth
+Glosse: Glosses
+Gorgo: Gorgon
+Gotica: Gothic Script
+Greci: Greeks
+Grigio: Gray
+Gyges: Gyges
+Halicarnassus: Halicarnassus
+Harpya Caeleno: Calaeno the harpy
+Hebe: Hebe
+Hector: Hector
+Hecuba: Hecuba
+Helena: Helena
+Helicon: Helicon
+Helvia: Helvia
+Hercules: Hercules
+Hero: Hero
+Hydra: Hydra
+I. Maggiulli (a cura di): I. Maggiuli (edited by)
+Ianus (tempio): Janus (temple)
+Iason: Jason
+Ibridi: Hybrids
+Illustrazioni: Illustrations
+Illustrazioni in campo aperto: Illustrations in blank space
+Illustrazioni in monocromo: Monochrome Illustrations
+Imeneus: Hymen
+Imperatori: Emperors
+Imperatori bizantini: Byzantine emperors
+Imperatori romani: Roman emperors
+Imperatrici bizantine: Byzantine empresses
+Impiccagioni: Hangings
+Incipit: Incipit
+Inferi: Underworld
+Infermi: Invalids
+Inferno: Hell
+Iniziali: Orange color
+Iniziali a bianchi girari: Initials of the bianchi girali type
+Iniziali abitate: Inhabited Initials
+Iniziali calligrafiche: Plain Initials
+Iniziali campite: Champ Initials
+Iniziali FC: Initials FC
+Iniziali FD: Initials FD
+Iniziali figurate: Figurated Initials
+Iniziali filigranate: Pen-Flourished Initials
+Iniziali fitomorfe: Phytomorphic Initials
+Iniziali in foglia d'oro: Initials decorated with gold leaf
+Iniziali istoriate: Historiated Initials
+Iniziali mantiniane: Littera mantiniana
+Iniziali zoomorfe: Zoomorphic Initials
+iniziali:A: initials:A
+iniziali:B: initials:B
+iniziali:C: initials:C
+iniziali:D: initials:D
+iniziali:E: initials:E
+iniziali:F: initials:F
+iniziali:G: initials:G
+iniziali:H: initials:H
+iniziali:I: initials:I
+iniziali:J: initials:J
+iniziali:K: initials:K
+iniziali:L: initials:L
+iniziali:M: initials:M
+iniziali:N: initials:N
+iniziali:O: initials:O
+iniziali:P: initials:P
+iniziali:Q: initials:Q
+iniziali:R: initials:R
+iniziali:S: initials:S
+iniziali:T: initials:T
+iniziali:U: initials:U
+iniziali:V: initials:V
+iniziali:X: initials:X
+iniziali:Y: initials:Y
+iniziali:Z: initials:Z
+Insegnamenti: Teaching
+Interventi redazionali: Editorial contributions
+Io: Io
+Iocasta: Jocasta
+Iotacismo: Iotacism
+Ippolytus: Hippolytus
+Iris: Iris
+Iuno: Juno
+Iuppiter: Juppiter
+Kepheus: Cepheus
+Koronis: Coronis
+L. Massolo (a cura di): L. Massolo (edited by)
+Lacune: Blank gaps
+Lambrecchini: Mantling
+Laocoon: Laocoon
+Latinus: Latinus
+Laziali (popolo): Inhabitants of Lazio
+Leander: Leander
+Leone di Nemea: Nemean lion
+Lethe: Lethe
+Lezionari: Lectionaries
+Libraria di area franca: Book industry of French origin
+Licaste: Lycaste
+Lilla: Lilac
+Limes (confine romano): Limes (Roman boundary)
+Lucilius: Lucilius
+Lucius: Lucius
+Luna: Moon
+Luoghi: Places
+Lupa capitolina: Capitoline Wolf
+Lycaon: Lycaon
+Lycon: Lycon
+Macchine da guerra: War machines
+Maestri: Chiefs
+Mago (generale cartaginese): Mago (Carthaginian general)
+Maiuscola: Majuscule script
+Manicule: Index
+MantelloMedea: Gown of Medea
+Marcia (nome proprio): Marcia (mother of Trajan)
+Margini: Margins
+Mari: Seas
+Maria Virgo, s.: The Virgin Mary, St.
+Mars: Mars
+Maschere: Masks
+Massinissa: Masinissa
+Medaglioni: Medals
+Medaglioni polilobati: Multilobate Medals
+Medea: Medea
+Megaera: Megaera
+Meliboeus: Meliboeus
+Menalca: Menalcas
+Menei: Menaion
+Menes: Months
+Menologi: Menologia
+Mercantesca: Merchant script
+Mercurius: Mercury
+Mesi: Months
+Mesi (Agosto): Months (August)
+Mesi (Aprile): Months (April)
+Mesi (Dicembre): Months (Dicember)
+Mesi (Febbraio): Months (February)
+Mesi (Gennaio): Months (January)
+Mesi (Giugno): Months (June)
+Mesi (Luglio): Months (July)
+Mesi (Maggio): Months (May)
+Mesi (Marzo): Months (March)
+Mesi (Novembre): Months (November)
+Mesi (Ottobre): Months (October)
+Mesi (Settembre): Months (September)
+Messapus: Messapus
+Mete accese e tronchi germoglianti (collare): Collars
+Miniatori: Illuminators
+Miniature: Illuminations
+Miniature a piena pagina: Full-page Illuminations
+Miniature tabellari: Illuminations arranged in a table form
+Minos: Minos
+Minuscola: Minuscule script
+Monete: Coins
+Monogrammi: Monograms
+Monti: Mountains
+Mopsus: Mopsus
+Morte: Death
+Mura: Ramparts
+Musa: Muse
+Musaeos: Musaeos
+Musicanti: Musicians
+Navi: Ships
+Navigazione: Navigation
+Neptunus: Neptune
+Ninfe: Nymphs
+Ninias: Ninias
+Ninus: Ninus
+Nisus: Nisus
+Nodi ferraresi: Ferrarese knots
+Non finito: Non finito
+Notazione musicale: Musical notation
+Note di possesso: Notations of ownership
+Nutrici: Nurses
+Octavia: Octavia
+Oedipus: Oedipus
+Offerte: Offerings
+Oltraggi: Insults
+Omissioni: Ommisions
+Onciale: Uncial script
+Ordine della Giarrettiera (collare): The Most Noble Order of the Garter
+Oro: Gold
+Orpheus: Orpheus
+Padri: Fathers
+Padroni: Owners
+Pagine di incipit: Incipit Page
+Palemon: Palaemon
+Palinurus: Palinurus
+Pallas: Pallus
+Parcae: Fates
+Paris: Paris
+Pastorizia: Pastoralism
+Penati: Penates
+Penelope: Penelope
+Pentesilea: Penthesilea
+Pergamum: Pergamon
+Perseus: Perseus
+Personificazioni: Personifications
+Personificazioni (Acaia): Personifications (Acaia)
+Personificazioni (Africa): Personifications (Africa)
+Personificazioni (Aritmetica): Personifications (Arithmetic)
+Personificazioni (Asia): Personifications (Asia)
+Personificazioni (Astronomia): Personifications (Astronomy)
+Personificazioni (Avarizia): Personifications (Avarice)
+Personificazioni (Campania): Personifications (Campania)
+Personificazioni (Carità): Personifications (Charity)
+Personificazioni (Dacia): Personifications (Dacia)
+Personificazioni (Dialettica): Personifications (Dialectic)
+Personificazioni (Ellesponto): Personifications (Hellespont)
+Personificazioni (Fede): Personifications (Faith)
+Personificazioni (Fortuna): Personifications (Fortune)
+Personificazioni (Geometria): Personifications (Geometry)
+Personificazioni (Giustizia): Personifications (Justice)
+Personificazioni (Grammatica): Personifications (Grammar)
+Personificazioni (Illirico): Personifications (Illyricum)
+Personificazioni (Ira): Personifications (Wrath)
+Personificazioni (Isole): Personifications (Islands)
+Personificazioni (Italia): Personifications (Italy)
+Personificazioni (Macedonio): Personifications (Macedonia)
+Personificazioni (Mezzogiorno): Personifications (Southern Italy)
+Personificazioni (Morte): Personifications (Death)
+Personificazioni (Musica): Personifications (Music)
+Personificazioni (Palestina): Personifications (Palestine)
+Personificazioni (Prudenzia): Personifications (Prudence)
+Personificazioni (Pudore): Personifications (Modesty)
+Personificazioni (Retorica): Personifications (Rhetoric)
+Personificazioni (Roma): Personifications (Rome)
+Personificazioni (Sole): Personifications (Sun)
+Personificazioni (Speranza): Personifications (Hope)
+Phaedra: Phaedra
+Philoctetes: Philoctetes
+Phyllis: Phyllis
+Pié di mosca: Pied-de-mouche
+Pithon: Pithon
+Poeti: Poets
+Polixene: Polixena
+Pollux: Pollux
+Polydorus: Polydorus
+Polynices: Polynices
+Polyphemus: Polyphemus
+Pomona: Pomona
+Porpora: Purple
+Porte decorate: Decorated Doors
+Porti: Harbors
+Pre-umanistica: Pre-humanist script
+Priamus: Priam
+Proteus: Proteus
+Province romane: Roman provinces
+Psyche: Psyche
+Putti: Putti
+Putti giocosi: Playful Putti
+Putti musicanti: Musical Putti
+Putti reggistemma: Putti bearing a coat of arms
+Ramo d'oro: Golden bough
+Rattoppi: Patches
+Re: King
+Regina di Saba: Queen of Saba
+Richiami di fascicolo: Catchwords
+Riempitivi: Line fillers
+Ritratti: Portraits
+Roccaforti: Fortresses
+Roma: Rome
+Romolus: Romulus
+Rosa: Rose
+Rosso: Red
+Rubricatori: Rubricators
+Ruota della Fortuna: Wheel of Fortune
+Rutuli: Rutulians
+Sacrifici: Sacrifices
+Salomon: Solomon
+Salteri: Psalters
+Sapienti: Sages
+Sappho: Sappho
+Saturnus: Saturn
+Schemi: Diagrams
+Schemi astronomici: Astronomical diagrams
+Schiavi: Slaves
+Scilla: Scylla
+Scopetta: Brush
+Scriptio inferior: Scriptio inferior
+Scriptio infima: Scriptio infima
+Scriptio superior: Scriptio superior
+Scritture altomedievali italiane: Early medieval Italian scripts
+Scritture insulari: Insular scripts
+Segnature a registro: Signature
+Segni di interpunzione: Punctuation marks
+Segni di paragrafo: Paragraph signs
+Segni di richiamo: Reference marks
+Semele: Semele
+Semigotica: Semi-Gothic script
+Semionciale: Semi-Uncial script
+Semiramis: Semiramis
+Sepolture: Burials
+Sicani: Sicanians
+Sicilia: Sicily
+Silenus: Silenus
+Silvia: Silvia
+Sinassari: Synaxaria
+Sinon: Sinon
+Siracusani: Inhabitants of Syracuse
+Soldati: Soldiers
+Spartani: Spartans
+Statue equestri: Equestrian statues
+Stemma: Blazons
+Stemma comitale: Comital blazon
+Stemma ducale: Ducal blazon
+Stemmi: Blazons
+Stemmi erasi: Erased blazons
+Stemmi muti: Mute blazons
+Stemmi sovrapposti: Overlapping blazons
+Strumenti musicali: Musical Instruments
+Suicidi: Suicides
+Tabelle: Charts
+Tabelle purpuree: Purple charts
+Tachigrafia: Shorthand
+Talia: Thalia
+Tantalus: Tantalus
+Taranto: Taranto
+Tartaro: Tartarus
+Tebani: Thebans
+Tempeste: Tempests
+Termopili: Thermopylae
+Teucri: Teucrians
+Tevere: Tiber
+Thebes: Thebes
+Theseus: Theseus
+Thrasyllus: Thrasyllus
+Thyestes: Thyestes
+Tiranni: Tyrants
+Tiresias: Tiresias
+Tirso: Tirso
+Tisiphon: Tisiphone
+Tityrus: Tityrus
+Tlepolemus: Tlepolemus
+Trascrizioni: Transcriptions
+Trenta tiranni: Thirty Tyrants
+Trionfi: Triumphs
+Trionfi (Amore): Triumphs (Love)
+Trionfi (Eternità): Triumphs (Eternity)
+Trionfi (Fama): Triumphs (Fame)
+Trionfi (Morte): Triumphs (Death)
+Trionfi (Pudicizia): Triumphs (Chastity)
+Trionfi (Tempo): Triumphs (Time)
+Tritone: Triton
+Troia: Troy
+Troiani: Trojans
+Turnus: Turnus
+Tydeo: Tydeus
+Ulivi: Olive trees
+Umanistica: Humanist minuscule script
+Uomini: Men
+Usignoli: Nightingales
+Veio: Veii
+Venus: Venus
+Verde: Green
+Vertumnus: Vertumnus
+Viola: Violet
+Visigotica: Visigothic script
+Vite: Vine
+Volta celeste: Celestial vault
+Volterra: Volterra
+Zodiaco: Zodiac
+Zodiaco (Acquario): Zodiac (Aquarius)
+Zodiaco (Ariete): Zodiac (Aries)
+Zodiaco (Bilancia): Zodiac (Libra)
+Zodiaco (Cancro): Zodiac (Cancer)
+Zodiaco (Capricorno): Zodiac (Capricorn)
+Zodiaco (Gemelli): Zodiac (Gemini)
+Zodiaco (Leone): Zodiac (Leo)
+Zodiaco (Pesci): Zodiac (Pisces)
+Zodiaco (Sagittario): Zodiac (Sagittarius)
+Zodiaco (Scorpione): Zodiac (Scorpio)
+Zodiaco (Toro): Zodiac (Taurus)
+Zodiaco (Vergine): Zodiac (Virgo)
+Zoroastres: Zoroaster
