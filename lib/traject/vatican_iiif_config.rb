@@ -78,6 +78,12 @@ compose ->(record, accumulator, _context) { accumulator << record.tei.xpath('//T
   to_field 'place_ssim', extract_xml(
     'origPlace/settlement', nil
   )
+  to_field 'place_ssim', extract_xml(
+    'origPlace/region', nil
+  )
+  to_field 'place_ssim', extract_xml(
+    'origPlace/country', nil
+  )
   to_field 'language_ssim', extract_xml(
     'textLang', nil,
     strip: true,
