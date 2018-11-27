@@ -88,8 +88,8 @@ RSpec.describe 'Bibliography resource integration test', type: :feature do
 
     it 'has author' do
       expect(document['author_ssim']).to eq [
-        'Eunapius Sardianus, 354-420 [person]',
-        'Porphyrius Tyrius, 232/233-305? [person]'
+        'Eunapius Sardianus, 354-420 [internal]',
+        'Porphyrius Tyrius, 232/233-305? [internal]'
       ]
     end
 
@@ -200,9 +200,9 @@ RSpec.describe 'Bibliography resource integration test', type: :feature do
 
       it 'works with present and missing values' do
         expect(document['author_ssim']).to include(
-          'Leontius Constantinopolitanus, sec. VII [person]',
-          'Athanasius, s., patriarca di Alessandria, 292-373. Opere spurie e dubbie [person]',
-          'Iohannes Chrysostomus, s., patriarca di Costantinopoli, 347-407. Opere spurie e dubbie [person]'
+          'Leontius Constantinopolitanus, sec. VII [internal]',
+          'Athanasius, s., patriarca di Alessandria, 292-373. Opere spurie e dubbie [internal]',
+          'Iohannes Chrysostomus, s., patriarca di Costantinopoli, 347-407. Opere spurie e dubbie [internal]'
         )
         expect(document['ms_other_name_tesim']).to include(
           'Altemps (famiglia) [person]'

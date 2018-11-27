@@ -23,7 +23,17 @@ class NameDisplay
   end
 
   def type
-    "[#{author.attribute('type').value}]" if author.attribute('type')
+    return unless author.attribute('type')
+
+    value = author.attribute('type').value
+
+    value = author_type if value == 'person' && author_type
+
+    "[#{value}]"
+  end
+
+  def author_type
+    author.parent.parent.attribute('type')&.value
   end
 
   def display
