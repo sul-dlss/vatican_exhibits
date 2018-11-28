@@ -99,7 +99,7 @@ body {
 }
 
 .document-thumbnail img {
-  max-height: 100px;
+  max-height: 110px;
   max-width: 100%;
 }
 
@@ -120,7 +120,7 @@ body {
   &.documents-list {
     .document {
       box-sizing: content-box;
-      min-height: 100px;
+      min-height: 140px;
       padding-bottom: $padding-large-vertical;
       padding-top: $padding-large-vertical;
     }
