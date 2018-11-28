@@ -58,11 +58,19 @@ class ManuscriptMetadataPresenter
 
     def fields
       document_show_fields(document).select do |_, field|
-        field.section == type && should_render_show_field?(document, field)
+        field_is_correct_type?(field) && should_render_show_field?(document, field)
       end
     end
 
     private
+
+    # Force the ehxibit_tags field to be grouped in the :general section even though it is
+    # not configured in the controller and therefore can't be grouped via our normal means
+    def field_is_correct_type?(field)
+      return type == :general if field.key.to_sym == :exhibit_tags
+
+      field.section == type
+    end
 
     def type
       return nil if @type == :description
