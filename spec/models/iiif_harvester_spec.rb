@@ -39,11 +39,14 @@ RSpec.describe IiifHarvester do
         end
       end
 
-      context 'when canvases have thumbnails' do
+      context 'when canvases have thumbnails and manifest has a thumb' do
         it 'they are included in the thubnails array' do
           expect(harvester).to receive_messages(
             manifest: {
               '@id' => 'howdy',
+              'thumbnail' => {
+                '@id' => 'http://example.com/yolo.gif'
+              },
               'sequences' => [
                 {
                   '@id' => 'sequenceid1',
@@ -62,10 +65,11 @@ RSpec.describe IiifHarvester do
             }
           )
 
-          expect(harvester.thumbnails.length).to eq 3
-          expect(harvester.thumbnails).to include 'http://example.com/pup.gif'
-          expect(harvester.thumbnails).to include 'http://example.com/cat.gif'
-          expect(harvester.thumbnails).to include 'http://example.com/coolcat.gif'
+          expect(harvester.thumbnails.length).to eq 4
+          expect(harvester.thumbnails).to include 'http://example.com/yolo.gif',
+                                                  'http://example.com/pup.gif',
+                                                  'http://example.com/cat.gif',
+                                                  'http://example.com/coolcat.gif'
         end
       end
     end

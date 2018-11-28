@@ -40,9 +40,19 @@ class IiifHarvester
   end
 
   def thumbnails
+    ([thumbnail] + canvas_thumbnails).compact
+  end
+
+  def canvas_thumbnails
     canvases.flat_map do |canvas|
       canvas.dig('thumbnail', '@id')
     end.compact
+  end
+
+  def thumbnail
+    return nil if manifest['thumbnail'].blank?
+
+    manifest['thumbnail']['@id']
   end
 
   def canvases
