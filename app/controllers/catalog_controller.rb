@@ -12,7 +12,7 @@ class CatalogController < ApplicationController
     config.show.oembed_field = :oembed_url_ssm
     config.show.partials.insert(1, :oembed)
     config.show.partials.insert(1, :viewer)
-    config.show.partials.insert(3, :curatorial_narrative)
+    config.show.partials.insert(4, :curatorial_narrative)
     config.show.partials << :parts
     config.show.partials << :annotations
     config.view.parts.partials = [:part_header, :part_show]
