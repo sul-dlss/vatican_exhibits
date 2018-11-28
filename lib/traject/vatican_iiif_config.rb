@@ -87,7 +87,7 @@ compose ->(record, accumulator, _context) { accumulator << record.tei.xpath('//T
   to_field 'language_ssim', extract_xml(
     'textLang', nil,
     strip: true,
-    gsub: [/.$/, '']
+    gsub: [/\.$/, '']
   )
   to_field 'incipit_tesim', extract_xml(
     "incipit[@type='text']/@value", nil
