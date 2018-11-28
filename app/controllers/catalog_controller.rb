@@ -77,7 +77,7 @@ class CatalogController < ApplicationController
     config.add_show_field 'ms_extent_tesim', section: :general
     config.add_show_field 'ms_content_tesim', section: :general
     config.add_show_field 'ms_overview_tesim', section: :general
-    config.add_show_field 'ms_bibl_tesim', section: :general
+    config.add_show_field 'ms_bibl_tesim'
     config.add_show_field 'ms_collation_tesim'
     config.add_show_field 'ms_layout_tesim'
     config.add_show_field 'ms_foliation_tesim'
