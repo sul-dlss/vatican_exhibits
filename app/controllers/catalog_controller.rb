@@ -38,16 +38,27 @@ class CatalogController < ApplicationController
     config.document_solr_path = 'get'
     config.document_unique_id_param = 'ids'
 
+    config.break_seperator = {
+      last_word_connector: '<br/>',
+      two_words_connector: '<br/>',
+      words_connector: '<br/>'
+    }
+
+    config.comma_seperator = {
+      last_word_connector: ', ',
+      two_words_connector: ', ',
+      words_connector: ', '
+    }
 
     # solr field configuration for search results/index views
     config.index.title_field = 'full_title_tesim'
 
     config.add_index_field 'resource_type_ssim', section: :general
     config.add_index_field 'collection_ssim', section: :general
-    config.add_index_field 'date_ssim'
-    config.add_index_field 'beginning_date_ssim'
-    config.add_index_field 'ending_date_ssim'
-    config.add_index_field 'dated_mss_ssim'
+    config.add_index_field 'date_ssim', separator_options: config.comma_seperator
+    config.add_index_field 'beginning_date_ssim', separator_options: config.comma_seperator
+    config.add_index_field 'ending_date_ssim', separator_options: config.comma_seperator
+    config.add_index_field 'dated_mss_ssim', separator_options: config.comma_seperator
     config.add_index_field 'manuscript_shelfmark_ssim', helper_method: :link_to_manuscript
     config.add_index_field 'annotation_text_tesim', helper_method: :render_minimally_styled_narrative_field
     config.add_index_field 'annotation_tags_en_ssim', link_to_search: true, if: ->(*_) { I18n.locale =~ /en/ }
@@ -61,11 +72,11 @@ class CatalogController < ApplicationController
     config.add_show_field 'ms_shelfmark_tesim', section: :general
     config.add_show_field 'ms_library_tesim', section: :general
     config.add_show_field 'ms_ocelli_nominum_tesim', section: :general
-    config.add_show_field 'ms_date_ssim', section: :general, link_to_search: true
-    config.add_show_field 'ms_date_mss_ssim', section: :general, link_to_search: true
-    config.add_show_field 'ms_beginning_date_tesim', section: :general
-    config.add_show_field 'ms_ending_date_tesim', section: :general
-    config.add_show_field 'ms_date_of_text_tesim', section: :general
+    config.add_show_field 'ms_date_ssim', section: :general, link_to_search: true, separator_options: config.comma_seperator
+    config.add_show_field 'ms_date_mss_ssim', section: :general, link_to_search: true, separator_options: config.comma_seperator
+    config.add_show_field 'ms_beginning_date_tesim', section: :general, separator_options: config.comma_seperator
+    config.add_show_field 'ms_ending_date_tesim', section: :general, separator_options: config.comma_seperator
+    config.add_show_field 'ms_date_of_text_tesim', section: :general, separator_options: config.comma_seperator
     config.add_show_field 'ms_country_ssim', section: :general, link_to_search: true
     config.add_show_field 'ms_region_ssim', section: :general, link_to_search: true
     config.add_show_field 'ms_place_ssim', section: :general, link_to_search: true
@@ -101,8 +112,8 @@ class CatalogController < ApplicationController
     config.add_show_field 'ms_watermarks_tesim'
     config.add_show_field 'ms_motto_tesim'
     config.add_show_field 'ms_locus_tesim'
-    config.add_show_field 'ms_author_tesim', separator_options: { words_connector: '<br>' }
-    config.add_show_field 'ms_other_author_tesim', separator_options: { words_connector: '<br>' }
+    config.add_show_field 'ms_author_tesim', separator_options: config.break_seperator
+    config.add_show_field 'ms_other_author_tesim', separator_options: config.break_seperator
     config.add_show_field 'ms_title_tesim'
     config.add_show_field 'ms_supplied_title_tesim'
     config.add_show_field 'ms_uniform_title_tesim'
@@ -119,7 +130,7 @@ class CatalogController < ApplicationController
     config.add_show_field 'ms_type_of_document_tesim'
     config.add_show_field 'ms_general_note_tesim'
     config.add_show_field 'ms_source_note_tesim'
-    config.add_show_field 'ms_other_name_tesim', separator_options: { words_connector: '<br>' }
+    config.add_show_field 'ms_other_name_tesim', separator_options: config.break_seperator
     config.add_show_field 'ms_subject_tesim'
     config.add_show_field 'ms_language_ssim', link_to_search: true
     config.add_show_field 'ms_alphabet_ssim', link_to_search: true
