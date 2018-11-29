@@ -27,6 +27,16 @@ body {
 .panel-default {
   > .panel-heading {
     background-color: $gray-lighter;
+
+    a:hover,
+    a:active,
+    a:focus {
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: lighten($default-link-color, 10%);
+    }
   }
 
   // Active facet panel
