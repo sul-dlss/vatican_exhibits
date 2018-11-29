@@ -4,7 +4,25 @@ body,
 }
 
 a {
+  border-bottom: 1px solid transparent;
   color: lighten($default-link-color, 0%);
+}
+
+// Overrides for link color to lighten for easier visiblity,
+// but just in body text and metadata lists.
+p a,
+dd a {
+  border-bottom: 1px solid transparent;
+  color: lighten($default-link-color, 13%);
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    border-bottom: 1px solid $default-link-color;
+    color: $default-link-color;
+    text-decoration: none;
+  }
 }
 
 .btn-primary,
