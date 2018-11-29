@@ -15,8 +15,9 @@ RSpec.describe ManuscriptMetadataPresenter do
   let(:document) { SolrDocument.new }
   let(:document_show_fields) { {} }
   let(:should_render_show_field) { false }
-  let(:general_field) { instance_double('Field', section: :general) }
-  let(:description_field) { instance_double('Field', section: nil) }
+  let(:general_field) { instance_double('Field', section: :general, key: 'title') }
+  let(:description_field) { instance_double('Field', section: nil, key: 'description') }
+  let(:tags_field) { instance_double('Field', section: nil, key: 'exhibit_tags') }
 
   describe 'section accessors' do
     it 'has a general, description, and admin sections' do
@@ -45,7 +46,9 @@ RSpec.describe ManuscriptMetadataPresenter do
     end
 
     describe '#fields' do
-      let(:document_show_fields) { { gen_field: general_field, desc_field: description_field } }
+      let(:document_show_fields) do
+        { gen_field: general_field, desc_field: description_field, exhibit_tags: tags_field }
+      end
 
       context 'when the description section' do
         let(:type) { :description }
@@ -55,14 +58,24 @@ RSpec.describe ManuscriptMetadataPresenter do
           expect(section.fields.values.length).to eq 1
           expect(section.fields.values.first.section).to be_nil
         end
+
+        it 'exhibit_tags are not present (even though their section is nil)' do
+          expect(section.fields.values.first.section).to be_nil
+          expect(section.fields.values.map(&:key)).not_to include 'exhibit_tags'
+        end
       end
 
       context 'when another section' do
         let(:should_render_show_field) { true }
 
         it 'is an array of fields based on the given section' do
-          expect(section.fields.values.length).to eq 1
+          expect(section.fields.values.length).to eq 2
           expect(section.fields.values.first.section).to eq :general
+        end
+
+        it 'exhibit_tags are always in the General section (even though their section is nil)' do
+          expect(section.fields.values.first.section).to eq :general
+          expect(section.fields.values.map(&:key)).to include 'exhibit_tags'
         end
       end
 
