@@ -1,0 +1,8 @@
+h1 small,
+.breadcrumb > .active,
+.dl-invert dt,
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > a:focus {
+  color: $gray-text-color;
+}
