@@ -44,11 +44,15 @@ body {
     border-color: $vatican-blue-alternate;
 
     > .panel-heading {
-      background-color: lighten($vatican-blue-alternate, 10%);
+      background-color: $vatican-blue-alternate;
       border-color: $vatican-blue;
       color: $base-background-color;
 
       &.collapse-toggle .panel-title:after {
+        color: $base-background-color;
+      }
+
+      a:hover {
         color: $base-background-color;
       }
     }
@@ -57,6 +61,10 @@ body {
   .facet-values li .selected {
     color: $gray-dark;
   }
+}
+
+.facet_limit-active > .panel-heading + .panel-collapse > .panel-body {
+ border-top-color: $vatican-blue;
 }
 
 .constraints-container {
