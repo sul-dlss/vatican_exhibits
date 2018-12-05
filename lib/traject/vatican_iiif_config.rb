@@ -257,8 +257,20 @@ compose 'parts_ssm', ->(record, accumulator, _context) { accumulator.concat reco
   to_field 'ms_palimpsest_tesim', extract_xml('msPart/physDesc/palimpsest/p', nil) #	Palinsesto	Palimpsest
 
   to_field 'ms_locus_tesim', extract_xml('msPart/msContents/msItem/locus', nil) #	Locus	Locus
-  to_field 'ms_author_tesim', extract_xml('msPart/msContents/msItem/author/alias/authorityAuthor[@rif="aut"]', nil) #	Autore	Author
-  to_field 'ms_other_author_tesim', extract_xml('msPart/msContents/msItem/name[@role="internal" or @role="external"]/alias/authorityAuthor[@rif="aut"]', nil) #	Altro autore	Other author
+  to_field 'ms_author_tesim', (accumulate do |resource, *_| #	Autore	Author
+    resource.xpath('msPart/msContents/msItem/author/alias/authorityAuthor[@rif="aut"]').map do |author|
+      NameDisplay.new(
+        author
+      ).display
+    end
+  end)
+  to_field 'ms_other_author_tesim', (accumulate do |resource, *_| #	Altro autore	Other author
+    resource.xpath('msPart/msContents/msItem/name[@role="internal" or @role="external"]/alias/authorityAuthor[@rif="aut"]').map do |author|
+      NameDisplay.new(
+        author
+      ).display
+    end
+  end)
   to_field 'ms_title_tesim', extract_xml('msPart/msContents/msItem/title[@type="title"]/@value', nil) #		Titolo	Title
   to_field 'ms_supplied_title_tesim', extract_xml('msPart/msContents/msItem/title[@type="supplied"]/@value', nil) #		Titolo supplito	Supplied title
   to_field 'ms_uniform_title_tesim', extract_xml('msPart/msContents/msItem/uniformTitle/alias/authorityTitleSeries[@rif="aut"]/@value', nil) #		Titolo uniforme	Uniform title
@@ -275,7 +287,13 @@ compose 'parts_ssm', ->(record, accumulator, _context) { accumulator.concat reco
   to_field 'ms_type_of_document_tesim', extract_xml('msPart/msContents/msItem/note[@anchored and not(@anchored="yes")]', nil) #	Tipologia documento	Type of document
   to_field 'ms_general_note_tesim', extract_xml('msPart/msContents/msItem/note[@anchored="yes" or not(@anchored)]', nil) #	Nota	General note
   to_field 'ms_source_note_tesim', extract_xml('msPart/msContents/msItem/note[@anchored="sourceSYS"]', nil) #		Nota di fonte	Source note
-  to_field 'ms_other_name_tesim', extract_xml('msPart/msContents/msItem/name[@role!="internal" and @role!="external" or not(@role)]/alias/authorityAuthor[@rif="aut"]', nil) #	Altro nome	Other name
+  to_field 'ms_other_name_tesim', (accumulate do |resource, *_| #	Altro nome	Other name
+    resource.xpath('msPart/msContents/msItem/name[@role!="internal" and @role!="external" or not(@role)]/alias/authorityAuthor[@rif="aut"]').map do |author|
+      NameDisplay.new(
+        author
+      ).display
+    end
+  end)
   to_field 'ms_subject_tesim', extract_xml('msPart/msContents/msItem/keywords/term/alias/authoritySubject[@rif="aut"]', nil) #	Soggetto	Subject
   to_field 'ms_language_ssim', extract_xml('msPart/msContents/msItem/textLang', nil) #	Lingua	Language
   to_field 'ms_alphabet_ssim', extract_xml('msPart/msContents/msItem/textLang/@n', nil) #	Alfabeto	Alphabet
