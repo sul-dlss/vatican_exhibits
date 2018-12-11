@@ -6,7 +6,17 @@
     <% if document['ms_author_date_tesim'].present? %>
       <span class="part-author-date"><%= show_presenter.field_value('ms_author_date_tesim') %>.</span>
     <% end %>
-    <span class="part-supplied-title"><%= show_presenter.field_value('ms_supplied_title_tesim') %></span>
+
+    <span class="part-title">
+      <% if document['ms_title_tesim'] %>
+        <%= show_presenter.field_value('ms_title_tesim') %>
+      <% elsif document['ms_supplied_title_tesim'] %>
+        <%= show_presenter.field_value('ms_supplied_title_tesim') %>
+      <% elsif document['ms_uniform_title_tesim'] %>
+        <%= show_presenter.field_value('ms_uniform_title_tesim') %>
+      <% end %>
+    </span>
+
     <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#part-show-<%= document.first('ms_locus_tesim').parameterize %>" aria-expanded="false" aria-controls="part-show-<%= document.first('ms_locus_tesim').parameterize %>">
       <span class="collapse-shown">
         <%= t('.hide_details') %>
