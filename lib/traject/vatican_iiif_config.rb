@@ -257,6 +257,7 @@ compose 'parts_ssm', ->(record, accumulator, _context) { accumulator.concat reco
   to_field 'ms_palimpsest_tesim', extract_xml('msPart/physDesc/palimpsest/p', nil) #	Palinsesto	Palimpsest
 
   to_field 'ms_locus_tesim', extract_xml('msPart/msContents/msItem/locus', nil) #	Locus	Locus
+  to_field 'ms_author_header_tesim', extract_xml('msPart/msContents/msItem/author/alias/authorityAuthor[@rif="aut"]', nil) #	Autore	Author for Parts section header
   to_field 'ms_author_tesim', (accumulate do |resource, *_| #	Autore	Author
     resource.xpath('msPart/msContents/msItem/author/alias/authorityAuthor[@rif="aut"]').map do |author|
       NameDisplay.new(
