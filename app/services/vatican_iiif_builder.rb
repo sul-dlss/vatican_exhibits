@@ -31,7 +31,7 @@ class VaticanIiifBuilder < Spotlight::SolrDocumentBuilder
   ##
   # Needed because traject has a stringed key, but we need a symbol one
   def convert_id(doc)
-    doc[:id] = doc['id'].try(:first)
+    doc[:id] = doc['id'].try(:first) if doc
     doc
   end
 
