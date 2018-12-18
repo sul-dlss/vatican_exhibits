@@ -22,6 +22,8 @@ class CatalogController < ApplicationController
     config.view.masonry.partials = [:index]
     config.view.slideshow.partials = [:index]
 
+    config.view.embed.partials = [:viewer]
+
     config.index.document_actions.clear
     config.show.document_actions.clear
     config.index.document_actions[:bookmark].if = false
