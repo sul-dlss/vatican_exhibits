@@ -177,7 +177,8 @@ class CatalogController < ApplicationController
     config.add_search_field 'overview_tesim'
     config.add_search_field 'summary_tesim'
 
-    config.add_sort_field 'relevance', sort: 'score desc', label: I18n.t('spotlight.search.fields.sort.relevance')
+    config.add_sort_field 'relevance', sort: 'score desc, shelfmark_ssi asc',
+                                       label: I18n.t('spotlight.search.fields.sort.relevance')
 
     config.add_facet_fields_to_solr_request!
     config.add_field_configuration_to_solr_request!

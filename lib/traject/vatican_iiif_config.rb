@@ -16,6 +16,7 @@ end
 
 to_field 'id', (accumulate { |resource, *_| resource.slug })
 to_field 'resource_type_ssim', literal('Manuscript')
+to_field 'shelfmark_ssi', (accumulate { |resource, *_| resource.shelfmark })
 to_field 'shelfmark_tsim', (accumulate { |resource, *_| resource.shelfmark })
 to_field 'full_title_tesim', copy('shelfmark_tsim')
 
