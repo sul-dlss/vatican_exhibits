@@ -170,7 +170,8 @@ RSpec.describe 'Bibliography resource integration test', type: :feature do
       expect(data).to include hash_including(
         'ms_overview_tesim' => ['Libellus I.'],
         'ms_locus_tesim' => ['1r-38v'],
-        'ms_author_tesim' => ['Eunapius Sardianus,'],
+        'ms_author_header_tesim' => ['Eunapius Sardianus,'],
+        'ms_author_tesim' => ['Eunapius Sardianus, 354-420 [internal]'],
         'ms_supplied_title_tesim' => ['Vitae sophistarum'],
         'ms_uniform_title_tesim' => ['Vitae sophistarum (Eunapius Sardianus, 354-420)'],
         'ms_language_ssim' => ['Greco.'],
