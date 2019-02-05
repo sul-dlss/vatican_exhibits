@@ -9,6 +9,7 @@ settings do
 end
 
 each_record do |record, context|
+  context.skip!("Skipping #{record} because it is not present") unless record
   context.clipboard[:annotation] = ::JSON.parse(record.data)
 
   canvas_body = Rails.cache.fetch(record.canvas) do
