@@ -8,7 +8,7 @@ class AnnotationResource < Spotlight::Resource
   def resources
     return to_enum(:resources) { annotations.size } unless block_given?
 
-    annotations.map do |id|
+    annotations.each do |id|
       annotation = lookup_annotation(id)
       next unless annotation
 
