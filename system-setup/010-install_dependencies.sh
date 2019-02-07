@@ -76,7 +76,7 @@ echo "
 export MYSQL_DATABASE=$MYSQL_DATABASE
 export MYSQL_USER=$MYSQL_USER
 export MYSQL_PASSWORD=$MYSQL_PASSWORD
-export DATABASE_URL=mysql2://$MYSQL_USER:$MYSQL_PASSWORD@localhost/$MYSQL_DATABASE
+export DATABASE_URL=mysql2://$MYSQL_USER:$MYSQL_PASSWORD@localhost/$MYSQL_DATABASE?pool=25
 " >> /etc/profile.d/rails.sh
 
 # Set a secret env for Rails
