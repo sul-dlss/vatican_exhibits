@@ -17,11 +17,15 @@ RSpec.describe 'Indexing IIIF Annotations', type: :feature do
   end
 
   let(:exhibit) { FactoryBot.create(:exhibit) }
-  let(:resource) { AnnotationResource.new(annotations: [annotation.to_global_id], exhibit: exhibit) }
+  let(:resource) { AnnotationResource.new(annotations: [annotation.to_global_id, 'foo'], exhibit: exhibit) }
 
   describe 'to_solr' do
     subject(:document) do
       resource.document_builder.to_solr.first
+    end
+
+    it 'skips missing annotations' do
+      expect(resource.document_builder.to_solr).to all(be_an(Hash))
     end
 
     it 'extracts information from the Annotot resource' do
