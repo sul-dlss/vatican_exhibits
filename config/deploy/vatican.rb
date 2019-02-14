@@ -10,4 +10,4 @@ set :bundle_without, %w(test deployment development).join(' ')
 set :rails_env, 'production'
 
 set :sidekiq_role, :background
-set :sidekiq_processes, 2
+set :sidekiq_processes, 1
