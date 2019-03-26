@@ -12,16 +12,15 @@ each_record do |record, context|
   context.skip!("Skipping #{record} because it is not present") unless record
   context.clipboard[:annotation] = ::JSON.parse(record.data)
 
-  canvas_body = Rails.cache.fetch(record.canvas) do
-    Faraday.get(record.canvas).body
-  end
-  context.clipboard[:canvas] = ::JSON.parse(canvas_body)
-
   manifest_url = AnnotationCompatibility.new(context.clipboard[:annotation]).manifest_uri
   manifest_body = Rails.cache.fetch(manifest_url) do
     Faraday.get(manifest_url).body
   end
   context.clipboard[:manifest] = ::JSON.parse(manifest_body)
+
+  context.clipboard[:canvas] = context.clipboard[:manifest]['sequences'][0]['canvases'].find do |canvas|
+    canvas['@id'] == record.canvas
+  end
 
   context.clipboard[:structures] = Array(context.clipboard[:manifest]['structures']).select do |structure|
     Array(structure['canvases']).include? record.canvas
@@ -88,7 +87,7 @@ compose ->(_record, accumulator, context) { accumulator << context.clipboard[:ca
     resource['thumbnail']['@id']
   end)
   to_field 'iiif_image_resource_ssi', (accumulate do |resource, *_|
-    resource['images'].first['resource']['service']['@id']
+    resource['images'].first.dig('resource', 'service', '@id')
   end)
 end
 
@@ -123,9 +122,15 @@ to_field 'full_title_tesim', (accumulate do |_resource, context|
 end)
 
 to_field 'thumbnail_url_ssm', (accumulate do |_resource, context|
-  image = context.clipboard[:canvas]['images'].first['resource']['service']['@id']
-  selector = AnnotationCompatibility.new(context.clipboard[:annotation]).selector
-  region = selector['value'].sub('xywh=', '') if selector['@type'] == 'oa:FragmentSelector'
-  region ||= 'full'
-  "#{image}/#{region}/100,/0/default.jpg"
+  thumb_size = '100,'
+  image_resource = context.clipboard[:canvas]['images'].first.dig('resource', 'service', '@id')
+  if image_resource
+    selector = AnnotationCompatibility.new(context.clipboard[:annotation]).selector
+    region = selector['value'].sub('xywh=', '') if selector['@type'] == 'oa:FragmentSelector'
+    region ||= 'full'
+    "#{image_resource}/#{region}/#{thumb_size}/0/default.jpg"
+  else
+    # Case where there is no image resource. Usually a "full" rotated for a "rotation" manifest
+    context.clipboard[:canvas]['thumbnail']['@id'].gsub('/,150/', "/#{thumb_size}/")
+  end
 end)

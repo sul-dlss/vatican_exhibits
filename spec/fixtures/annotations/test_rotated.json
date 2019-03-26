@@ -1,0 +1,49 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@type": "oa:Annotation",
+  "motivation": [
+    "oa:tagging",
+    "oa:commenting"
+  ],
+  "resource": [
+    {
+      "@type": "oa:Tag",
+      "chars": "Onciale"
+    },
+    {
+      "@type": "oa:Tag",
+      "chars": "Scriptio inferior"
+    },
+    {
+      "@type": "oa:Tag",
+      "chars": "D. Surace (a cura di)"
+    },
+    {
+      "@type": "dctypes:Text",
+      "format": "text/html",
+      "chars": "<p>Incipit eiusdem | Annaei Senecae | de vita patris | feliciter</p>"
+    }
+  ],
+  "on": [
+    {
+      "@type": "oa:SpecificResource",
+      "full": "https://digi.vatlib.it/Pal.lat.24inf01b",
+      "selector": {
+        "@type": "oa:Choice",
+        "default": {
+          "@type": "oa:FragmentSelector",
+          "value": "xywh=379,427,1118,799"
+        },
+        "item": {
+          "@type": "oa:SvgSelector",
+          "value": "<svg xmlns='http://www.w3.org/2000/svg'><path xmlns=\"http://www.w3.org/2000/svg\" d=\"M1497.29955,427.40711h-558.95344v0h-558.95344v399.7103v399.7103h558.95344h558.95344v-399.7103z\" data-paper-data=\"{&quot;strokeWidth&quot;:1,&quot;rotation&quot;:0,&quot;deleteIcon&quot;:null,&quot;rotationIcon&quot;:null,&quot;group&quot;:null,&quot;editable&quot;:true,&quot;annotation&quot;:null}\" id=\"rectangle_c8958252-02ac-4507-9609-a3d7614c3b6e\" fill-opacity=\"0\" fill=\"#00bfff\" fill-rule=\"nonzero\" stroke=\"#00bfff\" stroke-width=\"1\" stroke-linecap=\"butt\" stroke-linejoin=\"miter\" stroke-miterlimit=\"10\" stroke-dasharray=\"\" stroke-dashoffset=\"0\" font-family=\"none\" font-weight=\"none\" font-size=\"none\" text-anchor=\"none\" style=\"mix-blend-mode: normal\"/></svg>"
+        }
+      },
+      "within": {
+        "@id": "https://digi.vatlib.it/rotation/MSS_Pal.lat.24/manifest.json",
+        "@type": "sc:Manifest"
+      }
+    }
+  ],
+  "@id": "cb5979f5-8aae-419b-b749-0290b0c06b62"
+}
