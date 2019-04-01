@@ -131,6 +131,7 @@ to_field 'thumbnail_url_ssm', (accumulate do |_resource, context|
     "#{image_resource}/#{region}/#{thumb_size}/0/default.jpg"
   else
     # Case where there is no image resource. Usually a "full" rotated for a "rotation" manifest
-    context.clipboard[:canvas]['thumbnail']['@id'].gsub('/,150/', "/#{thumb_size}/")
+    thumb_url = context.clipboard[:canvas]['thumbnail']['@id']
+    thumb_url.gsub('/,150/', "/#{thumb_size}/") if thumb_url =~ %r(\/\d*\/[a-z]*\.[a-z]{3,4}$) # /123/native.jpg|wbp
   end
 end)
