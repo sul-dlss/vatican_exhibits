@@ -4,8 +4,8 @@ RSpec.describe 'Indexing IIIF Annotations', type: :feature do
   before do
     stub_request(:get, 'https://digi.vatlib.it/iiif/MSS_Barb.gr.252/manifest.json')
       .to_return(body: stubbed_manifest('MSS_Barb.gr.252.json'))
-    stub_request(:get, 'https://digi.vatlib.it/iiif/MSS_Barb.gr.252/canvas/p0001')
-      .to_return(body: stubbed_manifest('MSS_Barb.gr.252_canvas_p0001.json'))
+    stub_request(:get, 'https://digi.vatlib.it/rotation/MSS_Pal.lat.24/manifest.json')
+      .to_return(body: stubbed_manifest('Rotated_MSS_Pal.lat.24.json'))
   end
 
   let(:annotation) do
@@ -16,8 +16,17 @@ RSpec.describe 'Indexing IIIF Annotations', type: :feature do
     )
   end
 
+  let(:annotation_on_rotation) do
+    Annotot::Annotation.create(
+      uuid: 'cb5979f5-8aae-419b-b749-0290b0c06b62',
+      canvas: 'https://digi.vatlib.it/Pal.lat.24inf01b',
+      data: stubbed_annotation('test_rotated.json')
+    )
+  end
+
   let(:exhibit) { FactoryBot.create(:exhibit) }
   let(:resource) { AnnotationResource.new(annotations: [annotation.to_global_id, 'foo'], exhibit: exhibit) }
+  let(:rotated_resource) { AnnotationResource.new(annotations: [annotation_on_rotation.to_global_id, 'bar'], exhibit: exhibit) }
 
   describe 'to_solr' do
     subject(:document) do
@@ -68,6 +77,15 @@ RSpec.describe 'Indexing IIIF Annotations', type: :feature do
 
     it 'constructs a thumbnail that points to an annotated region of an image' do
       expect(document).to include 'thumbnail_url_ssm' => ['https://digi.vatlib.it/iiifimage/MSS_Barb.gr.252/Barb.gr.252_0001_al_piatto.anteriore.jp2/614,589,649,585/100,/0/default.jpg']
+    end
+    describe('rotated annotation manifest') do
+      subject(:rotated_document) do
+        rotated_resource.document_builder.to_solr.first
+      end
+
+      it('constructs a thumbnail that points to a rotated full image') do
+        expect(rotated_document).to include 'thumbnail_url_ssm' => ['https://digi.vatlib.it/iiifimage/MSS_Pal.lat.24/Pal.lat.24_0199_fa_0043v.%5B02.wl.0000%5D.jp2/0,0,2115,3225/100,/180/native.jpg']
+      end
     end
   end
 end
