@@ -39,6 +39,18 @@ RSpec.describe IiifHarvester do
         end
       end
 
+      context 'when a rotated manifest' do
+        it 'has a correct shelfmark and slug' do
+          expect(harvester).to receive_messages(
+            manifest: {
+              '@id' => 'https://digi.vatlib.it/rotation/MSS_Pal.lat.24/manifest.json'
+            }
+          )
+          expect(harvester.shelfmark).to eq 'Pal.lat.24'
+          expect(harvester.slug).to eq 'rotation-Pal_lat_24'
+        end
+      end
+
       context 'when canvases have thumbnails and manifest has a thumb' do
         it 'they are included in the thubnails array' do
           expect(harvester).to receive_messages(
