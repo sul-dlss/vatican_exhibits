@@ -25,14 +25,15 @@ class IiifHarvester
 
   def shelfmark
     id
-      .sub('https://digi.vatlib.it/iiif/', '')
+      .sub(%r{https:\/\/digi\.vatlib\.it\/(iiif|rotation)\/}, '')
       .sub('/manifest.json', '')
       .gsub('MSS_', '')
   end
 
   def slug
-    shelfmark
-      .tr('.', '_') # TODO: Figure out what we want our ids to be; see https://github.com/sul-dlss/vatican_exhibits/issues/37
+    slug = shelfmark.tr('.', '_')
+    slug = "rotation-#{slug}" if id.include? 'rotation'
+    slug
   end
 
   def tei_url
