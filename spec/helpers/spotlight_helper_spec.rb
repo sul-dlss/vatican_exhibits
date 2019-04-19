@@ -1,6 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe SpotlightHelper, type: :helper do
+  before do
+    controller.extend OptionalLocaleRouteParamInjection
+  end
+
   describe '#render_minimally_styled_narrative_field' do
     let(:value) do
       <<-EOHTML

@@ -53,6 +53,10 @@ RSpec.configure do |config|
   config.include SirTrevorPageHelpers, type: :feature
   config.include SeleniumConsoleOutput, type: :feature
 
+  config.include ::Rails.application.routes.url_helpers, type: :controller
+  config.include ::Rails.application.routes.mounted_helpers, type: :controller
+  config.include OptionalLocaleRouteParamInjection
+
   # RSpec Rails can automatically mix in different behaviours to your tests
   # based on their file location, for example enabling you to call `get` and
   # `post` in specs under `spec/controllers`.
