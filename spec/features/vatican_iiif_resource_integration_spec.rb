@@ -98,8 +98,8 @@ RSpec.describe 'Bibliography resource integration test', type: :feature do
     end
 
     it 'has other name' do
-      expect(document['other_name_ssim']).to eq ['Albini, Valeriano, sac., f. 1528-1545 [person]']
-      expect(document['other_name_and_role_ssim']).to eq ['Albini, Valeriano [scribe]']
+      expect(document['other_name_ssim']).to eq ['Albini, Valeriano, sac., f. 1528-1545 [scribe]']
+      expect(document['other_name_and_role_ssim']).to eq ['Albini, Valeriano, sac., f. 1528-1545 [scribe]']
     end
 
     it 'has place' do
@@ -156,7 +156,7 @@ RSpec.describe 'Bibliography resource integration test', type: :feature do
                                   'ms_height_tesim' => ['320'],
                                   'ms_language_ssim' => ['Greco.'],
                                   'ms_library_tesim' => ['Biblioteca Apostolica Vaticana'],
-                                  'ms_other_name_tesim' => ['Albini, Valeriano, sac., f. 1528-1545 [person]'],
+                                  'ms_other_name_tesim' => ['Albini, Valeriano, sac., f. 1528-1545 [scribe]'],
                                   'ms_shelfmark_tesim' => ['Barb.gr.252'],
                                   'ms_support_tesim' => ['chart.'],
                                   'ms_watermarks_tesim' => ['In prima parte codicis, officinarum chartariarum signa duo: ancora in circulo, stella superposita (cf. Briquet 588) et arcuballista in circulo, lilio superposito (Briquet 761); in secunda parte, signum unicum: sagittae, stella superposita (cf. Briquet 6300).'],
@@ -206,7 +206,7 @@ RSpec.describe 'Bibliography resource integration test', type: :feature do
           'Iohannes Chrysostomus, s., patriarca di Costantinopoli, 347-407. Opere spurie e dubbie [internal]'
         )
         expect(document['ms_other_name_tesim']).to include(
-          'Altemps (famiglia) [person]'
+          'Altemps (famiglia) [owner]'
         )
       end
     end
@@ -239,8 +239,8 @@ RSpec.describe 'Bibliography resource integration test', type: :feature do
           'Petrarca, Francesco, 1304-1374 [internal]'
         )
         expect(document['ms_other_name_tesim']).to include(
-          'Malpaghini, Giovanni, n. c. 1346-m. c. 1417 [person]',
-          'Bembo, Pietro, card., 1470-1547 [person]'
+          'Malpaghini, Giovanni, n. c. 1346-m. c. 1417 [scribe]',
+          'Bembo, Pietro, card., 1470-1547 [owner]'
         )
       end
     end

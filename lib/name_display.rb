@@ -28,13 +28,14 @@ class NameDisplay
     value = author.attribute('type').value
 
     value = author_type if value == 'person' && author_type
-    value = author_role if value == 'person' && other_author_role
 
     "[#{value}]"
   end
 
-  def other_author_role
-    author_role && %w[internal external].include?(author_role)
+  def role_or_type
+    return "[#{author_role}]" if author_role
+
+    type
   end
 
   def author_type
@@ -46,6 +47,6 @@ class NameDisplay
   end
 
   def display
-    [text, title, date, formal, type].compact.join(' ')
+    [text, title, date, formal, role_or_type].compact.join(' ')
   end
 end

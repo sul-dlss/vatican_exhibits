@@ -66,13 +66,9 @@ compose ->(record, accumulator, _context) { accumulator << record.tei.xpath('//T
   to_field 'other_name_and_role_ssim', (accumulate do |resource, *_|
     resource.xpath("name[@role!='internal' and @role!='external' or not(@role)]").flat_map do |name|
       name.xpath("alias/authorityAuthor[@rif='aut']").map do |author|
-        author_name = author.text.gsub(/[,\.]$/, '')
-
-        if name['role'].present?
-          "#{author_name} [#{name['role']}]"
-        else
-          author_name
-        end
+        NameDisplay.new(
+          author
+        ).display
       end
     end
   end)
