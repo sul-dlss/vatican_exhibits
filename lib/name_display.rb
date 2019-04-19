@@ -32,11 +32,21 @@ class NameDisplay
     "[#{value}]"
   end
 
+  def role_or_type
+    return "[#{author_role}]" if author_role
+
+    type
+  end
+
   def author_type
     author.parent.parent.attribute('type')&.value
   end
 
+  def author_role
+    author.parent.parent.attribute('role')&.value
+  end
+
   def display
-    [text, title, date, formal, type].compact.join(' ')
+    [text, title, date, formal, role_or_type].compact.join(' ')
   end
 end
