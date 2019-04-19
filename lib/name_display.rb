@@ -28,12 +28,21 @@ class NameDisplay
     value = author.attribute('type').value
 
     value = author_type if value == 'person' && author_type
+    value = author_role if value == 'person' && other_author_role
 
     "[#{value}]"
   end
 
+  def other_author_role
+    author_role && %w[internal external].include?(author_role)
+  end
+
   def author_type
     author.parent.parent.attribute('type')&.value
+  end
+
+  def author_role
+    author.parent.parent.attribute('role')&.value
   end
 
   def display

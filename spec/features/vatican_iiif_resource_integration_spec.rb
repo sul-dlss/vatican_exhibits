@@ -233,10 +233,10 @@ RSpec.describe 'Bibliography resource integration test', type: :feature do
 
       it 'works with present and missing values' do
         expect(document['other_author_ssim']).to include(
-          'Petrarca, Francesco, 1304-1374 [person]'
+          'Petrarca, Francesco, 1304-1374 [internal]'
         )
         expect(document['ms_other_author_tesim']).to include(
-          'Petrarca, Francesco, 1304-1374 [person]'
+          'Petrarca, Francesco, 1304-1374 [internal]'
         )
         expect(document['ms_other_name_tesim']).to include(
           'Malpaghini, Giovanni, n. c. 1346-m. c. 1417 [person]',
