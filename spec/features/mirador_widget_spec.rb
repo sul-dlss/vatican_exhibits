@@ -15,7 +15,7 @@ RSpec.describe 'Mirador Block', type: :feature, js: true do
       add_widget 'mirador'
 
       page.all('input[name="heading"]').first.set('The Heading')
-      page.all('textarea[name="text"]').first.set('The Text')
+      page.all('div[contenteditable="true"]').first.set('The Text')
       page.all('input[name="caption"]').first.set('The Caption')
 
       expect(page).to have_css '[data-behavior="nestable"]'
