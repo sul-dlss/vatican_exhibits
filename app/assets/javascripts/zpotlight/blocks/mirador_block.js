@@ -137,7 +137,7 @@ SirTrevor.Blocks.Mirador = (function() {
         '</div>',
         '<div>',
           '<label for="<%= blockID + "_text"  %>" class="control-label"><%= i18n.t("blocks:mirador:text_label") %></label>',
-          '<textarea class="st-text-block" name="text" class="form-control"></textarea>',
+          '<div id="<%= blockID + "_text"  %>" class="st-text-block form-control" contenteditable="true"></div>',
         '</div>',
         '<div>',
           '<label for="<%= blockID + "_caption"  %>" class="control-label"><%= i18n.t("blocks:mirador:caption_label") %></label>',
