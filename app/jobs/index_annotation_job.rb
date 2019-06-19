@@ -1,5 +1,9 @@
 # Index an annotot annotation into solr, associated with the correct exhibit
 class IndexAnnotationJob < ApplicationJob
+  discard_on ActiveJob::DeserializationError do |_job, error|
+    Rails.logger.error("Skipping job because of ActiveJob::DeserializationError (#{error.message})")
+  end
+
   def perform(annotation)
     if annotation.destroyed?
       destroy(annotation)
