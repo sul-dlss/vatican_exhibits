@@ -37,5 +37,13 @@ RSpec.describe MiradorHelper, type: :helper do
       expect(mirador_options[:annotationEndpoint][:module]).to eq 'AnnototEndpoint'
       expect(mirador_options[:annotationEndpoint][:options][:endpoint]).to eq '/annotations'
     end
+
+    it 'turns on the mirror' do
+      mirador_options = mirador_options(manifest, nil)
+      expect(mirador_options[:windowSettings][:canvasControls][:imageManipulation][:manipulationLayer])
+        .to be true
+      expect(mirador_options[:windowSettings][:canvasControls][:imageManipulation][:controls][:mirror])
+        .to be true
+    end
   end
 end

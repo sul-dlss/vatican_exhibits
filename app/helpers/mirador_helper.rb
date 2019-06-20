@@ -34,6 +34,16 @@ module MiradorHelper
         options: {
           endpoint: annotot_path
         }
+      },
+      windowSettings: {
+        canvasControls: {
+          imageManipulation: {
+            manipulationLayer: true,
+            controls: {
+              mirror: true
+            }
+          }
+        }
       }
     }
   end
