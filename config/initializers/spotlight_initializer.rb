@@ -60,8 +60,9 @@ Spotlight::Engine.config.external_resources_partials += ['vatican_iiif_resources
 
 # ==> Google Analytics integration
 # Spotlight::Engine.config.analytics_provider = nil
+Spotlight::Engine.config.ga_anonymize_ip = true
 # Spotlight::Engine.config.ga_pkcs12_key_path = nil
-# Spotlight::Engine.config.ga_web_property_id = nil
+Spotlight::Engine.config.ga_web_property_id = 'UA-52480754-4'
 # Spotlight::Engine.config.ga_email = nil
 # Spotlight::Engine.config.ga_analytics_options = {}
 # Spotlight::Engine.config.ga_page_analytics_options = config.ga_analytics_options.merge(limit: 5)
