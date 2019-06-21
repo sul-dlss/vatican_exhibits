@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe IndexAnnotationJob do
+  include ActiveJob::TestHelper
   let(:stub_resource) { instance_double(AnnotationResource, delete_from_index: nil, reindex: nil) }
   let(:annotation) { FactoryBot.create(:annotation, data: annotation_data) }
   let(:annotation_data) do
@@ -32,6 +33,24 @@ RSpec.describe IndexAnnotationJob do
       it 'indexes the item' do
         described_class.perform_now(annotation)
         expect(stub_resource).to have_received(:reindex)
+      end
+    end
+
+    context 'when no annotation can be found' do
+      let(:exhibit) { FactoryBot.create(:exhibit) }
+
+      before do
+        annotation.delete
+        allow(AnnotationResource).to receive(:new).with(exhibit: nil,
+                                                        annotations: [annotation.to_global_id]).and_return(stub_resource)
+      end
+
+      it 'discards the job' do
+        expect do
+          perform_enqueued_jobs do
+            described_class.perform_later(annotation)
+          end
+        end.not_to raise_error
       end
     end
 
