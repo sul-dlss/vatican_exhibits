@@ -106,3 +106,5 @@ gem 'honeybadger'
 gem 'oauth2', '~> 1.4' # prevent oauth2 (dependency of blacklight-spotlight) from being downgraded
 gem 'faraday'
 gem 'newrelic_rpm'
+
+gem 'lograge'
