@@ -8,6 +8,8 @@ class CatalogController < ApplicationController
   end
 
   configure_blacklight do |config|
+    config.crawler_detector = ->(req) { req.env['HTTP_USER_AGENT'] =~ /bot/ }
+
     config.index.display_type_field = :resource_type_ssim
     config.show.oembed_field = :oembed_url_ssm
     config.show.partials.insert(1, :oembed)
