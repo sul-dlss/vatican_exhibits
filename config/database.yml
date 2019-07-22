@@ -25,7 +25,7 @@ production:
   database: db/production.sqlite3
   encoding: utf8mb4
   collation: utf8mb4_unicode_ci
-  connect_timeout: 4
-  read_timeout: 4
-  write_timeout: 4
-  checkout_timeout: 8
+  connect_timeout: 200
+  read_timeout: 200
+  write_timeout: 200
+  checkout_timeout: 200
