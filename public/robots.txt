@@ -1,10 +1,8 @@
 # See http://www.robotstxt.org/robotstxt.html for documentation on how to use the robots.txt file
 ---
-User-agent: Googlebot
-Disallow: /
-
-User-agent: SemrushBot
-Disallow: /
-
-User-agent: SemrushBot-SA
-Disallow: /
+User-agent: *
+Crawl-delay: 10
+Disallow: /*/catalog?q=*
+Disallow: /*/catalog?f*
+Disallow: /*/catalog*?q=*
+Disallow: /*/catalog*?f*
