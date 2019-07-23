@@ -67,7 +67,7 @@ RSpec.describe 'Indexing IIIF Annotations', type: :feature do
     end
 
     it 'extracts information from the IIIF structure the canvas is contained in' do
-      expect(document).to include 'iiif_structure_label_ssim' => ['Legatura'],
+      expect(document).to include 'iiif_structure_label_ssim' => ['Legatura <inf.>'],
                                   'iiif_structure_id_ssim' => ['https://digi.vatlib.it/iiif/MSS_Barb.gr.252/range/r0-0']
     end
 
