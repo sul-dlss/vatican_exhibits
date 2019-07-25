@@ -107,7 +107,7 @@ end
 compose ->(_record, accumulator, context) { accumulator.concat(context.clipboard[:structures]) } do
   extend TrajectPlus::Macros
   to_field 'iiif_structure_label_ssim', (accumulate do |resource, *_|
-    resource['label']
+    CGI.unescapeHTML(resource['label'])
   end)
 
   to_field 'iiif_structure_id_ssim', (accumulate do |resource, *_|
