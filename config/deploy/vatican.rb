@@ -11,3 +11,6 @@ set :rails_env, 'production'
 
 set :sidekiq_role, :background
 set :sidekiq_processes, 2
+
+after 'deploy:updated', 'newrelic:notice_deployment'
+ 
