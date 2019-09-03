@@ -377,7 +377,7 @@ GEM
     puma (3.12.1)
     rack (2.0.7)
     rack-cors (1.0.3)
-    rack-protection (2.0.5)
+    rack-protection (2.0.7)
       rack
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -665,7 +665,7 @@ DEPENDENCIES
   rubocop-rspec
   sass-rails (~> 5.0)
   selenium-webdriver (>= 3.13.1)
-  sidekiq
+  sidekiq (~> 5.0)
   simplecov
   sitemap_generator
   solr_wrapper (>= 0.3)
