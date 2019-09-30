@@ -9,11 +9,13 @@ RSpec.describe MiradorHelper, type: :helper do
       mirador_options = mirador_options(manifest, canvas)
       expect(mirador_options[:data].first[:manifestUri]).to be manifest
     end
+
     it 'includes the manifest url and canvas uri in the windowObject' do
       mirador_options = mirador_options(manifest, canvas)
       expect(mirador_options[:windowObjects].first[:loadedManifest]).to be manifest
       expect(mirador_options[:windowObjects].first[:canvasID]).to be canvas
     end
+
     context 'with no canvas' do
       it 'turns off annotationState' do
         mirador_options = mirador_options(manifest, nil)

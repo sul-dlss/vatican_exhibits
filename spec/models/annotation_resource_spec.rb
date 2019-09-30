@@ -9,6 +9,7 @@ RSpec.describe AnnotationResource do
     it 're-hydrates a list of annotation ids' do
       expect(resource.resources).to match_array [annotation]
     end
+
     it 'when a globalid cannot be found' do
       without_resources = described_class.new(annotations: ['foo'])
       expect(without_resources.resources.first).to be_nil

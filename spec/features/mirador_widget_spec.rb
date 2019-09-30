@@ -232,6 +232,7 @@ RSpec.describe 'Mirador Block', type: :feature, js: true do
 
       expect(hidden_input['value']).to eq mirador_config
     end
+
     it 'can be updated from a mirador viewer' do
       visit spotlight.edit_exhibit_home_page_path(exhibit)
 

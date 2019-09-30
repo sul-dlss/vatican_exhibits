@@ -32,9 +32,11 @@ RSpec.describe VaticanIiifResource do
 
   describe '#iiif_urls' do
     it { expect(vatican_resource.iiif_urls).to be_a Array }
+
     it 'splits on whitespace' do
       expect(vatican_resource.iiif_urls.first).to eq 'https://digi.vatlib.it/iiif/MSS_Barb.gr.252/manifest.json'
     end
+
     it 'is unique' do
       expect(vatican_resource.iiif_urls.count).to eq 2
     end

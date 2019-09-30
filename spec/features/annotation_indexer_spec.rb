@@ -60,6 +60,7 @@ RSpec.describe 'Indexing IIIF Annotations', type: :feature do
       expect(document).to include 'canvas_label_ssi' => ['piatto.anteriore'],
                                   'iiif_image_resource_ssi' => ['https://digi.vatlib.it/iiifimage/MSS_Barb.gr.252/Barb.gr.252_0001_al_piatto.anteriore.jp2']
     end
+
     it 'extracts information from the IIIF manifest the canvas is contained in' do
       expect(document).to include 'iiif_manifest_url_ssi' => ['https://digi.vatlib.it/iiif/MSS_Barb.gr.252/manifest.json'],
                                   'iiif_manifest_label_ssi' => ['Barb.gr.252'],
@@ -78,6 +79,7 @@ RSpec.describe 'Indexing IIIF Annotations', type: :feature do
     it 'constructs a thumbnail that points to an annotated region of an image' do
       expect(document).to include 'thumbnail_url_ssm' => ['https://digi.vatlib.it/iiifimage/MSS_Barb.gr.252/Barb.gr.252_0001_al_piatto.anteriore.jp2/614,589,649,585/100,/0/default.jpg']
     end
+
     describe('rotated annotation manifest') do
       subject(:rotated_document) do
         rotated_resource.document_builder.to_solr.first

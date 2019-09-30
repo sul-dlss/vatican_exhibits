@@ -28,6 +28,7 @@ RSpec.describe AnnotationCompatibility do
     it 'works with a simple format' do
       expect(simple_fragment.manifest_uri).to eq 'http://www.example.com/shelfmark/manifest.json'
     end
+
     it 'works with a complex format' do
       expect(complex_fragment.manifest_uri).to eq 'http://www.example.com/shelfmark/manifest.json'
     end
@@ -40,6 +41,7 @@ RSpec.describe AnnotationCompatibility do
         'value' => 'http://www.example.com/shelfmark/canvas/01#xywh=0,0,100,100'
       )
     end
+
     it 'works with a complex format' do
       expect(complex_fragment.selector).to eq(
         '@type' => 'oa:FragmentSelector',

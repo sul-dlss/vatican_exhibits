@@ -179,6 +179,7 @@ RSpec.describe 'Bibliography resource integration test', type: :feature do
         'ms_source_of_information_tesim' => ['J. Mogenet, Codices Barberiniani Graeci, in Bibliotheca Vaticana 1989, v. 2, p. 100.']
       )
     end
+
     context 'with more complex author display' do
       subject(:document) do
         bibliograpy_resource.document_builder.to_solr.first
