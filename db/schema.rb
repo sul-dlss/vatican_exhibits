@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_19_132929) do
+ActiveRecord::Schema.define(version: 2019_10_04_153005) do
 
   create_table "annotot_annotations", force: :cascade do |t|
     t.string "uuid"
@@ -127,6 +127,7 @@ ActiveRecord::Schema.define(version: 2018_09_19_132929) do
     t.datetime "updated_at"
     t.string "field_type"
     t.boolean "readonly_field", default: false
+    t.boolean "is_multiple", default: false
   end
 
   create_table "spotlight_exhibits", force: :cascade do |t|
@@ -209,12 +210,12 @@ ActiveRecord::Schema.define(version: 2018_09_19_132929) do
   end
 
   create_table "spotlight_pages", force: :cascade do |t|
-    t.string "title"
-    t.string "type"
-    t.string "slug"
-    t.string "scope"
+    t.string "title", limit: 191
+    t.string "type", limit: 191
+    t.string "slug", limit: 191
+    t.string "scope", limit: 191
     t.text "content", limit: 16777215
-    t.integer "weight", default: 50
+    t.integer "weight", default: 1000
     t.boolean "published"
     t.integer "exhibit_id"
     t.integer "created_by_id"
@@ -225,8 +226,9 @@ ActiveRecord::Schema.define(version: 2018_09_19_132929) do
     t.boolean "display_sidebar"
     t.boolean "display_title"
     t.integer "thumbnail_id"
-    t.string "locale", default: "en"
+    t.string "locale", limit: 191, default: "en"
     t.integer "default_locale_page_id"
+    t.string "content_type"
     t.index ["default_locale_page_id"], name: "index_spotlight_pages_on_default_locale_page_id"
     t.index ["exhibit_id"], name: "index_spotlight_pages_on_exhibit_id"
     t.index ["locale"], name: "index_spotlight_pages_on_locale"
@@ -315,7 +317,7 @@ ActiveRecord::Schema.define(version: 2018_09_19_132929) do
 
   create_table "taggings", force: :cascade do |t|
     t.integer "tag_id"
-    t.string "taggable_id"
+    t.integer "taggable_id"
     t.string "taggable_type"
     t.string "tagger_type"
     t.integer "tagger_id"
