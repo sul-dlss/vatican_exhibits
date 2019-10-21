@@ -32,6 +32,12 @@
       modalForBlock(block).find('[data-save-mirador-config]').on('click', function(context) {
         block.trigger('mirador-modal-closed', context);
       });
+      modalForBlock(block).find('.annotations-checkbox').on('change', function(context) {
+        block.trigger('annotations-available', context);
+      });
+      modalForBlock(block).find('.display-default-checkbox').on('change', function(context) {
+        block.trigger('annotations-default-toggled', context);
+      });
     }
 
     // Setup functions that need to listen to the source selected event
@@ -67,9 +73,8 @@
               loadedManifest: value.loadedManifest,
               sidePanelVisible: value.sidePanelVisible,
               windowOptions: value.windowOptions ? { osdBounds: value.windowOptions.osdBounds } : undefined
-            }
-          }),
-          windowSettings: config.windowSettings
+            };
+          })
         };
         // Add config to hidden form.
         block.find('[name="mirador_config"]').replaceWith(
@@ -77,6 +82,81 @@
         );
         $modal.modal('hide')
       })
+    }
+
+    function setupAnnotationsListener(block) {
+      // make checkboxes reflect accurate state.
+      block.on('annotations-available', function(e, value) {
+        var $modal = modalForBlock(block);
+        var iframeContext = $modal.find('iframe')[0].contentWindow;
+        var miradorInstance = iframeContext.miradorInstance;
+        var available = value.currentTarget.checked;
+
+        // reset the workspace settings if box is checked.
+        if (available) {
+          var config = miradorInstance.saveController.currentConfig;
+          var windowConfigs = config.windowObjects.map(function(value) {
+              return {
+                slotAddress: value.slotAddress,
+                viewType: value.viewType,
+                canvasID: value.canvasID,
+                loadedManifest: value.loadedManifest,
+                sidePanelVisible: value.sidePanelVisible,
+                windowOptions: value.windowOptions ? { osdBounds: value.windowOptions.osdBounds } : undefined
+              };
+          });
+          // Disable the ability to view annotations for all new windows.
+          miradorInstance.saveController.currentConfig
+            .windowSettings.canvasControls.annotations
+            .annotationsLayer = false;
+
+          // clear existing windows
+          miradorInstance.viewer.workspace.windows.forEach(function(window) {
+            miradorInstance.eventEmitter.publish('REMOVE_WINDOW', window.id);
+          });
+
+          // reset original layout
+          miradorInstance.eventEmitter.publish('RESET_WORKSPACE_LAYOUT', {layoutDescription: config.layout});
+
+          // repopulate layout slots with new windows that take up
+          // the new annotation setting on initialisation.
+          // miradorInstance.viewer.workspace.slots.forEach(function(slot, index){
+          //   console.log(windowConfigs);
+          //   miradorInstance.eventEmitter.publish('ADD_WINDOW', windowConfigs[0]);
+          // });
+
+          modalForBlock(block).find('.display-default-checkbox').removeAttr('disabled');
+          return;
+        }
+
+        modalForBlock(block).find('.display-default-checkbox').attr('disabled', true);
+      });
+
+      block.on('annotations-default-toggled', function(e, value) {
+
+        var $modal = modalForBlock(block);
+        var miradorInstance = $modal.find('iframe')[0].contentWindow.miradorInstance;
+        var displayed = value.currentTarget.checked;
+
+        // Enable the default toggle checkboxes.
+        if (displayed) {
+
+          miradorInstance.viewer.workspace.windows.forEach(function(window) {
+            // necessary to initialise the menu state machine.
+            // There is no mirador "action" for this setting.
+            window.focusModules.ImageView.hud.annoState.displayOn();
+          });
+
+          console.log(miradorInstance.saveController.currentConfig);
+          return;
+        }
+
+        miradorInstance.viewer.workspace.windows.forEach(function(window) {
+          window.focusModules.ImageView.hud.annoState.displayOff();
+        });
+
+        console.log(miradorInstance.saveController.currentConfig);
+      });
     }
 
     // Setup functions that need ot listen to when an item is successfully added to the items array
@@ -321,6 +401,7 @@
         setupItemsUpdatedListener(block);
         setupManifestErrorListener(block);
         modalMiradorSubmitListener(block);
+        setupAnnotationsListener(block);
       },
 
       hiddenInput: function(index, object) {
