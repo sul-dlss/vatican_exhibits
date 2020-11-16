@@ -25,7 +25,7 @@ class IiifHarvester
 
   def shelfmark
     id
-      .sub(%r{https:\/\/digi\.vatlib\.it\/(iiif|rotation)\/}, '')
+      .sub(%r{https://digi\.vatlib\.it/(iiif|rotation)/}, '')
       .sub('/manifest.json', '')
       .gsub('MSS_', '')
   end

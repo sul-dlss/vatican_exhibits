@@ -10,7 +10,7 @@ namespace :annotations do
         data.delete('@context')
 
         # Update uuid if not a uuid
-        unless annotation.uuid.match?(/[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}/)
+        unless annotation.uuid.match?(/[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}/)
           uuid = SecureRandom.uuid
           annotation.uuid = uuid
           data['@id'] = uuid
