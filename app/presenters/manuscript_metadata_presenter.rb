@@ -46,6 +46,7 @@ class ManuscriptMetadataPresenter
              to: :context
 
     attr_reader :context, :document
+
     def initialize(context:, document:, type:)
       @context = context
       @document = document

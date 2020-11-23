@@ -31,11 +31,14 @@ end
 desc 'Run tests in generated test Rails app with generated Solr instance running'
 task ci: [:rubocop, :eslint, 'factory_bot:lint', :environment] do
   require 'solr_wrapper'
+  puts 'Setup for running tests'
   ENV['environment'] = 'test'
   SolrWrapper.wrap(port: '8983') do |solr|
     solr.with_collection(name: 'blacklight-core', dir: Rails.root.join('solr', 'config')) do
+      puts 'Seeding data'
       # run the tests
       Rake::Task['spotlight:seed'].invoke
+      puts 'Running the tests'
       Rake::Task['spec'].invoke
     end
   end

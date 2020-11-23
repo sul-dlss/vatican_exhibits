@@ -118,11 +118,11 @@ compose ->(record, accumulator, _context) { accumulator << record.tei } do
 
   to_field 'author_ssim', extract_xml(
     "//titleStmt/author/alias/authorityAuthor[@rif='aut']/text()", nil,
-    gsub: [/[,\.]$/, '']
+    gsub: [/[,.]$/, '']
   )
   to_field 'other_author_ssim', extract_xml(
     "//titleStmt/respStmt/resp/name[@role='internal' or @role='external']/alias/authorityAuthor[@rif='aut']", nil,
-    gsub: [/[,\.]$/, '']
+    gsub: [/[,.]$/, '']
   )
   to_field 'title_tesim', extract_xml(
     "//titleStmt/title[@level!='u' or not(@level)]/@value", nil
