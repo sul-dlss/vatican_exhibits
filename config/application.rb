@@ -45,5 +45,9 @@ module VaticanExhibits
         resource '/annotation*', headers: :any, methods: %i[get post options delete patch put]
       end
     end
+
+    config.active_record.yaml_column_permitted_classes = [
+      Symbol
+    ]
   end
 end
