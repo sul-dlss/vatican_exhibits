@@ -58,7 +58,8 @@ namespace :annotations do
             x2 = abs_coords.max_by(&:first)
             y2 = abs_coords.max_by(&:last)
 
-            bounding_box = "xywh=#{x1.first.round},#{y1.last.round},#{(x2.first - x1.first).ceil},#{(y2.last - y1.last).ceil}"
+            bounding_box = "xywh=#{x1.first.round},#{y1.last.round},#{(x2.first - x1.first).ceil}," \
+                           "#{(y2.last - y1.last).ceil}"
             data['on'].first['selector']['default']['value'] = bounding_box
           end
         end

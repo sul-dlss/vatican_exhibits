@@ -61,7 +61,9 @@ compose ->(_record, accumulator, context) { accumulator << context.clipboard[:an
       end
     end
   end)
-  to_field 'annotation_tags_en_ssim', extract: (accumulate { |_, context| context.output_hash['annotation_tags_it_ssim'] }),
+  to_field 'annotation_tags_en_ssim', extract: (accumulate do |_, context|
+                                                  context.output_hash['annotation_tags_it_ssim']
+                                                end),
                                       transform: transform(translation_map: 'annotation_tags')
 
   to_field 'annotation_tags_facet_en_ssim', (accumulate do |_resource, context|

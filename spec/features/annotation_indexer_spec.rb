@@ -26,7 +26,9 @@ RSpec.describe 'Indexing IIIF Annotations', type: :feature do
 
   let(:exhibit) { FactoryBot.create(:exhibit) }
   let(:resource) { AnnotationResource.new(annotations: [annotation.to_global_id, 'foo'], exhibit: exhibit) }
-  let(:rotated_resource) { AnnotationResource.new(annotations: [annotation_on_rotation.to_global_id, 'bar'], exhibit: exhibit) }
+  let(:rotated_resource) do
+    AnnotationResource.new(annotations: [annotation_on_rotation.to_global_id, 'bar'], exhibit: exhibit)
+  end
 
   describe 'to_solr' do
     subject(:document) do
