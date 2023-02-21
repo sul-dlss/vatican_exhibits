@@ -47,6 +47,7 @@ module VaticanExhibits
     end
 
     config.active_record.yaml_column_permitted_classes = [
+      HashWithIndifferentAccess,
       Symbol
     ]
   end
