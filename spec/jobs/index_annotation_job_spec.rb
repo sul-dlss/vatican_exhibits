@@ -26,7 +26,8 @@ RSpec.describe IndexAnnotationJob do
 
       before do
         allow(AnnotationResource).to receive(:new).with(exhibit: exhibit,
-                                                        annotations: [annotation.to_global_id]).and_return(stub_resource)
+                                                        annotations: [annotation.to_global_id])
+                                                  .and_return(stub_resource)
         VaticanIiifResource.instance(exhibit).update(iiif_url_list: 'x')
       end
 
@@ -42,7 +43,8 @@ RSpec.describe IndexAnnotationJob do
       before do
         annotation.delete
         allow(AnnotationResource).to receive(:new).with(exhibit: nil,
-                                                        annotations: [annotation.to_global_id]).and_return(stub_resource)
+                                                        annotations: [annotation.to_global_id])
+                                                  .and_return(stub_resource)
       end
 
       it 'discards the job' do
@@ -58,7 +60,8 @@ RSpec.describe IndexAnnotationJob do
       before do
         annotation.destroy
         allow(AnnotationResource).to receive(:new).with(exhibit: nil,
-                                                        annotations: [annotation.to_global_id]).and_return(stub_resource)
+                                                        annotations: [annotation.to_global_id])
+                                                  .and_return(stub_resource)
       end
 
       it 'deletes objects from the index' do

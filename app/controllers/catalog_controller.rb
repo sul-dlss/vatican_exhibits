@@ -76,8 +76,10 @@ class CatalogController < ApplicationController
     config.add_show_field 'ms_shelfmark_tesim', section: :general
     config.add_show_field 'ms_library_tesim', section: :general
     config.add_show_field 'ms_ocelli_nominum_tesim', section: :general
-    config.add_show_field 'ms_date_ssim', section: :general, link_to_search: true, separator_options: config.comma_seperator
-    config.add_show_field 'ms_date_mss_ssim', section: :general, link_to_search: true, separator_options: config.comma_seperator
+    config.add_show_field 'ms_date_ssim', section: :general, link_to_search: true,
+                                          separator_options: config.comma_seperator
+    config.add_show_field 'ms_date_mss_ssim', section: :general, link_to_search: true,
+                                              separator_options: config.comma_seperator
     config.add_show_field 'ms_beginning_date_tesim', section: :general, separator_options: config.comma_seperator
     config.add_show_field 'ms_ending_date_tesim', section: :general, separator_options: config.comma_seperator
     config.add_show_field 'ms_date_of_text_tesim', section: :general, separator_options: config.comma_seperator
