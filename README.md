@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/sul-dlss/vatican_exhibits.svg?branch=master)](https://travis-ci.org/sul-dlss/vatican_exhibits)
-
 ## Vatican Exhibits
 
 Spotlight-based discovery application for the Vatican Library built by the Stanford Libraries. Built using:
