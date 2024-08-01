@@ -398,7 +398,6 @@ GEM
     net-smtp (0.3.3)
       net-protocol
     net-ssh (7.0.1)
-    newrelic_rpm (8.16.0)
     nio4r (2.5.8)
     nokogiri (1.14.2)
       mini_portile2 (~> 2.8.0)
@@ -711,7 +710,6 @@ DEPENDENCIES
   lograge
   mirador_rails
   mysql2
-  newrelic_rpm
   oauth2 (~> 1.4)
   okcomputer
   puma (~> 3.11)
