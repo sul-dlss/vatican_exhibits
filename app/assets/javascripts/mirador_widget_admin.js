@@ -151,18 +151,27 @@
       return input;
     }
 
-    // TODO: Add some sort of loading animation and clean it up after
-    // complete to help reduce confusion with slow loading manifests
     function fetchSelectedItem(block, manifestUrl) {
       if (validUrl(block, manifestUrl) === false) {
         return false;
       }
 
+      var loadingAlertBox = $('<div>')
+        .addClass('iiif-loading-alert alert alert-info')
+        .text('Attempting to load the specified IIIF item.')
+        .prepend('<img class="loading-indicator" src="/assets/spinner.png">');
+
+      itemsSection(block).append(loadingAlertBox);
+
       $.get(manifestUrl)
         .done(function(data) {
+
+          loadingAlertBox.remove();
+
           if(typeof(data) == 'string') {
             data = JSON.parse(data);
           }
+
           if (validManifest(data)) {
             block.trigger('item-added', {
               block: block,
